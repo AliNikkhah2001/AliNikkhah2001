@@ -1,0 +1,127 @@
+# Configuration file for Size Estimation Prototype
+
+# Model paths (leave empty to use default models)
+models:
+  yolo:
+    # Path to YOLO model file
+    # Use "yolov8n.pt" for Ultralytics YOLOv8 Nano
+    path: ""
+    # Alternative models:
+    # "yolov8s.pt" (small) - Better accuracy
+    # "yolov8m.pt" (medium) - Good balance
+    # "yolov8l.pt" (large) - Best accuracy, slower
+    
+  depth:
+    # Path to depth estimation model
+    # Use "depth_pro" for Apple's Depth Pro
+    # Use "depth_anything_v2" for Depth Anything V2
+    path: ""
+    # Specify model type if using specific implementations
+    type: ""  # "transformers", "depth_anything_v2", or "placeholder"
+
+# Processing parameters
+processing:
+  # Minimum confidence for object detection
+  min_confidence: 0.25
+  
+  # Non-maximum suppression IoU threshold
+  nms_iou: 0.45
+  
+  # Image input size for processing
+  input_size:
+    width: 640
+    height: 480
+  
+  # Output image size (None to maintain aspect ratio)
+  output_size:
+    width: 1280
+    height: 720
+
+# Output configuration
+output:
+  # Format for size estimation results
+  format: "json"  # "json", "csv", or "txt"
+  
+  # Include depth maps in output
+  include_depth: true
+  
+  # Include visualizations
+  include_visualization: true
+  
+  # Output directory for results
+  directory: "results"
+
+# Web interface configuration (for Gradio)
+web:
+  # Server host ("" for localhost, "0.0.0.0" for all interfaces)
+  host: ""
+  
+  # Server port
+  port: 7860
+  
+  # Share link (requires Gradio account for permanent links)
+  share: false
+  
+  # Custom title for the web interface
+  title: "Size Estimation and Depth Estimation Demo"
+  
+  # Custom theme
+  theme: "default"  # "default", "soft", "nice"
+
+# Logging configuration
+logging:
+  # Log level
+  level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR"
+  
+  # Log file path
+  file: "size_estimation.log"
+  
+  # Console output
+  console: true
+
+# Sample data configuration
+sample:
+  # Enable/disable sample image loading
+  enabled: true
+  
+  # Path to sample images
+  directory: "data/sample_images"
+  
+  # Number of sample images to load
+  count: 5
+
+# Performance optimization
+performance:
+  # Use GPU if available
+  use_gpu: true
+  
+  # CPU threads for inference (0 = auto-detect)
+  cpu_threads: 0
+  
+  # Enable model caching
+  cache_models: true
+  
+  # Maximum batch size for processing
+  max_batch_size: 8
+
+# Advanced features
+advanced:
+  # Enable ruler-based scale calibration
+  ruler_calibration: false
+  
+  # Enable multi-view fusion (requires multiple camera feeds)
+  multi_view: false
+  
+  # Enable real-time video processing
+  real_time: false
+  
+  # Enable object tracking across frames
+  tracking: false
+
+# Version information
+version:
+  app: "1.0.0"
+  python: "3.8"
+  torch: "2.0"
+  ultralytics: "8.0"
+  gradio: "3.40"

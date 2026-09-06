@@ -1,0 +1,124 @@
+% THEME 04_altacv: AltaCV Sidebar — AltaCV-inspired sidebar color #1A3A4A
+% Auto-generated via scripts/generate_themes.py
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames,table,HTML]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{lmodern}\definecolor{sidebar}{HTML}{1A3A4A}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\pubItem}[4]{%
+  % #1 = authors  #2 = title  #3 = venue/status  #4 = year
+  \vspace{4pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{p{0.85\textwidth}@{\extracolsep{\fill}}r}
+    \small \textbf{#2} & \small #4 \\
+    \small #1 & \\
+    \small \textit{#3} & \\
+  \end{tabular*}\vspace{-4pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}{\end{itemize}}
+\newenvironment{resumeItemList}{\begin{itemize}[leftmargin=0.2in]}{\end{itemize}\vspace{-5pt}}
+
+% ==============================================================================
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+  \Huge \textsc{Ali Nikkhah} \\ \vspace{2pt}
+  \small
+  Tehran, Iran $|$ Open to Relocation $|$
+  \href{mailto:alinkkh9@gmail.com}{alinkkh9@gmail.com} $|$
+  +98 991 296 3951 \\
+  \href{https://alinikkhah2001.github.io}{alinikkhah2001.github.io} $|$
+  \href{https://linkedin.com/in/alinikkhah2001}{linkedin.com/in/alinikkhah2001}
+\end{center}
+
+% --- RESEARCH INTERESTS ---
+\section{Research Interests}
+\small{Vision-language models; multimodal representation learning; explainable and robust AI; speech and audio intelligence; applied machine learning for healthcare and financial systems.}
+\vspace{4pt}
+
+% --- EDUCATION ---
+\section{Education}
+\begin{resumeSubHeadingList}
+  \resumeSubheading
+    {Sharif University of Technology}{Tehran, Iran}
+    {B.Sc.\ Electrical Engineering -- Digital Systems \quad GPA: 3.65 overall, 3.91 major}{Sept 2020 -- Jul 2024}
+  \begin{resumeItemList}
+    \resumeItem{Relevant coursework: Deep Learning, Machine Learning, Digital Signal Processing, Linear Algebra, Probability \& Statistics, Algorithm Design, Digital Systems Design.}
+  \end{resumeItemList}
+\end{resumeSubHeadingList}
+
+% --- PUBLICATIONS & PREPRINTS ---
+\section{Publications \& Preprints}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \input{../segments/publications/list.tex}
+\end{itemize}
+
+% --- RESEARCH EXPERIENCE ---
+\section{Research Experience}
+\begin{resumeSubHeadingList}
+  \input{../segments/research_experience/entries.tex}
+\end{resumeSubHeadingList}
+
+% --- TEACHING & MENTORING ---
+\section{Teaching \& Mentoring}
+\begin{resumeSubHeadingList}
+  \input{../segments/teaching_mentoring/ta_history.tex}
+\end{resumeSubHeadingList}
+
+% --- INDUSTRY EXPERIENCE ---
+\section{Industry Experience}
+\begin{resumeSubHeadingList}
+  \input{../segments/research_experience/industry.tex}
+\end{resumeSubHeadingList}
+
+% --- TECHNICAL SKILLS ---
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Python, C++, Go, SQL, R, Bash, TypeScript} \\
+    \textbf{Deep Learning \& Vision}{: PyTorch, TensorFlow, JAX, Hugging Face, ViT, BLIP, T5, Whisper, wav2vec2.0, Librosa} \\
+    \textbf{Agentic AI \& RAG}{: LangGraph, LangChain, LlamaIndex, FAISS, ChromaDB, HyDE, KAG, Graph RAG} \\
+    \textbf{Data \& MLOps}{: Spark, Airflow, Kafka, Docker, Kubernetes, Ray, Triton, vLLM, MLflow, W\&B} \\
+    \textbf{Languages (Human)}{: Persian (Native), English (C2 -- IELTS 8.0), Arabic (Professional), French (Beginner)}
+  }}
+\end{itemize}
+
+\end{document}

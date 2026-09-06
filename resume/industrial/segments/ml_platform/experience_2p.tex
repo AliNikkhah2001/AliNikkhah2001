@@ -1,0 +1,42 @@
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {ML Platform Engineer (LLM Serving)}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Engineered the production LLM serving layer handling over \textbf{5 million daily queries}: integrated \textbf{vLLM} with PagedAttention and \textbf{Triton Inference Server} for LLM and embedding model deployment, maximizing KV-cache utilization and GPU throughput under variable query burst patterns (\textbf{3.2x throughput gain, 60\% cost reduction per 1K queries, p99 <200ms}).}
+  \resumeItem{Implemented async \textbf{FastAPI} serving layers with multi-tier \textbf{Redis} caching and asynchronous request batching to fully isolate model execution latency from client-facing response times.}
+  \resumeItem{Designed a Modular Control Pipeline (MCP) decoupling text ingestion, chunking, retrieval, and synthesis phases, enabling zero-downtime model hot-swapping and live index migrations without service interruption.}
+  \resumeItem{Built stateful multi-agent routing networks using LangGraph cyclic directed graphs to manage multi-turn session state, dynamic context evaluation, and automated query rewriting loops.}
+  \resumeItem{Architected multi-tenant Kubernetes deployment (200 pods) with GPU scheduling via NVIDIA device plugin and MIG, isolating vision and language model compute nodes for independent horizontal scaling and fault containment (\textbf{40\% GPU cost reduction}); implemented HPA/VPA for automatic scaling under burst traffic.}
+  \resumeItem{Established ML platform observability: Prometheus metrics for GPU utilization, KV-cache hit rates, request latency distributions; Grafana dashboards for real-time serving health; automated alerts for SLO violations.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Advanced Analytics Australia}{Remote Contract}
+  {ML Platform Engineer (Edge)}{Sep 2025 -- Apr 2026}
+\begin{resumeItemList}
+  \resumeItem{Built the edge ML serving infrastructure for industrial safety compliance across \textbf{12 sites}: compiled and quantized vision models into \textbf{TensorRT} and \textbf{TensorFlow Lite} runtimes; served them through \textbf{Triton Inference Server} with dynamic batching, eliminating Python-level inference overhead (\textbf{3.5x speedup vs Python, <50ms inference}).}
+  \resumeItem{Architected a high-throughput spatial metadata ingestion broker using \textbf{Apache Kafka} to buffer concurrent high-frame-rate tracking streams from \textbf{100+ cameras (30 FPS each)} without back-pressure on inference workers.}
+  \resumeItem{Implemented edge MLOps workflow: zero-downtime model updates across distributed sites via Triton model repository; Prometheus/Grafana monitoring for inference health, model drift detection, and hardware failures; automated rollback on anomaly detection.}
+  \resumeItem{Designed sensor calibration routines and signal-to-noise monitoring to maintain stable detection thresholds across indoor and outdoor deployment sites (\textbf{-35\% false positives}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Engineer}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Architected the central enterprise data lake and OLAP warehouse for a high-volume BNPL and stock-trading platform, routing transactional and user-interaction streams from PostgreSQL into \textbf{Trino} via \textbf{PeerDB} Change Data Capture (CDC) replication for continuous, low-latency synchronization (\textbf{<60s CDC latency, 5TB/day}).}
+  \resumeItem{Designed and maintained complex \textbf{Apache Airflow} DAGs orchestrating multi-stage data transformation pipelines, automated cold-data archiving (Iceberg/Parquet on object storage), and cross-system synchronization workflows.}
+  \resumeItem{Built a real-time statistical inference engine running parallel A/B hypothesis tests on application features using mSPRT sequential testing (\textbf{50+ concurrent experiments}); automated model deployment with FastAPI inference APIs, model versioning, and canary rollout with automated rollback.}
+  \resumeItem{Deployed ML models for BNPL credit risk (AUC 0.87, -22\% default rate) and time-series transformer portfolio allocation (Sharpe +0.42); implemented model monitoring for data drift, prediction drift, and performance degradation.}
+  \resumeItem{Configured \textbf{Prometheus} and \textbf{Grafana} monitoring dashboards for pipeline latency, job failures, and storage degradation; integrated \textbf{Great Expectations} for automated data quality gating at ingestion.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {Founding MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Founded the ML platform from scratch: provisioned Kubernetes cluster with Terraform; deployed Ray for distributed training workload scheduling, MLflow for experiment tracking and artifact lineage, TensorFlow Serving for model inference.}
+  \resumeItem{Automated end-to-end CI/CD with Docker, ArgoCD, and GitHub Actions, reducing release cycles to under 10 minutes (\textbf{99.9\% deploy success rate}); implemented GitOps workflow for model and infrastructure deployments.}
+  \resumeItem{Built low-latency model inference APIs with FastAPI and TensorFlow Serving to handle concurrent traffic spikes; orchestrated distributed training workloads with Ray and MLflow (\textbf{15+ models, 50+ experiments tracked}).}
+  \resumeItem{Established ML engineering best practices: model registry with versioning, automated model testing (unit, integration, A/B), canary deployment with automated rollback, lineage tracking, and cost optimization via spot instances and GPU scheduling.}
+\end{resumeItemList}

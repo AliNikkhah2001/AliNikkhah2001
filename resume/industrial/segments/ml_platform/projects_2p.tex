@@ -1,0 +1,39 @@
+\resumeSubheading
+  {Enterprise LLM Serving Platform}{Digikala}
+  {ML Platform Engineer}{2024 -- 2025}
+\begin{resumeItemList}
+  \resumeItem{Built production LLM serving stack at 5M+ daily queries: vLLM PagedAttention + Triton, async FastAPI, multi-tier Redis, request batching, LangGraph session management — all on multi-tenant K8s (200 pods, GPU scheduling via MIG, 40\% GPU cost reduction).}
+  \resumeItem{Designed Modular Control Pipeline (MCP) for zero-downtime model hot-swapping, live index migrations, and canary deployments; established SLOs (p99 <200ms, 99.9\% uptime) with Prometheus/Grafana observability.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Edge ML Serving Infrastructure}{Advanced Analytics Australia}
+  {ML Platform Engineer}{2025 -- 2026}
+\begin{resumeItemList}
+  \resumeItem{Deployed TensorRT/TF Lite models via Triton on AXIS edge hardware across 12 sites; Kafka streaming for 100+ cameras @ 30 FPS; dynamic batching for 3.5x speedup; <50ms inference, 99.2\% uptime.}
+  \resumeItem{Built edge MLOps: zero-downtime model updates via Triton repository, automated rollback on anomaly detection, Prometheus/Grafana monitoring for inference health, drift detection, hardware failures.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Enterprise Data Lake \& ML Deployment Platform}{Turquoise Digital}
+  {Senior Data Engineer}{2025 -- 2026}
+\begin{resumeItemList}
+  \resumeItem{Architected Trino + PeerDB CDC data lake (<60s latency, 5TB/day); Airflow DAGs with Iceberg/Parquet; PySpark ETL (60\% memory reduction); Great Expectations quality gates.}
+  \resumeItem{Deployed ML model serving: FastAPI inference APIs, model versioning, A/B testing (mSPRT), canary rollout with automated rollback; model monitoring for data/prediction drift.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {ML Platform Foundation}{HomaCloud}
+  {Founding MLOps Engineer}{2021 -- 2022}
+\begin{resumeItemList}
+  \resumeItem{Built ML platform from scratch: K8s + Ray (distributed training) + MLflow (experiment tracking) + TF Serving; CI/CD (ArgoCD, GitHub Actions, Terraform <10min); GitOps for model/infra deployments.}
+  \resumeItem{Established ML engineering practices: model registry, automated testing (unit/integration/A/B), canary deployment with rollback, lineage tracking, cost optimization via spot instances and GPU scheduling. 15+ models, 99.9\% deploy success.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Distributed Training \& Serving Optimization}{Personal Research}
+  {ML Platform Engineer}{2024}
+\begin{resumeItemList}
+  \resumeItem{Benchmarked LLM serving: vLLM PagedAttention vs TensorRT-LLM vs Triton; optimized batching, KV-cache, GPU utilization; published findings on serving 7B/70B models at scale.}
+  \resumeItem{Explored distributed training: PyTorch Distributed, Ray Train, DeepSpeed; compared throughput, scaling efficiency, fault tolerance for multi-node LLM fine-tuning.}
+\end{resumeItemList}

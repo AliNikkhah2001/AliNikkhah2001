@@ -1,0 +1,25 @@
+% Tagged unified main — selects experiences by variant via generated fragments
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}\usepackage[empty]{fullpage}\usepackage{titlesec}\usepackage{marvosym}\usepackage[usenames,dvipsnames]{color}\usepackage{verbatim}\usepackage{enumitem}\usepackage[hidelinks]{hyperref}\usepackage{fancyhdr}\usepackage[english]{babel}\usepackage{tabularx}\usepackage{etoolbox}\usepackage{microtype}\usepackage{lmodern}
+% Choose variant: long|agentic|vision|data|swe|hybrid|senior|platform|research
+\newcommand{\cvvariant}{long}
+\newbool{onePage}\setbool{onePage}{false} % long is always 2+ pages
+\ifbool{onePage}{\addtolength{\oddsidemargin}{-0.65in}\addtolength{\evensidemargin}{-0.65in}\addtolength{\textwidth}{1.3in}\addtolength{\topmargin}{-.65in}\addtolength{\textheight}{1.3in}}{\addtolength{\oddsidemargin}{-0.5in}\addtolength{\evensidemargin}{-0.5in}\addtolength{\textwidth}{1.0in}\addtolength{\topmargin}{-.5in}\addtolength{\textheight}{1.0in}}
+\urlstyle{same}\raggedbottom\raggedright
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-1pt}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \small #2 \\ \textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-7pt}}
+\renewcommand\labelitemii{--}
+\newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}{\end{itemize}}
+\newenvironment{resumeItemList}{\begin{itemize}[leftmargin=0.2in, topsep=2pt, itemsep=1pt, parsep=0pt]}{\end{itemize}\vspace{-3pt}}
+\begin{document}
+\input{segments/common/contact_info.tex}
+\section{Summary}\input{segments/generated/\cvvariant/summary.tex}
+\section{Technical Skills}\input{segments/generated/\cvvariant/skills.tex}
+\section{Professional Experience}\begin{resumeSubHeadingList}\input{segments/generated/\cvvariant/experience.tex}\end{resumeSubHeadingList}
+\ifbool{onePage}{}{\section{Selected Projects \& Research}\begin{resumeSubHeadingList}
+% projects still from legacy per-variant — TODO migrate to data/cv.yaml research_projects
+\input{segments/common/research_2p.tex}
+\end{resumeSubHeadingList}}
+\section{Education}\begin{resumeSubHeadingList}\input{segments/common/education.tex}\end{resumeSubHeadingList}
+\end{document}

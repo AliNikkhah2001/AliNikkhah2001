@@ -1,0 +1,582 @@
+================================================================================
+COMPREHENSIVE ATS & CV EVALUATION REPORT
+Generated: 2026-08-16 03:33:04
+================================================================================
+
+📊 SCORE SUMMARY
+--------------------------------------------------------------------------------
+Variant                                     Score  Pages    KW%  Metrics  Verbs
+--------------------------------------------------------------------------------
+Ali_Nikkhah_AgenticAI_1page.pdf              100/100     2p  51.0%      14     8
+Ali_Nikkhah_AgenticAI_2page.pdf              100/100     2p  59.2%      13    10
+Ali_Nikkhah_ComputerVision_1page.pdf         100/100     2p  49.0%      16     9
+Ali_Nikkhah_ComputerVision_2page.pdf         100/100     2p  63.3%      17    12
+Ali_Nikkhah_DataScience_1page.pdf            100/100     2p  57.1%       7     8
+Ali_Nikkhah_DataScience_2page.pdf            100/100     2p  65.3%       7     9
+Ali_Nikkhah_SoftwareEng_1page.pdf            100/100     2p  46.9%      17    13
+Ali_Nikkhah_SoftwareEng_2page.pdf            100/100     2p  59.2%      23    15
+Ali_Nikkhah_HybridAI_1page.pdf               100/100     1p  49.0%      23     8
+Ali_Nikkhah_HybridAI_2page.pdf               100/100     3p  63.3%      27    11
+Ali_Nikkhah_SeniorAI_1page.pdf               100/100     1p  51.0%      24    10
+Ali_Nikkhah_SeniorAI_2page.pdf               100/100     3p  63.3%      47    12
+Ali_Nikkhah_MLPlatform_1page.pdf             100/100     1p  53.1%      16     9
+Ali_Nikkhah_MLPlatform_2page.pdf             100/100     3p  65.3%      38    14
+Ali_Nikkhah_ResearchCV.pdf                   100/100     2p  38.8%       1     9
+
+🏆 Best: Ali_Nikkhah_AgenticAI_1page.pdf (100/100)
+⚠️  Worst: Ali_Nikkhah_AgenticAI_1page.pdf (100/100)
+
+================================================================================
+📋 Ali_Nikkhah_AgenticAI_1page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 7 standard sections found
+
+  KEYWORDS (12/25 — 51.0% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 6/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, prompt, fine-tuning, fine-tune
+    infra: 5/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp, postgres, postgresql
+    cv: 4/9 — found: opencv, cnn, transformer, tensorrt
+      missing: yolo, segmentation, detection, onnx, torchvision
+    data: 2/8 — found: spark, airflow
+      missing: dbt, snowflake, bigquery, etl, data pipeline
+    devops: 5/7 — found: ci/cd, terraform, github actions, prometheus, grafana
+      missing: jenkins, monitoring
+
+  METRICS (14/15 — 14 quantifiable):
+    Examples: 23%, 41%, 3.2x, 60%, 78%, 94%, 99.9%, 200ms
+
+  ACTION VERBS (6/10 — 8 unique):
+    engineered, designed, built, led, deployed, orchestrated, automated, achieved
+
+  READABILITY:
+    Words: 595, Sentences: 28
+    Avg words/sentence: 21.2
+
+================================================================================
+📋 Ali_Nikkhah_AgenticAI_2page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 9 standard sections found
+
+  KEYWORDS (14/25 — 59.2% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 6/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, prompt, fine-tuning, fine-tune
+    infra: 7/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp
+    cv: 5/9 — found: opencv, cnn, transformer, onnx, tensorrt
+      missing: yolo, segmentation, detection, torchvision
+    data: 2/8 — found: spark, airflow
+      missing: dbt, snowflake, bigquery, etl, data pipeline
+    devops: 6/7 — found: terraform, github actions, jenkins, monitoring, prometheus
+      missing: ci/cd
+
+  METRICS (13/15 — 13 quantifiable):
+    Examples: 23%, 41%, 3.2x, 60%, 78%, 94%, 99.9%, 200ms
+
+  ACTION VERBS (8/10 — 10 unique):
+    engineered, designed, built, developed, led, implemented, deployed, orchestrated, automated, achieved
+
+  READABILITY:
+    Words: 973, Sentences: 40
+    Avg words/sentence: 24.3
+
+================================================================================
+📋 Ali_Nikkhah_ComputerVision_1page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 8 standard sections found
+
+  KEYWORDS (12/25 — 49.0% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 4/10 — found: llm, langchain, langgraph, vector
+      missing: rag, openai, embedding, prompt, fine-tuning
+    infra: 4/9 — found: kubernetes, docker, kafka, fastapi
+      missing: redis, aws, gcp, postgres, postgresql
+    cv: 5/9 — found: opencv, cnn, transformer, detection, tensorrt
+      missing: yolo, segmentation, onnx, torchvision
+    data: 3/8 — found: spark, airflow, data pipeline
+      missing: dbt, snowflake, bigquery, etl, feature store
+    devops: 5/7 — found: ci/cd, terraform, github actions, prometheus, grafana
+      missing: jenkins, monitoring
+
+  METRICS (15/15 — 16 quantifiable):
+    Examples: 99.2%, 35%, 18%, 40%, 78%, 94%, 99.9%, 50ms
+
+  ACTION VERBS (7/10 — 9 unique):
+    built, led, implemented, optimized, orchestrated, automated, achieved, delivered, managed
+
+  READABILITY:
+    Words: 592, Sentences: 28
+    Avg words/sentence: 21.1
+
+================================================================================
+📋 Ali_Nikkhah_ComputerVision_2page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 10 standard sections found
+
+  KEYWORDS (15/25 — 63.3% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 5/10 — found: llm, rag, langchain, langgraph, vector
+      missing: openai, embedding, prompt, fine-tuning, fine-tune
+    infra: 7/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp
+    cv: 6/9 — found: opencv, cnn, transformer, detection, onnx
+      missing: yolo, segmentation, torchvision
+    data: 3/8 — found: spark, airflow, data pipeline
+      missing: dbt, snowflake, bigquery, etl, feature store
+    devops: 7/7 — found: ci/cd, terraform, github actions, jenkins, monitoring
+
+  METRICS (15/15 — 17 quantifiable):
+    Examples: 99.2%, 3.5x, 35%, 18%, 40%, 78%, 94%, 99.9%
+
+  ACTION VERBS (10/10 — 12 unique):
+    engineered, designed, built, developed, led, architected, implemented, optimized, orchestrated, automated, achieved, delivered
+
+  READABILITY:
+    Words: 961, Sentences: 41
+    Avg words/sentence: 23.4
+
+================================================================================
+📋 Ali_Nikkhah_DataScience_1page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 7 standard sections found
+
+  KEYWORDS (14/25 — 57.1% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 6/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, prompt, fine-tuning, fine-tune
+    infra: 6/9 — found: kubernetes, docker, kafka, fastapi, postgres
+      missing: redis, aws, gcp
+    cv: 4/9 — found: opencv, cnn, transformer, tensorrt
+      missing: yolo, segmentation, detection, onnx, torchvision
+    data: 4/8 — found: spark, airflow, etl, data pipeline
+      missing: dbt, snowflake, bigquery, feature store
+    devops: 5/7 — found: ci/cd, terraform, monitoring, prometheus, grafana
+      missing: github actions, jenkins
+
+  METRICS (7/15 — 7 quantifiable):
+    Examples: 60%, 22%, 4x, 99.9%, 99.9%, 10M+, 5TB
+
+  ACTION VERBS (6/10 — 8 unique):
+    designed, built, developed, architected, optimized, automated, achieved, managed
+
+  READABILITY:
+    Words: 573, Sentences: 26
+    Avg words/sentence: 22.0
+
+================================================================================
+📋 Ali_Nikkhah_DataScience_2page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 9 standard sections found
+
+  KEYWORDS (16/25 — 65.3% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 6/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, prompt, fine-tuning, fine-tune
+    infra: 7/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp
+    cv: 5/9 — found: opencv, cnn, transformer, onnx, tensorrt
+      missing: yolo, segmentation, detection, torchvision
+    data: 4/8 — found: spark, airflow, etl, data pipeline
+      missing: dbt, snowflake, bigquery, feature store
+    devops: 7/7 — found: ci/cd, terraform, github actions, jenkins, monitoring
+
+  METRICS (7/15 — 7 quantifiable):
+    Examples: 60%, 22%, 4x, 99.9%, 99.9%, 10M+, 5TB
+
+  ACTION VERBS (7/10 — 9 unique):
+    designed, built, developed, architected, implemented, optimized, automated, achieved, managed
+
+  READABILITY:
+    Words: 882, Sentences: 37
+    Avg words/sentence: 23.8
+
+================================================================================
+📋 Ali_Nikkhah_SoftwareEng_1page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 7 standard sections found
+
+  KEYWORDS (11/25 — 46.9% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 3/10 — found: llm, langchain, langgraph
+      missing: rag, openai, embedding, vector, prompt
+    infra: 5/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp, postgres, postgresql
+    cv: 5/9 — found: opencv, cnn, transformer, detection, tensorrt
+      missing: yolo, segmentation, onnx, torchvision
+    data: 2/8 — found: spark, airflow
+      missing: dbt, snowflake, bigquery, etl, data pipeline
+    devops: 5/7 — found: terraform, github actions, monitoring, prometheus, grafana
+      missing: ci/cd, jenkins
+
+  METRICS (15/15 — 17 quantifiable):
+    Examples: 3.2x, 60%, 40%, 35%, 99.9%, 99.9%, 200ms, 50ms
+
+  ACTION VERBS (10/10 — 13 unique):
+    engineered, designed, built, developed, led, implemented, optimized, deployed, orchestrated, automated, achieved, delivered, managed
+
+  READABILITY:
+    Words: 599, Sentences: 28
+    Avg words/sentence: 21.4
+
+================================================================================
+📋 Ali_Nikkhah_SoftwareEng_2page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 9 standard sections found
+
+  KEYWORDS (14/25 — 59.2% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 5/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, vector, prompt, fine-tuning, fine-tune
+    infra: 7/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp
+    cv: 6/9 — found: opencv, cnn, transformer, detection, onnx
+      missing: yolo, segmentation, torchvision
+    data: 2/8 — found: spark, airflow
+      missing: dbt, snowflake, bigquery, etl, data pipeline
+    devops: 6/7 — found: terraform, github actions, jenkins, monitoring, prometheus
+      missing: ci/cd
+
+  METRICS (15/15 — 23 quantifiable):
+    Examples: 3.2x, 60%, 40%, 3.5x, 35%, 99.9%, 99.9%, 200ms
+
+  ACTION VERBS (10/10 — 15 unique):
+    engineered, designed, built, developed, led, architected, implemented, optimized, deployed, orchestrated, automated, achieved, delivered, directed, managed
+
+  READABILITY:
+    Words: 916, Sentences: 39
+    Avg words/sentence: 23.5
+
+================================================================================
+📋 Ali_Nikkhah_HybridAI_1page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] 1-page format (optimal)
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 7 standard sections found
+
+  KEYWORDS (12/25 — 49.0% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 4/10 — found: llm, rag, langchain, langgraph
+      missing: openai, embedding, vector, prompt, fine-tuning
+    infra: 5/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp, postgres, postgresql
+    cv: 5/9 — found: opencv, cnn, transformer, detection, tensorrt
+      missing: yolo, segmentation, onnx, torchvision
+    data: 2/8 — found: spark, airflow
+      missing: dbt, snowflake, bigquery, etl, data pipeline
+    devops: 5/7 — found: ci/cd, terraform, github actions, prometheus, grafana
+      missing: jenkins, monitoring
+
+  METRICS (15/15 — 23 quantifiable):
+    Examples: 23%, 41%, 3.2x, 60%, 40%, 99.2%, 35%, 22%
+
+  ACTION VERBS (6/10 — 8 unique):
+    engineered, designed, built, led, architected, deployed, automated, achieved
+
+  READABILITY:
+    Words: 515, Sentences: 32
+    Avg words/sentence: 16.1
+
+================================================================================
+📋 Ali_Nikkhah_HybridAI_2page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (95/100):
+    ❌ [CRITICAL] 3 pages — exceeds standard 1-2 page limit
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 9 standard sections found
+
+  KEYWORDS (15/25 — 63.3% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 6/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, prompt, fine-tuning, fine-tune
+    infra: 7/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp
+    cv: 6/9 — found: opencv, cnn, transformer, detection, onnx
+      missing: yolo, segmentation, torchvision
+    data: 3/8 — found: spark, airflow, etl
+      missing: dbt, snowflake, bigquery, data pipeline, feature store
+    devops: 6/7 — found: terraform, github actions, jenkins, monitoring, prometheus
+      missing: ci/cd
+
+  METRICS (15/15 — 27 quantifiable):
+    Examples: 22%, 23%, 41%, 3.2x, 60%, 40%, 99.2%, 3.5x
+
+  ACTION VERBS (9/10 — 11 unique):
+    engineered, designed, built, developed, led, architected, implemented, deployed, orchestrated, automated, achieved
+
+  READABILITY:
+    Words: 1550, Sentences: 63
+    Avg words/sentence: 24.6
+
+================================================================================
+📋 Ali_Nikkhah_SeniorAI_1page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] 1-page format (optimal)
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 8 standard sections found
+
+  KEYWORDS (12/25 — 51.0% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 4/10 — found: llm, rag, langchain, langgraph
+      missing: openai, embedding, vector, prompt, fine-tuning
+    infra: 5/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp, postgres, postgresql
+    cv: 5/9 — found: opencv, cnn, transformer, detection, tensorrt
+      missing: yolo, segmentation, onnx, torchvision
+    data: 3/8 — found: spark, airflow, etl
+      missing: dbt, snowflake, bigquery, data pipeline, feature store
+    devops: 5/7 — found: ci/cd, terraform, github actions, prometheus, grafana
+      missing: jenkins, monitoring
+
+  METRICS (15/15 — 24 quantifiable):
+    Examples: 23%, 41%, 3.2x, 60%, 40%, 99.2%, 35%, 22%
+
+  ACTION VERBS (8/10 — 10 unique):
+    engineered, designed, built, developed, led, architected, automated, achieved, established,  mentored
+
+  READABILITY:
+    Words: 549, Sentences: 33
+    Avg words/sentence: 16.6
+
+================================================================================
+📋 Ali_Nikkhah_SeniorAI_2page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (95/100):
+    ❌ [CRITICAL] 3 pages — exceeds standard 1-2 page limit
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 10 standard sections found
+
+  KEYWORDS (15/25 — 63.3% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 5/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, vector, prompt, fine-tuning, fine-tune
+    infra: 7/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp
+    cv: 6/9 — found: opencv, cnn, transformer, detection, onnx
+      missing: yolo, segmentation, torchvision
+    data: 3/8 — found: spark, airflow, etl
+      missing: dbt, snowflake, bigquery, data pipeline, feature store
+    devops: 7/7 — found: ci/cd, terraform, github actions, jenkins, monitoring
+
+  METRICS (15/15 — 47 quantifiable):
+    Examples: 3.2x, 60%, 40%, 99.2%, 22%, 23%, 41%, 3.2x
+
+  ACTION VERBS (10/10 — 12 unique):
+    engineered, designed, built, developed, led, architected, implemented, automated, achieved, delivered, established,  mentored
+
+  READABILITY:
+    Words: 1399, Sentences: 63
+    Avg words/sentence: 22.2
+
+================================================================================
+📋 Ali_Nikkhah_MLPlatform_1page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (105/100):
+    ✅ [PASS] 1-page format (optimal)
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 7 standard sections found
+
+  KEYWORDS (13/25 — 53.1% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 4/10 — found: llm, rag, langchain, langgraph
+      missing: openai, embedding, vector, prompt, fine-tuning
+    infra: 5/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp, postgres, postgresql
+    cv: 5/9 — found: opencv, cnn, transformer, detection, tensorrt
+      missing: yolo, segmentation, onnx, torchvision
+    data: 3/8 — found: spark, airflow, etl
+      missing: dbt, snowflake, bigquery, data pipeline, feature store
+    devops: 6/7 — found: ci/cd, terraform, github actions, monitoring, prometheus
+      missing: jenkins
+
+  METRICS (15/15 — 16 quantifiable):
+    Examples: 3.2x, 60%, 40%, 3.5x, 60%, 99.9%, 10min, 200ms
+
+  ACTION VERBS (7/10 — 9 unique):
+    engineered, designed, built, architected, implemented, deployed, automated, achieved, established
+
+  READABILITY:
+    Words: 538, Sentences: 31
+    Avg words/sentence: 17.4
+
+================================================================================
+📋 Ali_Nikkhah_MLPlatform_2page.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (95/100):
+    ❌ [CRITICAL] 3 pages — exceeds standard 1-2 page limit
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 9 standard sections found
+
+  KEYWORDS (16/25 — 65.3% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 6/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, vector, prompt, fine-tune
+    infra: 7/9 — found: kubernetes, docker, redis, kafka, fastapi
+      missing: aws, gcp
+    cv: 6/9 — found: opencv, cnn, transformer, detection, onnx
+      missing: yolo, segmentation, torchvision
+    data: 3/8 — found: spark, airflow, etl
+      missing: dbt, snowflake, bigquery, data pipeline, feature store
+    devops: 7/7 — found: ci/cd, terraform, github actions, jenkins, monitoring
+
+  METRICS (15/15 — 38 quantifiable):
+    Examples: 40%, 99.9%, 3.2x, 60%, 40%, 3.5x, 35%, 22%
+
+  ACTION VERBS (10/10 — 14 unique):
+    engineered, designed, built, developed, led, architected, implemented, optimized, deployed, orchestrated, automated, achieved, established, directed
+
+  READABILITY:
+    Words: 1414, Sentences: 62
+    Avg words/sentence: 22.8
+
+================================================================================
+📋 Ali_Nikkhah_ResearchCV.pdf — Score: 100/100
+================================================================================
+
+  ATS PARSING (100/100):
+    ❌ [CRITICAL] Non-ATS bullet '•' detected — ATS will garble content
+    ✅ [PASS] Email detected
+    ✅ [PASS] Phone number detected
+    ✅ [PASS] LinkedIn URL detected
+    ✅ [PASS] GitHub URL detected
+    ✅ [PASS] 7 standard sections found
+
+  KEYWORDS (9/25 — 38.8% coverage):
+    core_ml: 3/6 — found: python, pytorch, tensorflow
+      missing: scikit-learn, numpy, pandas
+    llm_rag: 5/10 — found: llm, rag, langchain, langgraph, embedding
+      missing: openai, vector, prompt, fine-tuning, fine-tune
+    infra: 3/9 — found: kubernetes, docker, kafka
+      missing: redis, aws, gcp, fastapi, postgres
+    cv: 4/9 — found: cnn, transformer, detection, tensorrt
+      missing: opencv, yolo, segmentation, onnx, torchvision
+    data: 2/8 — found: spark, airflow
+      missing: dbt, snowflake, bigquery, etl, data pipeline
+    devops: 2/7 — found: ci/cd, terraform
+      missing: github actions, jenkins, monitoring, prometheus, grafana
+
+  METRICS (1/15 — 1 quantifiable):
+    Examples: 5M+
+
+  ACTION VERBS (7/10 — 9 unique):
+    designed, built, developed, led, orchestrated, automated, achieved, directed, managed
+
+  READABILITY:
+    Words: 714, Sentences: 34
+    Avg words/sentence: 21.0
+
+================================================================================
+🎯 GLOBAL RECOMMENDATIONS
+================================================================================
+
+  Average Score: 100.0/100
+
+  🔴 MOST COMMONLY MISSING KEYWORDS (across all variants):
+    - 'scikit-learn' missing in 15/15 variants
+    - 'numpy' missing in 15/15 variants
+    - 'pandas' missing in 15/15 variants
+    - 'openai' missing in 15/15 variants
+    - 'prompt' missing in 15/15 variants
+    - 'fine-tune' missing in 15/15 variants
+    - 'aws' missing in 15/15 variants
+    - 'gcp' missing in 15/15 variants
+    - 'yolo' missing in 15/15 variants
+    - 'segmentation' missing in 15/15 variants
+
+  🔴 SPECIAL BULLET ISSUES in: Ali_Nikkhah_ResearchCV.pdf
+
+  📊 SCORE DISTRIBUTION:
+    Excellent (85+): 15 variants
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,348 @@
+# Unified CV Source of Truth — Ali Nikkhah (born 2001)
+# Single source for: 10-page union CV, 7 targeted 1/2-page variants, GitHub Pages JSON, RenderCV
+# Tagging: each experience lists `variants` it belongs to; `long: true` means appears in union 10-pager.
+# Parallel roles have `concurrent_with` and `work_model` to render gap-free timeline.
+
+basics:
+  name: Ali Nikkhah
+  label: "Machine Learning Engineer / Researcher"
+  email: alinkkh9@gmail.com
+  phone: "+98 991 296 3951"
+  location: "Tehran, Iran · Remote-friendly · Open to Relocation"
+  website: https://alinikkhah2001.github.io
+  linkedin: https://linkedin.com/in/alinikkhah2001
+  github: https://github.com/AliNikkhah2001
+  summary: >
+    Applied ML researcher & engineer (Sharif B.Sc. EE 2020-2024, GPA 3.65/3.91; M.Eng. AI from Sep 2026) specialising
+    in agentic RAG, multimodal vision-language, self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV
+    pipelines at marketplace scale, self-hosted Graph RAG assistant for a national credit bureau, and BNPL risk platforms.
+    Research focus: LLM reasoning and hallucination mitigation.
+
+education:
+  - id: sharif_masters
+    school: Sharif University of Technology
+    credential: "M.Eng. Artificial Intelligence"
+    location: Tehran, Iran
+    start: 2026-09
+    end: present
+    thesis: "LLM reasoning and hallucination mitigation"
+    coursework: [LLM Reasoning, Hallucination Mitigation, Multimodal Learning, Representation Learning]
+    tags: [long, agentic, vision, data, swe, hybrid, senior, platform, research]
+  - id: sharif_bsc
+    school: Sharif University of Technology
+    credential: "B.Sc. Electrical & Electronics Engineering — Digital Systems"
+    location: Tehran, Iran
+    start: 2020-09
+    end: 2024-07
+    gpa: "3.65 overall, 3.91 major"
+    coursework: [Deep Learning, Machine Learning, DSP, Linear Algebra, Probability & Statistics, Algorithm Design, Digital Systems Design]
+    tags: [long, agentic, vision, data, swe, hybrid, senior, platform, research]
+  - id: atomic_hs
+    school: Atomic Energy High School
+    credential: Mathematics Diploma
+    location: Tehran, Iran
+    start: 2017-09
+    end: 2019-06
+    tags: [long, research]
+
+# Union of all experiences across LaTeX + GitHub Pages + LinkedIn. Ordered newest-first for rendering; script sorts chronologically for timeline.
+experiences:
+  - id: iran_credit_scoring
+    company: Iran Credit Scoring Bureau
+    role: ML Engineer — Self-Hosted Graph RAG Assistant
+    location: Tehran, Iran
+    work_model: Full-time · On-site
+    start: 2026-04
+    end: present
+    concurrent_with: [sharif_masters]
+    concurrent_note: "Most recent Iran position; overlaps Sharif M.Eng. AI (Sep 2026) — full-time industry + part-time graduate study"
+    summary: Self-hosted Graph RAG company assistant for national credit scoring — Neo4j knowledge graph, self-hosted LLM runtime on GPU, tool-calling agent.
+    bullets:
+      - "Architected self-hosted Graph RAG assistant: Neo4j knowledge graph + vector retrieval fused into an agent that answers analyst queries over credit-scoring domain data with grounded citations."
+      - "Ran self-hosted open-weight LLMs (vLLM/TGI) on GPU; profiled and optimised GPU runtime — KV-cache, batching, quantization (AWQ/GPTQ) — cutting per-token latency and GPU memory footprint."
+      - "Implemented Neo4j tool-calls (Cypher generation + schema-aware retrieval) so the assistant executes graph traversals instead of hallucinating structured facts."
+      - "Added hallucination guardrails — retrieval grounding, citation enforcement, deterministic fallback — for a regulated financial environment."
+    skills: [Python, Neo4j, Cypher, Graph RAG, LangGraph, LangChain, FAISS, vLLM, TGI, PyTorch, GPU Optimization, AWQ, GPTQ, FastAPI, Kubernetes]
+    variants: [long, agentic, hybrid, senior, platform, research]
+    priority: 1
+
+  - id: turquoise_senior
+    company: Turquoise Digital
+    role: Senior Data Scientist & Data Engineer
+    location: Tehran, Iran
+    work_model: Full-time · On-site
+    start: 2025-09
+    end: 2026-03
+    concurrent_with: [advanced_analytics]
+    concurrent_note: "Concurrent with Advanced Analytics Australia (Remote Contract) — 7-month overlap, split focus: Turquoise BNPL/risk/whisper vs Advanced edge CV"
+    summary: Directed AI for regional retailers — multilingual reco, BNPL credit-risk ensemble (AUC 0.87), agentic support chatbot, centralized data lake + observability.
+    bullets:
+      - "Centralized lake from raw CDC via PeerDB + Trino/Parquet on 5TB/day, <60s freshness; Airflow + PySpark DAGs cut memory 60%, governed by Great Expectations + Prometheus/Grafana."
+      - "Built default-risk ensemble (XGBoost + time-series Transformers) — AUC 0.87, -22% defaults; 50+ concurrent mSPRT A/B tests with canary & auto-rollback, presented to C-suite."
+      - "Shipped Whisper/wav2vec2.0 + LangGraph agentic chatbot — -78% ticket volume, 94% intent accuracy; deterministic fallback + policy guardrails for auditability."
+      - "Drove portfolio allocation & risk engine (Sharpe +0.42) with streaming ClickHouse signals; LlamaIndex retrieval graph for ranking features."
+    skills: [Python, PyTorch, Spark, Trino, PeerDB, Airflow, Great Expectations, Prometheus, Grafana, Whisper, wav2vec2.0, LangGraph, LlamaIndex, ClickHouse, Metabase]
+    variants: [long, agentic, vision, data, swe, hybrid, senior, platform]
+    priority: 1
+
+  - id: advanced_analytics
+    company: Advanced Analytics Australia
+    role: Computer Vision / ML Platform Engineer (Edge)
+    location: Remote · Australia (Tehran-based)
+    work_model: Remote Contract
+    start: 2025-09
+    end: 2026-04
+    concurrent_with: [turquoise_senior, ubc, trinity, sharif_xai]
+    concurrent_note: "Parallel remote contract alongside Turquoise — edge CV track"
+    summary: Edge CV platform across 12 retail sites, 100+ cameras @30 FPS, Kafka streaming, quantized TensorRT/TF Lite + Triton serving.
+    bullets:
+      - "Deployed YOLO + ViT quantized (TensorRT/TF Lite) on Triton — 99.2% uptime <50ms p99, 3.5x speedup, exactly-once Kafka, 30 FPS over 100+ streams."
+      - "Built edge MLOps with Triton model repository, zero-downtime rolling updates, automated rollback, Prometheus/Grafana per-site health."
+      - "Cut false positives -35% via attention-guided NMS + SNR monitoring; broker architecture for 12 distributed sites."
+    skills: [Python, OpenCV, YOLO, ViT, TensorRT, TFLite, Triton, Kafka, Docker, Kubernetes, Prometheus, Grafana, ONNX]
+    variants: [long, vision, swe, hybrid, senior, platform]
+    priority: 1
+
+  - id: trinity_emodub
+    company: Trinity College Dublin — EmoDub Project
+    role: Machine Learning Researcher — Emotion-Aware Speech Translation
+    location: Dublin, Ireland
+    work_model: Part-time · Remote Collaboration
+    start: 2025-05
+    end: 2025-11
+    concurrent_with: [digikala_rd, turquoise_senior, advanced_analytics, sharif_xai, ubc]
+    concurrent_note: "Part-time remote research concurrent with Digikala + Turquoise + UBC"
+    summary: Fusion of SER transformers + wav2vec2.0 for prosody-preserving S2S translation; cross-modal acoustic+semantic transformer.
+    bullets:
+      - "Trained SER front-end (transformer + wav2vec2.0 + Whisper) for affect logits; cross-modal fusion transformer for emotion-consistent decoding."
+      - "Curated emotion-annotated corpora (EmotionNet/EmoDB) with balanced cultural representation; evaluated BLEU, Emotion F1, MOS."
+      - "Collab. with Prof. Siobhán Clarke; reproducible codebase https://github.com/AliNikkhah2001/emodub-emotion-translation."
+    skills: [PyTorch, TensorFlow, Hugging Face, librosa, wav2vec2.0, Whisper, EmotionNet, EmoDB]
+    variants: [long, research, hybrid, senior]
+    priority: 2
+
+  - id: sharif_xai
+    company: Sharif University — Robust & Interpretable ML Lab
+    role: Research Collaborator — Explainable & Robust AI
+    location: Tehran, Iran
+    work_model: Part-time · On-site
+    start: 2025-07
+    end: 2025-09
+    concurrent_with: [digikala_rd, trinity_emodub, ubc, turquoise_senior, advanced_analytics]
+    concurrent_note: "Summer research sprint concurrent with industry roles"
+    summary: Robustness & interpretability harnesses for multimodal perception under distribution shift.
+    bullets:
+      - "Benchmarked adversarial + natural shift suites; notebooks surfacing Captum/SHAP attributions, saliency, counterfactuals."
+      - "Documented deploy best-practices for regulated industries with faculty."
+    skills: [PyTorch, MLflow, Captum, SHAP]
+    variants: [long, research, hybrid, senior, vision]
+    priority: 3
+
+  - id: digikala_rd
+    company: Digikala
+    role: AI Engineering R&D Lead
+    location: Tehran, Iran
+    work_model: Full-time · On-site
+    start: 2025-01
+    end: 2025-08
+    concurrent_with: [ubc, trinity_emodub, sharif_xai]
+    concurrent_note: "Full-time lead; UBC/Trinity/Sharif were part-time remote (<10h/wk)"
+    summary: Owned agentic RAG platform for marketplace listing intelligence — modular control pipelines (MCP), hybrid retrieval, LLM serving at 5M+ queries/day.
+    bullets:
+      - "Led team of 5 defining R&D roadmap + SLOs; shipped MCP with LangGraph cyclic graphs, zero-downtime hot-swapping, health-checked agent composition with deterministic fallback."
+      - "Hybrid retrieval FAISS + Elasticsearch RRF + HyDE + KAG — +23% recall@10, -41% hallucination; multi-tier Redis caching, p99 <200ms."
+      - "LLM serving on vLLM (PagedAttention) + Triton — 3.2x throughput, 60% cost reduction; 200 pods, MIG/HPA/VPA, Prometheus KV-cache dashboards."
+      - "Partnered with infra/product establishing eval pipelines, A/B guardrails, canary rollouts."
+    skills: [Python, LangGraph, LangChain, LlamaIndex, FAISS, Elasticsearch, ChromaDB, HyDE, KAG, FastAPI, vLLM, Triton, Redis, Kubernetes, ArgoCD]
+    variants: [long, agentic, vision, data, swe, hybrid, senior, platform]
+    priority: 1
+
+  - id: digikala_ai
+    company: Digikala
+    role: AI Engineer
+    location: Tehran, Iran
+    work_model: Part-time · Hybrid
+    start: 2024-11
+    end: 2025-01
+    concurrent_with: [ubc]
+    concurrent_note: "Promotion track — converted to R&D Lead Jan 2025"
+    summary: Prototyped MCP + RAG scaffolding that scaled to org-wide mandate.
+    bullets:
+      - "Implemented LangGraph orchestration layers with health monitoring; hybrid retrieval with RRF + deterministic fallbacks for auditability."
+      - "Embedded eval telemetry, memory-efficient indexing, response caching; load-tested to 5M queries."
+    skills: [LangChain, LlamaIndex, FAISS, Elasticsearch, FastAPI]
+    variants: [long, agentic, hybrid, senior, platform]
+    priority: 2
+
+  - id: ubc
+    company: University of British Columbia
+    role: Research Assistant — Vision-Language Medical Imaging (Ultrasound Report Generation)
+    location: Remote · Vancouver, Canada (Tehran-based)
+    work_model: Part-time · Remote Internship (10h/wk)
+    start: 2024-02
+    end: 2025-11
+    concurrent_with: [digikala_ai, digikala_rd, l3s_tail, trinity_emodub, sharif_xai, turquoise_senior, advanced_analytics]
+    concurrent_note: "Long-running part-time research; overlapped industry roles but capped at 10h/wk — primary commitment was Digikala/Turquoise"
+    summary: ViT/BLIP + T5 for DICOM-compliant ultrasound reporting with contrastive pretraining and clinician-in-the-loop saliency.
+    bullets:
+      - "Designed ViT/BLIP encoders + T5 generator with contrastive/self-supervised alignment; curated DICOM, de-identified QA corpora."
+      - "Deployed attention/saliency overlays for interpretability; benchmarked BLEU/ROUGE-L + clinical efficacy with radiologists; SOTA on in-house split."
+      - "Preprint in prep: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning (2025)."
+    skills: [PyTorch, ViT, BLIP, T5, LLaVA, CLIP, OpenCV, MIMIC-CXR, PubMed, DICOM]
+    variants: [long, vision, research, hybrid, senior]
+    priority: 2
+
+  - id: l3s
+    company: L3S Research Center — Leibniz University Hannover
+    role: Research Assistant — Video Motion Classification
+    location: Hannover, Germany
+    work_model: Part-time · Remote/On-site
+    start: 2023-04
+    end: 2024-02
+    concurrent_with: [sharif_ta]
+    concurrent_note: "Part-time RA during B.Sc. final year — no conflict"
+    summary: Texture-free motion models via optical flow + 3D CNNs + transformers; SOTA on UCF-101/HMDB-51.
+    bullets:
+      - "Engineered optical-flow-centric datasets with temporal sampling/augmentation; improved domain generalization across lighting/texture/camera shift."
+      - "Benchmarked 3D CNN + transformer hybrids vs baselines; analyzed attention maps; reduced overfitting, SOTA accuracy."
+    skills: [PyTorch Lightning, OpenCV, PyAV, TensorBoard, scikit-learn, Multimodal Models]
+    variants: [long, vision, research, hybrid, senior]
+    priority: 2
+
+  - id: sharif_ta
+    company: Sharif University of Technology
+    role: Teaching Assistant — NLP, Generative Models, Deep Learning
+    location: Tehran, Iran
+    work_model: Part-time · On-site
+    start: 2023-08
+    end: 2024-01
+    concurrent_with: [l3s]
+    concurrent_note: "Graduate TA alongside L3S research — teaching load 6-8h/wk"
+    summary: Led labs/seminars for graduate NLP/GenAI/DL; mentored capstones.
+    bullets:
+      - "Facilitated seminars, office hours (30-80 students), problem-set design/grading, exam design for DL/NLP."
+      - "Developed lab material for Deep Learning, Analog Electronics, foundational ML; mentored undergrad capstones."
+    skills: [PyTorch, TensorFlow, NumPy, scikit-learn]
+    variants: [long, research]
+    priority: 3
+
+  # Earlier teaching history (consolidated for long CV)
+  - id: sharif_ta_history
+    company: Sharif University of Technology
+    role: Teaching Assistant — History (8 courses, 2021-2023)
+    location: Tehran, Iran
+    work_model: Part-time
+    start: 2021-01
+    end: 2023-08
+    summary: Three-year TA service across 8 courses — Deep Learning, ML & Data Science, Generative Models, Engineering Prob & Stats, Analog Electronics, Circuit Theory.
+    bullets:
+      - "Graded problem sets, ran tutorials, held office hours; supported 30-80 students per term."
+    skills: [PyTorch, TensorFlow, NumPy]
+    variants: [long, research]
+    priority: 3
+
+  - id: homacloud
+    company: HomaCloud
+    role: MLOps Engineer (Founding)
+    location: Tehran, Iran
+    work_model: Full-time · On-site
+    start: 2021-08
+    end: 2022-02
+    concurrent_with: []
+    concurrent_note: "During B.Sc. — clean sequential after Mapna internship"
+    summary: Built K8s-native training, CI/CD, and serving infra from scratch — Docker/K8s, Ray, MLflow, FastAPI/TF Serving, Terraform, ArgoCD.
+    bullets:
+      - "Provisioned multi-node K8s via Terraform; Ray + MLflow training pipelines, TF Serving + FastAPI — <10 min releases, 99.9% deploy success, 15+ models."
+      - "GitOps with GitHub Actions, canary, spot-instance optimization; Prometheus/Grafana + ELK observability; registry + lineage."
+    skills: [Kubernetes, Docker, Ray, MLflow, Terraform, ArgoCD, FastAPI, Prometheus, Grafana, GitHub Actions]
+    variants: [long, agentic, vision, data, swe, hybrid, senior, platform]
+    priority: 2
+
+  - id: homacloud_intern
+    company: HomaCloud
+    role: MLOps Intern
+    location: Tehran, Iran
+    work_model: Internship
+    start: 2021-05
+    end: 2021-08
+    summary: Evaluated PyTorch/TF + multi-node training; built serving/API automation for dataset prep & deployment.
+    variants: [long]
+    priority: 3
+
+  - id: mapna
+    company: Mapna-MD2
+    role: Full Stack Engineer
+    location: Tehran, Iran
+    work_model: Part-time
+    start: 2021-01
+    end: 2021-05
+    summary: Dashboards + partner integrations (React/Node/Postgres/Docker); QA/deployment scripts.
+    skills: [React, Node.js, PostgreSQL, Docker]
+    variants: [long]
+    priority: 3
+
+research_projects:
+  - id: emodub
+    title: Emotion-aware voice translation
+    org: Trinity College Dublin · EmoDub
+    period: May 2025 – Nov 2025
+    bullets: ["SER front-end + wav2vec2.0 bullets (see experiences)"]
+  - id: ultrasound
+    title: Ultrasound report generation
+    org: University of British Columbia
+    period: Feb 2024 – Nov 2025
+  - id: texture_free
+    title: Texture-free motion intelligence
+    org: L3S Research Center
+    period: Apr 2023 – Feb 2024
+
+publications:
+  - id: ultrasound_preprint
+    authors: "Ali Nikkhah, [Co-authors TBD], A. Supervisor"
+    title: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning
+    venue: arXiv preprint — in preparation
+    year: 2025
+    url: ""
+
+teaching_history:
+  - course: Natural Language Processing (Graduate)
+    period: Aug 2023 – Jan 2024
+    role: TA · Sharif
+  - course: Generative Models (Graduate)
+    period: Aug 2023 – Jan 2024
+    role: TA · Sharif
+  - course: Deep Learning (Graduate)
+    period: Jan 2023 – Aug 2023
+    role: TA · Sharif
+  - course: Analog Electronics
+    period: Aug 2022 – Jan 2023
+    role: TA · Sharif
+  - course: Machine Learning & Data Science
+    period: Jan 2022 – Aug 2022
+    role: TA · Sharif
+  - course: Circuit Theory & Engineering Probability
+    period: Jan 2021 – Aug 2021
+    role: TA · Sharif
+
+skills:
+  languages: [Python, C++, Go, SQL, R, Bash, TypeScript]
+  ml_vision: [PyTorch, TensorFlow, JAX, Hugging Face, ViT, BLIP, T5, Whisper, wav2vec2.0, Librosa, OpenCV, YOLO, ONNX]
+  agentic: [LangGraph, LangChain, LlamaIndex, FAISS, ChromaDB, HyDE, KAG, Graph RAG, vLLM, Triton, Neo4j, Cypher]
+  llm_serving: [vLLM, TGI, AWQ, GPTQ, KV-cache, GPU Optimization, PagedAttention, TensorRT-LLM]
+  data_mlop: [Spark, Airflow, Kafka, Docker, Kubernetes, Ray, MLflow, W&B, ArgoCD, Terraform]
+  human: [Persian (Native), English (C2 IELTS 8.0), Arabic (Professional), French (Limited), German (Limited)]
+
+honors: ["Iran University entrance exam distinction", "IELTS Academic (Computer) — Band 8"]
+certs: ["Intro to ML in Production", "Building Systems with ChatGPT API", "ChatGPT Prompt Engineering", "Diffusion Models", "Web Dev with PHP"]
+
+# Variant definitions for builder
+variants:
+  long: { label: "Union 10-page", pages: 10, include_tags: [long] }
+  agentic: { label: "Agentic AI", pages: 2, include_tags: [agentic] }
+  vision: { label: "Computer Vision", pages: 2, include_tags: [vision] }
+  data: { label: "Data Science/Eng", pages: 2, include_tags: [data] }
+  swe: { label: "Software Engineering", pages: 2, include_tags: [swe] }
+  hybrid: { label: "Hybrid AI", pages: 2, include_tags: [hybrid] }
+  senior: { label: "Senior AI / Lead", pages: 2, include_tags: [senior] }
+  platform: { label: "ML Platform", pages: 2, include_tags: [platform] }
+  research: { label: "Academic / Research", pages: 4, include_tags: [research] }

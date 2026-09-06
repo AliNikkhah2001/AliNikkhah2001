@@ -1,0 +1,35 @@
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Led the full architectural transition of the enterprise search and knowledge layer from static semantic matching to stateful multi-agent pipelines powered by \textbf{LangGraph}; the system now handles over \textbf{5 million daily queries} (p99 <200ms) across product discovery, customer support, and internal knowledge retrieval.}
+  \resumeItem{Designed a Modular Control Pipeline (MCP) that cleanly decouples text ingestion, chunking, retrieval, and response synthesis phases, enabling live LLM hot-swapping and zero-downtime vector index migrations without service interruption.}
+  \resumeItem{Built a hybrid retrieval engine combining dense \textbf{FAISS} vector search with sparse \textbf{Elasticsearch} keyword lookup, fused via Reciprocal Rank Fusion (RRF); implemented \textbf{HyDE} query expansion and hierarchical chunking strategies to significantly close the accuracy gap on long-tail and ambiguous product queries (\textbf{+23\% recall@10}).}
+  \resumeItem{Deployed \textbf{Knowledge-Augmented Generation (KAG)} alongside standard RAG to enforce symbolic reasoning constraints on structured product catalog data, substantially reducing factual hallucinations in generated customer-facing answers (\textbf{-41\% factual error rate}).}
+  \resumeItem{Engineered async \textbf{FastAPI} serving layers with multi-tier \textbf{Redis} caching and asynchronous request batching; deployed LLMs via \textbf{vLLM} with PagedAttention and \textbf{Triton Inference Server} to maximize KV-cache utilization and GPU throughput (\textbf{3.2x throughput gain, 60\% cost reduction per 1K queries}) under burst traffic conditions.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineer}{Nov 2024 -- Jan 2025}
+\begin{resumeItemList}
+  \resumeItem{Prototyped and benchmarked RAG architectures against real production query logs; integrated LangGraph cyclic agent graphs for multi-turn session management, dynamic context re-evaluation, and automated query rewriting loops.}
+  \resumeItem{Evaluated retrieval precision and end-to-end latency across candidate retrieval systems; findings directly shaped the R\&D roadmap adopted in the subsequent lead role.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Engineer \& Data Scientist}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Engineered an enterprise \textbf{LangGraph} agentic chatbot handling customer support ticketing, financial literacy instruction, and live portfolio inquiries; integrated real-time \textbf{Whisper} and \textbf{wav2vec2.0} voice transcription so call-center audio streams feed the agent directly, eliminating manual ticket creation (\textbf{-78\% ticket volume, 94\% transcription accuracy}).}
+  \resumeItem{Implemented strict data-access validation layers allowing the agent to safely execute compound-profit calculations via dynamic function-calling and retrieve live user equity balances, without ever exposing raw database credentials to the LLM context window.}
+  \resumeItem{Built the AI portfolio allocation system: ingested user risk-tolerance questionnaires, fused historical time-series pricing data with streaming news-sentiment embeddings, and trained time-series transformer models to produce portfolio value forecasts with explicit statistical confidence intervals feeding automated trading allocations (\textbf{Sharpe +0.42 vs benchmark}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Orchestrated distributed model training pipelines on Kubernetes using Ray for workload scheduling and MLflow for experiment tracking and artifact lineage (\textbf{15+ models, 50+ experiments tracked}).}
+  \resumeItem{Built model inference APIs in FastAPI backed by TensorFlow Serving; automated full deployment lifecycle with Docker, ArgoCD, and GitHub Actions, cutting release cycles to under 10 minutes (\textbf{99.9\% deploy success rate}).}
+\end{resumeItemList}

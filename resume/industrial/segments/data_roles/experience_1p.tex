@@ -1,0 +1,30 @@
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Engineer}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Architected the central enterprise data lake and OLAP warehouse for a high-volume BNPL and stock-trading platform: routed transactional and user-interaction streams from PostgreSQL into \textbf{Trino} via \textbf{PeerDB} Change Data Capture (CDC) replication (\textbf{<60s CDC latency, 5TB/day}); designed multi-stage \textbf{Airflow} DAGs for transformation, cold-data archiving to Parquet/ORC on object storage, and cross-system synchronization.}
+  \resumeItem{Built a real-time A/B statistical inference engine running parallel hypothesis tests on application features, monitoring user-activity telemetry and automatically flagging significance shifts under volatile market conditions (\textbf{50+ concurrent experiments, mSPRT sequential testing}).}
+  \resumeItem{Refactored legacy ETL scripts into modular \textbf{PySpark} pipelines improving memory efficiency (\textbf{60\% memory reduction}); configured \textbf{Prometheus}, \textbf{Grafana}, and \textbf{Great Expectations} for end-to-end pipeline observability and automated data quality gating at ingestion.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Data Scientist}{Aug 2025 -- Sep 2025}
+\begin{resumeItemList}
+  \resumeItem{Developed predictive ML models analyzing BNPL user repayment histories and behavioral telemetry to compute dynamic credit limits; automated fund allocation and containment decisions with full audit logging; aligned historical price time-series with news-sentiment embeddings using time-series transformers for portfolio valuation forecasting (\textbf{default rate -22\%, AUC 0.87}).} % [1p-drop]
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Designed distributed \textbf{Apache Spark} feature-extraction jobs to pre-compute, partition, and serialize massive product-text datasets prior to batch embedding generation, parallelizing tokenization across the cluster to cut pipeline wall-time (\textbf{4x faster, 10M+ docs/day}).}
+  \resumeItem{Optimized hybrid dense/sparse vector indexing across \textbf{Elasticsearch}, \textbf{OpenSearch}, and \textbf{FAISS} with memory-efficient incremental indexing, maintaining real-time consistency across millions of product documents; built deduplicating ingestion pipelines to pre-populate RAG retrieval indices (\textbf{<1s index refresh, 99.9\% consistency}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Managed distributed ML data pipelines on Kubernetes (Ray, MLflow); built FastAPI model serving APIs with TensorFlow Serving; automated CI/CD with Terraform, Docker, and ArgoCD; provisioned IaC and managed horizontal data partitioning and lineage tracking across ephemeral storage (\textbf{15+ models, 99.9\% deploy success rate}).} % [1p-drop]
+\end{resumeItemList}

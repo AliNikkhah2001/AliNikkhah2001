@@ -1,0 +1,205 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.3/schema.json
+cv:
+  name: Ali Nikkhah
+  location: Tehran, Iran
+  email: alinkkh9@gmail.com
+  phone: +98 991 296 3951
+  website: https://alinikkhah2001.github.io
+  social_networks:
+  - network: LinkedIn
+    username: alinikkhah2001
+  - network: GitHub
+    username: AliNikkhah2001
+  sections:
+    education:
+    - institution: Sharif University of Technology
+      area: M.Eng. Artificial Intelligence
+      degree: M.Eng. Artificial Intelligence
+      start_date: 2026-09
+      end_date: present
+      location: Tehran, Iran
+      highlights:
+      - 'Thesis: LLM reasoning and hallucination mitigation'
+      - 'Coursework: LLM Reasoning, Hallucination Mitigation, Multimodal Learning,
+        Representation Learning'
+    - institution: Sharif University of Technology
+      area: B.Sc. Electrical & Electronics Engineering — Digital Systems
+      degree: 'B.Sc. Electrical & Electronics Engineering '
+      start_date: 2020-09
+      end_date: 2024-07
+      location: Tehran, Iran
+      highlights:
+      - 'GPA: 3.65 overall, 3.91 major'
+      - 'Coursework: Deep Learning, Machine Learning, DSP, Linear Algebra, Probability
+        & Statistics, Algorithm Design, Digital Systems Design'
+    - institution: Atomic Energy High School
+      area: Mathematics Diploma
+      degree: Mathematics Diploma
+      start_date: 2017-09
+      end_date: 2019-06
+      location: Tehran, Iran
+      highlights: []
+    experience:
+    - company: Iran Credit Scoring Bureau
+      position: ML Engineer — Self-Hosted Graph RAG Assistant
+      start_date: 2026-04
+      end_date: present
+      location: Tehran, Iran — Full-time · On-site
+      summary: Self-hosted Graph RAG company assistant for national credit scoring
+        — Neo4j knowledge graph, self-hosted LLM runtime on GPU, tool-calling agent.
+      highlights:
+      - 'Architected self-hosted Graph RAG assistant: Neo4j knowledge graph + vector
+        retrieval fused into an agent that answers analyst queries over credit-scoring
+        domain data with grounded citations.'
+      - Ran self-hosted open-weight LLMs (vLLM/TGI) on GPU; profiled and optimised
+        GPU runtime — KV-cache, batching, quantization (AWQ/GPTQ) — cutting per-token
+        latency and GPU memory footprint.
+      - Implemented Neo4j tool-calls (Cypher generation + schema-aware retrieval)
+        so the assistant executes graph traversals instead of hallucinating structured
+        facts.
+      - Added hallucination guardrails — retrieval grounding, citation enforcement,
+        deterministic fallback — for a regulated financial environment.
+      - 'Stack: Python, Neo4j, Cypher, Graph RAG, LangGraph, LangChain'
+      - Most recent Iran position; overlaps Sharif M.Eng. AI (Sep 2026) — full-time
+        industry + part-time graduate study
+    - company: Turquoise Digital
+      position: Senior Data Scientist & Data Engineer
+      start_date: 2025-09
+      end_date: 2026-03
+      location: Tehran, Iran — Full-time · On-site
+      summary: Directed AI for regional retailers — multilingual reco, BNPL credit-risk
+        ensemble (AUC 0.87), agentic support chatbot, centralized data lake + observability.
+      highlights:
+      - Centralized lake from raw CDC via PeerDB + Trino/Parquet on 5TB/day, <60s
+        freshness; Airflow + PySpark DAGs cut memory 60%, governed by Great Expectations
+        + Prometheus/Grafana.
+      - Built default-risk ensemble (XGBoost + time-series Transformers) — AUC 0.87,
+        -22% defaults; 50+ concurrent mSPRT A/B tests with canary & auto-rollback,
+        presented to C-suite.
+      - Shipped Whisper/wav2vec2.0 + LangGraph agentic chatbot — -78% ticket volume,
+        94% intent accuracy; deterministic fallback + policy guardrails for auditability.
+      - Drove portfolio allocation & risk engine (Sharpe +0.42) with streaming ClickHouse
+        signals; LlamaIndex retrieval graph for ranking features.
+      - 'Stack: Python, PyTorch, Spark, Trino, PeerDB, Airflow'
+      - 'Concurrent with Advanced Analytics Australia (Remote Contract) — 7-month
+        overlap, split focus: Turquoise BNPL/risk/whisper vs Advanced edge CV'
+    - company: Advanced Analytics Australia
+      position: Computer Vision / ML Platform Engineer (Edge)
+      start_date: 2025-09
+      end_date: 2026-04
+      location: Remote · Australia (Tehran-based) — Remote Contract
+      summary: Edge CV platform across 12 retail sites, 100+ cameras @30 FPS, Kafka
+        streaming, quantized TensorRT/TF Lite + Triton serving.
+      highlights:
+      - Deployed YOLO + ViT quantized (TensorRT/TF Lite) on Triton — 99.2% uptime
+        <50ms p99, 3.5x speedup, exactly-once Kafka, 30 FPS over 100+ streams.
+      - Built edge MLOps with Triton model repository, zero-downtime rolling updates,
+        automated rollback, Prometheus/Grafana per-site health.
+      - Cut false positives -35% via attention-guided NMS + SNR monitoring; broker
+        architecture for 12 distributed sites.
+      - 'Stack: Python, OpenCV, YOLO, ViT, TensorRT, TFLite'
+      - Parallel remote contract alongside Turquoise — edge CV track
+    - company: Digikala
+      position: AI Engineering R&D Lead
+      start_date: 2025-01
+      end_date: 2025-08
+      location: Tehran, Iran — Full-time · On-site
+      summary: Owned agentic RAG platform for marketplace listing intelligence — modular
+        control pipelines (MCP), hybrid retrieval, LLM serving at 5M+ queries/day.
+      highlights:
+      - Led team of 5 defining R&D roadmap + SLOs; shipped MCP with LangGraph cyclic
+        graphs, zero-downtime hot-swapping, health-checked agent composition with
+        deterministic fallback.
+      - Hybrid retrieval FAISS + Elasticsearch RRF + HyDE + KAG — +23% recall@10,
+        -41% hallucination; multi-tier Redis caching, p99 <200ms.
+      - LLM serving on vLLM (PagedAttention) + Triton — 3.2x throughput, 60% cost
+        reduction; 200 pods, MIG/HPA/VPA, Prometheus KV-cache dashboards.
+      - Partnered with infra/product establishing eval pipelines, A/B guardrails,
+        canary rollouts.
+      - 'Stack: Python, LangGraph, LangChain, LlamaIndex, FAISS, Elasticsearch'
+      - Full-time lead; UBC/Trinity/Sharif were part-time remote (<10h/wk)
+    - company: Digikala
+      position: AI Engineer
+      start_date: 2024-11
+      end_date: 2025-01
+      location: Tehran, Iran — Part-time · Hybrid
+      summary: Prototyped MCP + RAG scaffolding that scaled to org-wide mandate.
+      highlights:
+      - Implemented LangGraph orchestration layers with health monitoring; hybrid
+        retrieval with RRF + deterministic fallbacks for auditability.
+      - Embedded eval telemetry, memory-efficient indexing, response caching; load-tested
+        to 5M queries.
+      - 'Stack: LangChain, LlamaIndex, FAISS, Elasticsearch, FastAPI'
+      - Promotion track — converted to R&D Lead Jan 2025
+    - company: HomaCloud
+      position: MLOps Engineer (Founding)
+      start_date: 2021-08
+      end_date: 2022-02
+      location: Tehran, Iran — Full-time · On-site
+      summary: Built K8s-native training, CI/CD, and serving infra from scratch —
+        Docker/K8s, Ray, MLflow, FastAPI/TF Serving, Terraform, ArgoCD.
+      highlights:
+      - Provisioned multi-node K8s via Terraform; Ray + MLflow training pipelines,
+        TF Serving + FastAPI — <10 min releases, 99.9% deploy success, 15+ models.
+      - GitOps with GitHub Actions, canary, spot-instance optimization; Prometheus/Grafana
+        + ELK observability; registry + lineage.
+      - 'Stack: Kubernetes, Docker, Ray, MLflow, Terraform, ArgoCD'
+      - During B.Sc. — clean sequential after Mapna internship
+    publications:
+    - title: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive
+        Vision-Language Learning
+      authors: Ali Nikkhah, [Co-authors TBD], A. Supervisor
+      doi: ''
+      journal: arXiv preprint — in preparation
+      date: 2025
+    teaching:
+    - name: Natural Language Processing (Graduate)
+      date: Aug 2023 – Jan 2024
+      summary: TA · Sharif
+    - name: Generative Models (Graduate)
+      date: Aug 2023 – Jan 2024
+      summary: TA · Sharif
+    - name: Deep Learning (Graduate)
+      date: Jan 2023 – Aug 2023
+      summary: TA · Sharif
+    - name: Analog Electronics
+      date: Aug 2022 – Jan 2023
+      summary: TA · Sharif
+    - name: Machine Learning & Data Science
+      date: Jan 2022 – Aug 2022
+      summary: TA · Sharif
+    - name: Circuit Theory & Engineering Probability
+      date: Jan 2021 – Aug 2021
+      summary: TA · Sharif
+    skills:
+    - 'languages: Python, C++, Go, SQL, R, Bash, TypeScript'
+    - 'ml_vision: PyTorch, TensorFlow, JAX, Hugging Face, ViT, BLIP, T5, Whisper,
+      wav2vec2.0, Librosa, OpenCV, YOLO, ONNX'
+    - 'agentic: LangGraph, LangChain, LlamaIndex, FAISS, ChromaDB, HyDE, KAG, Graph
+      RAG, vLLM, Triton, Neo4j, Cypher'
+    - 'llm_serving: vLLM, TGI, AWQ, GPTQ, KV-cache, GPU Optimization, PagedAttention,
+      TensorRT-LLM'
+    - 'data_mlop: Spark, Airflow, Kafka, Docker, Kubernetes, Ray, MLflow, W&B, ArgoCD,
+      Terraform'
+    - 'human: Persian (Native), English (C2 IELTS 8.0), Arabic (Professional), French
+      (Limited), German (Limited)'
+design:
+  theme: classic
+  page:
+    size: a4paper
+    top_margin: 0.55in
+    bottom_margin: 0.55in
+    left_margin: 0.6in
+    right_margin: 0.6in
+  colors:
+    name: rgb(0,79,144)
+    connection: rgb(0,79,144)
+    section: rgb(0,79,144)
+    link: rgb(0,79,144)
+  text:
+    font_family: Source Sans 3
+    font_size: 10pt
+    line_spacing: '1.0'
+  header:
+    name_font_size: 30pt
+    alignment: center

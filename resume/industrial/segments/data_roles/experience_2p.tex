@@ -1,0 +1,35 @@
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Engineer}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Architected and provisioned the central enterprise data lake and OLAP warehouse for a high-volume BNPL and stock-trading platform, routing transactional and user-interaction streams from PostgreSQL into \textbf{Trino} via \textbf{PeerDB} Change Data Capture (CDC) replication for continuous, low-latency synchronization (\textbf{<60s CDC latency, 5TB/day}).}
+  \resumeItem{Designed and maintained complex \textbf{Apache Airflow} DAGs orchestrating multi-stage data transformation pipelines, automated cold-data archiving (Parquet/ORC on object storage), and cross-system synchronization workflows across the full data platform.}
+  \resumeItem{Built a real-time statistical inference engine running parallel A/B hypothesis tests on application features, monitoring user-activity telemetry and automatically flagging significance shifts under volatile market conditions (\textbf{50+ concurrent experiments, mSPRT sequential testing}).}
+  \resumeItem{Refactored legacy ETL scripts into modular, object-oriented \textbf{PySpark} processing pipelines, improving memory management and substantially reducing algorithmic processing complexity over data lake targets (\textbf{60\% memory reduction}).}
+  \resumeItem{Architected data transformation DAGs automating cold-data archiving procedures, compressing historical relational records into optimized, immutable Parquet structures on object storage.}
+  \resumeItem{Configured \textbf{Prometheus} and \textbf{Grafana} monitoring dashboards to surface pipeline latency spikes, job failures, and storage degradation patterns in real time; integrated \textbf{Great Expectations} for automated data quality gating at ingestion.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Data Scientist}{Aug 2025 -- Sep 2025}
+\begin{resumeItemList}
+  \resumeItem{Conducted exploratory analysis on BNPL user repayment behaviors and equity transaction histories; identified key behavioral signals that drove the credit risk model architecture built in the senior role.}
+  \resumeItem{Developed predictive ML models to classify user debt-repayment risk, compute dynamic credit limits, and automate fund allocation or containment decisions for BNPL accounts (\textbf{default rate -22\%, AUC 0.87}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Designed distributed \textbf{Apache Spark} feature-extraction jobs to pre-compute, partition, and serialize massive product-text datasets prior to batch embedding generation, parallelizing tokenization across the cluster to reduce pipeline wall-time (\textbf{4x faster, 10M+ docs/day}).}
+  \resumeItem{Optimized large-scale vector indexing across \textbf{Elasticsearch}, \textbf{OpenSearch}, and \textbf{FAISS}, configuring hybrid dense/sparse search and memory-efficient incremental indexing to maintain real-time consistency across millions of product documents (\textbf{<1s index refresh, 99.9\% consistency}).}
+  \resumeItem{Built scalable ingestion pipelines extracting, filtering, and deduplicating historical transaction streams to pre-populate downstream document indices used in RAG retrieval.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Managed distributed ML data pipelines on Kubernetes using Ray and MLflow; automated CI/CD with Terraform, Docker, and ArgoCD; built model serving APIs with FastAPI and TensorFlow Serving (\textbf{15+ models, 99.9\% deploy success rate}).}
+\end{resumeItemList}

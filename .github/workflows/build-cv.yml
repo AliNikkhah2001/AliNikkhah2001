@@ -1,0 +1,77 @@
+name: Build CVs
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'resume/data/**'
+      - 'resume/scripts/**'
+      - 'resume/industrial/segments/common/**'
+      - 'resume/academic/segments/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+
+      - name: Install toolchain
+        run: |
+          pip install pyyaml rendercv
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended lmodern texlive-fonts-extra fonts-ebgaramond fonts-texgyre || true
+
+      - name: Regenerate from SSOT
+        working-directory: resume
+        run: |
+          python scripts/build_tagged.py --variant all
+          python scripts/cv_to_rendercv.py
+          python scripts/generate_timeline.py
+          python scripts/generate_profile_readme.py
+
+      - name: Compile LaTeX union + academic themes
+        working-directory: resume
+        run: |
+          cd industrial && pdflatex -interaction=nonstopmode long_union.tex && cd ..
+          cd academic/themes && bash build_all.sh || true; cd ../..
+
+      - name: Compile markdown resume (pandoc)
+        working-directory: resume
+        run: python scripts/build_markdown_pdf.py
+
+      - name: Render Typst via RenderCV (all variants)
+        working-directory: resume
+        run: |
+          for f in rendercv/Ali_Nikkhah_*.yaml; do rendercv render "$f" || true; done
+
+      - name: Collect outputs
+        working-directory: resume
+        run: |
+          mkdir -p dist
+          cp industrial/long_union.pdf dist/Ali_Nikkhah_Union.pdf 2>/dev/null || true
+          cp markdown_resume/pdf/*.pdf dist/ 2>/dev/null || true
+          cp -r rendercv_output dist/rendercv 2>/dev/null || true
+          cp academic/themes/*.pdf dist/ 2>/dev/null || true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cvs
+          path: resume/dist/**
+
+      - name: Deploy CV gallery to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: resume/dist
+          enable_jekyll: false

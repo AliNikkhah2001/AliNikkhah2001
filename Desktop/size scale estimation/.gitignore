@@ -1,0 +1,24 @@
+# Models
+*.pt
+*.pth
+*.onnx
+
+# Cache
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log
+nohup.out
+
+# Data
+data/
+*.jpg
+*.png
+
+# Environment
+.env
+.venv/
+venv/

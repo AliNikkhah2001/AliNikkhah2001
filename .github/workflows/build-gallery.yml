@@ -1,0 +1,73 @@
+name: Build theme gallery
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - 'resume/industrial/theme-gallery/**'
+      - 'resume/scripts/generate_gallery_themes.py'
+
+permissions:
+  contents: write
+
+jobs:
+  gallery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+
+      - name: Install toolchain
+        run: |
+          pip install pyyaml
+          sudo apt-get update || true
+          sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra lmodern fonts-ebgaramond fonts-texgyre poppler-utils || true
+
+      - name: Regenerate fragments from SSOT
+        working-directory: resume
+        run: python scripts/build_tagged.py --variant all
+
+      - name: Compile theme x variant gallery (1-page looks)
+        working-directory: resume/industrial
+        run: |
+          set -u
+          mkdir -p theme-gallery/pdfs theme-gallery/previews
+          FAILS=0
+          for PRE in theme-gallery/preamble-*.tex; do
+            THEME="$(basename "$PRE" .tex)"
+            THEME="${THEME#preamble-}"
+            for VARIANT in long agentic vision data swe hybrid senior platform research; do
+              OUT="${VARIANT}_${THEME}"
+              printf '\\newcommand{\\cvvariant}{%s}\n' "$VARIANT" > theme-gallery/build.tex
+              cat "$PRE" >> theme-gallery/build.tex
+              cat theme-gallery/body.tex >> theme-gallery/build.tex
+              if ! pdflatex -interaction=nonstopmode -jobname="$OUT" -output-directory=theme-gallery theme-gallery/build.tex > "/tmp/${OUT}.log" 2>&1; then
+                echo "FAILED ${OUT} (pdflatex error):"
+                tail -30 "theme-gallery/${OUT}.log" 2>/dev/null || tail -30 "/tmp/${OUT}.log"
+                FAILS=$((FAILS + 1))
+                continue
+              fi
+              if [ ! -f "theme-gallery/${OUT}.pdf" ]; then
+                echo "FAILED ${OUT} (no PDF)"
+                tail -30 "theme-gallery/${OUT%.pdf}.log" 2>/dev/null || true
+                FAILS=$((FAILS + 1))
+                continue
+              fi
+              pdftoppm -png -f 1 -l 1 -r 55 "theme-gallery/${OUT}.pdf" "theme-gallery/previews/${OUT}" || true
+              echo "OK ${OUT}"
+            done
+          done
+          rm -f theme-gallery/build.tex theme-gallery/*.aux theme-gallery/*.log theme-gallery/*.out
+          mv theme-gallery/*.pdf theme-gallery/pdfs/ 2>/dev/null || true
+          echo "failures: ${FAILS}"
+          exit "${FAILS}"
+
+      - name: Commit gallery outputs ([skip ci])
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[skip ci] Rebuild theme gallery"
+          file_pattern: resume/industrial/theme-gallery/**

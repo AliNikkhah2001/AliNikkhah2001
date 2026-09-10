@@ -1,0 +1,56 @@
+% THEME 02-teal — gallery preamble (auto-generated, do not edit)
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage[scaled]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\definecolor{accent}{HTML}{2A7F62}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
+\urlstyle{same}\raggedbottom\raggedright
+\titleformat{\section}{
+  \vspace{-4pt}\color{accent}\bfseries\raggedright\large
+}{0em}{}[\color{accent}\titlerule \vspace{-5pt}]
+
+\newcommand{\cvheader}{%
+\begin{center}
+  {\Huge \textbf{\color{accent}Ali Nikkhah}} \\ \vspace{2pt}
+\small
+  Open to Relocation \& Remote $|$
+    \href{mailto:alinkkh9@gmail.com}{alinkkh9@gmail.com} $|$
+    +98 991 296 3951 $|$
+    \href{https://alinikkhah2001.github.io}{alinikkhah2001.github.io} $|$
+    \href{https://linkedin.com/in/alinikkhah2001}{linkedin.com/in/alinikkhah2001}
+\end{center}}
+
+
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1 \vspace{-1pt}}%
+}
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}%
+}
+\renewcommand\labelitemii{--}
+\newenvironment{resumeSubHeadingList}{%
+  \begin{itemize}[leftmargin=0.15in, label={}]%
+}{\end{itemize}}
+\newenvironment{resumeItemList}{%
+  \begin{itemize}[leftmargin=0.2in, topsep=2pt, itemsep=1pt, parsep=0pt]%
+}{\end{itemize}\vspace{-3pt}}
+

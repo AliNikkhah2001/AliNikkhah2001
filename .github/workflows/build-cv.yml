@@ -48,7 +48,7 @@ jobs:
           cd industrial && pdflatex -interaction=nonstopmode long_union.tex && cd ..
           cd academic/themes && bash build_all.sh || true; cd ../..
 
-      - name: Compile tagged variants (single source: main_tagged.tex)
+      - name: "Compile tagged variants from main_tagged.tex"
         working-directory: resume/industrial
         run: |
           set -e

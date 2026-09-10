@@ -68,9 +68,10 @@ def build_variant(data, variant):
     with open(out_dir / "summary.tex", "w", encoding="utf-8") as f:
         f.write(f"% summary for {variant}\n")
         f.write(f"\\small{{{tex_escape(data['basics']['summary'])} — Variant: {tex_escape(name)}}}\n")
-    # skills
+    # skills (wrapped in its own list env: main_tagged inputs it outside any list)
     with open(out_dir / "skills.tex", "w", encoding="utf-8") as f:
-        s=data["skills"]
+        s = data["skills"]
+        f.write("\\begin{itemize}[leftmargin=0.15in, label={}]\n")
         f.write("\\small{\\item{\n")
         f.write(f"  \\textbf{{Languages}}: {', '.join(s['languages'])} \\\\\n")
         f.write(f"  \\textbf{{ML/Vision}}: {', '.join(s['ml_vision'][:8])} \\\\\n")
@@ -78,6 +79,7 @@ def build_variant(data, variant):
         if 'llm_serving' in s:
             f.write(f"  \\textbf{{LLM Serving/GPU}}: {', '.join(s['llm_serving'][:5])} \\\\\n")
         f.write(f"  \\textbf{{Data/MLOps}}: {', '.join(s['data_mlop'][:6])}\n}}\n")
+        f.write("\\end{itemize}\n")
     # projects + publications (single source: data/cv.yaml research_projects)
     with open(out_dir / "projects.tex", "w", encoding="utf-8") as f:
         f.write(f"% AUTO-GENERATED from data/cv.yaml variant={variant} — do not edit manually\n")

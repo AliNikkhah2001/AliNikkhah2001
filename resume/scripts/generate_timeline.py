@@ -2,7 +2,7 @@
 import yaml, pathlib
 from datetime import datetime
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-data = yaml.safe_load(open(ROOT/"data"/"cv.yaml"))
+data = yaml.safe_load(open(ROOT/"data"/"cv.yaml", encoding="utf-8"))
 # build timeline sorted
 exps = sorted(data["experiences"], key=lambda e: e["start"])
 edus = data["education"]
@@ -13,7 +13,7 @@ primary = [e for e in exps if e["work_model"].startswith("Full-time")]
 parallel = [e for e in exps if "Part-time" in e["work_model"] or "Remote" in e["work_model"] or "Internship" in e["work_model"]]
 # timeline md
 out = ROOT/"data"/"COMBINED_TIMELINE.md"
-with open(out,"w") as f:
+with open(out, "w", encoding="utf-8") as f:
     f.write("# Combined Timeline — Gap-Free (Parallel as Swimlanes)\n\n")
     f.write("| Start | End | Role | Company | Work Model | Concurrent Note |\n|---|---|---|---|---|---|\n")
     for e in exps:

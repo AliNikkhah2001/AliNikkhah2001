@@ -13,7 +13,7 @@ basics:
   linkedin: https://linkedin.com/in/alinikkhah2001
   github: https://github.com/AliNikkhah2001
   summary: >
-    Applied ML researcher & engineer (Sharif B.Sc. EE 2020-2024, GPA 3.65/3.91; M.Eng. AI from Sep 2026) specialising
+    Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025, GPA 3.65; M.Sc. AI from Sep 2025) specialising
     in agentic RAG, multimodal vision-language, self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV
     pipelines at marketplace scale, self-hosted Graph RAG assistant for a national credit bureau, and BNPL risk platforms.
     Research focus: LLM reasoning and hallucination mitigation.
@@ -21,29 +21,22 @@ basics:
 education:
   - id: sharif_masters
     school: Sharif University of Technology
-    credential: "M.Eng. Artificial Intelligence"
+    credential: "M.Sc. Artificial Intelligence"
     location: Tehran, Iran
-    start: 2026-09
+    start: 2025-09
     end: present
-    thesis: "LLM reasoning and hallucination mitigation"
-    coursework: [LLM Reasoning, Hallucination Mitigation, Multimodal Learning, Representation Learning]
+    program: "Computer Engineering Department, AI major (full-time, ongoing, no thesis yet)"
     tags: [long, agentic, vision, data, swe, hybrid, senior, platform, research]
   - id: sharif_bsc
     school: Sharif University of Technology
-    credential: "B.Sc. Electrical & Electronics Engineering — Digital Systems"
+    credential: "B.Sc. Electrical Engineering"
     location: Tehran, Iran
     start: 2020-09
-    end: 2024-07
-    gpa: "3.65 overall, 3.91 major"
-    coursework: [Deep Learning, Machine Learning, DSP, Linear Algebra, Probability & Statistics, Algorithm Design, Digital Systems Design]
+    end: 2025-09
+    gpa: "3.65"
+    thesis: "Team thesis on efficient design and implementation of spread-time CDMA ASIC (my slice: FPGA implementation and pre-chip FPGA tests), supervisor Dr. Fatemeh (Noyan) Akbar, grade 20/20"
+    coursework: [Machine Learning, Deep Learning, Natural Language Processing, Data Science, Embedded Systems, Signals and Systems, Microprocessor Systems]
     tags: [long, agentic, vision, data, swe, hybrid, senior, platform, research]
-  - id: atomic_hs
-    school: Atomic Energy High School
-    credential: Mathematics Diploma
-    location: Tehran, Iran
-    start: 2017-09
-    end: 2019-06
-    tags: [long, research]
 
 # Union of all experiences across LaTeX + GitHub Pages + LinkedIn. Ordered newest-first for rendering; script sorts chronologically for timeline.
 experiences:
@@ -55,7 +48,7 @@ experiences:
     start: 2026-04
     end: present
     concurrent_with: [sharif_masters]
-    concurrent_note: "Most recent Iran position; overlaps Sharif M.Eng. AI (Sep 2026) — full-time industry + part-time graduate study"
+    concurrent_note: "Most recent Iran position; overlaps Sharif M.Sc. AI (Sep 2025) — full-time industry alongside full-time graduate study"
     summary: Self-hosted Graph RAG company assistant for national credit scoring — Neo4j knowledge graph, self-hosted LLM runtime on GPU, tool-calling agent.
     bullets:
       - "Architected self-hosted Graph RAG assistant: Neo4j knowledge graph + vector retrieval fused into an agent that answers analyst queries over credit-scoring domain data with grounded citations."

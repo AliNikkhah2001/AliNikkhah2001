@@ -15,7 +15,7 @@
 | 2025-07 | 2025-09 | Research Collaborator — Explainable & Robust AI | Sharif University — Robust & Interpretable ML Lab | Part-time · On-site | Summer research sprint concurrent with industry roles |
 | 2025-09 | 2026-03 | Senior Data Scientist & Data Engineer | Turquoise Digital | Full-time · On-site | Concurrent with Advanced Analytics Australia (Remote Contract) — 7-month overlap, split focus: Turquoise BNPL/risk/whisper vs Advanced edge CV |
 | 2025-09 | 2026-04 | Computer Vision / ML Platform Engineer (Edge) | Advanced Analytics Australia | Remote Contract | Parallel remote contract alongside Turquoise — edge CV track |
-| 2026-04 | present | ML Engineer — Self-Hosted Graph RAG Assistant | Iran Credit Scoring Bureau (سازمان اعتبار سنجی ایران) | Full-time · On-site | Most recent Iran position; overlaps Sharif M.Eng. AI (Sep 2026) — full-time industry + part-time graduate study |
+| 2026-04 | present | ML Engineer — Self-Hosted Graph RAG Assistant | Iran Credit Scoring Bureau | Full-time · On-site | Most recent Iran position; overlaps Sharif M.Sc. AI (Sep 2025) — full-time industry alongside full-time graduate study |
 
 ## Swimlane View
 

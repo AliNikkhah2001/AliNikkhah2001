@@ -11,11 +11,11 @@ import argparse, pathlib, yaml, re, os, textwrap
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "cv.yaml"
 GEN_ROOT = ROOT / "industrial" / "segments" / "generated"
-JEKYLL_DATA = pathlib.Path("/Users/alinikkhah/PersonalWebsite/alinikkhah2001.github.io/_data/cv_generated.yaml")
+JEKYLL_DATA = ROOT.parents[1] / "alinikkhah2001.github.io" / "_data" / "cv_generated.yaml"
 LONG_TEX = ROOT / "industrial" / "long_union.tex"
 
 def load():
-    with open(DATA) as f: return yaml.safe_load(f)
+    with open(DATA, encoding="utf-8") as f: return yaml.safe_load(f)
 
 def tex_escape(s): return s.replace("&", r"\&").replace("%", r"\%")
 
@@ -60,16 +60,16 @@ def build_variant(data, variant):
     out_dir = GEN_ROOT / variant
     out_dir.mkdir(parents=True, exist_ok=True)
     # experience
-    with open(out_dir / "experience.tex","w") as f:
+    with open(out_dir / "experience.tex", "w", encoding="utf-8") as f:
         f.write(f"% AUTO-GENERATED from data/cv.yaml variant={variant} — do not edit manually\n")
         for e in exps: f.write(render_experience(e)+"\n")
     # summary
     name = vinfo["label"]
-    with open(out_dir / "summary.tex","w") as f:
+    with open(out_dir / "summary.tex", "w", encoding="utf-8") as f:
         f.write(f"% summary for {variant}\n")
         f.write(f"\\small{{{tex_escape(data['basics']['summary'])} — Variant: {tex_escape(name)}}}\n")
     # skills
-    with open(out_dir / "skills.tex","w") as f:
+    with open(out_dir / "skills.tex", "w", encoding="utf-8") as f:
         s=data["skills"]
         f.write("\\small{\\item{\n")
         f.write(f"  \\textbf{{Languages}}: {', '.join(s['languages'])} \\\\\n")
@@ -90,7 +90,7 @@ def build_all(data):
     except Exception as e: print(f"[jekyll] skip {e}")
     # generate long markdown timeline
     tl = ROOT / "data" / "timeline_gapfree.md"
-    with open(tl,"w") as f:
+    with open(tl, "w", encoding="utf-8") as f:
         f.write("# Gap-free Combined Timeline (parallel shown as swimlanes)\n\n")
         f.write("| Period | Role | Org | Concurrency |\n|---|---|---|---|\n")
         for e in sorted(data["experiences"], key=lambda x: x["start"]):

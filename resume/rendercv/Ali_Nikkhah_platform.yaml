@@ -1,7 +1,8 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.3/schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Ali Nikkhah
-  location: Tehran, Iran
+  headline: Machine Learning Engineer / Researcher
+  location: Tehran, Iran · Remote-friendly · Open to Relocation
   email: alinkkh9@gmail.com
   phone: +98 991 296 3951
   website: https://alinikkhah2001.github.io
@@ -11,34 +12,37 @@ cv:
   - network: GitHub
     username: AliNikkhah2001
   sections:
+    summary:
+    - 'Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025,
+      GPA 3.65; M.Sc. AI from Sep 2025) specialising in agentic RAG, multimodal vision-language,
+      self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV pipelines
+      at marketplace scale, self-hosted Graph RAG assistant for a national credit
+      bureau, and BNPL risk platforms. Research focus: LLM reasoning and hallucination
+      mitigation.
+
+      '
     education:
     - institution: Sharif University of Technology
-      area: M.Eng. Artificial Intelligence
-      degree: M.Eng. Artificial Intelligence
-      start_date: 2026-09
+      area: M.Sc. Artificial Intelligence
+      degree: M.Sc. Artificial Intelligence
+      start_date: 2025-09
       end_date: present
       location: Tehran, Iran
       highlights:
-      - 'Thesis: LLM reasoning and hallucination mitigation'
-      - 'Coursework: LLM Reasoning, Hallucination Mitigation, Multimodal Learning,
-        Representation Learning'
+      - Computer Engineering Department, AI major (full-time, ongoing, no thesis yet)
     - institution: Sharif University of Technology
-      area: B.Sc. Electrical & Electronics Engineering — Digital Systems
-      degree: 'B.Sc. Electrical & Electronics Engineering '
+      area: B.Sc. Electrical Engineering
+      degree: B.Sc. Electrical Engineering
       start_date: 2020-09
-      end_date: 2024-07
+      end_date: 2025-09
       location: Tehran, Iran
       highlights:
-      - 'GPA: 3.65 overall, 3.91 major'
-      - 'Coursework: Deep Learning, Machine Learning, DSP, Linear Algebra, Probability
-        & Statistics, Algorithm Design, Digital Systems Design'
-    - institution: Atomic Energy High School
-      area: Mathematics Diploma
-      degree: Mathematics Diploma
-      start_date: 2017-09
-      end_date: 2019-06
-      location: Tehran, Iran
-      highlights: []
+      - 'GPA: 3.65'
+      - 'Thesis: Team thesis on efficient design and implementation of spread-time
+        CDMA ASIC (my slice: FPGA implementation and pre-chip FPGA tests), supervisor
+        Dr. Fatemeh (Noyan) Akbar, grade 20/20'
+      - 'Coursework: Machine Learning, Deep Learning, Natural Language Processing,
+        Data Science, Embedded Systems, Signals and Systems, Microprocessor Systems'
     experience:
     - company: Iran Credit Scoring Bureau
       position: ML Engineer — Self-Hosted Graph RAG Assistant
@@ -60,8 +64,8 @@ cv:
       - Added hallucination guardrails — retrieval grounding, citation enforcement,
         deterministic fallback — for a regulated financial environment.
       - 'Stack: Python, Neo4j, Cypher, Graph RAG, LangGraph, LangChain'
-      - Most recent Iran position; overlaps Sharif M.Eng. AI (Sep 2026) — full-time
-        industry + part-time graduate study
+      - Most recent Iran position; overlaps Sharif M.Sc. AI (Sep 2025) — full-time
+        industry alongside full-time graduate study
     - company: Turquoise Digital
       position: Senior Data Scientist & Data Engineer
       start_date: 2025-09
@@ -148,58 +152,41 @@ cv:
     publications:
     - title: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive
         Vision-Language Learning
-      authors: Ali Nikkhah, [Co-authors TBD], A. Supervisor
-      doi: ''
+      authors:
+      - Ali Nikkhah
+      - '[Co-authors TBD]'
+      - A. Supervisor
       journal: arXiv preprint — in preparation
-      date: 2025
+      date: '2025'
     teaching:
     - name: Natural Language Processing (Graduate)
-      date: Aug 2023 – Jan 2024
-      summary: TA · Sharif
+      summary: TA · Sharif (Aug 2023 – Jan 2024)
     - name: Generative Models (Graduate)
-      date: Aug 2023 – Jan 2024
-      summary: TA · Sharif
+      summary: TA · Sharif (Aug 2023 – Jan 2024)
     - name: Deep Learning (Graduate)
-      date: Jan 2023 – Aug 2023
-      summary: TA · Sharif
+      summary: TA · Sharif (Jan 2023 – Aug 2023)
     - name: Analog Electronics
-      date: Aug 2022 – Jan 2023
-      summary: TA · Sharif
+      summary: TA · Sharif (Aug 2022 – Jan 2023)
     - name: Machine Learning & Data Science
-      date: Jan 2022 – Aug 2022
-      summary: TA · Sharif
+      summary: TA · Sharif (Jan 2022 – Aug 2022)
     - name: Circuit Theory & Engineering Probability
-      date: Jan 2021 – Aug 2021
-      summary: TA · Sharif
+      summary: TA · Sharif (Jan 2021 – Aug 2021)
     skills:
-    - 'languages: Python, C++, Go, SQL, R, Bash, TypeScript'
-    - 'ml_vision: PyTorch, TensorFlow, JAX, Hugging Face, ViT, BLIP, T5, Whisper,
-      wav2vec2.0, Librosa, OpenCV, YOLO, ONNX'
-    - 'agentic: LangGraph, LangChain, LlamaIndex, FAISS, ChromaDB, HyDE, KAG, Graph
-      RAG, vLLM, Triton, Neo4j, Cypher'
-    - 'llm_serving: vLLM, TGI, AWQ, GPTQ, KV-cache, GPU Optimization, PagedAttention,
-      TensorRT-LLM'
-    - 'data_mlop: Spark, Airflow, Kafka, Docker, Kubernetes, Ray, MLflow, W&B, ArgoCD,
-      Terraform'
-    - 'human: Persian (Native), English (C2 IELTS 8.0), Arabic (Professional), French
-      (Limited), German (Limited)'
+    - label: Programming
+      details: Python, C++, Go, SQL, R, Bash, TypeScript
+    - label: ML & Vision
+      details: PyTorch, TensorFlow, JAX, Hugging Face, ViT, BLIP, T5, Whisper, wav2vec2.0,
+        Librosa, OpenCV, YOLO, ONNX
+    - label: Agentic AI & RAG
+      details: LangGraph, LangChain, LlamaIndex, FAISS, ChromaDB, HyDE, KAG, Graph
+        RAG, vLLM, Triton, Neo4j, Cypher
+    - label: LLM Serving & GPU
+      details: vLLM, TGI, AWQ, GPTQ, KV-cache, GPU Optimization, PagedAttention, TensorRT-LLM
+    - label: Data & MLOps
+      details: Spark, Airflow, Kafka, Docker, Kubernetes, Ray, MLflow, W&B, ArgoCD,
+        Terraform
+    - label: Languages
+      details: Persian (Native), English (C2 IELTS 8.0), Arabic (Professional), French
+        (Limited), German (Limited)
 design:
   theme: classic
-  page:
-    size: a4paper
-    top_margin: 0.55in
-    bottom_margin: 0.55in
-    left_margin: 0.6in
-    right_margin: 0.6in
-  colors:
-    name: rgb(0,79,144)
-    connection: rgb(0,79,144)
-    section: rgb(0,79,144)
-    link: rgb(0,79,144)
-  text:
-    font_family: Source Sans 3
-    font_size: 10pt
-    line_spacing: '1.0'
-  header:
-    name_font_size: 30pt
-    alignment: center

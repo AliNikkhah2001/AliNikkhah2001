@@ -31,7 +31,7 @@ jobs:
       - name: Install toolchain
         run: |
           pip install pyyaml rendercv
-          sudo apt-get update
+          sudo apt-get update || true
           sudo apt-get install -y pandoc texlive-xetex texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern texlive-fonts-extra fonts-ebgaramond fonts-texgyre || true
 
       - name: Regenerate from SSOT
@@ -58,7 +58,11 @@ jobs:
                 -e "s/\\\\setbool{onePage}{[a-z]*}/\\\\setbool{onePage}{${ONEPAGE}}/" \
                 main_tagged.tex > main_tagged.build.tex
             cp main_tagged.build.tex main_tagged.tex
-            pdflatex -interaction=nonstopmode -jobname="${OUTNAME}" main_tagged.tex
+            if ! pdflatex -interaction=nonstopmode -jobname="${OUTNAME}" main_tagged.tex > "/tmp/${OUTNAME}.log" 2>&1; then
+              echo "FAILED ${OUTNAME} — tail of main_tagged.log:"
+              tail -40 main_tagged.log 2>/dev/null || tail -40 "/tmp/${OUTNAME}.log"
+              return 1
+            fi
           }
           build_variant agentic Ali_Nikkhah_AgenticAI_1page true
           build_variant agentic Ali_Nikkhah_AgenticAI_2page false
@@ -85,7 +89,7 @@ jobs:
       - name: Compile academic main + long union PDFs
         working-directory: resume
         run: |
-          cd academic && pdflatex -interaction=nonstopmode main.tex && cp main.pdf Ali_Nikkhah_ResearchCV.pdf && cd ..
+          cd academic && pdflatex -interaction=nonstopmode main.tex > /tmp/academic.log 2>&1 || { tail -40 main.log; exit 1; } && cp main.pdf Ali_Nikkhah_ResearchCV.pdf && cd ..
           rm -f academic/*.aux academic/*.log academic/*.out industrial/*.aux industrial/*.log industrial/*.out
 
       - name: Commit rebuilt PDFs back ([skip ci])

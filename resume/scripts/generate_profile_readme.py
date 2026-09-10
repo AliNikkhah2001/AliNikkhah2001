@@ -68,6 +68,6 @@ Field notes on shipping applied AI/ML systems.
 
 <sub>Auto-generated from `data/cv.yaml` (single source of truth).</sub>
 '''
-out = pathlib.Path("/Users/alinikkhah/PersonalWebsite/AliNikkhah2001/README.md")
+out = ROOT.parents[1] / "README.md"
 out.write_text(readme)
 print("profile README regenerated ->", out)

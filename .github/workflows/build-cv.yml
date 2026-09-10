@@ -106,6 +106,21 @@ jobs:
             resume/data/*.md
             README.md
 
+      - name: Save LaTeX logs on failure
+        if: failure()
+        working-directory: resume
+        run: |
+          mkdir -p ci-logs
+          cp industrial/*.log academic/*.log /tmp/*.log ci-logs/ 2>/dev/null || true
+          ls ci-logs/ || true
+
+      - name: Commit failure logs ([skip ci])
+        if: failure()
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[skip ci] CI failure logs"
+          file_pattern: resume/ci-logs/*
+
       - name: Compile markdown resume (pandoc)
         working-directory: resume
         run: python scripts/build_markdown_pdf.py

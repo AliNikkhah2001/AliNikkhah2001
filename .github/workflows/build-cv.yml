@@ -7,7 +7,10 @@ on:
       - 'resume/data/**'
       - 'resume/scripts/**'
       - 'resume/industrial/segments/common/**'
+      - 'resume/industrial/segments/generated/**'
+      - 'resume/industrial/main_tagged.tex'
       - 'resume/academic/segments/**'
+      - 'resume/academic/main.tex'
   workflow_dispatch:
 
 permissions:
@@ -29,7 +32,7 @@ jobs:
         run: |
           pip install pyyaml rendercv
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended lmodern texlive-fonts-extra fonts-ebgaramond fonts-texgyre || true
+          sudo apt-get install -y pandoc texlive-xetex texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern texlive-fonts-extra fonts-ebgaramond fonts-texgyre || true
 
       - name: Regenerate from SSOT
         working-directory: resume
@@ -44,6 +47,59 @@ jobs:
         run: |
           cd industrial && pdflatex -interaction=nonstopmode long_union.tex && cd ..
           cd academic/themes && bash build_all.sh || true; cd ../..
+
+      - name: Compile tagged variants (single source: main_tagged.tex)
+        working-directory: resume/industrial
+        run: |
+          set -e
+          build_variant() {
+            VARIANT="$1"; OUTNAME="$2"; ONEPAGE="$3"
+            sed -e "s/\\\\newcommand{\\\\cvvariant}{[a-z]*}/\\\\newcommand{\\\\cvvariant}{${VARIANT}}/" \
+                -e "s/\\\\setbool{onePage}{[a-z]*}/\\\\setbool{onePage}{${ONEPAGE}}/" \
+                main_tagged.tex > main_tagged.build.tex
+            cp main_tagged.build.tex main_tagged.tex
+            pdflatex -interaction=nonstopmode -jobname="${OUTNAME}" main_tagged.tex
+          }
+          build_variant agentic Ali_Nikkhah_AgenticAI_1page true
+          build_variant agentic Ali_Nikkhah_AgenticAI_2page false
+          build_variant vision Ali_Nikkhah_ComputerVision_1page true
+          build_variant vision Ali_Nikkhah_ComputerVision_2page false
+          build_variant data Ali_Nikkhah_DataScience_1page true
+          build_variant data Ali_Nikkhah_DataScience_2page false
+          build_variant swe Ali_Nikkhah_SWE_1page true
+          build_variant swe Ali_Nikkhah_SWE_2page false
+          build_variant hybrid Ali_Nikkhah_HybridAI_1page true
+          build_variant hybrid Ali_Nikkhah_HybridAI_2page false
+          build_variant senior Ali_Nikkhah_SeniorAI_1page true
+          build_variant senior Ali_Nikkhah_SeniorAI_2page false
+          build_variant platform Ali_Nikkhah_MLPlatform_1page true
+          build_variant platform Ali_Nikkhah_MLPlatform_2page false
+          build_variant research Ali_Nikkhah_ResearchCV false
+          cp Ali_Nikkhah_AgenticAI_*.pdf Ali_Nikkhah_ComputerVision_*.pdf Ali_Nikkhah_DataScience_*.pdf Ali_Nikkhah_SWE_*.pdf Ali_Nikkhah_HybridAI_*.pdf Ali_Nikkhah_SeniorAI_*.pdf Ali_Nikkhah_MLPlatform_*.pdf ../compiled_pdfs/
+          cp Ali_Nikkhah_SWE_1page.pdf ../compiled_pdfs/Ali_Nikkhah_SoftwareEng_1page.pdf
+          cp Ali_Nikkhah_SWE_2page.pdf ../compiled_pdfs/Ali_Nikkhah_SoftwareEng_2page.pdf
+          cp Ali_Nikkhah_ResearchCV.pdf ../compiled_pdfs/Ali_Nikkhah_ResearchCV.pdf
+          git checkout -- main_tagged.tex
+          rm -f main_tagged.build.tex *.aux *.log *.out
+
+      - name: Compile academic main + long union PDFs
+        working-directory: resume
+        run: |
+          cd academic && pdflatex -interaction=nonstopmode main.tex && cp main.pdf Ali_Nikkhah_ResearchCV.pdf && cd ..
+          rm -f academic/*.aux academic/*.log academic/*.out industrial/*.aux industrial/*.log industrial/*.out
+
+      - name: Commit rebuilt PDFs back ([skip ci])
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[skip ci] Rebuild PDFs from SSOT"
+          file_pattern: |
+            resume/compiled_pdfs/*.pdf
+            resume/industrial/*.pdf
+            resume/academic/*.pdf
+            resume/industrial/segments/generated/**
+            resume/rendercv/*.yaml
+            resume/data/*.md
+            README.md
 
       - name: Compile markdown resume (pandoc)
         working-directory: resume

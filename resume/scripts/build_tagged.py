@@ -78,6 +78,22 @@ def build_variant(data, variant):
         if 'llm_serving' in s:
             f.write(f"  \\textbf{{LLM Serving/GPU}}: {', '.join(s['llm_serving'][:5])} \\\\\n")
         f.write(f"  \\textbf{{Data/MLOps}}: {', '.join(s['data_mlop'][:6])}\n}}\n")
+    # projects + publications (single source: data/cv.yaml research_projects)
+    with open(out_dir / "projects.tex", "w", encoding="utf-8") as f:
+        f.write(f"% AUTO-GENERATED from data/cv.yaml variant={variant} — do not edit manually\n")
+        for rp in data.get("research_projects", []):
+            f.write("\\resumeSubheading\n")
+            f.write(f"  {{{tex_escape(rp['org'])}}}{{{tex_escape(rp['period'])}}}\n")
+            f.write(f"  {{{tex_escape(rp['title'])}}}{{ }}\n")
+            bullets = rp.get("bullets", [])
+            if bullets:
+                f.write("\\begin{resumeItemList}\n")
+                for b in bullets:
+                    f.write(f"  \\resumeItem{{{tex_escape(b)}}}\n")
+                f.write("\\end{resumeItemList}\n")
+            f.write("\n")
+        for pub in data.get("publications", []):
+            f.write(f"\\resumeItem{{{tex_escape(pub['title'])} — \\textit{{{tex_escape(pub['venue'])}}}, {pub['year']}}}\n")
     print(f"[build] {variant}: {len(exps)} experiences -> {out_dir}")
 
 def build_all(data):

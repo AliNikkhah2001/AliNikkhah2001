@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
+      - '.github/workflows/build-cv.yml'
       - 'resume/data/**'
       - 'resume/scripts/**'
       - 'resume/industrial/segments/common/**'

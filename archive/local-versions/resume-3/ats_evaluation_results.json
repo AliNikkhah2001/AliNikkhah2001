@@ -1,0 +1,2448 @@
+[
+  {
+    "variant": "Ali_Nikkhah_AgenticAI_1page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "7 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 12,
+      "coverage": 51.0,
+      "found": 25,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding",
+            "vector"
+          ],
+          "missing": [
+            "openai",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi"
+          ],
+          "missing": [
+            "aws",
+            "gcp",
+            "postgres",
+            "postgresql"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "detection",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "jenkins",
+            "monitoring"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 14,
+      "count": 14,
+      "examples": [
+        "23%",
+        "41%",
+        "3.2x",
+        "60%",
+        "78%",
+        "94%",
+        "99.9%",
+        "200ms",
+        "10 min",
+        "5M+"
+      ],
+      "standalone_numbers": 32
+    },
+    "action_verbs": {
+      "score": 6,
+      "count": 8,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "led",
+        "deployed",
+        "orchestrated",
+        "automated",
+        "achieved"
+      ]
+    },
+    "readability": {
+      "total_words": 595,
+      "total_sentences": 28,
+      "avg_words_per_sentence": 21.2,
+      "jargon_density": 7
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_AgenticAI_2page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "9 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 14,
+      "coverage": 59.2,
+      "found": 29,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding",
+            "vector"
+          ],
+          "missing": [
+            "openai",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "onnx",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "detection",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "terraform",
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "ci/cd"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 13,
+      "count": 13,
+      "examples": [
+        "23%",
+        "41%",
+        "3.2x",
+        "60%",
+        "78%",
+        "94%",
+        "99.9%",
+        "200ms",
+        "10 min",
+        "5M+"
+      ],
+      "standalone_numbers": 36
+    },
+    "action_verbs": {
+      "score": 8,
+      "count": 10,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "implemented",
+        "deployed",
+        "orchestrated",
+        "automated",
+        "achieved"
+      ]
+    },
+    "readability": {
+      "total_words": 973,
+      "total_sentences": 40,
+      "avg_words_per_sentence": 24.3,
+      "jargon_density": 7
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_ComputerVision_1page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "8 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 12,
+      "coverage": 49.0,
+      "found": 24,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "langchain",
+            "langgraph",
+            "vector"
+          ],
+          "missing": [
+            "rag",
+            "openai",
+            "embedding",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "kafka",
+            "fastapi"
+          ],
+          "missing": [
+            "redis",
+            "aws",
+            "gcp",
+            "postgres",
+            "postgresql"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "data pipeline"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "jenkins",
+            "monitoring"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 16,
+      "examples": [
+        "99.2%",
+        "35%",
+        "18%",
+        "40%",
+        "78%",
+        "94%",
+        "99.9%",
+        "50ms",
+        "150ms",
+        "100ms"
+      ],
+      "standalone_numbers": 37
+    },
+    "action_verbs": {
+      "score": 7,
+      "count": 9,
+      "list": [
+        "built",
+        "led",
+        "implemented",
+        "optimized",
+        "orchestrated",
+        "automated",
+        "achieved",
+        "delivered",
+        "managed"
+      ]
+    },
+    "readability": {
+      "total_words": 592,
+      "total_sentences": 28,
+      "avg_words_per_sentence": 21.1,
+      "jargon_density": 6
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_ComputerVision_2page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "10 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 15,
+      "coverage": 63.3,
+      "found": 31,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "vector"
+          ],
+          "missing": [
+            "openai",
+            "embedding",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "onnx",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "data pipeline"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": []
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 17,
+      "examples": [
+        "99.2%",
+        "3.5x",
+        "35%",
+        "18%",
+        "40%",
+        "78%",
+        "94%",
+        "99.9%",
+        "50ms",
+        "150ms"
+      ],
+      "standalone_numbers": 45
+    },
+    "action_verbs": {
+      "score": 10,
+      "count": 12,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "architected",
+        "implemented",
+        "optimized",
+        "orchestrated",
+        "automated",
+        "achieved",
+        "delivered"
+      ]
+    },
+    "readability": {
+      "total_words": 961,
+      "total_sentences": 41,
+      "avg_words_per_sentence": 23.4,
+      "jargon_density": 7
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_DataScience_1page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "7 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 14,
+      "coverage": 57.1,
+      "found": 28,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding",
+            "vector"
+          ],
+          "missing": [
+            "openai",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "redis",
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "detection",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "etl",
+            "data pipeline"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "github actions",
+            "jenkins"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 7,
+      "count": 7,
+      "examples": [
+        "60%",
+        "22%",
+        "4x",
+        "99.9%",
+        "99.9%",
+        "10M+",
+        "5TB"
+      ],
+      "standalone_numbers": 29
+    },
+    "action_verbs": {
+      "score": 6,
+      "count": 8,
+      "list": [
+        "designed",
+        "built",
+        "developed",
+        "architected",
+        "optimized",
+        "automated",
+        "achieved",
+        "managed"
+      ]
+    },
+    "readability": {
+      "total_words": 573,
+      "total_sentences": 26,
+      "avg_words_per_sentence": 22.0,
+      "jargon_density": 3
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_DataScience_2page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "9 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 16,
+      "coverage": 65.3,
+      "found": 32,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding",
+            "vector"
+          ],
+          "missing": [
+            "openai",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "onnx",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "detection",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "etl",
+            "data pipeline"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": []
+        }
+      }
+    },
+    "metrics": {
+      "score": 7,
+      "count": 7,
+      "examples": [
+        "60%",
+        "22%",
+        "4x",
+        "99.9%",
+        "99.9%",
+        "10M+",
+        "5TB"
+      ],
+      "standalone_numbers": 32
+    },
+    "action_verbs": {
+      "score": 7,
+      "count": 9,
+      "list": [
+        "designed",
+        "built",
+        "developed",
+        "architected",
+        "implemented",
+        "optimized",
+        "automated",
+        "achieved",
+        "managed"
+      ]
+    },
+    "readability": {
+      "total_words": 882,
+      "total_sentences": 37,
+      "avg_words_per_sentence": 23.8,
+      "jargon_density": 3
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_SoftwareEng_1page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "7 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 11,
+      "coverage": 46.9,
+      "found": 23,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "langchain",
+            "langgraph"
+          ],
+          "missing": [
+            "rag",
+            "openai",
+            "embedding",
+            "vector",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi"
+          ],
+          "missing": [
+            "aws",
+            "gcp",
+            "postgres",
+            "postgresql"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "terraform",
+            "github actions",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "ci/cd",
+            "jenkins"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 17,
+      "examples": [
+        "3.2x",
+        "60%",
+        "40%",
+        "35%",
+        "99.9%",
+        "99.9%",
+        "200ms",
+        "50ms",
+        "100ms",
+        "5M+"
+      ],
+      "standalone_numbers": 32
+    },
+    "action_verbs": {
+      "score": 10,
+      "count": 13,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "implemented",
+        "optimized",
+        "deployed",
+        "orchestrated",
+        "automated",
+        "achieved",
+        "delivered",
+        "managed"
+      ]
+    },
+    "readability": {
+      "total_words": 599,
+      "total_sentences": 28,
+      "avg_words_per_sentence": 21.4,
+      "jargon_density": 9
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_SoftwareEng_2page.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "9 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 14,
+      "coverage": 59.2,
+      "found": 29,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding"
+          ],
+          "missing": [
+            "openai",
+            "vector",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "onnx",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "terraform",
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "ci/cd"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 23,
+      "examples": [
+        "3.2x",
+        "60%",
+        "40%",
+        "3.5x",
+        "35%",
+        "99.9%",
+        "99.9%",
+        "200ms",
+        "50ms",
+        "100ms"
+      ],
+      "standalone_numbers": 36
+    },
+    "action_verbs": {
+      "score": 10,
+      "count": 15,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "architected",
+        "implemented",
+        "optimized",
+        "deployed",
+        "orchestrated",
+        "automated",
+        "achieved",
+        "delivered",
+        "directed",
+        "managed"
+      ]
+    },
+    "readability": {
+      "total_words": 916,
+      "total_sentences": 39,
+      "avg_words_per_sentence": 23.5,
+      "jargon_density": 9
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_HybridAI_1page.pdf",
+    "total_score": 100,
+    "page_count": 1,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "1-page format (optimal)"
+        ],
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "7 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 12,
+      "coverage": 49.0,
+      "found": 24,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph"
+          ],
+          "missing": [
+            "openai",
+            "embedding",
+            "vector",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi"
+          ],
+          "missing": [
+            "aws",
+            "gcp",
+            "postgres",
+            "postgresql"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "jenkins",
+            "monitoring"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 23,
+      "examples": [
+        "23%",
+        "41%",
+        "3.2x",
+        "60%",
+        "40%",
+        "99.2%",
+        "35%",
+        "22%",
+        "78%",
+        "94%"
+      ],
+      "standalone_numbers": 43
+    },
+    "action_verbs": {
+      "score": 6,
+      "count": 8,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "led",
+        "architected",
+        "deployed",
+        "automated",
+        "achieved"
+      ]
+    },
+    "readability": {
+      "total_words": 515,
+      "total_sentences": 32,
+      "avg_words_per_sentence": 16.1,
+      "jargon_density": 7
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_HybridAI_2page.pdf",
+    "total_score": 100,
+    "page_count": 3,
+    "ats_parsing": {
+      "score": 95,
+      "findings": [
+        [
+          "CRITICAL",
+          "3 pages \u2014 exceeds standard 1-2 page limit"
+        ],
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "9 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 15,
+      "coverage": 63.3,
+      "found": 31,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding",
+            "vector"
+          ],
+          "missing": [
+            "openai",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "onnx",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "etl"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "terraform",
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "ci/cd"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 27,
+      "examples": [
+        "22%",
+        "23%",
+        "41%",
+        "3.2x",
+        "60%",
+        "40%",
+        "99.2%",
+        "3.5x",
+        "35%",
+        "60%"
+      ],
+      "standalone_numbers": 67
+    },
+    "action_verbs": {
+      "score": 9,
+      "count": 11,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "architected",
+        "implemented",
+        "deployed",
+        "orchestrated",
+        "automated",
+        "achieved"
+      ]
+    },
+    "readability": {
+      "total_words": 1550,
+      "total_sentences": 63,
+      "avg_words_per_sentence": 24.6,
+      "jargon_density": 7
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_SeniorAI_1page.pdf",
+    "total_score": 100,
+    "page_count": 1,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "1-page format (optimal)"
+        ],
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "8 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 12,
+      "coverage": 51.0,
+      "found": 25,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph"
+          ],
+          "missing": [
+            "openai",
+            "embedding",
+            "vector",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi"
+          ],
+          "missing": [
+            "aws",
+            "gcp",
+            "postgres",
+            "postgresql"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "etl"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "jenkins",
+            "monitoring"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 24,
+      "examples": [
+        "23%",
+        "41%",
+        "3.2x",
+        "60%",
+        "40%",
+        "99.2%",
+        "35%",
+        "22%",
+        "78%",
+        "94%"
+      ],
+      "standalone_numbers": 45
+    },
+    "action_verbs": {
+      "score": 8,
+      "count": 10,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "architected",
+        "automated",
+        "achieved",
+        "established",
+        " mentored"
+      ]
+    },
+    "readability": {
+      "total_words": 549,
+      "total_sentences": 33,
+      "avg_words_per_sentence": 16.6,
+      "jargon_density": 6
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_SeniorAI_2page.pdf",
+    "total_score": 100,
+    "page_count": 3,
+    "ats_parsing": {
+      "score": 95,
+      "findings": [
+        [
+          "CRITICAL",
+          "3 pages \u2014 exceeds standard 1-2 page limit"
+        ],
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "10 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 15,
+      "coverage": 63.3,
+      "found": 31,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding"
+          ],
+          "missing": [
+            "openai",
+            "vector",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "onnx",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "etl"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": []
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 47,
+      "examples": [
+        "3.2x",
+        "60%",
+        "40%",
+        "99.2%",
+        "22%",
+        "23%",
+        "41%",
+        "3.2x",
+        "60%",
+        "40%"
+      ],
+      "standalone_numbers": 77
+    },
+    "action_verbs": {
+      "score": 10,
+      "count": 12,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "architected",
+        "implemented",
+        "automated",
+        "achieved",
+        "delivered",
+        "established",
+        " mentored"
+      ]
+    },
+    "readability": {
+      "total_words": 1399,
+      "total_sentences": 63,
+      "avg_words_per_sentence": 22.2,
+      "jargon_density": 9
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_MLPlatform_1page.pdf",
+    "total_score": 100,
+    "page_count": 1,
+    "ats_parsing": {
+      "score": 105,
+      "findings": [
+        [
+          "PASS",
+          "1-page format (optimal)"
+        ],
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "7 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 13,
+      "coverage": 53.1,
+      "found": 26,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph"
+          ],
+          "missing": [
+            "openai",
+            "embedding",
+            "vector",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi"
+          ],
+          "missing": [
+            "aws",
+            "gcp",
+            "postgres",
+            "postgresql"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "etl"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": [
+            "jenkins"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 16,
+      "examples": [
+        "3.2x",
+        "60%",
+        "40%",
+        "3.5x",
+        "60%",
+        "99.9%",
+        "10min",
+        "200ms",
+        "10min",
+        "5M+"
+      ],
+      "standalone_numbers": 34
+    },
+    "action_verbs": {
+      "score": 7,
+      "count": 9,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "architected",
+        "implemented",
+        "deployed",
+        "automated",
+        "achieved",
+        "established"
+      ]
+    },
+    "readability": {
+      "total_words": 538,
+      "total_sentences": 31,
+      "avg_words_per_sentence": 17.4,
+      "jargon_density": 8
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_MLPlatform_2page.pdf",
+    "total_score": 100,
+    "page_count": 3,
+    "ats_parsing": {
+      "score": 95,
+      "findings": [
+        [
+          "CRITICAL",
+          "3 pages \u2014 exceeds standard 1-2 page limit"
+        ],
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "9 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 16,
+      "coverage": 65.3,
+      "found": 32,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding",
+            "fine-tuning"
+          ],
+          "missing": [
+            "openai",
+            "vector",
+            "prompt",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "redis",
+            "kafka",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ],
+          "missing": [
+            "aws",
+            "gcp"
+          ]
+        },
+        "cv": {
+          "found": [
+            "opencv",
+            "cnn",
+            "transformer",
+            "detection",
+            "onnx",
+            "tensorrt"
+          ],
+          "missing": [
+            "yolo",
+            "segmentation",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow",
+            "etl"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform",
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ],
+          "missing": []
+        }
+      }
+    },
+    "metrics": {
+      "score": 15,
+      "count": 38,
+      "examples": [
+        "40%",
+        "99.9%",
+        "3.2x",
+        "60%",
+        "40%",
+        "3.5x",
+        "35%",
+        "22%",
+        "99.9%",
+        "40%"
+      ],
+      "standalone_numbers": 61
+    },
+    "action_verbs": {
+      "score": 10,
+      "count": 14,
+      "list": [
+        "engineered",
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "architected",
+        "implemented",
+        "optimized",
+        "deployed",
+        "orchestrated",
+        "automated",
+        "achieved",
+        "established",
+        "directed"
+      ]
+    },
+    "readability": {
+      "total_words": 1414,
+      "total_sentences": 62,
+      "avg_words_per_sentence": 22.8,
+      "jargon_density": 8
+    }
+  },
+  {
+    "variant": "Ali_Nikkhah_ResearchCV.pdf",
+    "total_score": 100,
+    "page_count": 2,
+    "ats_parsing": {
+      "score": 100,
+      "findings": [
+        [
+          "CRITICAL",
+          "Non-ATS bullet '\u2022' detected \u2014 ATS will garble content"
+        ],
+        [
+          "PASS",
+          "Email detected"
+        ],
+        [
+          "PASS",
+          "Phone number detected"
+        ],
+        [
+          "PASS",
+          "LinkedIn URL detected"
+        ],
+        [
+          "PASS",
+          "GitHub URL detected"
+        ],
+        [
+          "PASS",
+          "7 standard sections found"
+        ]
+      ]
+    },
+    "keywords": {
+      "score": 9,
+      "coverage": 38.8,
+      "found": 19,
+      "total": 49,
+      "details": {
+        "core_ml": {
+          "found": [
+            "python",
+            "pytorch",
+            "tensorflow"
+          ],
+          "missing": [
+            "scikit-learn",
+            "numpy",
+            "pandas"
+          ]
+        },
+        "llm_rag": {
+          "found": [
+            "llm",
+            "rag",
+            "langchain",
+            "langgraph",
+            "embedding"
+          ],
+          "missing": [
+            "openai",
+            "vector",
+            "prompt",
+            "fine-tuning",
+            "fine-tune"
+          ]
+        },
+        "infra": {
+          "found": [
+            "kubernetes",
+            "docker",
+            "kafka"
+          ],
+          "missing": [
+            "redis",
+            "aws",
+            "gcp",
+            "fastapi",
+            "postgres",
+            "postgresql"
+          ]
+        },
+        "cv": {
+          "found": [
+            "cnn",
+            "transformer",
+            "detection",
+            "tensorrt"
+          ],
+          "missing": [
+            "opencv",
+            "yolo",
+            "segmentation",
+            "onnx",
+            "torchvision"
+          ]
+        },
+        "data": {
+          "found": [
+            "spark",
+            "airflow"
+          ],
+          "missing": [
+            "dbt",
+            "snowflake",
+            "bigquery",
+            "etl",
+            "data pipeline",
+            "feature store"
+          ]
+        },
+        "devops": {
+          "found": [
+            "ci/cd",
+            "terraform"
+          ],
+          "missing": [
+            "github actions",
+            "jenkins",
+            "monitoring",
+            "prometheus",
+            "grafana"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "score": 1,
+      "count": 1,
+      "examples": [
+        "5M+"
+      ],
+      "standalone_numbers": 31
+    },
+    "action_verbs": {
+      "score": 7,
+      "count": 9,
+      "list": [
+        "designed",
+        "built",
+        "developed",
+        "led",
+        "orchestrated",
+        "automated",
+        "achieved",
+        "directed",
+        "managed"
+      ]
+    },
+    "readability": {
+      "total_words": 714,
+      "total_sentences": 34,
+      "avg_words_per_sentence": 21.0,
+      "jargon_density": 3
+    }
+  }
+]

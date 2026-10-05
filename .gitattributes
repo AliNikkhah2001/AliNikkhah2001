@@ -1,0 +1,3 @@
+# Preserve original snapshot/vendor bytes for portable SHA-256 verification.
+archive/local-versions/** -text
+resume/academic/template-library/upstream/** -text

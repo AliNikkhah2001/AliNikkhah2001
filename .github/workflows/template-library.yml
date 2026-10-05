@@ -1,0 +1,57 @@
+name: Verify archives and academic templates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'archive/local-versions/**'
+      - 'resume/academic/template-library/**'
+      - 'resume/scripts/academic_template_library.py'
+      - 'resume/scripts/consolidate_local_versions.py'
+      - 'resume/scripts/restore_local_version.py'
+      - '.github/workflows/template-library.yml'
+  pull_request:
+    paths:
+      - 'archive/local-versions/**'
+      - 'resume/academic/template-library/**'
+      - 'resume/scripts/academic_template_library.py'
+      - 'resume/scripts/consolidate_local_versions.py'
+      - 'resume/scripts/restore_local_version.py'
+      - '.github/workflows/template-library.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify imported content
+        run: |
+          python resume/scripts/consolidate_local_versions.py --verify
+          python resume/scripts/academic_template_library.py --verify
+      - name: Install TeX and preview tools
+        run: |
+          pip install Pillow
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-xetex texlive-luatex texlive-latex-extra texlive-fonts-extra texlive-bibtex-extra biber poppler-utils
+      - name: Build all ten templates
+        run: python resume/scripts/academic_template_library.py --build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: minimal-academic-template-gallery
+          path: |
+            resume/academic/template-library/previews/
+            resume/academic/template-library/index.html
+            resume/academic/template-library/build-results.json
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: template-build-logs
+          include-hidden-files: true
+          path: .build/academic-templates/**/build.log

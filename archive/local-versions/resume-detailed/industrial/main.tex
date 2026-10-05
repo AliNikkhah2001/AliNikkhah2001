@@ -1,0 +1,97 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{etoolbox}
+
+% ==============================================================================
+% CONFIGURATION: SET TRUE FOR THE TARGET RESUME VARIANT YOU WANT TO COMPILE
+% ==============================================================================
+\newbool{isAgentic} \setbool{isAgentic}{false}   % Frameworks: LangGraph, RAG, Chatbots
+\newbool{isVision}  \setbool{isVision}{true}   % Modalities: Video, Audio, Edge, TensorRT
+\newbool{isData}    \setbool{isData}{false}     % Infrastructure: Airflow, Spark, Analytics, Lakes
+\newbool{isSWE}     \setbool{isSWE}{false}      % Engineering: FastAPI, Go, Kafka, Scale, System
+% ==============================================================================
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+	\item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}{\end{itemize}}
+\newenvironment{resumeItemList}{\begin{itemize}}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+	
+	% --- CONTACT INFO HEADER ---
+	\begin{center}
+		\textbf{\Huge \scshape Ali Nikkhah} \\ \vspace{1pt}
+		\small Tehran, Iran $|$ +98 991 296 3951 $|$ 
+		\href{mailto:alinkkh9@gmail.com}{alinkkh9@gmail.com} $|$ 
+		\href{https://alinikkhah2001.github.io}{alinikkhah2001.github.io} $|$ 
+		\href{https://linkedin.com/in/alinikkhah2001}{linkedin.com/in/alinikkhah2001}
+	\end{center}
+	
+	% --- TECHNICAL SKILLS MATRIX ---
+	\section{Technical Skills}
+	\input{segments/common/skills.tex}
+	
+	% --- PROFESSIONAL EXPERIENCE ---
+	\section{Professional Experience}
+	\begin{resumeSubHeadingList}
+		% Dynamically includes tailored work descriptions based on active switches
+		\ifbool{isAgentic}{\input{segments/agentic_ai/experience.tex}}{}
+		\ifbool{isVision}{\input{segments/computer_vision/experience.tex}}{}
+		\ifbool{isData}{\input{segments/data_roles/experience.tex}}{}
+		\ifbool{isSWE}{\input{segments/software_engineering/experience.tex}}{}
+	\end{resumeSubHeadingList}
+	
+	% --- SELECTED PROJECTS & RESEARCH ---
+	\section{Selected Projects \& Research}
+	\begin{resumeSubHeadingList}
+		\ifbool{isAgentic}{\input{segments/agentic_ai/projects.tex}}{}
+		\ifbool{isVision}{\input{segments/computer_vision/projects.tex}}{}
+		\ifbool{isData}{\input{segments/data_roles/projects.tex}}{}
+		\ifbool{isSWE}{\input{segments/software_engineering/projects.tex}}{}
+	\end{resumeSubHeadingList}
+	
+	% --- EDUCATION ---
+	\section{Education}
+	\begin{resumeSubHeadingList}
+		\resumeSubheading
+		{Sharif University of Technology}{Tehran, Iran}
+		{B.Sc. Electrical Engineering \-- Digital Systems (GPA: 3.65, Major: 3.91)}{Sept 2020 \-- Jul 2024}
+	\end{resumeSubHeadingList}
+	
+\end{document}

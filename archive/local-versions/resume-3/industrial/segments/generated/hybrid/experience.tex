@@ -1,0 +1,110 @@
+% AUTO-GENERATED from data/cv.yaml variant=hybrid — do not edit manually
+\resumeSubheading
+  {Iran Credit Scoring Bureau}{Tehran, Iran}
+  {ML Engineer — Self-Hosted Graph RAG Assistant \textit{\scriptsize (Concurrent)}}{Apr 2026 == Present}
+\begin{resumeItemList}
+  \resumeItem{Architected self-hosted Graph RAG assistant: Neo4j knowledge graph + vector retrieval fused into an agent that answers analyst queries over credit-scoring domain data with grounded citations.}
+  \resumeItem{Ran self-hosted open-weight LLMs (vLLM/TGI) on GPU; profiled and optimised GPU runtime — KV-cache, batching, quantization (AWQ/GPTQ) — cutting per-token latency and GPU memory footprint.}
+  \resumeItem{Implemented Neo4j tool-calls (Cypher generation + schema-aware retrieval) so the assistant executes graph traversals instead of hallucinating structured facts.}
+  \resumeItem{Added hallucination guardrails — retrieval grounding, citation enforcement, deterministic fallback — for a regulated financial environment.}
+  \resumeItem{\textit{Stack:} Python, Neo4j, Cypher, Graph RAG, LangGraph, LangChain, FAISS, vLLM}
+  \resumeItem{\textit{Most recent Iran position; overlaps Sharif M.Eng. AI (Sep 2026) — full-time industry + part-time graduate study}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital}{Tehran, Iran}
+  {Senior Data Scientist \& Data Engineer \textit{\scriptsize (Concurrent)}}{Sep 2025 == Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Centralized lake from raw CDC via PeerDB + Trino/Parquet on 5TB/day, <60s freshness; Airflow + PySpark DAGs cut memory 60\%, governed by Great Expectations + Prometheus/Grafana.}
+  \resumeItem{Built default-risk ensemble (XGBoost + time-series Transformers) — AUC 0.87, -22\% defaults; 50+ concurrent mSPRT A/B tests with canary \& auto-rollback, presented to C-suite.}
+  \resumeItem{Shipped Whisper/wav2vec2.0 + LangGraph agentic chatbot — -78\% ticket volume, 94\% intent accuracy; deterministic fallback + policy guardrails for auditability.}
+  \resumeItem{Drove portfolio allocation \& risk engine (Sharpe +0.42) with streaming ClickHouse signals; LlamaIndex retrieval graph for ranking features.}
+  \resumeItem{\textit{Stack:} Python, PyTorch, Spark, Trino, PeerDB, Airflow, Great Expectations, Prometheus}
+  \resumeItem{\textit{Concurrent with Advanced Analytics Australia (Remote Contract) — 7-month overlap, split focus: Turquoise BNPL/risk/whisper vs Advanced edge CV}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Advanced Analytics Australia}{Remote · Australia (Tehran-based)}
+  {Computer Vision / ML Platform Engineer (Edge) \textit{\scriptsize (Concurrent)}}{Sep 2025 == Apr 2026}
+\begin{resumeItemList}
+  \resumeItem{Deployed YOLO + ViT quantized (TensorRT/TF Lite) on Triton — 99.2\% uptime <50ms p99, 3.5x speedup, exactly-once Kafka, 30 FPS over 100+ streams.}
+  \resumeItem{Built edge MLOps with Triton model repository, zero-downtime rolling updates, automated rollback, Prometheus/Grafana per-site health.}
+  \resumeItem{Cut false positives -35\% via attention-guided NMS + SNR monitoring; broker architecture for 12 distributed sites.}
+  \resumeItem{\textit{Stack:} Python, OpenCV, YOLO, ViT, TensorRT, TFLite, Triton, Kafka}
+  \resumeItem{\textit{Parallel remote contract alongside Turquoise — edge CV track}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Sharif University — Robust \& Interpretable ML Lab}{Tehran, Iran}
+  {Research Collaborator — Explainable \& Robust AI \textit{\scriptsize (Concurrent)}}{Jul 2025 == Sep 2025}
+\begin{resumeItemList}
+  \resumeItem{Benchmarked adversarial + natural shift suites; notebooks surfacing Captum/SHAP attributions, saliency, counterfactuals.}
+  \resumeItem{Documented deploy best-practices for regulated industries with faculty.}
+  \resumeItem{\textit{Stack:} PyTorch, MLflow, Captum, SHAP}
+  \resumeItem{\textit{Summer research sprint concurrent with industry roles}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Trinity College Dublin — EmoDub Project}{Dublin, Ireland}
+  {Machine Learning Researcher — Emotion-Aware Speech Translation \textit{\scriptsize (Concurrent)}}{May 2025 == Nov 2025}
+\begin{resumeItemList}
+  \resumeItem{Trained SER front-end (transformer + wav2vec2.0 + Whisper) for affect logits; cross-modal fusion transformer for emotion-consistent decoding.}
+  \resumeItem{Curated emotion-annotated corpora (EmotionNet/EmoDB) with balanced cultural representation; evaluated BLEU, Emotion F1, MOS.}
+  \resumeItem{Collab. with Prof. Siobhán Clarke; reproducible codebase https://github.com/AliNikkhah2001/emodub-emotion-translation.}
+  \resumeItem{\textit{Stack:} PyTorch, TensorFlow, Hugging Face, librosa, wav2vec2.0, Whisper, EmotionNet, EmoDB}
+  \resumeItem{\textit{Part-time remote research concurrent with Digikala + Turquoise + UBC}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead \textit{\scriptsize (Concurrent)}}{Jan 2025 == Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Led team of 5 defining R\&D roadmap + SLOs; shipped MCP with LangGraph cyclic graphs, zero-downtime hot-swapping, health-checked agent composition with deterministic fallback.}
+  \resumeItem{Hybrid retrieval FAISS + Elasticsearch RRF + HyDE + KAG — +23\% recall@10, -41\% hallucination; multi-tier Redis caching, p99 <200ms.}
+  \resumeItem{LLM serving on vLLM (PagedAttention) + Triton — 3.2x throughput, 60\% cost reduction; 200 pods, MIG/HPA/VPA, Prometheus KV-cache dashboards.}
+  \resumeItem{Partnered with infra/product establishing eval pipelines, A/B guardrails, canary rollouts.}
+  \resumeItem{\textit{Stack:} Python, LangGraph, LangChain, LlamaIndex, FAISS, Elasticsearch, ChromaDB, HyDE}
+  \resumeItem{\textit{Full-time lead; UBC/Trinity/Sharif were part-time remote (<10h/wk)}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineer \textit{\scriptsize (Concurrent)}}{Nov 2024 == Jan 2025}
+\begin{resumeItemList}
+  \resumeItem{Implemented LangGraph orchestration layers with health monitoring; hybrid retrieval with RRF + deterministic fallbacks for auditability.}
+  \resumeItem{Embedded eval telemetry, memory-efficient indexing, response caching; load-tested to 5M queries.}
+  \resumeItem{\textit{Stack:} LangChain, LlamaIndex, FAISS, Elasticsearch, FastAPI}
+  \resumeItem{\textit{Promotion track — converted to R\&D Lead Jan 2025}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {University of British Columbia}{Remote · Vancouver, Canada (Tehran-based)}
+  {Research Assistant — Vision-Language Medical Imaging (Ultrasound Report Generation) \textit{\scriptsize (Concurrent)}}{Feb 2024 == Nov 2025}
+\begin{resumeItemList}
+  \resumeItem{Designed ViT/BLIP encoders + T5 generator with contrastive/self-supervised alignment; curated DICOM, de-identified QA corpora.}
+  \resumeItem{Deployed attention/saliency overlays for interpretability; benchmarked BLEU/ROUGE-L + clinical efficacy with radiologists; SOTA on in-house split.}
+  \resumeItem{Preprint in prep: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning (2025).}
+  \resumeItem{\textit{Stack:} PyTorch, ViT, BLIP, T5, LLaVA, CLIP, OpenCV, MIMIC-CXR}
+  \resumeItem{\textit{Long-running part-time research; overlapped industry roles but capped at 10h/wk — primary commitment was Digikala/Turquoise}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {L3S Research Center — Leibniz University Hannover}{Hannover, Germany}
+  {Research Assistant — Video Motion Classification \textit{\scriptsize (Concurrent)}}{Apr 2023 == Feb 2024}
+\begin{resumeItemList}
+  \resumeItem{Engineered optical-flow-centric datasets with temporal sampling/augmentation; improved domain generalization across lighting/texture/camera shift.}
+  \resumeItem{Benchmarked 3D CNN + transformer hybrids vs baselines; analyzed attention maps; reduced overfitting, SOTA accuracy.}
+  \resumeItem{\textit{Stack:} PyTorch Lightning, OpenCV, PyAV, TensorBoard, scikit-learn, Multimodal Models}
+  \resumeItem{\textit{Part-time RA during B.Sc. final year — no conflict}}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer (Founding) \textit{\scriptsize (Concurrent)}}{Aug 2021 == Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Provisioned multi-node K8s via Terraform; Ray + MLflow training pipelines, TF Serving + FastAPI — <10 min releases, 99.9\% deploy success, 15+ models.}
+  \resumeItem{GitOps with GitHub Actions, canary, spot-instance optimization; Prometheus/Grafana + ELK observability; registry + lineage.}
+  \resumeItem{\textit{Stack:} Kubernetes, Docker, Ray, MLflow, Terraform, ArgoCD, FastAPI, Prometheus}
+  \resumeItem{\textit{During B.Sc. — clean sequential after Mapna internship}}
+\end{resumeItemList}
+

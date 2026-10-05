@@ -1,0 +1,51 @@
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Led the full architectural transition of the enterprise search and knowledge layer from static semantic matching to stateful multi-agent pipelines powered by \textbf{LangGraph}; the system now handles over \textbf{5 million daily queries} (p99 <200ms) across product discovery, customer support, and internal knowledge retrieval.}
+  \resumeItem{Designed a Modular Control Pipeline (MCP) that cleanly decouples text ingestion, chunking, retrieval, and response synthesis phases, enabling live LLM hot-swapping and zero-downtime vector index migrations without service interruption.}
+  \resumeItem{Built a hybrid retrieval engine combining dense \textbf{FAISS} vector search with sparse \textbf{Elasticsearch} keyword lookup, fused via Reciprocal Rank Fusion (RRF); implemented \textbf{HyDE} query expansion and hierarchical chunking strategies to significantly close the accuracy gap on long-tail and ambiguous product queries (\textbf{+23\% recall@10}).}
+  \resumeItem{Deployed \textbf{Knowledge-Augmented Generation (KAG)} alongside standard RAG to enforce symbolic reasoning constraints on structured product catalog data, substantially reducing factual hallucinations in generated customer-facing answers (\textbf{-41\% factual error rate}).}
+  \resumeItem{Engineered async \textbf{FastAPI} serving layers with multi-tier \textbf{Redis} caching and asynchronous request batching; deployed LLMs via \textbf{vLLM} with PagedAttention and \textbf{Triton Inference Server} to maximize KV-cache utilization and GPU throughput (\textbf{3.2x throughput gain, 60\% cost reduction per 1K queries}) under burst traffic conditions.}
+  \resumeItem{Supervised Kubernetes deployment of multi-tenant model serving clusters, isolating vision and language model compute nodes for independent horizontal scaling and fault containment (\textbf{200 pods, 40\% GPU cost reduction}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineer}{Nov 2024 -- Jan 2025}
+\begin{resumeItemList}
+  \resumeItem{Prototyped and benchmarked RAG architectures against real production query logs; integrated LangGraph cyclic agent graphs for multi-turn session management, dynamic context re-evaluation, and automated query rewriting loops.}
+  \resumeItem{Evaluated retrieval precision and end-to-end latency across candidate retrieval systems; findings directly shaped the R\&D roadmap adopted in the subsequent lead role.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Advanced Analytics Australia}{Remote Contract}
+  {Computer Vision Engineer}{Sep 2025 -- Apr 2026}
+\begin{resumeItemList}
+  \resumeItem{Engineered production video analytics pipelines on AXIS network camera hardware for health, safety, and compliance monitoring across \textbf{12 industrial sites}: handwash verification, PPE detection (boots, helmets), face tracking, and restricted-zone entry alerting (\textbf{<50ms inference, 99.2\% uptime}).}
+  \resumeItem{Compiled and quantized vision models into \textbf{TensorRT} and \textbf{TensorFlow Lite} runtimes; served them through \textbf{Triton Inference Server} with dynamic batching, substantially reducing CPU overhead on edge nodes by eliminating Python-level inference overhead (\textbf{3.5x speedup vs Python}).}
+  \resumeItem{Architected a high-throughput spatial metadata ingestion broker using \textbf{Apache Kafka} to buffer concurrent high-frame-rate tracking streams from \textbf{100+ cameras (30 FPS each)} without back-pressure on inference workers.}
+  \resumeItem{Implemented dynamic sensor calibration routines that compensate for exposure variance and lighting shifts across indoor and outdoor camera placements, maintaining stable detection thresholds across all deployment sites (\textbf{-35\% false positives}).}
+  \resumeItem{Built asynchronous Python streaming workers interfacing directly with camera APIs, managing parallel video payload processing without blocking main inference threads.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Engineer \& Data Scientist}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Architected the central enterprise data lake and OLAP warehouse for a high-volume BNPL and stock-trading platform, routing transactional and user-interaction streams from PostgreSQL into \textbf{Trino} via \textbf{PeerDB} Change Data Capture (CDC) replication for continuous, low-latency synchronization (\textbf{<60s CDC latency, 5TB/day}).}
+  \resumeItem{Designed and maintained complex \textbf{Apache Airflow} DAGs orchestrating multi-stage data transformation pipelines, automated cold-data archiving (Parquet/ORC on object storage), and cross-system synchronization workflows across the full data platform.}
+  \resumeItem{Built a real-time statistical inference engine running parallel A/B hypothesis tests on application features, monitoring user-activity telemetry and automatically flagging significance shifts under volatile market conditions (\textbf{50+ concurrent experiments, mSPRT sequential testing}).}
+  \resumeItem{Refactored legacy ETL scripts into modular, object-oriented \textbf{PySpark} processing pipelines, improving memory management and substantially reducing algorithmic processing complexity over data lake targets (\textbf{60\% memory reduction}).}
+  \resumeItem{Developed predictive ML models to classify user debt-repayment risk, compute dynamic credit limits, and automate fund allocation or containment decisions for BNPL accounts (\textbf{default rate -22\%, AUC 0.87}).}
+  \resumeItem{Engineered an enterprise \textbf{LangGraph} agentic chatbot handling customer support ticketing, financial literacy instruction, and live portfolio inquiries; integrated real-time \textbf{Whisper} and \textbf{wav2vec2.0} voice transcription so call-center audio streams feed the agent directly, eliminating manual ticket creation (\textbf{-78\% ticket volume, 94\% transcription accuracy}).}
+  \resumeItem{Built the AI portfolio allocation system: ingested user risk-tolerance questionnaires, fused historical time-series pricing data with streaming news-sentiment embeddings, and trained time-series transformer models to produce portfolio value forecasts with explicit statistical confidence intervals feeding automated trading allocations (\textbf{Sharpe +0.42 vs benchmark}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Orchestrated distributed model training pipelines on Kubernetes using Ray for workload scheduling and MLflow for experiment tracking and artifact lineage (\textbf{15+ models, 50+ experiments tracked}).}
+  \resumeItem{Built model inference APIs in FastAPI backed by TensorFlow Serving; automated full deployment lifecycle with Docker, ArgoCD, and GitHub Actions, cutting release cycles to under 10 minutes (\textbf{99.9\% deploy success rate}).}
+\end{resumeItemList}

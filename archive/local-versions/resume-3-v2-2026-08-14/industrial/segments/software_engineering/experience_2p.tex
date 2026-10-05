@@ -1,0 +1,36 @@
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead (Backend \& Systems)}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Engineered the async \textbf{FastAPI} serving infrastructure handling over \textbf{5 million daily queries}; implemented multi-tier \textbf{Redis} caching and asynchronous request batching to fully isolate model execution latency from client-facing response times.}
+  \resumeItem{Integrated \textbf{vLLM} with PagedAttention and \textbf{Triton Inference Server} for LLM and embedding model deployment, maximizing KV-cache utilization and GPU throughput under variable query burst patterns.}
+  \resumeItem{Designed a Modular Control Pipeline (MCP) decoupling text ingestion, chunking, retrieval, and synthesis phases, enabling zero-downtime model hot-swapping and live index migrations.}
+  \resumeItem{Built stateful multi-agent routing networks using LangGraph cyclic directed graphs to manage multi-turn session state, dynamic context evaluation, and automated query rewriting loops.}
+  \resumeItem{Supervised Kubernetes deployment of multi-tenant model serving clusters, isolating vision and language model compute nodes for independent horizontal scaling and fault containment.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Advanced Analytics Australia}{Remote Contract}
+  {Backend \& Edge Systems Engineer}{Sep 2025 -- Apr 2026}
+\begin{resumeItemList}
+  \resumeItem{Built high-performance async Python streaming workers interfacing directly with AXIS network camera hardware, processing continuous live video feeds and routing them into a distributed \textbf{Apache Kafka} ingestion broker for fault-tolerant delivery under network spikes.}
+  \resumeItem{Compiled and quantized vision networks into \textbf{TensorRT} and \textbf{TF Lite} runtimes served via Triton Inference Server, eliminating Python-level inference overhead on resource-constrained edge nodes.}
+  \resumeItem{Designed sensor calibration routines and signal-to-noise monitoring to maintain stable detection thresholds across indoor and outdoor deployment sites.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Engineer}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Developed async backend infrastructure in Python/FastAPI supporting high-frequency portfolio projection requests and automated asset trading execution; decoupled ingestion from core relational databases via multi-tier Redis caching and \textbf{Apache Kafka} message queuing.}
+  \resumeItem{Maintained full system reliability and observability across microservices using \textbf{Prometheus}, \textbf{Grafana}, and the ELK log aggregation stack.}
+  \resumeItem{Orchestrated complex \textbf{Airflow} DAGs and deployed \textbf{PeerDB} CDC replication clusters to continuously mirror transactional databases into OLAP engines with sub-minute latency.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Automated end-to-end model deployment pipelines with Docker, \textbf{ArgoCD}, and GitHub Actions, reducing release cycles to under 10 minutes; managed Kubernetes cluster orchestration and IaC via Terraform.}
+  \resumeItem{Built low-latency model inference APIs with FastAPI and TensorFlow Serving to handle concurrent traffic spikes; orchestrated distributed workloads with Ray and MLflow.}
+\end{resumeItemList}

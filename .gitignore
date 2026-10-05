@@ -1,0 +1,16 @@
+.DS_Store
+._*
+__pycache__/
+*.pyc
+.build/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bcf
+*.run.xml
+*.blg
+*.xdv

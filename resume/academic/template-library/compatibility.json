@@ -1,0 +1,46 @@
+{
+  "14-pseudomanifold": {
+    "note": "Use free TeX Gyre fonts instead of requiring Adobe Minion Pro, Cabin and Fira Mono; separate the sample's adjacent education entries.",
+    "patches": {
+      "CV.tex": [
+        ["{Minion Pro}", "{TeX Gyre Pagella}"],
+        ["{Cabin Regular}", "{TeX Gyre Heros}"],
+        ["{Fira Mono}", "{TeX Gyre Cursor}"],
+        ["Advisor: Arthur Eddington\n", "Advisor: Arthur Eddington\\\\[0.2cm]\n"]
+      ]
+    }
+  },
+  "16-prometheus": {
+    "engine": "xelatex",
+    "note": "Compile fontspec with XeLaTeX and substitute the free TeX Gyre Pagella family for separately installed Cormorant fonts.",
+    "patches": {
+      "main.tex": [
+        ["Cormorant Garamond Bold Italic", "texgyrepagella-bolditalic.otf"],
+        ["Cormorant Garamond Bold", "texgyrepagella-bold.otf"],
+        ["Cormorant Garamond Italic", "texgyrepagella-italic.otf"],
+        ["Cormorant Garamond Regular", "texgyrepagella-regular.otf"],
+        ["Cormorant Garamond Light", "texgyrepagella-regular.otf"]
+      ]
+    }
+  },
+  "17-phd-application": {
+    "note": "Restore the Raleway font switch and provide a minimal monochrome variant: plain headings, hidden link borders, neutral skill tags, and a spaced name.",
+    "patches": {
+      "my_cv.cls": [
+        ["\\ralewayextra", "\\sffamily"],
+        ["\\definecolor{cvblue}{rgb}{0.32, 0.68, 0.89}", "\\definecolor{cvblue}{rgb}{0, 0, 0}"],
+        ["\\definecolor{keywordcolor}{rgb}{0.80, 0.90, 1.0}", "\\definecolor{keywordcolor}{rgb}{0.95, 0.95, 0.95}"],
+        ["\\RequirePackage{hyperref}", "\\RequirePackage[hidelinks]{hyperref}"],
+        ["\\circled{#1} {\\larger[2] #2}", "{\\larger[2] #2}"],
+        ["\\selectfont #1}", "\\selectfont #1\\space}"]
+      ]
+    }
+  },
+  "18-mcdowell": {
+    "engine": "lualatex",
+    "note": "Use LuaLaTeX for microtype letterspacing and the free TeX Gyre Termes equivalent of Times New Roman.",
+    "patches": {
+      "mcdowellcv.cls": [["Times New Roman", "TeX Gyre Termes"]]
+    }
+  }
+}

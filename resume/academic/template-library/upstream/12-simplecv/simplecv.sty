@@ -1,0 +1,219 @@
+\ProvidesPackage{simplecv}
+
+% Packages
+\usepackage{fontawesome}                    % Social media icons
+\usepackage[cm]{fullpage}                   % Margins
+\usepackage[hidelinks]{hyperref}            % Hyperlinks
+\usepackage{titlesec}                       % Title formatting
+\usepackage{import}                         % File importing
+\usepackage{multicol}                       % Multiple columns
+\usepackage[usenames,dvipsnames]{xcolor}    % Coloring
+\usepackage{enumitem}                       % List customization
+\usepackage{lastpage}                       % Page numbering
+\usepackage{fancyhdr}                       % Footers
+\usepackage[russian,english]{babel}         % Language styles
+\usepackage{graphicx}                       % Importing graphics
+\usepackage[export]{adjustbox}              % Aligning margins
+\usepackage{moresize}                       % HUGE size
+\usepackage{etoolbox}                       % CSV lists, patching helpers
+\usepackage{xpatch}                         % patch to make author name bold
+
+% % Chinese
+% \usepackage{xeCJK}
+% \setCJKmainfont{BabelStone Han}
+
+% % Cyrillic/Russian
+% \usepackage{hyphenat}
+% \babelfont{rm}{Droid Sans}
+
+% Styling
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Quotes
+\usepackage[autostyle,english=american]{csquotes}
+\MakeOuterQuote{"}
+
+% Define colors
+\definecolor{color-text}{gray}{0.10}    % light black
+\definecolor{color-detail}{gray}{0.40}  % dark gray
+\colorlet{color-title}{\theme}          % black
+
+% Hyperlinks
+\newcommand{\link}[2]{\href{#1}{\underline{\smash{#2}}}}
+
+% Set text color
+\makeatletter
+\newcommand{\globalcolor}[1]{\color{#1}\global\let\default@color\current@color}
+\makeatother
+\AtBeginDocument{\globalcolor{color-text}}
+
+% Shorthand
+\newcommand{\github}[1]{\href{https://github.com/#1/}{#1}}
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+\newcommand{\website}[1]{\href{https://#1/}{#1}}
+\newcommand{\linkedin}[1]{\href{https://www.linkedin.com/in/#1/}{#1}}
+
+% Dummy environment
+\newenvironment*{dummyenv}{}{}
+
+% Simple heading: name + comma-separated contact items
+\makeatletter
+\newcommand{\headingsimple}[2]{%
+  \begin{center}
+    {\HUGE \textcolor{color-title}{#1}}\\[\bigskipamount]
+    \def\simplecv@sep{}%
+    \forcsvlist{\simplecv@contact}{#2}%
+  \end{center}
+}
+\newcommand{\simplecv@contact}[1]{%
+  \simplecv@sep #1%
+  \def\simplecv@sep{\hspace{10pt}\vrule\hspace{10pt}}%
+}
+\makeatother
+
+% Inline heading
+\newcommand{\headinginline}[2]{
+  \begin{minipage}[t]{0.60\textwidth}
+    \vspace*{\fill}
+    \HUGE \textcolor{color-title}{#1}
+  \end{minipage}
+  \begin{minipage}[t]{0.39\textwidth}
+    \begin{flushright}
+      #2
+    \end{flushright}
+  \end{minipage}
+}
+
+% Photo heading
+\newcommand{\headingphoto}[3]{
+  \begin{minipage}[t]{0.60\textwidth}
+    \begin{dummyenv}
+      \vspace*{\fill}
+      \HUGE \textcolor{color-title}{#1}
+    \end{dummyenv}
+    \vspace{5mm}\\
+    #2
+  \end{minipage}
+  \begin{minipage}[t]{0.39\textwidth}
+    \begin{flushright}
+      \includegraphics[width=.5\linewidth,keepaspectratio,valign=t]{#3}
+    \end{flushright}
+  \end{minipage}
+}
+
+% Two-columns
+\newcommand{\sidebyside}[2]{
+  \begin{multicols}{2}
+    #1 \columnbreak
+    #2
+  \end{multicols}
+}
+
+% Section titles
+\titleformat{\section}{
+\scshape\raggedright\Large\color{color-title}}{}{0em}{}
+[\color{color-title}\titlerule\vspace{-\smallskipamount}]
+
+% Subsection titles
+\titleformat{\subsection}{%
+  % \scshape
+\raggedright\large\color{color-title}}{}{0em}{}[\vspace{-\smallskipamount}]
+
+% Match other CV sections (biblatex defaults to \section* plus marks)
+\defbibheading{bibliography}[\refname]{
+\section{#1}}
+
+% Footer
+\fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+% Lists
+\newcommand{\outerlist}[1]{
+  \begin{itemize}[leftmargin=*] #1
+\end{itemize}}
+\newcommand{\denseouterlist}[1]{
+  \begin{itemize}[leftmargin=*,itemsep=0pt] #1
+\end{itemize}}
+\newcommand{\innerlist}[1]{
+  \begin{itemize}[topsep=0pt] #1
+\end{itemize}}
+\newcommand{\orderedouterlist}[1]{
+  \begin{enumerate}[leftmargin=*] #1
+\end{enumerate}}
+\newcommand{\denseorderedouterlist}[1]{
+  \begin{enumerate}[leftmargin=*,itemsep=0pt] #1
+\end{enumerate}}
+
+% List items
+\newcommand{\entry}[1]{
+\item\small{#1}}  % bullet / body line
+\newcommand{\entryextra}[1]{\textcolor{color-detail}{\entry{#1}}}  % muted secondary bullet
+\newcommand{\entrylabeled}[2][]{
+\item[#1]\small{#2}}  % bullet with a custom label
+
+\newcommand{\entrymid}[4][]{  % title + date, italic subtitle (teaching, volunteering)
+\item[#1] \small{#2} \hfill \small{#3}
+  \vspace{-\smallskipamount}
+\item[]\small{\textit{#4}}}
+
+\newcommand{\entrybig}[5][]{
+\item[#1]  % org + location, role + dates (jobs, education)
+  \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    #2 & #3 \\ {\small#4} & {\small #5} \\
+\end{tabular*}}
+
+\newcommand{\entryrole}[2]{% extra role + dates under the same \entrybig (promotions)
+  \par\nobreak\vspace{-\parskip}\nointerlineskip
+  \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    {\small#1} & {\small #2} \\
+\end{tabular*}}
+
+\newcommand{\entrybigonecol}[3][]{
+\item[#1]  % two left-only rows (projects without location/dates)
+  \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    #2 & \\ {\small#3} & \\
+\end{tabular*}}
+
+\makeatletter
+\newcommand{\entryrule}{% theme-colored divider, centered between two \entrybig items
+  % If we're inside a list (\@listdepth>0) emit an empty \item[] so the
+  % rule lines up with other items; otherwise just emit a standalone rule.
+  \ifnum\@listdepth>0
+\item[]% empty list item to position the rule
+  \par\nobreak\nointerlineskip\vspace*{\smallskipamount}
+  \noindent\textcolor{color-title}{\rule{\linewidth}{0.1pt}}%
+  \par\nobreak\nointerlineskip\vspace*{\smallskipamount}
+  \else
+  \par\nobreak\nointerlineskip\vspace*{\smallskipamount}
+  \noindent\textcolor{color-title}{\rule{\linewidth}{0.1pt}}%
+  \par\nobreak\nointerlineskip\vspace*{\smallskipamount}
+\fi}
+\makeatother
+
+% Fill year
+\newcommand{\fillyear}[1]{\phantom{#1}}
+
+% Make author name bold
+\makeatletter
+\newbibmacro*{name:bold}[2]{%
+  \edef\blx@tmp@name{\expandonce#1, \expandonce#2}%
+  \def\do##1{\ifdefstring{\blx@tmp@name}{##1}{\bfseries\listbreak}{}}%
+\dolistloop{\boldnames}}
+\newcommand*{\boldnames}{}
+\makeatother
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}

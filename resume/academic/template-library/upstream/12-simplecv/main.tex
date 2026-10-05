@@ -1,0 +1,66 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+% Choose bibliography style for formatting list of publications
+\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false,date=year]{biblatex}
+\bibliography{papers}
+
+% Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue, Blue
+% More predefined colors: https://en.wikibooks.org/wiki/LaTeX/Colors
+\def\theme{MidnightBlue}
+
+\usepackage{simplecv}
+
+% Make author name bold
+\forcsvlist{\listadd\boldnames}{
+  {Cetin*, D\bibinitperiod},
+  {Cetin, D\bibinitperiod},
+}
+
+\begin{document}
+
+% Adding {} after icons to force whitespace insertion
+
+% Inline heading: name on the left, contact items on the right
+\headinginline{Doruk Çetin}{
+  \faEnvelope{} \email{doruk.cetin.dc@gmail.com} \\
+  \faGlobe{} \website{dcetin.me}
+  \faLinkedin{} \linkedin{doruk-cetin}
+  \faGithub{} \github{dcetin} \\
+  \faPhone{} +1 555-555-5555
+}
+
+% Photo heading: name on the left, contact items below the name, photo on the right
+% \headingphoto{Doruk Çetin}{
+%     Website: \website{dcetin.me} \\
+%     Email: \email{dcetin@ethz.ch} \\
+%     % LinkedIn: \linkedin{doruk-cetin} \\
+%     GitHub: \github{dcetin}
+% }{photo.png}
+
+% Simple heading: name above, contact items below, separated by vertical bars
+% \headingsimple{Doruk Çetin}{
+%     \faEnvelope: \email{doruk.cetin.dc@gmail.com},
+%     \faGlobe: \website{dcetin.me},
+%     \faLinkedin: \linkedin{doruk-cetin},
+%     \faGithub: \github{dcetin}
+% }
+
+% Page One
+\import{sections/}{education.tex}
+\import{sections/}{experience.tex}
+\import{sections/}{publications.tex}
+
+\pagebreak
+
+% Page Two
+% Use \sidebyside to place two sections side by side
+\import{sections/}{teaching.tex}
+\sidebyside
+{\import{sections/}{skills.tex}}
+{\import{sections/}{languages.tex}}
+\import{sections/}{projects.tex}
+\import{sections/}{awards.tex}
+\import{sections/}{volunteering.tex}
+
+\end{document}

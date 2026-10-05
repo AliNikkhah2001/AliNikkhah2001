@@ -1,0 +1,30 @@
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Led architectural transition from static semantic matching to stateful \textbf{LangGraph} multi-agent pipelines now handling \textbf{5M+ daily queries} (p99 latency <200ms) across product discovery, customer support, and internal knowledge retrieval; designed a Modular Control Pipeline (MCP) decoupling ingestion, chunking, retrieval, and synthesis phases for zero-downtime LLM hot-swapping.}
+  \resumeItem{Built hybrid retrieval combining dense \textbf{FAISS} vector search with sparse \textbf{Elasticsearch} keyword lookup fused via Reciprocal Rank Fusion (RRF); added \textbf{HyDE} query expansion and hierarchical chunking to close accuracy gaps on ambiguous long-tail queries (\textbf{+23\% recall@10}), and deployed \textbf{KAG} symbolic reasoning to reduce hallucinations on structured catalog data (\textbf{-41\% factual error rate}).}
+  \resumeItem{Engineered async \textbf{FastAPI} serving with multi-tier \textbf{Redis} caching and request batching; deployed LLMs via \textbf{vLLM} (PagedAttention) and \textbf{Triton Inference Server} to maximize KV-cache utilization and GPU throughput (\textbf{3.2x throughput gain, 60\% cost reduction per 1K queries}) under burst traffic.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineer}{Nov 2024 -- Jan 2025}
+\begin{resumeItemList}
+  \resumeItem{Prototyped RAG architectures against production query logs; integrated LangGraph cyclic agent graphs for multi-turn session management, context re-evaluation, and automated query rewriting; benchmarked retrieval precision and latency to shape the R\&D roadmap for the lead role.} % [1p-drop]
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Engineer \& Data Scientist}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Engineered an enterprise \textbf{LangGraph} financial chatbot with real-time \textbf{Whisper}/\textbf{wav2vec2.0} call transcription and secure dynamic function-calling for live equity balance queries and compound-profit calculations — without exposing database credentials to the LLM context (\textbf{-78\% ticket volume, 94\% transcription accuracy}).}
+  \resumeItem{Built an AI portfolio allocation system fusing historical time-series pricing with streaming news-sentiment embeddings using time-series transformer models, producing forecasts with explicit confidence intervals that drive automated batch trading allocations (\textbf{Sharpe +0.42 vs benchmark}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Orchestrated distributed ML training and feature-extraction pipelines on Kubernetes (Ray, MLflow); built FastAPI inference APIs with TensorFlow Serving; automated the full CI/CD lifecycle with Docker, ArgoCD, and GitHub Actions, cutting deployment cycles to under 10 minutes (\textbf{15+ models, 99.9\% deploy success rate}).} % [1p-drop]
+\end{resumeItemList}

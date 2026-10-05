@@ -1,0 +1,2422 @@
+{
+  "base_commit": "3ff03f75fac2da4d4b51bc5b357a2efa508d4c55",
+  "policy": "Keep GitHub working data; import missing Resume 3 files; archive all distinct local content.",
+  "files": [
+    {
+      "source": "Resume 3",
+      "path": ".github/workflows/rendercv.yml",
+      "sha256": "5654a0b3512fd05588576c896f6510e026a6ec1bc74df0012b54e0ef4d76acb1",
+      "stored_at": "archive/local-versions/resume-3/.github/workflows/rendercv.yml",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "ATS_EVALUATION_REPORT.txt",
+      "sha256": "ed64c5ead8a9081ada820c17aef23ab9601321098e32ab6affd5b51a1d6f290a",
+      "stored_at": "archive/local-versions/resume-3/ATS_EVALUATION_REPORT.txt",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "Ali Nikkhah Resume 2026 EN.pdf",
+      "sha256": "0cf0aacb054a26881d1388ace7af16930534510a00df2c8b382e628cbb5c17b7",
+      "stored_at": "archive/local-versions/resume-3/Ali Nikkhah Resume 2026 EN.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "CV_IMPROVEMENT_QUESTIONS.md",
+      "sha256": "d00f4050837adf22be62ca24a84a9d572adea7fdc3b63efed80f6574c0c171f7",
+      "stored_at": "archive/local-versions/resume-3/CV_IMPROVEMENT_QUESTIONS.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "CV_RULES_COMPILATION.md",
+      "sha256": "3953a08f6bf03504a80a517d52d65f996113bd2707413d2309f1178007bc1e6a",
+      "stored_at": "archive/local-versions/resume-3/CV_RULES_COMPILATION.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "CV_WEAKNESS_EVALUATION.md",
+      "sha256": "8df511b3b19f7c2671a6ce8dd5094820475bf24c45cdca97e16548362eac699a",
+      "stored_at": "archive/local-versions/resume-3/CV_WEAKNESS_EVALUATION.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "README.md",
+      "sha256": "fbd174c9a746dbf7f1cb6ce4b6b54e7e7e6e8f0a149b30e2f77077f8bb4cfca3",
+      "stored_at": "archive/local-versions/resume-3/README.md",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "README_TAGGED.md",
+      "sha256": "30b2a9bcb8058e8e6631530be1309fc79faa757c6a4b4ffa577ee4e0440899ff",
+      "stored_at": "archive/local-versions/resume-3/README_TAGGED.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/Ali_Nikkhah_ResearchCV.pdf",
+      "sha256": "f1a110d2abff1f20cf8da29575ee1b22ced0242daa351d83cfcb240e948360cf",
+      "stored_at": "archive/local-versions/resume-3/academic/Ali_Nikkhah_ResearchCV.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/main.pdf",
+      "sha256": "67d6a992daa608b1a889498469ae5ef28d7e206d26796855a7603e07410d55af",
+      "stored_at": "archive/local-versions/resume-3/academic/main.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/main.tex",
+      "sha256": "d2317ba0f6941b44ecb525a6a8be55812fa1c3a5db7c59186964014a4a2df9eb",
+      "stored_at": "archive/local-versions/resume-3/academic/main.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/segments/publications/list.tex",
+      "sha256": "11da9c4b8e0e3d9a3e590aa1778bae8b1f8c6da0b5aa2df87eae97edeb895d5f",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/publications/list.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/segments/research_experience/entries.tex",
+      "sha256": "ef12112ceef56766408f9ac15d3e56c25e4036b8af174b0cd46e05a173ec3403",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/research_experience/entries.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/segments/research_experience/industry.tex",
+      "sha256": "e5a3a38a07be34d0434591f2c462c98d0efb2b6fa28eabf702d045adb7496c47",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/research_experience/industry.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/segments/teaching_mentoring/ta_history.tex",
+      "sha256": "f3d7f6e024c667f2c116d94e00482ff3a28757f825aa8f62e9f76312a9de9227",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/teaching_mentoring/ta_history.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/README.md",
+      "sha256": "70f837f9ccfa2a860a1897826a8927ccde9774652d883110affa4ab14ae451ad",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/README.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/build_all.sh",
+      "sha256": "63b53b6b117665bb46eab2f1fe8d239e441ad56ee9559b7e83df3182c791f87d",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/build_all.sh",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_01_classic.pdf",
+      "sha256": "5ecd898121523781ba04e685004b973eee5ff3f3580ddfcac84276898397938a",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_01_classic.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_01_classic.tex",
+      "sha256": "129d15be871ce359ecebfddce0ab040511fd228e13c99c57d4b5d489bac5531f",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_01_classic.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_02_awesome.pdf",
+      "sha256": "9216e7bdf796dfab77f5764eff4d3f30410af38b0e530cc6f9d0f07664753656",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_02_awesome.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_02_awesome.tex",
+      "sha256": "1fd079e73cbaf19d07f0d0603795c1deb803cee7c767e1de504b1e958f2d8cbd",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_02_awesome.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_03_modern.pdf",
+      "sha256": "73d73e3d4fb8aec656d295ce30beafe98d3df6fb60ae8c1db652f2af8d5aac4e",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_03_modern.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_03_modern.tex",
+      "sha256": "214a7fe51185d593c10040ef073c9d87bd95f48c610e8795a5cf32dcd3ed55a6",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_03_modern.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_04_altacv.pdf",
+      "sha256": "f471b98cc51e57f9752e598933c2e775028322a97ea3cc5ff218335ff1d65113",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_04_altacv.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_04_altacv.tex",
+      "sha256": "6752833766e0f32dd86bbfcc4000287d3cfa0886320e9a545246b6b3c696bf92",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_04_altacv.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_05_deedy.pdf",
+      "sha256": "626c06af0c74c63142b98e37d2b882219f433d04f93501165ded765c7bc8c722",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_05_deedy.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_05_deedy.tex",
+      "sha256": "0fa2872bd6e488be1de2615ed67682427c5f88ff404c63fd8d86a6cb83fb1842",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_05_deedy.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_06_plasmati.pdf",
+      "sha256": "a0506f1ac8e276c9b35b1cb6b0e88ad5c3b8c33dbf87ab82136b8681a4e17b82",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_06_plasmati.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_06_plasmati.tex",
+      "sha256": "a60f55874b4871784a2f83beb38f9b7a84b1a453f7c71b77a560027c3cca3f15",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_06_plasmati.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_07_simple.pdf",
+      "sha256": "34a7e61fe64774526dfb82f27d832f0c5c92e6addcd5776ee26a871d03acbc22",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_07_simple.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_07_simple.tex",
+      "sha256": "f79051607204172b67ce4cebf16691c6b78da2d7e8964cebe91bac28c6e3bb4b",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_07_simple.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_08_ieee.pdf",
+      "sha256": "c9ab013aff88faeec7b5a3c5f3186cf05097b0dabb34f3d193f91226754d4a58",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_08_ieee.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_08_ieee.tex",
+      "sha256": "25c019871da15b1aaaf5dcc9d08057904014560824a919c1ac87fd91e635001e",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_08_ieee.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_09_clean.pdf",
+      "sha256": "c2bb47561b76f36d226f9c6e33b265037330fc1eb93a8fb14dc7d60c4889fc3f",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_09_clean.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_09_clean.tex",
+      "sha256": "3b71bd8927a6fabd40499eaa01714f2f13923af9cbc750ebb8642d822c74e320",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_09_clean.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_10_typst.pdf",
+      "sha256": "c35428040bfeca5032c95a7cbef1d6caaaf1f954d0120cdfaa4714d185ba04ed",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_10_typst.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/themes/theme_10_typst.tex",
+      "sha256": "39f8035bd4b1ee9b8627afb0c434e164d2d9e585240fb0190070f62ecf5ca3c8",
+      "stored_at": "archive/local-versions/resume-3/academic/themes/theme_10_typst.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "ats_analyze.py",
+      "sha256": "1ba37871f4da969ddcb59ddf354e3e57abff3aa2f508985da5f2166991511a71",
+      "stored_at": "archive/local-versions/resume-3/ats_analyze.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "ats_evaluate.py",
+      "sha256": "17ebadb4621fd193d2abd889018a18f0fe0dab368a95a00cd1fcce4a0a468f38",
+      "stored_at": "archive/local-versions/resume-3/ats_evaluate.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "ats_evaluation_results.json",
+      "sha256": "d0655daa6bedd537b17835d14a998969b5a37c37649305eac5d8ff5c2250f585",
+      "stored_at": "archive/local-versions/resume-3/ats_evaluation_results.json",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compile_all.py",
+      "sha256": "ffc80534d49377e41747f2c384f7d1a9dd0555754dc079e280d7137cf72e843e",
+      "stored_at": "archive/local-versions/resume-3/compile_all.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compile_all2.py",
+      "sha256": "b53b27c725ae546f416610538b37c56f5cf315d302ed9e47b71b5c68867af5e7",
+      "stored_at": "archive/local-versions/resume-3/compile_all2.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compile_all3.py",
+      "sha256": "10d152a1ef1b941738351c421e843b240c21b63539373dc61139501b3675452f",
+      "stored_at": "archive/local-versions/resume-3/compile_all3.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "sha256": "9e3c152151e82e2fd0f9df72cc3a039b951108b14f646a02fb164322058db769",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "sha256": "eee7da5ab653c719148b10d3a1c315701da59a97ab22be0d833dd8c333b030ef",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "sha256": "cbdf1dbb473d45c837eb8b1d907d40d72bd8e95304417f6101f2f7b59e71be6e",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "sha256": "a0a64149157e01d2654471155cfd71fe22ff5e942e53f1f971d89d53b5de5a37",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_DataScience_1page.pdf",
+      "sha256": "b9d12cfcc5702cff25fc17b24927efabaef529ab60619d12a96a643dcc79f858",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_DataScience_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_DataScience_2page.pdf",
+      "sha256": "2f2b6b80d17c9a15a9947d54b5616fc931a3567c31b1546869e5b0b6e363e3ef",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_DataScience_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_HybridAI_1page.pdf",
+      "sha256": "904864f4d005c217bc9cb209f0957629b28f4238c07b9b886301846361f5dcd3",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_HybridAI_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_HybridAI_2page.pdf",
+      "sha256": "ead3fa866c7f0863a190b2b24b3cbdecef9148102c75182f64728aacf9a3488a",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_HybridAI_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_MLPlatform_1page.pdf",
+      "sha256": "4c4fc60d978ea54d12f2ae6dcce0d83507eab7e9f5f0c30c265e4c5ea69ae3c8",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_MLPlatform_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_MLPlatform_2page.pdf",
+      "sha256": "1f803e51e7b67f47a3fa10453bc528fabdc3dfe06035daaf23a10762095358a1",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_MLPlatform_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_ResearchCV.pdf",
+      "sha256": "f1a110d2abff1f20cf8da29575ee1b22ced0242daa351d83cfcb240e948360cf",
+      "stored_at": "archive/local-versions/resume-3/academic/Ali_Nikkhah_ResearchCV.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_SWE_1page.pdf",
+      "sha256": "9cd754f1b0fe4a56e0c24572d6643b7a86e91b0bb50e3e1e24aba452667b316a",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_SWE_2page.pdf",
+      "sha256": "6fc16831aed188032949d85bffc76b446ee1ebc791802b4879031949ed76a3e4",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_SeniorAI_1page.pdf",
+      "sha256": "afb9d7a427d495fb7d715bfb93373029698a07dabab9ddad2a9a644a635a3525",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SeniorAI_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_SeniorAI_2page.pdf",
+      "sha256": "e67d5a51a535f6489a041c559c4781c60bdfcea8109f81569973a48b85359901",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SeniorAI_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_SoftwareEng_1page.pdf",
+      "sha256": "fc5abbadaada50d9543e9a67d70fc38f4afdbd6718da34331fcc84e93f8b6d60",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SoftwareEng_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "compiled_pdfs/Ali_Nikkhah_SoftwareEng_2page.pdf",
+      "sha256": "fd1c5fbb09816e51c820261cead3be7e9b3208e416e02d59a6b0723bc9ad64b5",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SoftwareEng_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "data/COMBINED_TIMELINE.md",
+      "sha256": "7874e83e504c57df5630defe8c096734db5f19cb5fda73be13c27926203397ed",
+      "stored_at": "archive/local-versions/resume-3/data/COMBINED_TIMELINE.md",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "data/cv.yaml",
+      "sha256": "a4a2b3630c677a2c5464c985fbe484d2553a9253f693d9fca5780a3df37f4905",
+      "stored_at": "archive/local-versions/resume-3/data/cv.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "data/timeline_gapfree.md",
+      "sha256": "4b6823a1f45a46a960f3a20828d525fd8d212c2d92071566925fa08cfbc98477",
+      "stored_at": "archive/local-versions/resume-3/data/timeline_gapfree.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "dist/index.html",
+      "sha256": "b6f233a1156b21fd17c610e3c5762c5af98d9c44f5599b344f8181ad772fbf79",
+      "stored_at": "archive/local-versions/resume-3/dist/index.html",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/README.md",
+      "sha256": "ddb4a1785cebd8d6e4ae8f7491926b9bf43c8661b944f58f51471a2fdf8bf6a3",
+      "stored_at": "archive/local-versions/resume-3/experiences/README.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/advanced_analytics.tex",
+      "sha256": "bf0e8a3fd259e211efa269376ae430a776d73636b2fe4dbc5ade6dcee79cb83e",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/advanced_analytics.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/digikala_ai.tex",
+      "sha256": "2e63d52d6ce8adf1bb36e8ac1696fe019e3ad3878b379ba69325aa753982397e",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/digikala_ai.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/digikala_rd.tex",
+      "sha256": "0fc79759322b2292bc4a77b050c44e4ad96691d5316fc5d3e5ed0be6b4e36f87",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/digikala_rd.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/homacloud.tex",
+      "sha256": "1b0c47040c46e410a84c0c6c53f0a2cd3976d121c752c46736982c1459916e63",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/homacloud.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/homacloud_intern.tex",
+      "sha256": "256f4112ddfe80270859328c968f1f2c4ea55dfdf767448441a81f718df445e1",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/homacloud_intern.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/l3s.tex",
+      "sha256": "71ed75bd9b4a5215c720b5f192d11c60b84d7cf705821bde8033737a11b8dc57",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/l3s.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/mapna.tex",
+      "sha256": "4cb18d3c5a22d99dbf92767c263484a7f2849f8300d1fe6135ca46fb4c127b51",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/mapna.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/sharif_ta.tex",
+      "sha256": "8beab082caceb98f9053e4f32e5c54795c97be67fcec27e83ecb0f2aa23084df",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/sharif_ta.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/sharif_ta_history.tex",
+      "sha256": "41353a366e508a22d020ee8437a674ea163f7dd2b97c2ef7c32cd34f96cb5c23",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/sharif_ta_history.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/sharif_xai.tex",
+      "sha256": "aefe4947eb6cb6cb35964a21218c1e137b8c6a07ee2d3328ee1dc82c7ac22193",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/sharif_xai.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/trinity_emodub.tex",
+      "sha256": "59f5740dcaabc3cb48c47fb8a378dafaee4311bace58edd9befef2b9109ae763",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/trinity_emodub.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/turquoise_senior.tex",
+      "sha256": "0f28653c8f44d6a0206790d729526eddb2eef3810076b5f3e88943cd125891a0",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/turquoise_senior.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "experiences/pool/ubc.tex",
+      "sha256": "c6490c8b2852e8bdfe61410ad32dfa77c98cb0e1b805646e5c4437c6aa83d9ba",
+      "stored_at": "archive/local-versions/resume-3/experiences/pool/ubc.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "sha256": "5bae37f65bb4a720c6dcd72330a4acb638263e7261ed30ae538c475ddc649d98",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "sha256": "c198257b3ea4c747b9d8a94a406d9435e3d3ff1c96041386f776b80a88e1156a",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "sha256": "3ba63425dd4d8f9299a888379025a0f1bb5731b426260061a5f17430d35a0950",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "sha256": "21c091d4f797368f150d9f73936dfc328b5e28945ef20f3c598caf4bcda354fd",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_DataScience_1page.pdf",
+      "sha256": "e6f825ed8d172abcaab3ca5ae12976023438030c5619b397f13ea515aedd4704",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_DataScience_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_DataScience_2page.pdf",
+      "sha256": "8cf2240e6ceef822fd41044576ac0a7c41233db646365587bde5fd601abca891",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_DataScience_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_SWE_1page.pdf",
+      "sha256": "9cd754f1b0fe4a56e0c24572d6643b7a86e91b0bb50e3e1e24aba452667b316a",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/Ali_Nikkhah_SWE_2page.pdf",
+      "sha256": "6fc16831aed188032949d85bffc76b446ee1ebc791802b4879031949ed76a3e4",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/long_union.pdf",
+      "sha256": "bd290b4cddb99a504acfe32e413a6a7ad55d3bcae84990b8f60ca86f651fedcd",
+      "stored_at": "archive/local-versions/resume-3/industrial/long_union.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/long_union.tex",
+      "sha256": "d8e8c0f672702c4529413a9247a50220a14b030d2ea73083aa4f02df75d24c68",
+      "stored_at": "archive/local-versions/resume-3/industrial/long_union.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/main.pdf",
+      "sha256": "4c4fc60d978ea54d12f2ae6dcce0d83507eab7e9f5f0c30c265e4c5ea69ae3c8",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_MLPlatform_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/main.tex",
+      "sha256": "4f117be2ca3d224c19fcebebd638fd689803bcf34e8c895ef2109770d6639a11",
+      "stored_at": "archive/local-versions/resume-3/industrial/main.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/main_tagged.tex",
+      "sha256": "96c85b1ae7e34d388f95a197870b05b4dfbf997cafb00b06e25ac96a0be84c97",
+      "stored_at": "archive/local-versions/resume-3/industrial/main_tagged.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/agentic_ai/experience_1p.tex",
+      "sha256": "10bd587f8b03ba564b00130fda0c9323cd83c1cccbe1fa5eaf85d5fc81c6d3e4",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/experience_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/agentic_ai/experience_2p.tex",
+      "sha256": "4773450a1dec670be6af99a1f4bfb4501e8270c4bc71e5d4ad02f5a4e3980ad5",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/experience_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/agentic_ai/projects_2p.tex",
+      "sha256": "aad995293143be1a419f19810924c16baf2bf586c279e1cd2f4c8b3c301b5150",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/agentic_ai/summary_1p.tex",
+      "sha256": "5b214b12a1328470d69b8b212b352cebb1b839679adf1472b40add79cd50d66c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/agentic_ai/summary_2p.tex",
+      "sha256": "470db79601cc7cb929d8537cdd4b8675dceac127a40e92e47fb1df0e82fd5e6c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/common/contact_info.tex",
+      "sha256": "32209d3e89160e65954c41f7c3ba7a9d92e53be2e9aa59a842e16ecf7319aa7b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/contact_info.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/common/education.tex",
+      "sha256": "55ae79fa8a906982abf55baed4e8866357b119c752d55704576e519c768b5aea",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/education.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/common/research_2p.tex",
+      "sha256": "cdd2e207760c0b3c0f0213a3cde24d1ef2769bb3c6e48264e55ceee38c701ceb",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/research_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/common/skills.tex",
+      "sha256": "e67e54c3a9b0a6fed0bca1695220cd8fe12a16183bab007d3bf285e6f863ee50",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/skills.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/common/skills_1p.tex",
+      "sha256": "2d7c84070aed2d1f7f32c83035ba476f36ab308ba8d02642e7676534485f3ceb",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/skills_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/common/skills_2p.tex",
+      "sha256": "4c51084ef80cf3ae3fe36725598e5691648f00a7f7b0e889d60f4a5e06f35579",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/skills_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/computer_vision/experience_1p.tex",
+      "sha256": "aecb7059b1dfc253c587ad0400d09230419c274b29a51e6bc4d7547d816f970c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/experience_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/computer_vision/experience_2p.tex",
+      "sha256": "e452a5045186d69f5fad82039d689258c8c921a175f85c81d4bd0da3eb4c18c2",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/experience_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/computer_vision/projects_2p.tex",
+      "sha256": "d17dbdd3bf1c55d565744fca140f2a1b15cd9c73a575a785f1b65c97c2de90dd",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/computer_vision/summary_1p.tex",
+      "sha256": "40eedda996728a59035442cbad53aa719fa0b5d4ab17cdf68e175667d27d4fec",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/computer_vision/summary_2p.tex",
+      "sha256": "50fff46534a2e9d4dc9c90f213f0f2e02e90044eed78d69731ba07041363eaba",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/data_roles/experience_1p.tex",
+      "sha256": "0e30e03451101d3208d2585fb1aa5e9236d008a5dab36f58c97da2d49dcbf9ab",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/experience_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/data_roles/experience_2p.tex",
+      "sha256": "145a6558d77763cd2e55e884a5ded45a7958d340e69a431ef9544983fece6f3c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/experience_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/data_roles/projects_2p.tex",
+      "sha256": "182f39d1a1ba822b0ae614585c4750d3ea0a00aef5ed1654fb98c8d7473df34d",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/data_roles/summary_1p.tex",
+      "sha256": "88b4b2c8fb49d040a930dcbbb25a3a227f639a776d5cee6ec0cd2e3f0761137b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/data_roles/summary_2p.tex",
+      "sha256": "c8c21bb37defe75bb15f58f7c4de0c977cfb99894540364463cab77269b3948f",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/agentic/experience.tex",
+      "sha256": "fc0912337e5e00bf3b516c3fe19fa972e8a61807610e7b437e4666e6ee0213aa",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/experience.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/agentic/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/agentic/summary.tex",
+      "sha256": "5226e4fec5005d0e180678d7caa507c03d75e8582daffc25788044c059b380c7",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/data/experience.tex",
+      "sha256": "51344a25753e2081860933c5617d1d9a47885919be0a2123ef4dd07bd73c0d48",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/data/experience.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/data/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/data/summary.tex",
+      "sha256": "0537f7c4fa2289995928e5af2716305e4158c097c2a390275db9027724a792e0",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/data/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/hybrid/experience.tex",
+      "sha256": "f745d812f21864ffbc7b8c6ebc39c1b618c86aa387c32659fff09fec6f14422c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/hybrid/experience.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/hybrid/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/hybrid/summary.tex",
+      "sha256": "d86e30691b790bff560a826d03d9fb2dca97ad65a8102079741e233034e30b8c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/hybrid/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/long/experience.tex",
+      "sha256": "7de94343e276ebde1c12287db29f9299d71f06f65646a1a89b5a895f7a89ce3f",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/long/experience.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/long/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/long/summary.tex",
+      "sha256": "71d99dd9beafa439524cf2f77535249f47f90cc81246b668b567992301895a09",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/long/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/platform/experience.tex",
+      "sha256": "e1f865136592501678d0dd49d6f4c6d2c1fc3546db5682da6f9375553b426a64",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/platform/experience.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/platform/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/platform/summary.tex",
+      "sha256": "0180b5aa81d00e5b54cd45aba2bde486dffaae716dd3c9d8e86a40187fac6747",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/platform/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/research/experience.tex",
+      "sha256": "7d4b1a74d69f604c5395d9bcc2169980370822afa9b81d5ef748e9f6222dfe8f",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/research/experience.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/research/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/research/summary.tex",
+      "sha256": "28ab41d28f93f51d6a0f806cfd2c524721e456236c1624d66cced35762b61d97",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/research/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/senior/experience.tex",
+      "sha256": "e76abb1592bbae3db0595badb00265400975537c578d2117f87532d01ad35639",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/senior/experience.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/senior/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/senior/summary.tex",
+      "sha256": "d75130e022a442418d2e1fb24d6bc539c9d997289b66f91a1d3079f9a4655947",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/senior/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/swe/experience.tex",
+      "sha256": "3d370aad9d8e5ffeb1d5254b03890aeaa694e52523a1b3e98a68709b1d4089a1",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/swe/experience.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/swe/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/swe/summary.tex",
+      "sha256": "7d4cd95bcceb740c78792d23c3217836fb87d96a606bb660c5ad812197197072",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/swe/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/vision/experience.tex",
+      "sha256": "96567e478f538122778dba2b8711e675207c7a8ae9ef3d5f74a48948f64d1544",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/vision/experience.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/vision/skills.tex",
+      "sha256": "f7344ac472d7d9ba5145ac70950689bd2cdce4a77b56a35bdb76d9de3818331b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/agentic/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/generated/vision/summary.tex",
+      "sha256": "3f3410526ba8f5a4a40c475f184e19362bba18a2bc57d80c8e3a1d0214221c39",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/generated/vision/summary.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/hybrid_ai/experience_1p.tex",
+      "sha256": "aa47d2a36855f53a8a696d716003fb2684a7f9bf9dda3ac1393154650ae5cc00",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/hybrid_ai/experience_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/hybrid_ai/experience_2p.tex",
+      "sha256": "ab55cde2e9c46ce17d4d325fe779c6f001f33196f0254403bd16a47728d9e50c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/hybrid_ai/experience_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/hybrid_ai/projects_2p.tex",
+      "sha256": "60f32372008803dafe84b6785e27184bea93ec5ca2f6255f21311a18eb49e2b1",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/hybrid_ai/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/hybrid_ai/summary_1p.tex",
+      "sha256": "8b89f9fe1dcf30c11d0c1159135f3992178d86f298a8b7cfd35e9488c20b881f",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/hybrid_ai/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/hybrid_ai/summary_2p.tex",
+      "sha256": "29701185585ce6f8eae74fa3d6fdcd90fdfa36c99a6a591ccb510343f66b7761",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/hybrid_ai/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/ml_platform/experience_1p.tex",
+      "sha256": "7322d498a3de05d0529024c6a9fa42661320f0cc5a648241bf34fd9b4e4ac444",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/ml_platform/experience_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/ml_platform/experience_2p.tex",
+      "sha256": "0e07ba0205f5ed61975da499cb8c4b850433403be54d0f3c6854ab761785d12d",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/ml_platform/experience_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/ml_platform/projects_2p.tex",
+      "sha256": "d137112721a73d092b53c6798fefcb256bdcdc82534b5a7b12d6206f9e6dc06d",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/ml_platform/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/ml_platform/summary_1p.tex",
+      "sha256": "57581b014cdf72ea123a570e2c07fad7ac896f79d3a65e7c63f46dc67b9ebdd1",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/ml_platform/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/ml_platform/summary_2p.tex",
+      "sha256": "ff9ca5e4c70607baa6510942892c07e0e04405c0562744bf9fcfec0f1d00fe28",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/ml_platform/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/senior_ai/experience_1p.tex",
+      "sha256": "b6ab6c131e3c9b5bed40a271108380cf3756dc8a3025f977fd2fd919e7d64ce4",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/senior_ai/experience_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/senior_ai/experience_2p.tex",
+      "sha256": "497dfa8a7c8d8f87c38bfc2aba41345dca871efa350dc5f506d299ba3d57da56",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/senior_ai/experience_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/senior_ai/projects_2p.tex",
+      "sha256": "9aabf33df5555c26552012ee4d3e5756c41f991c20d1ce5b2799606ae77d78fb",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/senior_ai/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/senior_ai/summary_1p.tex",
+      "sha256": "a65520d6280eea29c224895fbd06e307a478b0e49f6634bde4fade6ea321da16",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/senior_ai/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/senior_ai/summary_2p.tex",
+      "sha256": "7498a5f480ed3fec2f489c127be3c2cc4e645628288461dd354762adbeba2831",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/senior_ai/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/software_engineering/experience_1p.tex",
+      "sha256": "60781efd06901a1dda84dd67a07baba28223fe3150265bff3608412bd318ccf6",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/experience_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/software_engineering/experience_2p.tex",
+      "sha256": "ac7bdc8860b4044b8e8d21db5453f4d0a7d4457492b35482701279735ffb1461",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/experience_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/software_engineering/projects_2p.tex",
+      "sha256": "4f31027c3e1bbb0c8769a19e293690743bd11fd4f1c32ac7b69c0bef528900f7",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/software_engineering/summary_1p.tex",
+      "sha256": "182c8aaeaf5121f75926484f5124563439ba1a6ec3032936960ef508b7c1d3b0",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/software_engineering/summary_2p.tex",
+      "sha256": "c045e2ddac694e52214e3014221a68c7bf87f13884caca10f66144c2ea1ba945",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "markdown_resume/pdf/resume_classic.pdf",
+      "sha256": "e05a83bdecbb9d8f02449a3cfdbff1b4a1aed9abeabe40f9760678efc6933fcb",
+      "stored_at": "archive/local-versions/resume-3/markdown_resume/pdf/resume_classic.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "markdown_resume/pdf/resume_garamond.pdf",
+      "sha256": "60b4d20b68dc1882e39725ba2f2e2512893851e1cce3d4956d251f172290afdc",
+      "stored_at": "archive/local-versions/resume-3/markdown_resume/pdf/resume_garamond.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "markdown_resume/pdf/resume_helvet.pdf",
+      "sha256": "d77c340db303de63b55f30ad874af3696d9e25ac5046b8f644673335619dbc35",
+      "stored_at": "archive/local-versions/resume-3/markdown_resume/pdf/resume_helvet.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "markdown_resume/pdf/resume_libertine.pdf",
+      "sha256": "23f41ea598064c62a7618fa7da0d10616ffd8ab0005753f98cdd839c11a3e7d1",
+      "stored_at": "archive/local-versions/resume-3/markdown_resume/pdf/resume_libertine.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "markdown_resume/pdf/resume_palatino.pdf",
+      "sha256": "b2ea2b2fa62cc39104c2bc692ca0419474a4371eed6aecc82b6d9e1b1669e2f6",
+      "stored_at": "archive/local-versions/resume-3/markdown_resume/pdf/resume_palatino.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "markdown_resume/resume.md",
+      "sha256": "e727407710d8e9a7f3dbbb8ae156b300eea158ff423f3c0fcd99e8fca616afe9",
+      "stored_at": "archive/local-versions/resume-3/markdown_resume/resume.md",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_agentic.yaml",
+      "sha256": "95cd82b2cb9b82dc47c90479a3ac09061d3fdb1ad1218e7740905701198462fd",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_agentic.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_data.yaml",
+      "sha256": "f512a519eea7f334d20137357aefec320f3f5af911edc4f9b7cf080e54ee49cd",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_data.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_hybrid.yaml",
+      "sha256": "1746d9061b4ff66bb72a79625656d0e2b85d65ef2494f683a3d90437c97e44a8",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_hybrid.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_long.yaml",
+      "sha256": "1ec7b5a722df426b2fed9e104c5c66aab381884e6241587e9ef839eedb78342f",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_long.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_platform.yaml",
+      "sha256": "96e0d6700149d086cbd489895d0761e5564dc44782904748111eccbc3a2f8b31",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_platform.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_research.yaml",
+      "sha256": "407ee327ccf98ca2936e161dc0366afef804e5a01d36fb8509467fcde72b58c9",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_research.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_senior.yaml",
+      "sha256": "1746d9061b4ff66bb72a79625656d0e2b85d65ef2494f683a3d90437c97e44a8",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_hybrid.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_swe.yaml",
+      "sha256": "fb77e65dc7b0fa6d8c3e3fedd4008ad42b7be4bf000cb4a628d159d2584276b2",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_swe.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/Ali_Nikkhah_vision.yaml",
+      "sha256": "085b9233c98b30d15ff9dee03c84f7fd42aa2046f6f298888f0a7165862c1df6",
+      "stored_at": "archive/local-versions/resume-3/rendercv/Ali_Nikkhah_vision.yaml",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "rendercv/README.md",
+      "sha256": "ad500c7269c78d2d3c88a3752a267d15386e0e8a3ade9b771e7f55c76b106132",
+      "stored_at": "archive/local-versions/resume-3/rendercv/README.md",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "scripts/build_markdown_pdf.py",
+      "sha256": "566e147631ba7a8e3ebce45c8a932cb7e1060fb30544edc57afc463327272485",
+      "stored_at": "archive/local-versions/resume-3/scripts/build_markdown_pdf.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "scripts/build_tagged.py",
+      "sha256": "1191e75c015a00e550b635f04fb3324e49bc20f539fb94cffde1e010ad68c717",
+      "stored_at": "archive/local-versions/resume-3/scripts/build_tagged.py",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "scripts/cv_to_rendercv.py",
+      "sha256": "5d944a821868707c3b71c25130ce90cc565ea56f2bb444049de711ceb65e51e6",
+      "stored_at": "archive/local-versions/resume-3/scripts/cv_to_rendercv.py",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "scripts/fix_themes.py",
+      "sha256": "d721cd4df670e88e67049b59759d9a260094ca459f43c7d401c4c3baba4fb861",
+      "stored_at": "archive/local-versions/resume-3/scripts/fix_themes.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "scripts/generate_profile_readme.py",
+      "sha256": "c49e0552a4402153e7206edc8e590923399d5527a390038c893f7b5ab282c8ef",
+      "stored_at": "archive/local-versions/resume-3/scripts/generate_profile_readme.py",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "scripts/generate_themes.py",
+      "sha256": "820dbceea312e7e9b723091b0439208df352f0ae88febe3bc06dc1ec4065ea38",
+      "stored_at": "archive/local-versions/resume-3/scripts/generate_themes.py",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3",
+      "path": "scripts/generate_timeline.py",
+      "sha256": "acd535b23fea75958efca99d3aa81403dfc5e7b1bf6d1f445cb0c51a5ef33b00",
+      "stored_at": "archive/local-versions/resume-3/scripts/generate_timeline.py",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "Ali Nikkhah Resume 2026 EN.pdf",
+      "sha256": "0cf0aacb054a26881d1388ace7af16930534510a00df2c8b382e628cbb5c17b7",
+      "stored_at": "archive/local-versions/resume-3/Ali Nikkhah Resume 2026 EN.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "README.md",
+      "sha256": "fbd174c9a746dbf7f1cb6ce4b6b54e7e7e6e8f0a149b30e2f77077f8bb4cfca3",
+      "stored_at": "archive/local-versions/resume-3/README.md",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "academic/Ali_Nikkhah_ResearchCV.pdf",
+      "sha256": "f1a110d2abff1f20cf8da29575ee1b22ced0242daa351d83cfcb240e948360cf",
+      "stored_at": "archive/local-versions/resume-3/academic/Ali_Nikkhah_ResearchCV.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "academic/main.tex",
+      "sha256": "c81dfcfeb4bf7f02341cbf9a774e759e78f39a199960cd0a3036dcc372cac9d1",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/academic/main.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "academic/segments/publications/list.tex",
+      "sha256": "11da9c4b8e0e3d9a3e590aa1778bae8b1f8c6da0b5aa2df87eae97edeb895d5f",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/publications/list.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "academic/segments/research_experience/entries.tex",
+      "sha256": "ef12112ceef56766408f9ac15d3e56c25e4036b8af174b0cd46e05a173ec3403",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/research_experience/entries.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "academic/segments/research_experience/industry.tex",
+      "sha256": "e5a3a38a07be34d0434591f2c462c98d0efb2b6fa28eabf702d045adb7496c47",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/research_experience/industry.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "academic/segments/teaching_mentoring/ta_history.tex",
+      "sha256": "f3d7f6e024c667f2c116d94e00482ff3a28757f825aa8f62e9f76312a9de9227",
+      "stored_at": "archive/local-versions/resume-3/academic/segments/teaching_mentoring/ta_history.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "analysis/RESUME_CRITIQUE_DETAILED.md",
+      "sha256": "8a79e4d61178cc7f9fdf287d3b9fd886d47ac62bc9b01baaf98027300e3674a7",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/analysis/RESUME_CRITIQUE_DETAILED.md",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "sha256": "5bae37f65bb4a720c6dcd72330a4acb638263e7261ed30ae538c475ddc649d98",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "sha256": "c198257b3ea4c747b9d8a94a406d9435e3d3ff1c96041386f776b80a88e1156a",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "sha256": "3ba63425dd4d8f9299a888379025a0f1bb5731b426260061a5f17430d35a0950",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "sha256": "21c091d4f797368f150d9f73936dfc328b5e28945ef20f3c598caf4bcda354fd",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_DataScience_1page.pdf",
+      "sha256": "e6f825ed8d172abcaab3ca5ae12976023438030c5619b397f13ea515aedd4704",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_DataScience_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_DataScience_2page.pdf",
+      "sha256": "8cf2240e6ceef822fd41044576ac0a7c41233db646365587bde5fd601abca891",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_DataScience_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_ResearchCV.pdf",
+      "sha256": "f1a110d2abff1f20cf8da29575ee1b22ced0242daa351d83cfcb240e948360cf",
+      "stored_at": "archive/local-versions/resume-3/academic/Ali_Nikkhah_ResearchCV.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_SWE_1page.pdf",
+      "sha256": "9cd754f1b0fe4a56e0c24572d6643b7a86e91b0bb50e3e1e24aba452667b316a",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_1page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "compiled_pdfs/Ali_Nikkhah_SWE_2page.pdf",
+      "sha256": "6fc16831aed188032949d85bffc76b446ee1ebc791802b4879031949ed76a3e4",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_2page.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "documentation/ATS_OPTIMIZATION_GUIDE.md",
+      "sha256": "c5fd62688cb6dc5259046f758448fc2b3fd52812be4e4c5671e4f8ac3d2a3ce6",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/documentation/ATS_OPTIMIZATION_GUIDE.md",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "documentation/CHANGES_LOG.md",
+      "sha256": "bd25731d208c9b2e571781e0c2fb8f413c1eac6a83c9d1d826c995f53c51d148",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/documentation/CHANGES_LOG.md",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "documentation/COMPILATION_GUIDE.md",
+      "sha256": "a58cf86deb2176fea1faf22cb59901394f3c2dd76558e6c0d61eaf6d0bb096da",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/documentation/COMPILATION_GUIDE.md",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "sha256": "5bae37f65bb4a720c6dcd72330a4acb638263e7261ed30ae538c475ddc649d98",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_AgenticAI_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "sha256": "c198257b3ea4c747b9d8a94a406d9435e3d3ff1c96041386f776b80a88e1156a",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_AgenticAI_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "sha256": "3ba63425dd4d8f9299a888379025a0f1bb5731b426260061a5f17430d35a0950",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_ComputerVision_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "sha256": "21c091d4f797368f150d9f73936dfc328b5e28945ef20f3c598caf4bcda354fd",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_ComputerVision_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_DataScience_1page.pdf",
+      "sha256": "e6f825ed8d172abcaab3ca5ae12976023438030c5619b397f13ea515aedd4704",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_DataScience_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_DataScience_2page.pdf",
+      "sha256": "8cf2240e6ceef822fd41044576ac0a7c41233db646365587bde5fd601abca891",
+      "stored_at": "archive/local-versions/resume-3/industrial/Ali_Nikkhah_DataScience_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_SWE_1page.pdf",
+      "sha256": "9cd754f1b0fe4a56e0c24572d6643b7a86e91b0bb50e3e1e24aba452667b316a",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_1page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/Ali_Nikkhah_SWE_2page.pdf",
+      "sha256": "6fc16831aed188032949d85bffc76b446ee1ebc791802b4879031949ed76a3e4",
+      "stored_at": "archive/local-versions/resume-3/compiled_pdfs/Ali_Nikkhah_SWE_2page.pdf",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/main.tex",
+      "sha256": "c9a5c4e95a49ad52bf05648b860d25b578aacc1e57c644e9f3156b5f892970f7",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/main.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/agentic_ai/experience_1p.tex",
+      "sha256": "7810490cd142996bb56b9b089545823d2c5017cc5ed9f12d4f3d049d86727c5e",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/agentic_ai/experience_1p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/agentic_ai/experience_2p.tex",
+      "sha256": "29900955eb1da8819c1d45ded36a9fa6c6269deab2829f7de80dd38e93eb223d",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/agentic_ai/experience_2p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/agentic_ai/projects_2p.tex",
+      "sha256": "aad995293143be1a419f19810924c16baf2bf586c279e1cd2f4c8b3c301b5150",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/agentic_ai/summary_1p.tex",
+      "sha256": "5b214b12a1328470d69b8b212b352cebb1b839679adf1472b40add79cd50d66c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/agentic_ai/summary_2p.tex",
+      "sha256": "470db79601cc7cb929d8537cdd4b8675dceac127a40e92e47fb1df0e82fd5e6c",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/agentic_ai/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/common/contact_info.tex",
+      "sha256": "b0af932689fb9f55e5de7d7dd011dc49ff0fdd45e1d08966c5049cfd0d3b8e92",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/common/contact_info.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/common/education.tex",
+      "sha256": "6aa623986473f193222770c8f5233426db056b68435fd8133b574db7903ca828",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/common/education.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/common/research_2p.tex",
+      "sha256": "cdd2e207760c0b3c0f0213a3cde24d1ef2769bb3c6e48264e55ceee38c701ceb",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/research_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/common/skills.tex",
+      "sha256": "e67e54c3a9b0a6fed0bca1695220cd8fe12a16183bab007d3bf285e6f863ee50",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/skills.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/common/skills_1p.tex",
+      "sha256": "2d7c84070aed2d1f7f32c83035ba476f36ab308ba8d02642e7676534485f3ceb",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/skills_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/common/skills_2p.tex",
+      "sha256": "4c51084ef80cf3ae3fe36725598e5691648f00a7f7b0e889d60f4a5e06f35579",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/common/skills_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/computer_vision/experience_1p.tex",
+      "sha256": "b7bcedaefdcac8cddd0bb3664c017bfe14b337d5b332c4eccb32b0c3b8032c2f",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/computer_vision/experience_1p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/computer_vision/experience_2p.tex",
+      "sha256": "31d7e9c78017e4d83641110fe7508de7663ebce96bc335be2a4e69a923c0aae9",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/computer_vision/experience_2p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/computer_vision/projects_2p.tex",
+      "sha256": "d17dbdd3bf1c55d565744fca140f2a1b15cd9c73a575a785f1b65c97c2de90dd",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/computer_vision/summary_1p.tex",
+      "sha256": "40eedda996728a59035442cbad53aa719fa0b5d4ab17cdf68e175667d27d4fec",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/computer_vision/summary_2p.tex",
+      "sha256": "50fff46534a2e9d4dc9c90f213f0f2e02e90044eed78d69731ba07041363eaba",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/computer_vision/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/data_roles/experience_1p.tex",
+      "sha256": "0e3fe160de045371c84088c08032b66bca9669475db6246201ede718188bf493",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/data_roles/experience_1p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/data_roles/experience_2p.tex",
+      "sha256": "39e654e69081ab9640c5f166489394f9c7bf27cf1fb786e8883bbc90d44a537c",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/data_roles/experience_2p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/data_roles/projects_2p.tex",
+      "sha256": "182f39d1a1ba822b0ae614585c4750d3ea0a00aef5ed1654fb98c8d7473df34d",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/data_roles/summary_1p.tex",
+      "sha256": "88b4b2c8fb49d040a930dcbbb25a3a227f639a776d5cee6ec0cd2e3f0761137b",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/data_roles/summary_2p.tex",
+      "sha256": "c8c21bb37defe75bb15f58f7c4de0c977cfb99894540364463cab77269b3948f",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/data_roles/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/software_engineering/experience_1p.tex",
+      "sha256": "b5b69585c99442325e2d7882ff0e63ca28d7a92ca4a1362fb48e55752677eca9",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/software_engineering/experience_1p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/software_engineering/experience_2p.tex",
+      "sha256": "6e7a784e446484d5bae377cf2f299292b990bba36a8e3545558ef0be83b83fe9",
+      "stored_at": "archive/local-versions/resume-3-v2-2026-08-14/industrial/segments/software_engineering/experience_2p.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/software_engineering/projects_2p.tex",
+      "sha256": "4f31027c3e1bbb0c8769a19e293690743bd11fd4f1c32ac7b69c0bef528900f7",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/projects_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/software_engineering/summary_1p.tex",
+      "sha256": "182c8aaeaf5121f75926484f5124563439ba1a6ec3032936960ef508b7c1d3b0",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/summary_1p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/software_engineering/summary_2p.tex",
+      "sha256": "c045e2ddac694e52214e3014221a68c7bf87f13884caca10f66144c2ea1ba945",
+      "stored_at": "archive/local-versions/resume-3/industrial/segments/software_engineering/summary_2p.tex",
+      "status": "identical",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": ".gitignore",
+      "sha256": "d1c92411c6801ea6eab6abbe3b6dab49ec77b4f26149caa1cb86e85233ed554e",
+      "stored_at": "archive/local-versions/resume-detailed/.gitignore",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "academic/publications.bib",
+      "sha256": "7e877f9f56d1bec772d8d43ba6ff04538f1c9fbfa70e01deab5c25bfb2178cc7",
+      "stored_at": "archive/local-versions/resume-detailed/academic/publications.bib",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "academic/segments/contact_info.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "academic/segments/education/degree_details.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "academic/segments/research_experience/labs.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "academic/segments/research_experience/statements.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "academic/segments/teaching_mentoring/service_awards.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "academic/segments/teaching_mentoring/ta_history.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/main.pdf",
+      "sha256": "6c80f9455e4d49b3a8f0618583b9bc8c1d505380641eb4f9690dacca7fa6d41c",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/main.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/main.tex",
+      "sha256": "1e41cc7124a879d85b52d7dc4ead25a97c2354b2e09ffe8e51a58dd76640e97c",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/main.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/agentic_ai/experience.tex",
+      "sha256": "62dcd14f477625d7e0cb7875fec9774b5dad6b0f9edf2e8b9df868b9816ab184",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/agentic_ai/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/agentic_ai/projects.tex",
+      "sha256": "d85a1004fbb599567e70dbf6a8456d423f75c576cbf6fe7e3aa79535cb7e94ad",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/agentic_ai/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/common/contact_info.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/common/education.tex",
+      "sha256": "d1f8892d6a3984e4ddcefc5ba0888e8533432c368f8b9c1bb0fbdb3dbefbebc4",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/common/education.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/common/skills.tex",
+      "sha256": "872ed0cbcbbf36a80594bad6d1d0b49dc7754dddd52aeb2bc0f51d75468d27c6",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/common/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/computer_vision/experience.tex",
+      "sha256": "45fe94d40fd887e5925bb802c0f0a28550ad161b5c68b98ca955133e71b0532c",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/computer_vision/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/computer_vision/projects.tex",
+      "sha256": "499beed80c89678f2c145851409b861ac4224bf1d1b59a17a2f77f8a64911ad6",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/computer_vision/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/data_roles/experience.tex",
+      "sha256": "fe78c90361609deb9e85f1bb471d5d7b8b65be313b6b964f647a06ef3bfe19e9",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/data_roles/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/data_roles/projects.tex",
+      "sha256": "297fe3c7581612d2dcabb1b97d960456e8d987397c980b1cb9a4f4f006504d6e",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/data_roles/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/software_engineering/experience.tex",
+      "sha256": "eac2bba4fbb7797cb44ecf6b91861063ea89d44da4361ca34c837d03f1093858",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/software_engineering/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/segments/software_engineering/projects.tex",
+      "sha256": "81637db272c0d8910219e299e3c390825c69e66d2ee839693c022afe411efdee",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/software_engineering/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": ".gitignore",
+      "sha256": "d1c92411c6801ea6eab6abbe3b6dab49ec77b4f26149caa1cb86e85233ed554e",
+      "stored_at": "archive/local-versions/resume-detailed/.gitignore",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "academic/publications.bib",
+      "sha256": "7e877f9f56d1bec772d8d43ba6ff04538f1c9fbfa70e01deab5c25bfb2178cc7",
+      "stored_at": "archive/local-versions/resume-detailed/academic/publications.bib",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "academic/segments/contact_info.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "academic/segments/education/degree_details.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "academic/segments/research_experience/labs.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "academic/segments/research_experience/statements.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "academic/segments/teaching_mentoring/service_awards.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "academic/segments/teaching_mentoring/ta_history.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/main.pdf",
+      "sha256": "1fc2a42e0277df22cef65cc4ecced976263923652fe5a8f6a3087d5569ccd7ff",
+      "stored_at": "archive/local-versions/resume/industrial/main.pdf",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/main.tex",
+      "sha256": "1e41cc7124a879d85b52d7dc4ead25a97c2354b2e09ffe8e51a58dd76640e97c",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/main.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/agentic_ai/experience.tex",
+      "sha256": "b0310ccc2c5aaec086e8246b6044eb75bf1e8d048507e7849e5f220328568fe4",
+      "stored_at": "archive/local-versions/resume/industrial/segments/agentic_ai/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/agentic_ai/main.pdf",
+      "sha256": "f5fc184ba0d23d19cc57e5ddc1527082960d9d097cf83659f9caf52cef70b0fa",
+      "stored_at": "archive/local-versions/resume/industrial/segments/agentic_ai/main.pdf",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/agentic_ai/projects.tex",
+      "sha256": "d85a1004fbb599567e70dbf6a8456d423f75c576cbf6fe7e3aa79535cb7e94ad",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/agentic_ai/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/common/contact_info.tex",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_at": "archive/local-versions/resume-detailed/academic/segments/contact_info.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/common/education.tex",
+      "sha256": "d1f8892d6a3984e4ddcefc5ba0888e8533432c368f8b9c1bb0fbdb3dbefbebc4",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/common/education.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/common/skills.tex",
+      "sha256": "9a7cf46c20d0f8b9195e70cb373700376b0f0eab9e2fab0bf74ab849a1fbfa59",
+      "stored_at": "archive/local-versions/resume/industrial/segments/common/skills.tex",
+      "status": "conflict",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/computer_vision/experience.tex",
+      "sha256": "7eaa69a6c0b26fad211b017855f3bc0385de4f94b3b5a9b14a04ed17fda0f588",
+      "stored_at": "archive/local-versions/resume/industrial/segments/computer_vision/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/computer_vision/main.pdf",
+      "sha256": "1fc2a42e0277df22cef65cc4ecced976263923652fe5a8f6a3087d5569ccd7ff",
+      "stored_at": "archive/local-versions/resume/industrial/main.pdf",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/computer_vision/projects.tex",
+      "sha256": "499beed80c89678f2c145851409b861ac4224bf1d1b59a17a2f77f8a64911ad6",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/computer_vision/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/data_roles/experience.tex",
+      "sha256": "b4d4279986d9e2e266ff780a9357f90017c5169a8e86f80b1bc47a3d281f97c0",
+      "stored_at": "archive/local-versions/resume/industrial/segments/data_roles/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/data_roles/main.pdf",
+      "sha256": "719664d994ae9bc982d774949938b4185a24d91a8926a976769383db99a47af2",
+      "stored_at": "archive/local-versions/resume/industrial/segments/data_roles/main.pdf",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/data_roles/projects.tex",
+      "sha256": "297fe3c7581612d2dcabb1b97d960456e8d987397c980b1cb9a4f4f006504d6e",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/data_roles/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/software_engineering/experience.tex",
+      "sha256": "ec2d7941f2f8bb59319538d9bff99edebc2174ebd4e587f7e9ae4235d42e159b",
+      "stored_at": "archive/local-versions/resume/industrial/segments/software_engineering/experience.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/software_engineering/projects.tex",
+      "sha256": "81637db272c0d8910219e299e3c390825c69e66d2ee839693c022afe411efdee",
+      "stored_at": "archive/local-versions/resume-detailed/industrial/segments/software_engineering/projects.tex",
+      "status": "local-only",
+      "imported_to_live": false
+    }
+  ],
+  "excluded": [
+    {
+      "source": "Resume 3",
+      "path": ".DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/main.aux",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/main.log",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/main.out",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "academic/segments/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/long_union.aux",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/long_union.log",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/long_union.out",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/main.aux",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/main.log",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/main.out",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume 3",
+      "path": "industrial/segments/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": ".DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume 3_v2_2026-08-14",
+      "path": "industrial/segments/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": ".DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/main.aux",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/main.log",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/main.out",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume_Detailed",
+      "path": "industrial/main.synctex.gz",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume",
+      "path": ".DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume",
+      "path": "academic/.DS_Store",
+      "reason": "macOS metadata"
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/main.aux",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/main.log",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/main.out",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/main.synctex.gz",
+      "reason": "disposable TeX build output"
+    },
+    {
+      "source": "Resume",
+      "path": "industrial/segments/.DS_Store",
+      "reason": "macOS metadata"
+    }
+  ]
+}

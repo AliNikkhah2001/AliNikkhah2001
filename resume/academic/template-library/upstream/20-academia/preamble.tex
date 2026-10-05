@@ -1,0 +1,128 @@
+% ==================== preamble.tex ====================
+\usepackage[utf8]{inputenc}
+
+% -------------------- Layout --------------------
+\usepackage[left=0.5in,right=0.5in,top=0.7in,bottom=0.7in]{geometry}
+\renewcommand{\baselinestretch}{1.12}
+\renewcommand{\arraystretch}{1.12}
+
+% -------------------- Fonts --------------------
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% -------------------- Color + links --------------------
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=RoyalBlue,
+  urlcolor=RoyalBlue
+}
+
+% -------------------- Tables + helpers --------------------
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{makecell}
+\usepackage{graphicx}
+
+% No page numbers
+\pagenumbering{gobble}
+
+% Reduce overfull boxes
+\sloppy
+\emergencystretch=1.5em
+
+% -------------------- Column widths --------------------
+% --- Table spacing: make the whole longtable exactly \textwidth ---
+\newlength{\LeftColW}
+\setlength{\LeftColW}{1in}
+
+\newlength{\ColGap}
+\setlength{\ColGap}{6pt} % spacing between left and right columns
+
+% Remove default padding inside tabular/longtable
+\setlength{\tabcolsep}{0pt}
+
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}p{\LeftColW}}
+\newcolumntype{R}{>{\RaggedRight\arraybackslash}p{\dimexpr\textwidth-\LeftColW-\ColGap\relax}}
+
+% -------------------- Row helpers --------------------
+\newcommand{\cvlabel}[1]{\textcolor{OliveGreen}{\makecell[tl]{#1}}}
+\newcommand{\cvrow}[2]{\cvlabel{#1} & #2 \\}
+\newcommand{\cvcont}[1]{ & #1 \\}
+% inside cells (within \cvblock)
+\newcommand{\cvspace}{\vspace{8pt}}
+% between rows/sections (longtable row separator)
+\newcommand{\cvgap}{\vspace{12pt}}
+
+% -------------------- Safe URL helper (prevents & breaking tables) --------------------
+\newcommand{\safehref}[2]{\href{\detokenize{#1}}{#2}}
+
+% -------------------- Icons (ensure these filenames exist) --------------------
+\newcommand{\pdficon}{\raisebox{-0.03in}{\includegraphics[height=0.14in]{icons/pdf_icon.png}}}
+\newcommand{\scholaricon}{\raisebox{-0.03in}{\includegraphics[height=0.14in]{icons/google_scholar_icon.png}}}
+
+% -------------------- Block helpers (fix spacing issues) --------------------
+\newcommand{\cvline}[2]{%
+  \noindent\makebox[\linewidth][l]{%
+    #1\hfill #2%
+  }\par
+}
+\newcommand{\cvblock}[1]{%
+  \begin{minipage}[t]{\linewidth}\raggedright #1 \end{minipage}%
+}
+
+% -------------------- Reverse-numbered counters --------------------
+\newcounter{pubctr}
+\newcounter{thesectr}
+\newcounter{patctr}
+\newcounter{softctr}
+
+\newcommand{\setpubtotal}[1]{\setcounter{pubctr}{#1}}
+\newcommand{\setthesistotal}[1]{\setcounter{thesectr}{#1}}
+\newcommand{\setpatenttotal}[1]{\setcounter{patctr}{#1}}
+\newcommand{\setsoftwaretotal}[1]{\setcounter{softctr}{#1}}
+
+% Reverse-numbered entry macros (print current number then decrement)
+\newcommand{\pubentry}[4]{%
+  % reverse numbering version: prints current value then decrements
+  \cvblock{%
+    % --- title row: wrapping left + fixed right icon ---
+    \noindent
+    \begin{tabular*}{\linewidth}{@{}p{\dimexpr\linewidth-1.6em\relax}@{\hfill}p{1.6em}@{}}%
+      \raggedright [\thepubctr]\ \textbf{#1} &
+      \raggedleft \safehref{#2}{\pdficon}%
+    \end{tabular*}\par
+    % --- authors + venue ---
+    #3\par
+    \textit{#4}%
+  }%
+  \addtocounter{pubctr}{-1}%
+}
+
+\newcommand{\thesisentry}[3]{%
+  \cvblock{%
+    [\thethesectr]\ \textbf{#1}\hfill \safehref{#2}{\pdficon}\par
+    {\color{RoyalBlue}Your Name}\par
+    \textit{#3}%
+  }%
+  \addtocounter{thesectr}{-1}%
+}
+
+\newcommand{\patententry}[3]{%
+  \cvblock{%
+    [\thepatctr]\ \textbf{#1}\hfill \safehref{#2}{\pdficon}\par
+    #3%
+  }%
+  \addtocounter{patctr}{-1}%
+}
+
+\newcommand{\softentry}[2]{%
+  \cvblock{%
+    [\thesoftctr]\ \textbf{#1}\par
+    #2%
+  }%
+  \addtocounter{softctr}{-1}%
+}
+% ==================== end preamble.tex ====================

@@ -14,8 +14,8 @@ edu = []
 for e in d["education"]:
     end = "Present" if e["end"]=="present" else e["end"]
     line = f"- **{e['credential']}** — {e['school']} *({e['start']} – {end})*"
-    if e.get("gpa"): line += f"  \n  GPA {e['gpa']}"
-    if e.get("thesis"): line += f"  \n  Research: {e['thesis']}"
+    if e.get("gpa"): line += f"<br>\n  GPA {e['gpa']}"
+    if e.get("thesis"): line += f"<br>\n  Research: {e['thesis']}"
     edu.append(line)
 
 sk = d["skills"]
@@ -66,8 +66,14 @@ Field notes on shipping applied AI/ML systems.
 
 ---
 
-<sub>Auto-generated from `data/cv.yaml` (single source of truth).</sub>
+## CV workspace
+
+- [Working CV sources and build instructions](resume/README.md)
+- [Ten additional minimal academic LaTeX templates](resume/academic/template-library/README.md)
+- [Consolidated local versions and content manifest](archive/local-versions/README.md)
+
+<sub>Auto-generated from `resume/data/cv.yaml` (single source of truth).</sub>
 '''
-out = ROOT.parents[1] / "README.md"
+out = ROOT.parent / "README.md"
 out.write_text(readme)
 print("profile README regenerated ->", out)

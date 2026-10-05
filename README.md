@@ -11,18 +11,17 @@
 
 </div>
 
-> Applied ML researcher & engineer (Sharif B.Sc. EE 2020-2024, GPA 3.65/3.91; M.Eng. AI from Sep 2026) specialising in agentic RAG, multimodal vision-language, self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV pipelines at marketplace scale, self-hosted Graph RAG assistant for a national credit bureau, and BNPL risk platforms. Research focus: LLM reasoning and hallucination mitigation.
+> Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025, GPA 3.65; M.Sc. AI from Sep 2025) specialising in agentic RAG, multimodal vision-language, self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV pipelines at marketplace scale, self-hosted Graph RAG assistant for a national credit bureau, and BNPL risk platforms. Research focus: LLM reasoning and hallucination mitigation.
 
 
 ---
 
 ## 🎓 Education
 
-- **M.Eng. Artificial Intelligence** — Sharif University of Technology *(2026-09 – Present)*  
-  Research: LLM reasoning and hallucination mitigation
-- **B.Sc. Electrical & Electronics Engineering — Digital Systems** — Sharif University of Technology *(2020-09 – 2024-07)*  
-  GPA 3.65 overall, 3.91 major
-- **Mathematics Diploma** — Atomic Energy High School *(2017-09 – 2019-06)*
+- **M.Sc. Artificial Intelligence** — Sharif University of Technology *(2025-09 – Present)*
+- **B.Sc. Electrical Engineering** — Sharif University of Technology *(2020-09 – 2025-09)*<br>
+  GPA 3.65<br>
+  Research: Team thesis on efficient design and implementation of spread-time CDMA ASIC (my slice: FPGA implementation and pre-chip FPGA tests), supervisor Dr. Fatemeh (Noyan) Akbar, grade 20/20
 
 ## 💼 Experience
 
@@ -68,4 +67,10 @@ Field notes on shipping applied AI/ML systems.
 
 ---
 
-<sub>Auto-generated from `data/cv.yaml` (single source of truth).</sub>
+## CV workspace
+
+- [Working CV sources and build instructions](resume/README.md)
+- [Ten additional minimal academic LaTeX templates](resume/academic/template-library/README.md)
+- [Consolidated local versions and content manifest](archive/local-versions/README.md)
+
+<sub>Auto-generated from `resume/data/cv.yaml` (single source of truth).</sub>

@@ -1,0 +1,50 @@
+% ==================== main.tex ====================
+\documentclass[letterpaper,11pt]{article}
+\input{preamble.tex}
+
+\begin{document}
+
+% -------------------- Header --------------------
+\noindent{\Huge{\safehref{https://yourwebsite.com}{Your Name}}
+\hfill{\it\footnotesize Updated \today}}
+
+% -------------------- Contact --------------------
+\input{content/contact}
+
+% -------------------- Main two-column content --------------------
+\begin{longtable}{@{}L@{\hspace{\ColGap}}R@{}}
+
+% --- Current Employment ---
+% Remove this section if not applicable
+\input{content/current_employment}
+
+% --- Education ---
+\input{content/education}
+
+% --- Fellowships ---
+\input{content/fellowship}
+
+% --- Publications ---
+\input{content/publications}
+
+% --- Thesis ---
+\input{content/thesis}
+
+% --- Patents ---
+\input{content/patents}
+
+% --- Scientific Software ---
+\input{content/software}
+
+% --- Industry Experience ---
+\input{content/industry_experience}
+
+% --- Academia Experience ---
+\input{content/academia_experience}
+
+% --- Service ---
+\input{content/service}
+
+\end{longtable}
+\end{document}
+% ==================== end main.tex ====================

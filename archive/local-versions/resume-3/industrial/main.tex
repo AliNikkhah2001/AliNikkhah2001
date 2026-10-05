@@ -1,0 +1,157 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{etoolbox}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+% ==============================================================================
+% CONFIGURATION
+% Set exactly one role flag true. Set onePage true or false.
+% ==============================================================================
+\newbool{isAgentic}      \setbool{isAgentic}{true}
+\newbool{isVision}       \setbool{isVision}{false}
+\newbool{isData}         \setbool{isData}{false}
+\newbool{isSWE}          \setbool{isSWE}{false}
+\newbool{isHybrid}       \setbool{isHybrid}{false}
+\newbool{isSenior}       \setbool{isSenior}{false}
+\newbool{isMLPlatform}   \setbool{isMLPlatform}{true}
+
+\newbool{onePage}        \setbool{onePage}{true}
+% ==============================================================================
+
+% 1-page: slightly tighter margins to maximise usable area
+% 2-page: standard comfortable margins (unchanged)
+\ifbool{onePage}{%
+  \addtolength{\oddsidemargin}{-0.65in}
+  \addtolength{\evensidemargin}{-0.65in}
+  \addtolength{\textwidth}{1.3in}
+  \addtolength{\topmargin}{-.65in}
+  \addtolength{\textheight}{1.3in}
+}{%
+  \addtolength{\oddsidemargin}{-0.5in}
+  \addtolength{\evensidemargin}{-0.5in}
+  \addtolength{\textwidth}{1.0in}
+  \addtolength{\topmargin}{-.5in}
+  \addtolength{\textheight}{1.0in}
+}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+% Section headers
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Commands
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1 \vspace{-1pt}}%
+}
+
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}%
+}
+
+\renewcommand\labelitemii{--}
+
+\newenvironment{resumeSubHeadingList}{%
+  \begin{itemize}[leftmargin=0.15in, label={}]%
+}{\end{itemize}}
+
+\newenvironment{resumeItemList}{%
+  \begin{itemize}[leftmargin=0.2in, topsep=2pt, itemsep=1pt, parsep=0pt]%
+}{\end{itemize}\vspace{-3pt}}
+
+% ==============================================================================
+\begin{document}
+
+\input{segments/common/contact_info.tex}
+
+\section{Summary}
+\ifbool{isAgentic}    {\ifbool{onePage}{\input{segments/agentic_ai/summary_1p.tex}}{\input{segments/agentic_ai/summary_2p.tex}}}{}
+\ifbool{isVision}     {\ifbool{onePage}{\input{segments/computer_vision/summary_1p.tex}}{\input{segments/computer_vision/summary_2p.tex}}}{}
+\ifbool{isData}       {\ifbool{onePage}{\input{segments/data_roles/summary_1p.tex}}{\input{segments/data_roles/summary_2p.tex}}}{}
+\ifbool{isSWE}        {\ifbool{onePage}{\input{segments/software_engineering/summary_1p.tex}}{\input{segments/software_engineering/summary_2p.tex}}}{}
+\ifbool{isHybrid}     {\ifbool{onePage}{\input{segments/hybrid_ai/summary_1p.tex}}{\input{segments/hybrid_ai/summary_2p.tex}}}{}
+\ifbool{isSenior}     {\ifbool{onePage}{\input{segments/senior_ai/summary_1p.tex}}{\input{segments/senior_ai/summary_2p.tex}}}{}
+\ifbool{isMLPlatform} {\ifbool{onePage}{\input{segments/ml_platform/summary_1p.tex}}{\input{segments/ml_platform/summary_2p.tex}}}{}
+
+\section{Technical Skills}
+\ifbool{onePage}{\input{segments/common/skills_1p.tex}}{\input{segments/common/skills_2p.tex}}
+
+\section{Professional Experience}
+\begin{resumeSubHeadingList}
+  \ifbool{isAgentic}    {\ifbool{onePage}{\input{segments/agentic_ai/experience_1p.tex}}{\input{segments/agentic_ai/experience_2p.tex}}}{}
+  \ifbool{isVision}     {\ifbool{onePage}{\input{segments/computer_vision/experience_1p.tex}}{\input{segments/computer_vision/experience_2p.tex}}}{}
+  \ifbool{isData}       {\ifbool{onePage}{\input{segments/data_roles/experience_1p.tex}}{\input{segments/data_roles/experience_2p.tex}}}{}
+  \ifbool{isSWE}        {\ifbool{onePage}{\input{segments/software_engineering/experience_1p.tex}}{\input{segments/software_engineering/experience_2p.tex}}}{}
+  \ifbool{isHybrid}     {\ifbool{onePage}{\input{segments/hybrid_ai/experience_1p.tex}}{\input{segments/hybrid_ai/experience_2p.tex}}}{}
+  \ifbool{isSenior}     {\ifbool{onePage}{\input{segments/senior_ai/experience_1p.tex}}{\input{segments/senior_ai/experience_2p.tex}}}{}
+  \ifbool{isMLPlatform} {\ifbool{onePage}{\input{segments/ml_platform/experience_1p.tex}}{\input{segments/ml_platform/experience_2p.tex}}}{}
+\end{resumeSubHeadingList}
+
+% Projects section: 2-page only - 1-page gets compact highlights
+\ifbool{onePage}{}{%
+  \section{Selected Projects \& Research}
+  \begin{resumeSubHeadingList}
+    \ifbool{isAgentic}    {\input{segments/agentic_ai/projects_2p.tex}}{}
+    \ifbool{isVision}     {\input{segments/computer_vision/projects_2p.tex}}{}
+    \ifbool{isData}       {\input{segments/data_roles/projects_2p.tex}}{}
+    \ifbool{isSWE}        {\input{segments/software_engineering/projects_2p.tex}}{}
+    \ifbool{isHybrid}     {\input{segments/hybrid_ai/projects_2p.tex}}{}
+    \ifbool{isSenior}     {\input{segments/senior_ai/projects_2p.tex}}{}
+    \ifbool{isMLPlatform} {\input{segments/ml_platform/projects_2p.tex}}{}
+  \end{resumeSubHeadingList}
+
+  \section{Research Highlights}
+  \begin{resumeSubHeadingList}
+    \ifbool{isAgentic}    {\input{segments/common/research_2p.tex}}{}
+    \ifbool{isVision}     {\input{segments/common/research_2p.tex}}{}
+    \ifbool{isData}       {\input{segments/common/research_2p.tex}}{}
+    \ifbool{isSWE}        {\input{segments/common/research_2p.tex}}{}
+    \ifbool{isHybrid}     {\input{segments/common/research_2p.tex}}{}
+    \ifbool{isSenior}     {\input{segments/common/research_2p.tex}}{}
+    \ifbool{isMLPlatform} {\input{segments/common/research_2p.tex}}{}
+  \end{resumeSubHeadingList}
+}
+
+\section{Education}
+\begin{resumeSubHeadingList}
+  \input{segments/common/education.tex}
+\end{resumeSubHeadingList}
+
+% Compact research/highlights: 1-page only — inline tabular format to save vertical space
+\ifbool{onePage}{%
+  \section{Research Highlights}
+  \begin{itemize}[leftmargin=0.15in, label={}, topsep=2pt, itemsep=3pt, parsep=0pt]
+    \item \small{%
+      \textbf{Univ.\ of British Columbia} \textit{(Remote RA, Feb 2024 -- Nov 2025)} ---
+      Vision-language architectures (ViT + BLIP + T5) with self-supervised contrastive learning
+      for automated DICOM-compliant ultrasound report generation; achieved SOTA BLEU \& ROUGE-L.
+      Preprint in preparation.}
+    \item \small{%
+      \textbf{L3S Research Center} \textit{(Remote RA, Apr 2023 -- Feb 2024)} ---
+      3D CNNs and transformer encoders over dense optical flow for texture-free motion classification;
+      SOTA on UCF-101 and HMDB-51.}
+  \end{itemize}
+  \vspace{2pt}
+}{}
+
+
+\end{document}

@@ -1,0 +1,229 @@
+%!TEX TS-program = lualatex
+%!TEX encoding   = UTF-8 Unicode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Albert Einstein CV using CleanCV Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,11pt]{article}
+
+% Import the custom style file
+\usepackage{cleancv}
+
+% Choose between CV and Resume mode
+% Resume mode excludes sections enclosed in \ifcv ... \fi
+\cvtrue  % For CV (all sections)
+% \cvfalse % For resume (limited sections)
+
+% Import publications.bib for the bibliography
+\addbibresource{publications.bib}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header with name and contact information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bold name in bibliography publications
+\boldname{Einstein}{Albert}{A}
+
+% Name at top of CV
+\cvname{Albert Einstein} 
+
+% Contact bar with website, email, Github, LinkedIn, Google Scholar, and location
+\contactbar{einstein.princeton.edu}{a.einstein@ias.princeton.edu}{einsteinphysics}{albert-einstein}{https://scholar.google.com/citations?user=qc6CJjYAAAAJ}{Princeton, NJ, USA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Research Interests}
+
+Theoretical physics, general relativity, quantum mechanics, statistical mechanics, unified field theory
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Education}
+
+\cvblock{ETH Zurich (Swiss Federal Polytechnic)}{Zurich, Switzerland}{Ph.D. in Physics}{1900-1905}
+\medskip
+\cvblock{ETH Zurich (Swiss Federal Polytechnic)}{Zurich, Switzerland}{Diploma in Mathematics and Physics}{1896-1900}
+\medskip
+\cvblock{Aargau Cantonal School}{Aarau, Switzerland}{Secondary Education Certificate}{1895-1896}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Experience}
+
+\cvblock[
+    \item Conducted research on unified field theory and cosmology
+    \item Mentored doctoral and post-doctoral researchers
+    \item Published 33 papers during tenure
+]{Institute for Advanced Study}{Princeton, NJ, USA}{Professor of Theoretical Physics}{1933-1955}
+\medskip
+\cvblock[
+    \item Developed foundations of general relativity theory
+    \item Elected to Prussian Academy of Sciences
+    \item Led Kaiser Wilhelm Institute for Physics
+]{University of Berlin}{Berlin, Germany}{Professor of Theoretical Physics}{1914-1933}
+\medskip
+\cvblock[
+    \item Published "Annus Mirabilis" papers (1905)
+    \item Developed special relativity and mass-energy equivalence
+    \item Contributed to quantum theory foundations
+]{Swiss Patent Office}{Bern, Switzerland}{Technical Expert, Second Class}{1902-1909}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Honors & Awards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Honors \& Awards}
+
+\begin{itemize}
+\cvitem{Nobel Prize in Physics}{Royal Swedish Academy of Sciences}{1921}
+\cvitem{Copley Medal}{Royal Society of London}{1925}
+\cvitem{Max Planck Medal}{German Physical Society}{1929}
+\cvitem{Franklin Medal}{Franklin Institute}{1935}
+\cvitem{Foreign Member}{Royal Society of London}{1921}
+\cvitem{Member}{National Academy of Sciences}{1922}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcv
+\section*{Publications}
+
+% Define note explaining publication symbols for author annotations
+\defbibnote{symbols}{$^*$ Equal contribution \quad $^\dagger$ Corresponding author}
+
+% Publications would be loaded from publications.bib
+\nocite{*}
+\printbibliography[heading=none,prenote=symbols]
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Technical Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcv
+\section*{Technical Skills}
+
+\textbf{Theoretical Physics:} Relativity Theory, Quantum Mechanics, Statistical Mechanics, Thermodynamics \\
+\textbf{Mathematics:} Differential Geometry, Non-Euclidean Geometry, Tensor Analysis, Differential Equations \\
+\textbf{Programming Languages:} Fortran, Assembly (theoretical calculations) \\
+\textbf{Mathematical Tools:} Analytical mechanics, Variational calculus, Complex analysis \\
+\textbf{Languages:} German (native), English (fluent), French (working proficiency), Italian (basic)
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Software
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcv
+\section*{Software}
+
+\begin{itemize}
+\cvitem{\href{https://github.com/einsteinphysics/relativity-simulator}{\texttt{relativity-simulator}}}{Personal project}{1920-1930}
+\cvitem{\href{https://github.com/einsteinphysics/quantum-probability}{\texttt{quantum-probability}}}{Collaborative research}{1924-1935}
+\end{itemize}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Talks & Presentations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcv
+\section*{Talks \& Presentations}
+
+\begin{itemize}
+\cvitem{The Evolution of Physics}{University of Oxford}{1933}
+\cvitem{The Unified Field Theory}{California Institute of Technology}{1931}
+\cvitem{The Theory of Relativity}{Columbia University}{1921}
+\cvitem{Space, Time and Gravitation}{King's College London}{1921}
+\cvitem{The Meaning of Relativity}{Princeton University}{1921}
+\end{itemize}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Teaching
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcv
+\section*{Teaching}
+
+\subsection*{Course Instructor}
+\begin{itemize}
+\cvitem{Advanced Seminar in Theoretical Physics}{Institute for Advanced Study}{1933-1955}
+\cvitem{Graduate Lectures in Relativity Theory}{University of Berlin}{1914-1933}
+\end{itemize}
+
+\subsection*{Guest Lectures}
+\begin{itemize}
+\cvitem{Lectures on Molecular Physics}{University of Zurich}{1909-1911}
+\end{itemize}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mentoring
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcv
+\section*{Mentoring}
+
+\begin{itemize}
+\cvitem{Nathan Rosen}{PhD advisor}{1932-1935}
+\cvitem{Peter Bergmann}{PhD advisor}{1933-1936}
+\cvitem{Bruria Kaufman}{PhD co-advisor}{1948-1951}
+\cvitem{Leopold Infeld}{Postdoc}{1936-1938}
+\cvitem{Valentine Bargmann}{PhD committee}{1936-1938}
+\cvitem{John Wheeler}{PhD committee}{1933-1935}
+\cvitem{Abraham Pais}{Visiting researcher}{1946-1947}
+\end{itemize}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Service
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcv
+\section*{Service}
+
+\subsection*{Conference Organization}
+\begin{itemize}
+\cvitem{Solvay Conference on Physics}{Organizing Committee}{1927, 1930}
+\cvitem{International Congress of Mathematicians}{Advisory Board}{1928}
+\cvitem{Prussian Academy Physics Colloquium}{Organizing Committee}{1920-1933}
+\end{itemize}
+
+\subsection*{Peer Review}
+\begin{itemize}
+    \item Annalen der Physik: 1905-1933
+    \item Physical Review: 1935-1955
+    \item Proceedings of the Royal Society: 1920-1950
+    \item Zeitschrift für Physik: 1920-1933
+\end{itemize}
+
+\subsection*{Departmental \& University Service}
+\begin{itemize}
+\cvitem{Board of Governors}{Hebrew University of Jerusalem}{1925-1955}
+\cvitem{Faculty Senate}{Institute for Advanced Study}{1933-1955}
+\cvitem{Academic Committee}{Kaiser Wilhelm Institute}{1914-1933}
+\cvitem{Admissions Committee}{ETH Zurich}{1912-1914}
+\end{itemize}
+
+\subsection*{Community Service}
+\begin{itemize}
+\cvitem{Emergency Committee of Atomic Scientists}{Chairman}{1946-1955}
+\cvitem{International Rescue Committee}{Advisory Board}{1933-1955}
+\cvitem{League of Nations Committee on Intellectual Cooperation}{Member}{1922-1932}
+\cvitem{World Peace Congress}{Keynote Speaker}{1949}
+\end{itemize}
+\fi
+
+\end{document}

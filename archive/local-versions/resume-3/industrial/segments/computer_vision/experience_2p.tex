@@ -1,0 +1,44 @@
+\resumeSubheading
+  {Advanced Analytics Australia}{Remote Contract}
+  {Computer Vision Engineer}{Sep 2025 -- Apr 2026}
+\begin{resumeItemList}
+  \resumeItem{Engineered production video analytics pipelines on AXIS network camera hardware for health, safety, and compliance monitoring across \textbf{12 industrial sites}: handwash verification, PPE detection (boots, helmets), face tracking, and restricted-zone entry alerting (\textbf{<50ms inference, 99.2\% uptime}).}
+  \resumeItem{Compiled and quantized vision models into \textbf{TensorRT} and \textbf{TensorFlow Lite} runtimes; served them through \textbf{Triton Inference Server} with dynamic batching, substantially reducing CPU overhead on edge nodes by eliminating Python-level inference overhead (\textbf{3.5x speedup vs Python}).}
+  \resumeItem{Architected a high-throughput spatial metadata ingestion broker using \textbf{Apache Kafka} to buffer concurrent high-frame-rate tracking streams from \textbf{100+ cameras (30 FPS each)} without back-pressure on inference workers.}
+  \resumeItem{Implemented dynamic sensor calibration routines that compensate for exposure variance and lighting shifts across indoor and outdoor camera placements, maintaining stable detection thresholds across all deployment sites (\textbf{-35\% false positives}).}
+  \resumeItem{Built asynchronous Python streaming workers interfacing directly with camera APIs, managing parallel video payload processing without blocking main inference threads.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineering R\&D Lead}{Jan 2025 -- Aug 2025}
+\begin{resumeItemList}
+  \resumeItem{Led development of the multimodal product retrieval system, aligning image, diagram, and text product assets in a shared vector space using \textbf{Vision Transformers (ViT)} and \textbf{BLIP} encoders to enable cross-modal text-to-image semantic search across \textbf{10M+ product listings} (\textbf{+18\% CTR, p99 <150ms}).}
+  \resumeItem{Built high-throughput image preprocessing and spatial augmentation workers that fully decouple raw upload ingestion from model inference, preventing pipeline bottlenecks during traffic spikes.}
+  \resumeItem{Profiled and optimized matrix operations in multimodal alignment architectures to eliminate out-of-memory (OOM) failures under heavy concurrent load.}
+  \resumeItem{Supervised multi-tenant Kubernetes deployment isolating vision model serving nodes from language generation clusters, ensuring independent horizontal scaling and fault containment (\textbf{40\% GPU cost reduction}).}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Digikala}{Tehran, Iran}
+  {AI Engineer}{Nov 2024 -- Jan 2025}
+\begin{resumeItemList}
+  \resumeItem{Prototyped and benchmarked multimodal indexing strategies for the product catalog; evaluated ViT versus CNN feature extractor throughput and cross-modal alignment quality to inform the architecture adopted in the lead role.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {Turquoise Digital (Firouzeh Digital)}{Tehran, Iran}
+  {Senior Data Scientist \& AI Engineer}{Sep 2025 -- Mar 2026}
+\begin{resumeItemList}
+  \resumeItem{Engineered a telephony voice intelligence pipeline: live customer call audio is captured, transcribed in real time via \textbf{Whisper} and \textbf{wav2vec2.0}, and routed into a LangGraph agent for automated support ticket creation (\textbf{-78\% manual tickets, 94\% transcription accuracy}).}
+  \resumeItem{Compiled acoustic feature extraction blocks to \textbf{TorchScript} and built Asyncio workers that process parallel voice payloads without blocking API threads, achieving low-latency transcription under simultaneous call load (\textbf{50+ concurrent streams, <100ms latency}).}
+  \resumeItem{Designed continuous validation monitors that track signal-to-noise ratios on incoming audio streams, dynamically adjusting transcription thresholds to maintain accuracy under degraded telephony conditions.}
+\end{resumeItemList}
+
+\resumeSubheading
+  {HomaCloud}{Tehran, Iran}
+  {MLOps Engineer}{Aug 2021 -- Feb 2022}
+\begin{resumeItemList}
+  \resumeItem{Orchestrated distributed model training and data pipelines on Kubernetes using Ray for scheduling and MLflow for experiment tracking; built low-latency model inference APIs with FastAPI and TensorFlow Serving.}
+  \resumeItem{Automated full CI/CD lifecycle with Docker, ArgoCD, and GitHub Actions, cutting deployment cycle time to under 10 minutes; provisioned infrastructure-as-code with Terraform (\textbf{15+ models, 99.9\% deploy success rate}).}
+\end{resumeItemList}

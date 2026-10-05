@@ -11,7 +11,6 @@ import argparse, pathlib, yaml, re, os, textwrap
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "cv.yaml"
 GEN_ROOT = ROOT / "industrial" / "segments" / "generated"
-JEKYLL_DATA = ROOT.parents[1] / "alinikkhah2001.github.io" / "_data" / "cv_generated.yaml"
 LONG_TEX = ROOT / "industrial" / "long_union.tex"
 
 def load():
@@ -98,14 +97,13 @@ def build_variant(data, variant):
             f.write(f"\\resumeItem{{{tex_escape(pub['title'])} — \\textit{{{tex_escape(pub['venue'])}}}, {pub['year']}}}\n")
     print(f"[build] {variant}: {len(exps)} experiences -> {out_dir}")
 
-def build_all(data):
+def build_all(data, jekyll_data=None):
     for v in data["variants"]: build_variant(data, v)
-    # also export Jekyll data copy
-    try:
-        JEKYLL_DATA.parent.mkdir(parents=True, exist_ok=True)
-        import shutil; shutil.copy(DATA, JEKYLL_DATA)
-        print(f"[jekyll] copied to {JEKYLL_DATA}")
-    except Exception as e: print(f"[jekyll] skip {e}")
+    # Export to a separate website checkout only when explicitly requested.
+    if jekyll_data is not None:
+        jekyll_data.parent.mkdir(parents=True, exist_ok=True)
+        import shutil; shutil.copy(DATA, jekyll_data)
+        print(f"[jekyll] copied to {jekyll_data}")
     # generate long markdown timeline
     tl = ROOT / "data" / "timeline_gapfree.md"
     with open(tl, "w", encoding="utf-8") as f:
@@ -144,7 +142,8 @@ def build_all(data):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--variant", default="all", help="variant name or all")
+    ap.add_argument("--jekyll-data", type=pathlib.Path, help="optional website YAML export path")
     args = ap.parse_args()
     data = load()
-    if args.variant == "all": build_all(data)
+    if args.variant == "all": build_all(data, args.jekyll_data)
     else: build_variant(data, args.variant)

@@ -1,0 +1,182 @@
+{
+  "11-boeing": {
+    "status": "success",
+    "engine": "pdflatex",
+    "pages": 22,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "cv-gboeing.tex"
+    ],
+    "source_revision": "98a2d05452dcc2833af1f2012b0be061fe688692",
+    "adjustments": "None"
+  },
+  "12-simplecv": {
+    "status": "success",
+    "engine": "pdflatex",
+    "pages": 2,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "main.tex"
+    ],
+    "source_revision": "75dd40455d0138eafd982fea4b86162ae9c81f42",
+    "adjustments": "None"
+  },
+  "13-simple-resume": {
+    "status": "success",
+    "engine": "xelatex",
+    "pages": 3,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-xelatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "CV.tex"
+    ],
+    "source_revision": "23fbc6a5ea66bf1a89a93a4e5dd782eb8785b2eb",
+    "adjustments": "None"
+  },
+  "14-pseudomanifold": {
+    "status": "success",
+    "engine": "lualatex",
+    "pages": 2,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-lualatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "CV.tex"
+    ],
+    "source_revision": "f396db5aff322491da9c00df1bcf74e2bdf5be9c",
+    "adjustments": "Use free TeX Gyre fonts instead of requiring Adobe Minion Pro, Cabin and Fira Mono; separate the sample's adjacent education entries."
+  },
+  "15-cleancv": {
+    "status": "success",
+    "engine": "pdflatex",
+    "pages": 3,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "main.tex"
+    ],
+    "source_revision": "35ace22943278e05767dea7405ceaa9825732209",
+    "adjustments": "None"
+  },
+  "16-prometheus": {
+    "status": "success",
+    "engine": "xelatex",
+    "pages": 2,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-xelatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "main.tex"
+    ],
+    "source_revision": "a7ba18d5fa57b3eb09fd5601d76b88c06fffd6af",
+    "adjustments": "Compile fontspec with XeLaTeX and substitute the free TeX Gyre Pagella family for separately installed Cormorant fonts."
+  },
+  "17-phd-application": {
+    "status": "success",
+    "engine": "pdflatex",
+    "pages": 3,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "example.tex"
+    ],
+    "source_revision": "9245a2e1c363aab77ef0a858050e65329301aec5",
+    "adjustments": "Restore the Raleway font switch and provide a minimal monochrome variant: plain headings, hidden link borders, neutral skill tags, and a spaced name."
+  },
+  "18-mcdowell": {
+    "status": "success",
+    "engine": "lualatex",
+    "pages": 1,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-lualatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "McDowell_CV_Template.tex"
+    ],
+    "source_revision": "b7e2d271c64814ee02b3505b191389c8df614035",
+    "adjustments": "Use LuaLaTeX for microtype letterspacing and the free TeX Gyre Termes equivalent of Times New Roman."
+  },
+  "19-uieda": {
+    "status": "success",
+    "engine": "xelatex",
+    "pages": 2,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-xelatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "cv.tex"
+    ],
+    "source_revision": "d060160de936a00a023c6fd6ba964077e6705e74",
+    "adjustments": "None"
+  },
+  "20-academia": {
+    "status": "success",
+    "engine": "xelatex",
+    "pages": 2,
+    "command": [
+      "latexmk",
+      "-norc",
+      "-xelatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "-no-shell-escape",
+      "-outdir=<build-directory>",
+      "main.tex"
+    ],
+    "source_revision": "ddedab39e1f3db7e99977ebecb040bd3628658e3",
+    "adjustments": "None"
+  }
+}

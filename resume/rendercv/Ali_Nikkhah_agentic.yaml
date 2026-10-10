@@ -13,29 +13,23 @@ cv:
     username: AliNikkhah2001
   sections:
     summary:
-    - 'Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025,
+    - Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025,
       GPA 3.65; M.Sc. AI from Sep 2025) specialising in agentic RAG, multimodal vision-language,
-      self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV pipelines
-      at marketplace scale, self-hosted Graph RAG assistant for a national credit
-      bureau, and BNPL risk platforms. Research focus: LLM reasoning and hallucination
-      mitigation.
-
-      '
+      self-hosted LLM serving, and…
     education:
     - institution: Sharif University of Technology
       area: M.Sc. Artificial Intelligence
       degree: M.Sc. Artificial Intelligence
       start_date: 2025-09
       end_date: present
-      location: Tehran, Iran
-      highlights:
-      - Computer Engineering Department, AI major (full-time, ongoing, no thesis yet)
+      location: Sharif University of Technology
+      highlights: []
     - institution: Sharif University of Technology
       area: B.Sc. Electrical Engineering
       degree: B.Sc. Electrical Engineering
       start_date: 2020-09
       end_date: 2025-09
-      location: Tehran, Iran
+      location: Sharif University of Technology
       highlights:
       - 'GPA: 3.65'
       - 'Thesis: Team thesis on efficient design and implementation of spread-time
@@ -63,9 +57,6 @@ cv:
         facts.
       - Added hallucination guardrails — retrieval grounding, citation enforcement,
         deterministic fallback — for a regulated financial environment.
-      - 'Stack: Python, Neo4j, Cypher, Graph RAG, LangGraph, LangChain'
-      - Most recent Iran position; overlaps Sharif M.Sc. AI (Sep 2025) — full-time
-        industry alongside full-time graduate study
     - company: Turquoise Digital
       position: Senior Data Scientist & Data Engineer
       start_date: 2025-09
@@ -84,12 +75,9 @@ cv:
         94% intent accuracy; deterministic fallback + policy guardrails for auditability.
       - Drove portfolio allocation & risk engine (Sharpe +0.42) with streaming ClickHouse
         signals; LlamaIndex retrieval graph for ranking features.
-      - 'Stack: Python, PyTorch, Spark, Trino, PeerDB, Airflow'
-      - 'Concurrent with Advanced Analytics Australia (Remote Contract) — 7-month
-        overlap, split focus: Turquoise BNPL/risk/whisper vs Advanced edge CV'
     - company: Digikala
       position: AI Engineering R&D Lead
-      start_date: 2025-01
+      start_date: '2025'
       end_date: 2025-08
       location: Tehran, Iran — Full-time · On-site
       summary: Owned agentic RAG platform for marketplace listing intelligence — modular
@@ -104,12 +92,10 @@ cv:
         reduction; 200 pods, MIG/HPA/VPA, Prometheus KV-cache dashboards.
       - Partnered with infra/product establishing eval pipelines, A/B guardrails,
         canary rollouts.
-      - 'Stack: Python, LangGraph, LangChain, LlamaIndex, FAISS, Elasticsearch'
-      - Full-time lead; UBC/Trinity/Sharif were part-time remote (<10h/wk)
     - company: Digikala
       position: AI Engineer
       start_date: 2024-11
-      end_date: 2025-01
+      end_date: '2025'
       location: Tehran, Iran — Part-time · Hybrid
       summary: Prototyped MCP + RAG scaffolding that scaled to org-wide mandate.
       highlights:
@@ -117,8 +103,6 @@ cv:
         retrieval with RRF + deterministic fallbacks for auditability.
       - Embedded eval telemetry, memory-efficient indexing, response caching; load-tested
         to 5M queries.
-      - 'Stack: LangChain, LlamaIndex, FAISS, Elasticsearch, FastAPI'
-      - Promotion track — converted to R&D Lead Jan 2025
     - company: HomaCloud
       position: MLOps Engineer (Founding)
       start_date: 2021-08
@@ -131,8 +115,6 @@ cv:
         TF Serving + FastAPI — <10 min releases, 99.9% deploy success, 15+ models.
       - GitOps with GitHub Actions, canary, spot-instance optimization; Prometheus/Grafana
         + ELK observability; registry + lineage.
-      - 'Stack: Kubernetes, Docker, Ray, MLflow, Terraform, ArgoCD'
-      - During B.Sc. — clean sequential after Mapna internship
     publications:
     - title: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive
         Vision-Language Learning

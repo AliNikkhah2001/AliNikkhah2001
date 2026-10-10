@@ -13,29 +13,23 @@ cv:
     username: AliNikkhah2001
   sections:
     summary:
-    - 'Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025,
+    - Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025,
       GPA 3.65; M.Sc. AI from Sep 2025) specialising in agentic RAG, multimodal vision-language,
-      self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV pipelines
-      at marketplace scale, self-hosted Graph RAG assistant for a national credit
-      bureau, and BNPL risk platforms. Research focus: LLM reasoning and hallucination
-      mitigation.
-
-      '
+      self-hosted LLM serving, and…
     education:
     - institution: Sharif University of Technology
       area: M.Sc. Artificial Intelligence
       degree: M.Sc. Artificial Intelligence
       start_date: 2025-09
       end_date: present
-      location: Tehran, Iran
-      highlights:
-      - Computer Engineering Department, AI major (full-time, ongoing, no thesis yet)
+      location: Sharif University of Technology
+      highlights: []
     - institution: Sharif University of Technology
       area: B.Sc. Electrical Engineering
       degree: B.Sc. Electrical Engineering
       start_date: 2020-09
       end_date: 2025-09
-      location: Tehran, Iran
+      location: Sharif University of Technology
       highlights:
       - 'GPA: 3.65'
       - 'Thesis: Team thesis on efficient design and implementation of spread-time
@@ -63,9 +57,6 @@ cv:
         facts.
       - Added hallucination guardrails — retrieval grounding, citation enforcement,
         deterministic fallback — for a regulated financial environment.
-      - 'Stack: Python, Neo4j, Cypher, Graph RAG, LangGraph, LangChain'
-      - Most recent Iran position; overlaps Sharif M.Sc. AI (Sep 2025) — full-time
-        industry alongside full-time graduate study
     - company: Turquoise Digital
       position: Senior Data Scientist & Data Engineer
       start_date: 2025-09
@@ -84,9 +75,6 @@ cv:
         94% intent accuracy; deterministic fallback + policy guardrails for auditability.
       - Drove portfolio allocation & risk engine (Sharpe +0.42) with streaming ClickHouse
         signals; LlamaIndex retrieval graph for ranking features.
-      - 'Stack: Python, PyTorch, Spark, Trino, PeerDB, Airflow'
-      - 'Concurrent with Advanced Analytics Australia (Remote Contract) — 7-month
-        overlap, split focus: Turquoise BNPL/risk/whisper vs Advanced edge CV'
     - company: Advanced Analytics Australia
       position: Computer Vision / ML Platform Engineer (Edge)
       start_date: 2025-09
@@ -101,21 +89,6 @@ cv:
         automated rollback, Prometheus/Grafana per-site health.
       - Cut false positives -35% via attention-guided NMS + SNR monitoring; broker
         architecture for 12 distributed sites.
-      - 'Stack: Python, OpenCV, YOLO, ViT, TensorRT, TFLite'
-      - Parallel remote contract alongside Turquoise — edge CV track
-    - company: Sharif University — Robust & Interpretable ML Lab
-      position: Research Collaborator — Explainable & Robust AI
-      start_date: 2025-07
-      end_date: 2025-09
-      location: Tehran, Iran — Part-time · On-site
-      summary: Robustness & interpretability harnesses for multimodal perception under
-        distribution shift.
-      highlights:
-      - Benchmarked adversarial + natural shift suites; notebooks surfacing Captum/SHAP
-        attributions, saliency, counterfactuals.
-      - Documented deploy best-practices for regulated industries with faculty.
-      - 'Stack: PyTorch, MLflow, Captum, SHAP'
-      - Summer research sprint concurrent with industry roles
     - company: Trinity College Dublin — EmoDub Project
       position: Machine Learning Researcher — Emotion-Aware Speech Translation
       start_date: 2025-05
@@ -129,11 +102,20 @@ cv:
       - Curated emotion-annotated corpora (EmotionNet/EmoDB) with balanced cultural
         representation; evaluated BLEU, Emotion F1, MOS.
       - Collab. with Prof. Siobhán Clarke; reproducible codebase https://github.com/AliNikkhah2001/emodub-emotion-translation.
-      - 'Stack: PyTorch, TensorFlow, Hugging Face, librosa, wav2vec2.0, Whisper'
-      - Part-time remote research concurrent with Digikala + Turquoise + UBC
+    - company: Sharif University — Robust & Interpretable ML Lab
+      position: Research Collaborator — Explainable & Robust AI
+      start_date: 2025-07
+      end_date: 2025-09
+      location: Tehran, Iran — Part-time · On-site
+      summary: Robustness & interpretability harnesses for multimodal perception under
+        distribution shift.
+      highlights:
+      - Benchmarked adversarial + natural shift suites; notebooks surfacing Captum/SHAP
+        attributions, saliency, counterfactuals.
+      - Documented deploy best-practices for regulated industries with faculty.
     - company: Digikala
       position: AI Engineering R&D Lead
-      start_date: 2025-01
+      start_date: '2025'
       end_date: 2025-08
       location: Tehran, Iran — Full-time · On-site
       summary: Owned agentic RAG platform for marketplace listing intelligence — modular
@@ -148,12 +130,10 @@ cv:
         reduction; 200 pods, MIG/HPA/VPA, Prometheus KV-cache dashboards.
       - Partnered with infra/product establishing eval pipelines, A/B guardrails,
         canary rollouts.
-      - 'Stack: Python, LangGraph, LangChain, LlamaIndex, FAISS, Elasticsearch'
-      - Full-time lead; UBC/Trinity/Sharif were part-time remote (<10h/wk)
     - company: Digikala
       position: AI Engineer
       start_date: 2024-11
-      end_date: 2025-01
+      end_date: '2025'
       location: Tehran, Iran — Part-time · Hybrid
       summary: Prototyped MCP + RAG scaffolding that scaled to org-wide mandate.
       highlights:
@@ -161,8 +141,6 @@ cv:
         retrieval with RRF + deterministic fallbacks for auditability.
       - Embedded eval telemetry, memory-efficient indexing, response caching; load-tested
         to 5M queries.
-      - 'Stack: LangChain, LlamaIndex, FAISS, Elasticsearch, FastAPI'
-      - Promotion track — converted to R&D Lead Jan 2025
     - company: University of British Columbia
       position: Research Assistant — Vision-Language Medical Imaging (Ultrasound Report
         Generation)
@@ -179,22 +157,6 @@ cv:
         + clinical efficacy with radiologists; SOTA on in-house split.
       - 'Preprint in prep: Automated DICOM-Compliant Ultrasound Report Generation
         via Contrastive Vision-Language Learning (2025).'
-      - 'Stack: PyTorch, ViT, BLIP, T5, LLaVA, CLIP'
-      - Long-running part-time research; overlapped industry roles but capped at 10h/wk
-        — primary commitment was Digikala/Turquoise
-    - company: Sharif University of Technology
-      position: Teaching Assistant — NLP, Generative Models, Deep Learning
-      start_date: 2023-08
-      end_date: 2024-01
-      location: Tehran, Iran — Part-time · On-site
-      summary: Led labs/seminars for graduate NLP/GenAI/DL; mentored capstones.
-      highlights:
-      - Facilitated seminars, office hours (30-80 students), problem-set design/grading,
-        exam design for DL/NLP.
-      - Developed lab material for Deep Learning, Analog Electronics, foundational
-        ML; mentored undergrad capstones.
-      - 'Stack: PyTorch, TensorFlow, NumPy, scikit-learn'
-      - Graduate TA alongside L3S research — teaching load 6-8h/wk
     - company: L3S Research Center — Leibniz University Hannover
       position: Research Assistant — Video Motion Classification
       start_date: 2023-04
@@ -207,9 +169,27 @@ cv:
         improved domain generalization across lighting/texture/camera shift.
       - Benchmarked 3D CNN + transformer hybrids vs baselines; analyzed attention
         maps; reduced overfitting, SOTA accuracy.
-      - 'Stack: PyTorch Lightning, OpenCV, PyAV, TensorBoard, scikit-learn, Multimodal
-        Models'
-      - Part-time RA during B.Sc. final year — no conflict
+    - company: Sharif University of Technology
+      position: Teaching Assistant — NLP, Generative Models, Deep Learning
+      start_date: 2023-08
+      end_date: '2024'
+      location: Tehran, Iran — Part-time · On-site
+      summary: Led labs/seminars for graduate NLP/GenAI/DL; mentored capstones.
+      highlights:
+      - Facilitated seminars, office hours (30-80 students), problem-set design/grading,
+        exam design for DL/NLP.
+      - Developed lab material for Deep Learning, Analog Electronics, foundational
+        ML; mentored undergrad capstones.
+    - company: Sharif University of Technology
+      position: Teaching Assistant — History (8 courses, 2021-2023)
+      start_date: '2021'
+      end_date: 2023-08
+      location: Tehran, Iran — Part-time
+      summary: Three-year TA service across 8 courses — Deep Learning, ML & Data Science,
+        Generative Models, Engineering Prob & Stats, Analog Electronics, Circuit Theory.
+      highlights:
+      - Graded problem sets, ran tutorials, held office hours; supported 30-80 students
+        per term.
     - company: HomaCloud
       position: MLOps Engineer (Founding)
       start_date: 2021-08
@@ -222,8 +202,6 @@ cv:
         TF Serving + FastAPI — <10 min releases, 99.9% deploy success, 15+ models.
       - GitOps with GitHub Actions, canary, spot-instance optimization; Prometheus/Grafana
         + ELK observability; registry + lineage.
-      - 'Stack: Kubernetes, Docker, Ray, MLflow, Terraform, ArgoCD'
-      - During B.Sc. — clean sequential after Mapna internship
     - company: HomaCloud
       position: MLOps Intern
       start_date: 2021-05
@@ -232,26 +210,14 @@ cv:
       summary: Evaluated PyTorch/TF + multi-node training; built serving/API automation
         for dataset prep & deployment.
       highlights: []
-    - company: Sharif University of Technology
-      position: Teaching Assistant — History (8 courses, 2021-2023)
-      start_date: 2021-01
-      end_date: 2023-08
-      location: Tehran, Iran — Part-time
-      summary: Three-year TA service across 8 courses — Deep Learning, ML & Data Science,
-        Generative Models, Engineering Prob & Stats, Analog Electronics, Circuit Theory.
-      highlights:
-      - Graded problem sets, ran tutorials, held office hours; supported 30-80 students
-        per term.
-      - 'Stack: PyTorch, TensorFlow, NumPy'
     - company: Mapna-MD2
       position: Full Stack Engineer
-      start_date: 2021-01
+      start_date: '2021'
       end_date: 2021-05
-      location: Tehran, Iran — Part-time
+      location: Tehran, Iran — Part-time · On-site
       summary: Dashboards + partner integrations (React/Node/Postgres/Docker); QA/deployment
         scripts.
-      highlights:
-      - 'Stack: React, Node.js, PostgreSQL, Docker'
+      highlights: []
     publications:
     - title: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive
         Vision-Language Learning

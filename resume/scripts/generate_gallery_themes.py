@@ -24,7 +24,7 @@ BASE_PKGS = [
     r"\usepackage[T1]{fontenc}",
     r"\usepackage[empty]{fullpage}",
     r"\usepackage{titlesec}",
-    r"\usepackage[usenames,dvipsnames]{color}",
+    r"\usepackage[dvipsnames]{xcolor}",
     r"\usepackage{verbatim}",
     r"\usepackage{enumitem}",
     r"\usepackage[hidelinks]{hyperref}",
@@ -80,7 +80,7 @@ def section_rule(color="black"):
     return (
         "\\titleformat{\\section}{\n"
         "  \\vspace{-4pt}\\scshape\\raggedright\\large\n"
-        f"}}{{0em}}{{}}[\\color{{{color}}}\\titlerule \\vspace{{-5pt}}]\n"
+        f"}}{{}}{{0em}}{{}}[\\color{{{color}}}\\titlerule \\vspace{{-5pt}}]\n"
     )
 
 
@@ -106,7 +106,7 @@ THEMES["02-teal"] = "\n".join([
     r"\definecolor{accent}{HTML}{2A7F62}",
     GEOM_TIGHT,
     r"\urlstyle{same}\raggedbottom\raggedright",
-    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\color{accent}\\bfseries\\raggedright\\large\n}{0em}{}[\\color{accent}\\titlerule \\vspace{-5pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\color{accent}\\bfseries\\raggedright\\large\n}{}{0em}{}[\\color{accent}\\titlerule \\vspace{-5pt}]\n",
     header_center(r"{\Huge \textbf{\color{accent}Ali Nikkhah}}"),
     MACROS,
 ])
@@ -119,7 +119,7 @@ THEMES["03-blue"] = "\n".join([
     r"\definecolor{accent}{HTML}{0E6EB0}",
     GEOM_TIGHT,
     r"\urlstyle{same}\raggedbottom\raggedright",
-    "\\titleformat{\\section}{\n  \\vspace{-6pt}\\color{accent}\\bfseries\\raggedright\\Large\n}{0em}{}[\\vspace{-6pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-6pt}\\color{accent}\\bfseries\\raggedright\\Large\n}{}{0em}{}[\\vspace{-6pt}]\n",
     header_center(r"{\Huge \textbf{Ali Nikkhah}}"),
     MACROS,
 ])
@@ -152,7 +152,7 @@ THEMES["05-deedy"] = "\n".join([
         r"\addtolength{\textheight}{1.4in}",
     ]),
     r"\urlstyle{same}\raggedbottom\raggedright",
-    "\\titleformat{\\section}{\n  \\vspace{-6pt}\\bfseries\\raggedright\\normalsize\\uppercase\n}{0em}{}[\\titlerule \\vspace{-6pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-6pt}\\bfseries\\raggedright\\normalsize\\uppercase\n}{}{0em}{}[\\titlerule \\vspace{-6pt}]\n",
     header_center(r"{\Large \textbf{Ali Nikkhah}}"),
     MACROS,
 ])
@@ -165,7 +165,7 @@ THEMES["06-plasmati"] = "\n".join([
     r"\definecolor{accent}{HTML}{4A6572}",
     GEOM_TIGHT,
     r"\urlstyle{same}\raggedbottom\raggedright",
-    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\color{accent}\\scshape\\raggedright\\large\n}{0em}{}[\\color{accent}\\titlerule \\vspace{-5pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\color{accent}\\scshape\\raggedright\\large\n}{}{0em}{}[\\color{accent}\\titlerule \\vspace{-5pt}]\n",
     header_center(r"{\Huge \textsc{\color{accent}Ali Nikkhah}}"),
     MACROS,
 ])
@@ -175,10 +175,10 @@ THEMES["07-mono"] = "\n".join([
     r"\documentclass[letterpaper,11pt]{article}",
     *BASE_PKGS,
     r"\usepackage{lmodern}",
-    r"\usepackage[scaled=0.95]{courier}",
+    r"\usepackage{courier}",
     GEOM_TIGHT,
     r"\urlstyle{same}\raggedbottom\raggedright",
-    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\ttfamily\\raggedright\\large\n}{0em}{}[\\titlerule \\vspace{-5pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\ttfamily\\raggedright\\large\n}{}{0em}{}[\\titlerule \\vspace{-5pt}]\n",
     header_center(r"{\Huge \texttt{Ali Nikkhah}}"),
     MACROS,
 ])
@@ -190,7 +190,7 @@ THEMES["08-ieee"] = "\n".join([
     r"\usepackage{mathptmx}",
     r"\setlength{\columnsep}{0.3in}",
     r"\urlstyle{same}\raggedbottom",
-    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\scshape\\centering\\normalsize\n}{0em}{}[\\vspace{-4pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\scshape\\centering\\normalsize\n}{}{0em}{}[\\vspace{-4pt}]\n",
     "\\newcommand{\\cvheader}{%\n\\twocolumn[{\\begin{center}\\Large \\textsc{Ali Nikkhah} \\\\ \\small Open to Relocation \\& Remote $|$ alinkkh9@gmail.com $|$ +98 991 296 3951 \\\\ alinikkhah2001.github.io $|$ linkedin.com/in/alinikkhah2001\\end{center}\\vspace{4pt}}]}\n",
     MACROS,
 ])
@@ -202,7 +202,7 @@ THEMES["09-garamond"] = "\n".join([
     r"\usepackage{ebgaramond}",
     GEOM_TIGHT,
     r"\urlstyle{same}\raggedbottom\raggedright",
-    "\\titleformat{\\section}{\n  \\vspace{-2pt}\\itshape\\raggedright\\Large\n}{0em}{}[\\vspace{-4pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-2pt}\\itshape\\raggedright\\Large\n}{}{0em}{}[\\vspace{-4pt}]\n",
     header_center(r"{\Huge Ali Nikkhah}"),
     MACROS,
 ])
@@ -215,7 +215,7 @@ THEMES["10-executive"] = "\n".join([
     r"\definecolor{accent}{HTML}{7B1E26}",
     GEOM_TIGHT,
     r"\urlstyle{same}\raggedbottom\raggedright",
-    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\color{accent}\\bfseries\\raggedright\\large\n}{0em}{}[{\\color{accent}\\rule{\\textwidth}{1.5pt}} \\vspace{-5pt}]\n",
+    "\\titleformat{\\section}{\n  \\vspace{-4pt}\\color{accent}\\bfseries\\raggedright\\large\n}{}{0em}{}[{\\color{accent}\\rule{\\textwidth}{1.5pt}} \\vspace{-5pt}]\n",
     header_center(r"{\Huge \textbf{Ali Nikkhah}}"),
     MACROS,
 ])

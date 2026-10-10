@@ -44,18 +44,18 @@
 
 ## 🛠️ Stack
 
-**Languages** · Python, C++, Go, SQL, R, Bash, TypeScript
-**Ml Vision** · PyTorch, TensorFlow, JAX, Hugging Face, ViT, BLIP, T5, Whisper, wav2vec2.0, Librosa, OpenCV, YOLO, ONNX
-**Agentic** · LangGraph, LangChain, LlamaIndex, FAISS, ChromaDB, HyDE, KAG, Graph RAG, vLLM, Triton, Neo4j, Cypher
-**Llm Serving** · vLLM, TGI, AWQ, GPTQ, KV-cache, GPU Optimization, PagedAttention, TensorRT-LLM
-**Data Mlop** · Spark, Airflow, Kafka, Docker, Kubernetes, Ray, MLflow, W&B, ArgoCD, Terraform
-**Human** · Persian (Native), English (C2 IELTS 8.0), Arabic (Professional), French (Limited), German (Limited)
+**Programming** · Python, C++, Go, SQL, R, Bash, TypeScript
+**ML & Vision** · PyTorch, TensorFlow, JAX, Hugging Face, ViT, BLIP, T5, Whisper, wav2vec2.0, Librosa, OpenCV, YOLO, ONNX
+**Agentic AI & RAG** · LangGraph, LangChain, LlamaIndex, FAISS, ChromaDB, HyDE, KAG, Graph RAG, vLLM, Triton, Neo4j, Cypher
+**LLM Serving & GPU** · vLLM, TGI, AWQ, GPTQ, KV-cache, GPU Optimization, PagedAttention, TensorRT-LLM
+**Data & MLOps** · Spark, Airflow, Kafka, Docker, Kubernetes, Ray, MLflow, W&B, ArgoCD, Terraform
+**Languages** · Persian (Native), English (C2 IELTS 8.0), Arabic (Professional), French (Limited), German (Limited)
 
 ## 🧪 Research & Projects
 
-- **Emotion-aware voice translation** — Trinity College Dublin · EmoDub (May 2025 – Nov 2025)
-- **Ultrasound report generation** — University of British Columbia (Feb 2024 – Nov 2025)
-- **Texture-free motion intelligence** — L3S Research Center (Apr 2023 – Feb 2024)
+- **Emotion-aware voice translation** — Trinity College Dublin · EmoDub (2025-05 – 2025-11)
+- **Ultrasound report generation** — University of British Columbia (2024-02 – 2025-11)
+- **Texture-free motion intelligence** — L3S Research Center (2023-04 – 2024-02)
 
 ## 📚 Publications
 
@@ -73,4 +73,4 @@ Field notes on shipping applied AI/ML systems.
 - [Ten additional minimal academic LaTeX templates](resume/academic/template-library/README.md)
 - [Consolidated local versions and content manifest](archive/local-versions/README.md)
 
-<sub>Auto-generated from `resume/data/cv.yaml` (single source of truth).</sub>
+<sub>Auto-generated from `career-dashboard/career_db.json` (single source of truth).</sub>

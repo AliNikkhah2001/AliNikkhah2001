@@ -14,7 +14,9 @@ from pydantic import BaseModel
 
 from models import CareerDatabase, Organization, Position, Project, Education, Achievement, Variant
 import ats as ats_mod
+import interview as interview_mod
 import latex as latex_mod
+import originality as originality_mod
 import validation as validation_mod
 
 DB_PATH = Path(__file__).resolve().parents[1] / "career_db.json"
@@ -378,6 +380,42 @@ async def ats_score(template_id: str, compile_if_missing: bool = True):
             )
     family = template_id.split("-", 1)[0]
     return ats_mod.check_with_cache(pdf, db, family)
+
+
+# Originality — local plagiarism/AI-style screening (heuristics, not a verdict)
+@app.get("/api/originality/{template_id}")
+async def originality_report(template_id: str):
+    try:
+        return originality_mod.check_template(template_id)
+    except FileNotFoundError as e:
+        raise HTTPException(404, str(e))
+    except RuntimeError as e:
+        raise HTTPException(503, str(e))
+
+
+# Interview prep — deterministic question bank generated from career_db
+class InterviewAnswerRequest(BaseModel):
+    status: str
+    answer: str = ""
+
+
+@app.get("/api/interview/questions")
+async def interview_questions(position_id: str | None = None, category: str | None = None):
+    try:
+        return {"questions": interview_mod.get_questions(load_db(), position_id=position_id, category=category)}
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+
+
+@app.post("/api/interview/answers/{qid}")
+async def interview_answer(qid: str, body: InterviewAnswerRequest):
+    db = load_db()
+    try:
+        entry = interview_mod.submit_answer(db, qid, body.status, body.answer)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    save_db(db)
+    return entry
 
 
 # Publishing — real status audit (read-only, dry-run by default)

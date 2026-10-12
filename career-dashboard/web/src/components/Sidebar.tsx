@@ -3,8 +3,8 @@ import { CareerDatabase } from '../types'
 interface SidebarProps {
   open: boolean
   onToggle: () => void
-  activeTab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'publishing' | 'linkedin'
-  onTabChange: (tab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'publishing' | 'linkedin') => void
+  activeTab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'interview' | 'publishing' | 'linkedin'
+  onTabChange: (tab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'interview' | 'publishing' | 'linkedin') => void
   db: CareerDatabase | null
 }
 
@@ -14,6 +14,7 @@ const tabs = [
   { id: 'stack', label: 'Tech Stack', icon: '🧰' },
   { id: 'variants', label: 'CV Variants', icon: '📄' },
   { id: 'templates', label: 'Templates', icon: '🧩' },
+  { id: 'interview', label: 'Interview Prep', icon: '🎯' },
   { id: 'publishing', label: 'Publishing', icon: '🚀' },
   { id: 'linkedin', label: 'LinkedIn Export', icon: '💼' },
 ] as const

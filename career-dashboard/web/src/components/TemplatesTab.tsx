@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { AtsResult, CareerDatabase, TemplateInfo } from '../types'
+import { AtsResult, CareerDatabase, OriginalityReport, TemplateInfo } from '../types'
 import { api } from '../api'
 
 interface TemplatesTabProps {
@@ -17,6 +17,18 @@ function gradeColor(grade: string): string {
   return '#dc3545'
 }
 
+function origDupColor(score: number): string {
+  if (score >= 25) return '#dc3545'
+  if (score >= 15) return '#fd7e14'
+  return '#198754'
+}
+
+function origBandColor(band: string): string {
+  if (band === 'low') return '#198754'
+  if (band === 'medium') return '#fd7e14'
+  return '#dc3545'
+}
+
 export function TemplatesTab({ db }: TemplatesTabProps) {
   const [templates, setTemplates] = useState<TemplateInfo[]>([])
   const [loading, setLoading] = useState(true)
@@ -30,6 +42,23 @@ export function TemplatesTab({ db }: TemplatesTabProps) {
     running: false, done: 0, total: 0, current: '',
   })
   const batchRef = useRef(false)
+  const [originality, setOriginality] = useState<Record<string, OriginalityReport | null>>({})
+  const [origExpanded, setOrigExpanded] = useState<Record<string, boolean>>({})
+  const origFetchedRef = useRef<Set<string>>(new Set())
+
+  useEffect(() => {
+    if (templates.length === 0) return
+    const targets = templates.filter((t) => !origFetchedRef.current.has(t.id))
+    if (targets.length === 0) return
+    for (const t of targets) origFetchedRef.current.add(t.id)
+    Promise.allSettled(targets.map((t) => api.getOriginality(t.id))).then((results) => {
+      const next: Record<string, OriginalityReport | null> = {}
+      results.forEach((r, i) => {
+        next[targets[i].id] = r.status === 'fulfilled' ? r.value : null
+      })
+      setOriginality((prev) => ({ ...prev, ...next }))
+    })
+  }, [templates])
 
   const refresh = useCallback(async () => {
     try {
@@ -56,6 +85,12 @@ export function TemplatesTab({ db }: TemplatesTabProps) {
         ...r,
         [id]: { ok: true, message: `${res.pages ?? '?'} pages · ${res.duration ?? 0}s${res.cached ? ' (cached)' : ''}` },
       }))
+      origFetchedRef.current.delete(id)
+      setOriginality((prev) => {
+        const n = { ...prev }
+        delete n[id]
+        return n
+      })
       await refresh()
       return true
     } catch (e: any) {
@@ -202,6 +237,83 @@ export function TemplatesTab({ db }: TemplatesTabProps) {
               </div>
 
               <p className="text-muted" style={{ fontSize: '0.75rem', margin: '0.5rem 0' }}>{t.description}</p>
+
+              <div className="orig-chips">
+                {(() => {
+                  const orig = originality[t.id]
+                  const show = (val: string | number) => (orig ? String(val) : orig === undefined ? '…' : '—')
+                  const dupScore = orig?.duplication?.score
+                  const clicheCount = orig?.cliches?.count
+                  const aiBand = orig?.ai?.band
+                  return (
+                    <>
+                      <button
+                        type="button"
+                        className="orig-chip"
+                        disabled={!orig}
+                        onClick={() => setOrigExpanded((o) => ({ ...o, [t.id]: !o[t.id] }))}
+                        title={orig ? 'Duplication score — click for details' : 'Originality not available for this template'}
+                        style={typeof dupScore === 'number' ? { color: origDupColor(dupScore) } : undefined}
+                      >
+                        Dup {show(typeof dupScore === 'number' ? Math.round(dupScore) : '?')}
+                      </button>
+                      <button
+                        type="button"
+                        className="orig-chip"
+                        disabled={!orig}
+                        onClick={() => setOrigExpanded((o) => ({ ...o, [t.id]: !o[t.id] }))}
+                        title={orig ? 'Cliché phrases found — click for details' : 'Originality not available for this template'}
+                      >
+                        Clichés {show(typeof clicheCount === 'number' ? clicheCount : '?')}
+                      </button>
+                      <button
+                        type="button"
+                        className="orig-chip"
+                        disabled={!orig}
+                        onClick={() => setOrigExpanded((o) => ({ ...o, [t.id]: !o[t.id] }))}
+                        title={orig ? 'AI-generated likelihood — click for details' : 'Originality not available for this template'}
+                        style={aiBand ? { color: origBandColor(aiBand) } : undefined}
+                      >
+                        AI {show(aiBand ?? '?')}
+                      </button>
+                    </>
+                  )
+                })()}
+              </div>
+              {originality[t.id] && origExpanded[t.id] && (
+                <div className="orig-detail">
+                  <div>
+                    <strong>Duplication</strong>: {Math.round(originality[t.id]!.duplication?.score ?? 0)}/100
+                  </div>
+                  {(originality[t.id]!.duplication?.findings?.length ?? 0) > 0 && (
+                    <ul>
+                      {originality[t.id]!.duplication.findings.map((f, i) => (
+                        <li key={i}>{typeof f === 'string' ? f : JSON.stringify(f)}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <div>
+                    <strong>Clichés</strong>: {originality[t.id]!.cliches?.count ?? 0} found
+                  </div>
+                  {(originality[t.id]!.cliches?.phrases?.length ?? 0) > 0 && (
+                    <ul>
+                      {originality[t.id]!.cliches.phrases.map((p, i) => (
+                        <li key={i}>{p}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <div>
+                    <strong>AI-generated likelihood</strong>:{' '}
+                    <span style={{ color: origBandColor(originality[t.id]!.ai?.band ?? ''), fontWeight: 700 }}>
+                      {(originality[t.id]!.ai?.band ?? 'unknown').toUpperCase()}
+                    </span>{' '}
+                    ({Math.round(originality[t.id]!.ai?.score ?? 0)}/100)
+                  </div>
+                  {originality[t.id]!.ai?.disclaimer && (
+                    <p className="orig-disclaimer">{originality[t.id]!.ai!.disclaimer}</p>
+                  )}
+                </div>
+              )}
 
               <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
                 <button

@@ -1,0 +1,44 @@
+name: Verify CV Matrix
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'career-dashboard/career_db.json'
+      - 'career-dashboard/api/**'
+      - 'scripts/verify_all.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-xetex poppler-utils
+
+      - name: Install Python deps
+        run: pip install pydantic pyyaml fastapi uvicorn
+
+      - name: Run compile-verification matrix
+        run: python3 scripts/verify_all.py
+
+      - name: Check matrix is green
+        run: |
+          MATRIX=$(ls -t docs/research/matrix-*.md | head -1)
+          FAILS=$(grep -c '| FAIL\|| ERROR' "$MATRIX" || true)
+          if [ "$FAILS" -gt 0 ]; then
+            echo "::error::$FAILS templates failed to compile"
+            exit 1
+          fi
+          echo "All templates compiled OK"

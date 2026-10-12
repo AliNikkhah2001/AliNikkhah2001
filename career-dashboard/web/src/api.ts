@@ -121,6 +121,24 @@ export const api = {
     }),
   getAts: (id: string) => request<import('./types').AtsResult>(`/ats/${encodeURIComponent(id)}`),
 
+  listInterviewQuestions: (params: { position_id?: string; category?: string } = {}) => {
+    const qs = new URLSearchParams()
+    if (params.position_id) qs.set('position_id', params.position_id)
+    if (params.category) qs.set('category', params.category)
+    const query = qs.toString()
+    return request<import('./types').InterviewQuestionsResponse>(
+      `/interview/questions${query ? `?${query}` : ''}`
+    )
+  },
+  saveInterviewAnswer: (qid: string, data: { status: string; answer: string }) =>
+    request<import('./types').InterviewQuestion>(`/interview/answers/${encodeURIComponent(qid)}`, {
+      method: 'POST',
+      body: JSON.stringify(data),
+    }),
+
+  getOriginality: (templateId: string) =>
+    request<import('./types').OriginalityReport>(`/originality/${encodeURIComponent(templateId)}`),
+
   getPublishingAudit: () => request<import('./types').PublishingAudit>('/publishing/audit'),
 
   search: (q: string) => request<any>(`/search?q=${encodeURIComponent(q)}`),

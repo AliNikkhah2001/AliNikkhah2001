@@ -130,7 +130,7 @@ def validate_db(db: CareerDatabase) -> dict[str, Any]:
                 f"“{p.title}” has no end date and is not marked ongoing — ambiguous date range.",
                 [p.id],
             )
-        if p.start.month is None or (p.end and p.end.month is None):
+        if p.start.month is None or (p.end and p.end.year < 9999 and p.end.month is None):
             add(
                 "info",
                 "year_only_dates",
@@ -194,4 +194,13 @@ def validate_db(db: CareerDatabase) -> dict[str, Any]:
         "warning": sum(1 for i in issues if i["severity"] == "warning"),
         "info": sum(1 for i in issues if i["severity"] == "info"),
     }
+    # Filter acknowledged issues (user has explicitly accepted these)
+    ack = set(db.acknowledged or [])
+    if ack:
+        issues = [i for i in issues if f"{i['kind']}:{','.join(i['position_ids'])}" not in ack]
+        counts = {
+            "error": sum(1 for i in issues if i["severity"] == "error"),
+            "warning": sum(1 for i in issues if i["severity"] == "warning"),
+            "info": sum(1 for i in issues if i["severity"] == "info"),
+        }
     return {"issues": issues, "counts": counts, "total": len(issues)}

@@ -731,3 +731,126 @@ input, textarea, select {
 /* ===== Template cards ===== */
 .template-card { padding: 0.9rem; }
 .template-card:hover { box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08); }
+
+/* ===== Originality chips ===== */
+.orig-chips {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin: 0.4rem 0 0.5rem;
+}
+.orig-chip {
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #495057;
+}
+.orig-chip:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.orig-detail {
+  border: 1px solid #e9ecef;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.orig-detail ul {
+  margin: 0.2rem 0 0.4rem;
+  padding-left: 1.1rem;
+}
+.orig-disclaimer {
+  margin: 0.35rem 0 0;
+  color: #6c757d;
+  font-size: 0.68rem;
+  font-style: italic;
+}
+
+/* ===== Interview prep ===== */
+.interview-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.interview-progress {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.75rem;
+}
+.qa-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.85rem;
+  margin-bottom: 0.65rem;
+  background: #fff;
+}
+.qa-skeleton {
+  height: 120px;
+  border-radius: 8px;
+  background: #e9ecef;
+  margin-bottom: 0.65rem;
+  animation: qa-pulse 1.2s ease-in-out infinite;
+}
+@keyframes qa-pulse {
+  50% { opacity: 0.45; }
+}
+.qa-question {
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin: 0.4rem 0;
+}
+.qa-detail {
+  border-left: 3px solid #bad6ff;
+  background: #f8f9fa;
+  border-radius: 0 6px 6px 0;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+}
+.qa-detail-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  margin-top: 0.35rem;
+}
+.qa-detail ul {
+  margin: 0.25rem 0;
+  padding-left: 1.1rem;
+}
+.qa-status-group {
+  display: inline-flex;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.qa-status-btn {
+  border: none;
+  background: #fff;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6c757d;
+}
+.qa-status-btn + .qa-status-btn {
+  border-left: 1px solid #ced4da;
+}
+.qa-status-btn.active {
+  background: #0d6efd;
+  color: #fff;
+}
+.qa-saved {
+  color: #198754;
+  font-size: 0.78rem;
+  font-weight: 600;
+}

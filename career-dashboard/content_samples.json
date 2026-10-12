@@ -1,0 +1,361 @@
+{
+ "alternates": {
+  "ach_iran_credit_scoring_0": {
+   "concise": "Architected a self-hosted Graph RAG assistant that fuses a Neo4j knowledge graph with FAISS vector retrieval into a Lang\u2026",
+   "detailed": "Architected a self-hosted Graph RAG assistant that fuses a Neo4j knowledge graph with FAISS vector retrieval into a LangGraph tool-calling agent, answering credit-scoring analysts' queries with grounded citations."
+  },
+  "ach_iran_credit_scoring_1": {
+   "concise": "Ran open-weight LLMs on GPU via vLLM and TGI, profiling KV-cache, batching and AWQ/GPTQ quantization to cut per-token la\u2026",
+   "detailed": "Ran open-weight LLMs on GPU via vLLM and TGI, profiling KV-cache, batching and AWQ/GPTQ quantization to cut per-token latency and GPU memory footprint."
+  },
+  "ach_iran_credit_scoring_2": {
+   "concise": "Implemented Neo4j tool-calls inside the LangGraph agent \u2014 schema-aware Cypher generation and retrieval \u2014 so it executes \u2026",
+   "detailed": "Implemented Neo4j tool-calls inside the LangGraph agent \u2014 schema-aware Cypher generation and retrieval \u2014 so it executes real graph traversals instead of hallucinating structured credit facts."
+  },
+  "ach_iran_credit_scoring_3": {
+   "concise": "Hardened the Graph RAG assistant for a regulated financial environment with retrieval grounding, citation enforcement an\u2026",
+   "detailed": "Hardened the Graph RAG assistant for a regulated financial environment with retrieval grounding, citation enforcement and deterministic fallback, blocking unsupported answers before they reach analysts."
+  },
+  "ach_turquoise_senior_0": {
+   "concise": "Consolidated raw CDC streams into a centralized lake (PeerDB into Trino/Parquet) at 5TB/day with <60s freshness; Airflow\u2026",
+   "detailed": "Consolidated raw CDC streams into a centralized lake (PeerDB into Trino/Parquet) at 5TB/day with <60s freshness; Airflow and PySpark DAGs cut pipeline memory 60%, governed by Great Expectations and Prometheus/Grafana."
+  },
+  "ach_turquoise_senior_1": {
+   "concise": "Shipped a BNPL default-risk ensemble (XGBoost and PyTorch time-series Transformers) reaching AUC 0.87 and -22% defaults\u2026",
+   "detailed": "Shipped a BNPL default-risk ensemble (XGBoost and PyTorch time-series Transformers) reaching AUC 0.87 and -22% defaults, then ran 50+ concurrent mSPRT A/B tests with staged rollout and auto-rollback for the C-suite."
+  },
+  "ach_turquoise_senior_2": {
+   "concise": "Launched an agentic support chatbot built on Whisper, wav2vec2.0 and LangGraph, cutting ticket volume -78% at 94% intent\u2026",
+   "detailed": "Launched an agentic support chatbot built on Whisper, wav2vec2.0 and LangGraph, cutting ticket volume -78% at 94% intent accuracy, with deterministic fallback and policy guardrails keeping every response traceable."
+  },
+  "ach_turquoise_senior_3": {
+   "concise": "Directed a portfolio allocation and risk engine delivering Sharpe +0.42, fed by streaming ClickHouse signals and a Llama\u2026",
+   "detailed": "Directed a portfolio allocation and risk engine delivering Sharpe +0.42, fed by streaming ClickHouse signals and a LlamaIndex retrieval graph producing ranking features."
+  },
+  "ach_advanced_analytics_0": {
+   "concise": "Deployed quantized YOLO and ViT models (TensorRT/TF Lite) on Triton across 100+ camera streams at 30 FPS \u2014 99.2% uptime\u2026",
+   "detailed": "Deployed quantized YOLO and ViT models (TensorRT/TF Lite) on Triton across 100+ camera streams at 30 FPS \u2014 99.2% uptime, <50ms p99 latency and 3.5x speedup, with exactly-once Kafka ingestion."
+  },
+  "ach_advanced_analytics_1": {
+   "concise": "Operationalized edge MLOps around a Triton model repository \u2014 rolling updates with no service interruption, automated ro\u2026",
+   "detailed": "Operationalized edge MLOps around a Triton model repository \u2014 rolling updates with no service interruption, automated rollback and Prometheus/Grafana per-site health across 12 sites."
+  },
+  "ach_advanced_analytics_2": {
+   "concise": "Reduced YOLO detector false positives -35% by combining attention-guided NMS with SNR monitoring, over the Kafka broker \u2026",
+   "detailed": "Reduced YOLO detector false positives -35% by combining attention-guided NMS with SNR monitoring, over the Kafka broker architecture spanning 12 distributed retail sites."
+  },
+  "ach_trinity_emodub_0": {
+   "concise": "Trained a PyTorch SER front-end over wav2vec2.0 and Whisper to emit affect logits, then fused it with a cross-modal tran\u2026",
+   "detailed": "Trained a PyTorch SER front-end over wav2vec2.0 and Whisper to emit affect logits, then fused it with a cross-modal transformer for emotion-consistent translation decoding."
+  },
+  "ach_trinity_emodub_1": {
+   "concise": "Curated the EmotionNet and EmoDB emotion-annotated corpora with balanced cultural representation, then defined the BLEU\u2026",
+   "detailed": "Curated the EmotionNet and EmoDB emotion-annotated corpora with balanced cultural representation, then defined the BLEU, Emotion F1 and MOS evaluation protocol."
+  },
+  "ach_trinity_emodub_2": {
+   "concise": "Collaborated with Prof.",
+   "detailed": "Collaborated with Prof. Siobh\u00e1n Clarke at Trinity College Dublin, delivering a reproducible PyTorch research codebase: https://github.com/AliNikkhah2001/emodub-emotion-translation."
+  },
+  "ach_sharif_xai_0": {
+   "concise": "Constructed adversarial and natural distribution-shift suites over PyTorch multimodal perception models, with Captum and\u2026",
+   "detailed": "Constructed adversarial and natural distribution-shift suites over PyTorch multimodal perception models, with Captum and SHAP notebooks surfacing attributions, saliency and counterfactuals."
+  },
+  "ach_sharif_xai_1": {
+   "concise": "Authored a regulated-industry deployment guide with lab faculty, codifying MLflow experiment tracking, interpretability \u2026",
+   "detailed": "Authored a regulated-industry deployment guide with lab faculty, codifying MLflow experiment tracking, interpretability evidence and rollout safeguards from the robustness harness."
+  },
+  "ach_digikala_rd_0": {
+   "concise": "Led a 5-person R&D team defining roadmap and SLOs, shipping an MCP control plane with LangGraph cyclic graphs, zero-down\u2026",
+   "detailed": "Led a 5-person R&D team defining roadmap and SLOs, shipping an MCP control plane with LangGraph cyclic graphs, zero-downtime hot-swapping and health-checked agent composition."
+  },
+  "ach_digikala_rd_1": {
+   "concise": "Tuned the production hybrid retriever \u2014 FAISS vectors fused with Elasticsearch keyword hits via RRF, plus HyDE and KAG \u2026",
+   "detailed": "Tuned the production hybrid retriever \u2014 FAISS vectors fused with Elasticsearch keyword hits via RRF, plus HyDE and KAG \u2014 to +23% recall@10 and -41% hallucination, backed by multi-tier Redis caching holding p99 <200ms."
+  },
+  "ach_digikala_rd_2": {
+   "concise": "Scaled LLM inference on vLLM (PagedAttention) and Triton to 3.2x throughput and 60% cost reduction across 200 Kubernetes\u2026",
+   "detailed": "Scaled LLM inference on vLLM (PagedAttention) and Triton to 3.2x throughput and 60% cost reduction across 200 Kubernetes pods, with Prometheus KV-cache dashboards."
+  },
+  "ach_digikala_rd_3": {
+   "concise": "Partnered with infrastructure and product teams to establish shared eval pipelines, A/B guardrails and ArgoCD canary rol\u2026",
+   "detailed": "Partnered with infrastructure and product teams to establish shared eval pipelines, A/B guardrails and ArgoCD canary rollouts for the agent platform."
+  },
+  "ach_digikala_ai_0": {
+   "concise": "Prototyped LangGraph orchestration with health-checked steps, blending FAISS and Elasticsearch via RRF and backed by rul\u2026",
+   "detailed": "Prototyped LangGraph orchestration with health-checked steps, blending FAISS and Elasticsearch via RRF and backed by rule-based fallbacks that kept prototype answers auditable."
+  },
+  "ach_digikala_ai_1": {
+   "concise": "Instrumented the FastAPI prototype with eval telemetry, memory-efficient FAISS indexing and response caching, then load-\u2026",
+   "detailed": "Instrumented the FastAPI prototype with eval telemetry, memory-efficient FAISS indexing and response caching, then load-tested it to 5M queries before the work became the R&D platform."
+  },
+  "ach_ubc_0": {
+   "concise": "Designed ViT/BLIP encoders paired with a T5 report generator, trained with contrastive and self-supervised alignment ove\u2026",
+   "detailed": "Designed ViT/BLIP encoders paired with a T5 report generator, trained with contrastive and self-supervised alignment over curated DICOM and de-identified QA corpora in PyTorch."
+  },
+  "ach_ubc_1": {
+   "concise": "Deployed attention and saliency overlays for interpretability, benchmarked BLEU/ROUGE-L and clinical efficacy with radio\u2026",
+   "detailed": "Deployed attention and saliency overlays for interpretability, benchmarked BLEU/ROUGE-L and clinical efficacy with radiologists, and reached state-of-the-art accuracy on the in-house ultrasound split."
+  },
+  "ach_ubc_2": {
+   "concise": "Drafted manuscript \"Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning\" for\u2026",
+   "detailed": "Drafted manuscript \"Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning\" for arXiv (preprint in preparation, 2025)."
+  },
+  "ach_l3s_0": {
+   "concise": "Engineered optical-flow-centric video datasets with temporal sampling and augmentation, improving domain generalization \u2026",
+   "detailed": "Engineered optical-flow-centric video datasets with temporal sampling and augmentation, improving domain generalization across lighting, texture, and camera shifts using OpenCV and PyAV."
+  },
+  "ach_l3s_1": {
+   "concise": "Benchmarked 3D CNN and transformer hybrids against baselines on UCF-101/HMDB-51, analyzing attention maps to curb overfi\u2026",
+   "detailed": "Benchmarked 3D CNN and transformer hybrids against baselines on UCF-101/HMDB-51, analyzing attention maps to curb overfitting and reach SOTA accuracy with PyTorch Lightning."
+  },
+  "ach_sharif_ta_0": {
+   "concise": "Facilitated seminars and office hours for graduate Deep Learning and NLP courses, designing problem sets and exams for c\u2026",
+   "detailed": "Facilitated seminars and office hours for graduate Deep Learning and NLP courses, designing problem sets and exams for cohorts of 30-80 students."
+  },
+  "ach_sharif_ta_1": {
+   "concise": "Developed lab material for Deep Learning, Analog Electronics, and foundational machine learning courses while mentoring \u2026",
+   "detailed": "Developed lab material for Deep Learning, Analog Electronics, and foundational machine learning courses while mentoring undergraduate capstones."
+  },
+  "ach_sharif_ta_history_0": {
+   "concise": "Graded problem sets, ran tutorials, and answered student questions across a 2021-2023 Sharif teaching assistantship serv\u2026",
+   "detailed": "Graded problem sets, ran tutorials, and answered student questions across a 2021-2023 Sharif teaching assistantship serving 30-80 students per term."
+  },
+  "ach_homacloud_0": {
+   "concise": "Provisioned multi-node Kubernetes with Terraform and built Ray + MLflow training pipelines plus TF Serving/FastAPI servi\u2026",
+   "detailed": "Provisioned multi-node Kubernetes with Terraform and built Ray + MLflow training pipelines plus TF Serving/FastAPI serving \u2014 <10 min releases, 99.9% deploy success, 15+ models."
+  },
+  "ach_homacloud_1": {
+   "concise": "Operationalized GitOps delivery with GitHub Actions and canary rollouts, optimized spot-instance compute, and added Prom\u2026",
+   "detailed": "Operationalized GitOps delivery with GitHub Actions and canary rollouts, optimized spot-instance compute, and added Prometheus/Grafana + ELK observability with model registry and lineage tracking."
+  },
+  "ach_mapna_0": {
+   "concise": "Built dashboards and partner integration services with React, Node.js, and PostgreSQL as a part-time full stack engineer\u2026",
+   "detailed": "Built dashboards and partner integration services with React, Node.js, and PostgreSQL as a part-time full stack engineer at Mapna-MD2."
+  },
+  "ach_mapna_1": {
+   "concise": "Containerized delivery with Docker and wrote QA and deployment scripts supporting the dashboards and partner integration\u2026",
+   "detailed": "Containerized delivery with Docker and wrote QA and deployment scripts supporting the dashboards and partner integrations."
+  },
+  "ach_homacloud_intern_0": {
+   "concise": "Evaluated PyTorch and TensorFlow multi-node training setups for HomaCloud's model-training platform during the 2021 inte\u2026",
+   "detailed": "Evaluated PyTorch and TensorFlow multi-node training setups for HomaCloud's model-training platform during the 2021 internship."
+  },
+  "ach_homacloud_intern_1": {
+   "concise": "Built FastAPI-based serving and API automation covering dataset preparation and model deployment for HomaCloud's ML plat\u2026",
+   "detailed": "Built FastAPI-based serving and API automation covering dataset preparation and model deployment for HomaCloud's ML platform."
+  }
+ },
+ "linkedin_paragraphs": {
+  "pos_iran_credit_scoring": "ML Engineer \u2014 Self-Hosted Graph RAG Assistant at Iran Credit Scoring Bureau (2026-04 \u2013 Present). Architected a self-hosted Graph RAG assistant that fuses a Neo4j knowledge graph with FAISS vector retrieval into a LangGraph tool-calling agent, answering cred\u2026 Ran open-weight LLMs on GPU via vLLM and TGI, profiling KV-cache, batching and AWQ/GPTQ quantization to cut per-token latency and GPU memory footprint. Implemented Neo4j tool-calls inside the LangGraph agent \u2014 schema-aware Cypher generation and retrieval \u2014\u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_turquoise_senior": "Senior Data Scientist & Data Engineer at Turquoise Digital (2025-09 \u2013 2026-03). Consolidated raw CDC streams into a centralized lake (PeerDB into Trino/Parquet) at 5TB/day with <60s freshness; Airflow and PySpark DAGs cut pipeline memory 60\u2026 Shipped a BNPL default-risk ensemble (XGBoost and PyTorch time-series Transformers) reaching AUC 0.87 and -22% defaults, then ran 50+ concurrent mSPRT A/B tests\u2026 Launched an agentic support chatbot built on Whisper, wav2vec2.0 and LangGraph, cutting ticket\u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_advanced_analytics": "Computer Vision / ML Platform Engineer (Edge) at Advanced Analytics Australia (2025-09 \u2013 2026-04). Deployed quantized YOLO and ViT models (TensorRT/TF Lite) on Triton across 100+ camera streams at 30 FPS \u2014 99.2% uptime, <50ms p99 latency and 3.5x speedup, wit\u2026 Operationalized edge MLOps around a Triton model repository \u2014 rolling updates with no service interruption, automated rollback and Prometheus/Grafana per-site h\u2026 Reduced YOLO detector false positives -35% by combining attention-guided NMS with SNR\u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_trinity_emodub": "Machine Learning Researcher \u2014 Emotion-Aware Speech Translation at Trinity College Dublin \u2014 EmoDub Project (2025-05 \u2013 2025-11). Trained a PyTorch SER front-end over wav2vec2.0 and Whisper to emit affect logits, then fused it with a cross-modal transformer for emotion-consistent translati\u2026 Curated the EmotionNet and EmoDB emotion-annotated corpora with balanced cultural representation, then defined the BLEU, Emotion F1 and MOS evaluation protocol. Collaborated with Prof. Siobh\u00e1n Clarke at Trinity College Dublin, delivering a reproducible PyTorch research codebase: https://github.com/AliNikkhah2001/emodub-\u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_sharif_xai": "Research Collaborator \u2014 Explainable & Robust AI at Sharif University \u2014 Robust & Interpretable ML Lab (2025-07 \u2013 2025-09). Constructed adversarial and natural distribution-shift suites over PyTorch multimodal perception models, with Captum and SHAP notebooks surfacing attributions, \u2026 Authored a regulated-industry deployment guide with lab faculty, codifying MLflow experiment tracking, interpretability evidence and rollout safeguards from the\u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_digikala_rd": "AI Engineering R&D Lead at Digikala (2025-01 \u2013 2025-08). Led a 5-person R&D team defining roadmap and SLOs, shipping an MCP control plane with LangGraph cyclic graphs, zero-downtime hot-swapping and health-checked age\u2026 Tuned the production hybrid retriever \u2014 FAISS vectors fused with Elasticsearch keyword hits via RRF, plus HyDE and KAG \u2014 to +23% recall@10 and -41% hallucinatio\u2026 Scaled LLM inference on vLLM (PagedAttention) and Triton to 3.2x throughput\u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_digikala_ai": "AI Engineer at Digikala (2024-11 \u2013 2025-01). Prototyped LangGraph orchestration with health-checked steps, blending FAISS and Elasticsearch via RRF and backed by rule-based fallbacks that kept prototype an\u2026 Instrumented the FastAPI prototype with eval telemetry, memory-efficient FAISS indexing and response caching, then load-tested it to 5M queries before the work \u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_ubc": "Research Assistant \u2014 Vision-Language Medical Imaging (Ultrasound Report Generation) at University of British Columbia (2024-02 \u2013 2025-11). Designed ViT/BLIP encoders paired with a T5 report generator, trained with contrastive and self-supervised alignment over curated DICOM and de-identified QA cor\u2026 Deployed attention and saliency overlays for interpretability, benchmarked BLEU/ROUGE-L and clinical efficacy with radiologists, and reached state-of-the-art ac\u2026 Drafted manuscript \"Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning\" for arXiv (preprint in preparation, 2025). Passionate about building production ML systems that solve real problems.",
+  "pos_l3s": "Research Assistant \u2014 Video Motion Classification at L3S Research Center \u2014 Leibniz University Hannover (2023-04 \u2013 2024-02). Engineered optical-flow-centric video datasets with temporal sampling and augmentation, improving domain generalization across lighting, texture, and camera shi\u2026 Benchmarked 3D CNN and transformer hybrids against baselines on UCF-101/HMDB-51, analyzing attention maps to curb overfitting and reach SOTA accuracy with PyTor\u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_sharif_ta": "Teaching Assistant \u2014 NLP, Generative Models, Deep Learning at Sharif University of Technology (2023-08 \u2013 2024-01). Facilitated seminars and office hours for graduate Deep Learning and NLP courses, designing problem sets and exams for cohorts of 30-80 students. Developed lab material for Deep Learning, Analog Electronics, and foundational machine learning courses while mentoring undergraduate capstones. Passionate about building production ML systems that solve real problems.",
+  "pos_sharif_ta_history": "Teaching Assistant \u2014 History (8 courses, 2021-2023) at Sharif University of Technology (2021-01 \u2013 2023-08). Graded problem sets, ran tutorials, and answered student questions across a 2021-2023 Sharif teaching assistantship serving 30-80 students per term. Passionate about building production ML systems that solve real problems.",
+  "pos_homacloud": "MLOps Engineer (Founding) at HomaCloud (2021-08 \u2013 2022-02). Provisioned multi-node Kubernetes with Terraform and built Ray + MLflow training pipelines plus TF Serving/FastAPI serving \u2014 <10 min releases, 99.9% deploy succ\u2026 Operationalized GitOps delivery with GitHub Actions and canary rollouts, optimized spot-instance compute, and added Prometheus/Grafana + ELK observability with \u2026 Passionate about building production ML systems that solve real problems.",
+  "pos_homacloud_intern": "MLOps Intern at HomaCloud (2021-05 \u2013 2021-08). Evaluated PyTorch and TensorFlow multi-node training setups for HomaCloud's model-training platform during the 2021 internship. Built FastAPI-based serving and API automation covering dataset preparation and model deployment for HomaCloud's ML platform. Passionate about building production ML systems that solve real problems.",
+  "pos_mapna": "Full Stack Engineer at Mapna-MD2 (2021-01 \u2013 2021-05). Built dashboards and partner integration services with React, Node.js, and PostgreSQL as a part-time full stack engineer at Mapna-MD2. Containerized delivery with Docker and wrote QA and deployment scripts supporting the dashboards and partner integrations. Passionate about building production ML systems that solve real problems."
+ },
+ "variant_cuts": {
+  "long": {
+   "positions": [
+    "pos_iran_credit_scoring",
+    "pos_turquoise_senior",
+    "pos_advanced_analytics",
+    "pos_trinity_emodub",
+    "pos_sharif_xai",
+    "pos_digikala_rd",
+    "pos_digikala_ai",
+    "pos_ubc",
+    "pos_l3s",
+    "pos_sharif_ta",
+    "pos_sharif_ta_history",
+    "pos_homacloud",
+    "pos_homacloud_intern",
+    "pos_mapna"
+   ],
+   "position_titles": [
+    "ML Engineer \u2014 Self-Hosted Graph RAG Assistant (4 bullets)",
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "Computer Vision / ML Platform Engineer (Edge) (3 bullets)",
+    "Machine Learning Researcher \u2014 Emotion-Aware Speech Translation (3 bullets)",
+    "Research Collaborator \u2014 Explainable & Robust AI (2 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "AI Engineer (2 bullets)",
+    "Research Assistant \u2014 Vision-Language Medical Imaging (Ultrasound Report Generation) (3 bullets)",
+    "Research Assistant \u2014 Video Motion Classification (2 bullets)",
+    "Teaching Assistant \u2014 NLP, Generative Models, Deep Learning (2 bullets)",
+    "Teaching Assistant \u2014 History (8 courses, 2021-2023) (1 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)",
+    "MLOps Intern (2 bullets)",
+    "Full Stack Engineer (2 bullets)"
+   ],
+   "notes": "Variant 'long' includes 14 positions. All bullets from each position are included by default."
+  },
+  "agentic": {
+   "positions": [
+    "pos_iran_credit_scoring",
+    "pos_turquoise_senior",
+    "pos_digikala_rd",
+    "pos_digikala_ai",
+    "pos_homacloud"
+   ],
+   "position_titles": [
+    "ML Engineer \u2014 Self-Hosted Graph RAG Assistant (4 bullets)",
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "AI Engineer (2 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)"
+   ],
+   "notes": "Variant 'agentic' includes 5 positions. All bullets from each position are included by default."
+  },
+  "vision": {
+   "positions": [
+    "pos_turquoise_senior",
+    "pos_advanced_analytics",
+    "pos_sharif_xai",
+    "pos_digikala_rd",
+    "pos_ubc",
+    "pos_l3s",
+    "pos_homacloud"
+   ],
+   "position_titles": [
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "Computer Vision / ML Platform Engineer (Edge) (3 bullets)",
+    "Research Collaborator \u2014 Explainable & Robust AI (2 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "Research Assistant \u2014 Vision-Language Medical Imaging (Ultrasound Report Generation) (3 bullets)",
+    "Research Assistant \u2014 Video Motion Classification (2 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)"
+   ],
+   "notes": "Variant 'vision' includes 7 positions. All bullets from each position are included by default."
+  },
+  "data": {
+   "positions": [
+    "pos_turquoise_senior",
+    "pos_digikala_rd",
+    "pos_homacloud"
+   ],
+   "position_titles": [
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)"
+   ],
+   "notes": "Variant 'data' includes 3 positions. All bullets from each position are included by default."
+  },
+  "swe": {
+   "positions": [
+    "pos_turquoise_senior",
+    "pos_advanced_analytics",
+    "pos_digikala_rd",
+    "pos_homacloud"
+   ],
+   "position_titles": [
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "Computer Vision / ML Platform Engineer (Edge) (3 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)"
+   ],
+   "notes": "Variant 'swe' includes 4 positions. All bullets from each position are included by default."
+  },
+  "hybrid": {
+   "positions": [
+    "pos_iran_credit_scoring",
+    "pos_turquoise_senior",
+    "pos_advanced_analytics",
+    "pos_trinity_emodub",
+    "pos_sharif_xai",
+    "pos_digikala_rd",
+    "pos_digikala_ai",
+    "pos_ubc",
+    "pos_l3s",
+    "pos_homacloud"
+   ],
+   "position_titles": [
+    "ML Engineer \u2014 Self-Hosted Graph RAG Assistant (4 bullets)",
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "Computer Vision / ML Platform Engineer (Edge) (3 bullets)",
+    "Machine Learning Researcher \u2014 Emotion-Aware Speech Translation (3 bullets)",
+    "Research Collaborator \u2014 Explainable & Robust AI (2 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "AI Engineer (2 bullets)",
+    "Research Assistant \u2014 Vision-Language Medical Imaging (Ultrasound Report Generation) (3 bullets)",
+    "Research Assistant \u2014 Video Motion Classification (2 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)"
+   ],
+   "notes": "Variant 'hybrid' includes 10 positions. All bullets from each position are included by default."
+  },
+  "senior": {
+   "positions": [
+    "pos_iran_credit_scoring",
+    "pos_turquoise_senior",
+    "pos_advanced_analytics",
+    "pos_trinity_emodub",
+    "pos_sharif_xai",
+    "pos_digikala_rd",
+    "pos_digikala_ai",
+    "pos_ubc",
+    "pos_l3s",
+    "pos_homacloud"
+   ],
+   "position_titles": [
+    "ML Engineer \u2014 Self-Hosted Graph RAG Assistant (4 bullets)",
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "Computer Vision / ML Platform Engineer (Edge) (3 bullets)",
+    "Machine Learning Researcher \u2014 Emotion-Aware Speech Translation (3 bullets)",
+    "Research Collaborator \u2014 Explainable & Robust AI (2 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "AI Engineer (2 bullets)",
+    "Research Assistant \u2014 Vision-Language Medical Imaging (Ultrasound Report Generation) (3 bullets)",
+    "Research Assistant \u2014 Video Motion Classification (2 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)"
+   ],
+   "notes": "Variant 'senior' includes 10 positions. All bullets from each position are included by default."
+  },
+  "platform": {
+   "positions": [
+    "pos_iran_credit_scoring",
+    "pos_turquoise_senior",
+    "pos_advanced_analytics",
+    "pos_digikala_rd",
+    "pos_digikala_ai",
+    "pos_homacloud"
+   ],
+   "position_titles": [
+    "ML Engineer \u2014 Self-Hosted Graph RAG Assistant (4 bullets)",
+    "Senior Data Scientist & Data Engineer (4 bullets)",
+    "Computer Vision / ML Platform Engineer (Edge) (3 bullets)",
+    "AI Engineering R&D Lead (4 bullets)",
+    "AI Engineer (2 bullets)",
+    "MLOps Engineer (Founding) (2 bullets)"
+   ],
+   "notes": "Variant 'platform' includes 6 positions. All bullets from each position are included by default."
+  },
+  "research": {
+   "positions": [
+    "pos_iran_credit_scoring",
+    "pos_trinity_emodub",
+    "pos_sharif_xai",
+    "pos_ubc",
+    "pos_l3s",
+    "pos_sharif_ta",
+    "pos_sharif_ta_history"
+   ],
+   "position_titles": [
+    "ML Engineer \u2014 Self-Hosted Graph RAG Assistant (4 bullets)",
+    "Machine Learning Researcher \u2014 Emotion-Aware Speech Translation (3 bullets)",
+    "Research Collaborator \u2014 Explainable & Robust AI (2 bullets)",
+    "Research Assistant \u2014 Vision-Language Medical Imaging (Ultrasound Report Generation) (3 bullets)",
+    "Research Assistant \u2014 Video Motion Classification (2 bullets)",
+    "Teaching Assistant \u2014 NLP, Generative Models, Deep Learning (2 bullets)",
+    "Teaching Assistant \u2014 History (8 courses, 2021-2023) (1 bullets)"
+   ],
+   "notes": "Variant 'research' includes 7 positions. All bullets from each position are included by default."
+  }
+ }
+}

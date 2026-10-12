@@ -86,6 +86,7 @@ class Position(BaseModel):
     promotion_of: Optional[str] = None
     concurrent_with: list[str] = Field(default_factory=list)
     concurrent_note: Optional[str] = None
+    verified: bool = False
 
     @model_validator(mode="after")
     def sync_ongoing(self) -> Position:
@@ -189,6 +190,8 @@ class CareerDatabase(BaseModel):
     skills: list[Skill] = Field(default_factory=list)
     achievements: list[Achievement] = Field(default_factory=list)
     variants: list[Variant] = Field(default_factory=list)
+    interview_prep: dict[str, Any] = Field(default_factory=dict)
+    acknowledged: list[str] = Field(default_factory=list)
 
     def get_organization(self, org_id: str) -> Optional[Organization]:
         return next((o for o in self.organizations if o.id == org_id), None)

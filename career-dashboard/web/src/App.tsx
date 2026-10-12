@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Sidebar, TimelineView, KnowledgeBase, TechStackTab, VariantComposer, TemplatesTab, PublishingStatus, LinkedInExport } from './components'
+import { Sidebar, TimelineView, KnowledgeBase, TechStackTab, VariantComposer, TemplatesTab, PublishingStatus, LinkedInExport, InterviewPrep } from './components'
 import { CareerDatabase } from './types'
 import { api } from './api'
 
 function App() {
   const [db, setDb] = useState<CareerDatabase | null>(null)
   const [loading, setLoading] = useState(true)
-  const [activeTab, setActiveTab] = useState<'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'publishing' | 'linkedin'>('timeline')
+  const [activeTab, setActiveTab] = useState<'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'interview' | 'publishing' | 'linkedin'>('timeline')
   const [sidebarOpen, setSidebarOpen] = useState(true)
 
   useEffect(() => {
@@ -65,6 +65,7 @@ function App() {
           {activeTab === 'stack' && <TechStackTab db={db} onUpdate={handleDbUpdate} />}
           {activeTab === 'variants' && <VariantComposer db={db} onUpdate={handleDbUpdate} />}
           {activeTab === 'templates' && <TemplatesTab db={db} />}
+          {activeTab === 'interview' && <InterviewPrep db={db} />}
           {activeTab === 'publishing' && <PublishingStatus db={db} />}
           {activeTab === 'linkedin' && <LinkedInExport db={db} />}
         </div>

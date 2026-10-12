@@ -257,7 +257,7 @@ def _skills_section(db: CareerDatabase) -> str:
     return "\n".join(out)
 
 
-def _position_block(pos: Position, db: CareerDatabase, orgs: dict, achs: dict) -> str:
+def _position_block(pos: Position, db: CareerDatabase, orgs: dict, achs: dict, compact: bool = False) -> str:
     org = orgs.get(pos.organization_id)
     org_name = tex_esc(org.name if org else "Unknown")
     loc = tex_esc(pos.location or "")
@@ -274,14 +274,14 @@ def _position_block(pos: Position, db: CareerDatabase, orgs: dict, achs: dict) -
     for aid in pos.achievements:
         a = achs.get(aid)
         if a:
-            texts.append(a.text)
+            texts.append((a.brief_text or a.text) if compact else a.text)
     if not texts and pos.summary:
         texts.append(pos.summary)
     for t in texts:
         lines.append(f"  \\resumeItem{{{tex_esc(t)}}}")
-    if pos.tech_stack:
+    if pos.tech_stack and not compact:
         lines.append(f"  \\resumeItem{{\\textit{{Stack:}} {tex_esc(', '.join(pos.tech_stack))}}}")
-    if pos.concurrent_note:
+    if pos.concurrent_note and not compact:
         lines.append(f"  \\resumeItem{{\\textit{{{tex_esc(pos.concurrent_note)}}}}}")
     if len(lines) == 4:  # header only + begin + end
         lines.insert(4, "  \\resumeItem{}")
@@ -411,11 +411,11 @@ def _industrial_skills(db: CareerDatabase) -> str:
     return "\n".join(out) + "\n"
 
 
-def _industrial_experience(db: CareerDatabase) -> str:
+def _industrial_experience(db: CareerDatabase, compact: bool = False) -> str:
     orgs = _org_map(db)
     achs = _ach_map(db)
     positions = _by_start_desc(db.positions)
-    return "\n\n".join(_position_block(p, db, orgs, achs) for p in positions) + "\n"
+    return "\n\n".join(_position_block(p, db, orgs, achs, compact=compact) for p in positions) + "\n"
 
 
 def _industrial_projects(db: CareerDatabase) -> str:
@@ -457,7 +457,7 @@ def _industrial_education(db: CareerDatabase) -> str:
     return "\n".join(out) + "\n"
 
 
-def generate_industrial(db: CareerDatabase, cache: Path) -> None:
+def generate_industrial(db: CareerDatabase, cache: Path, compact: bool = False) -> None:
     gallery = RESUME / "industrial" / "theme-gallery"
     body = (gallery / "body.tex").read_text(encoding="utf-8")
     (cache / "segments" / "generated" / "live").mkdir(parents=True, exist_ok=True)
@@ -467,15 +467,19 @@ def generate_industrial(db: CareerDatabase, cache: Path) -> None:
     (gen / "summary.tex").write_text(_industrial_summary(db), encoding="utf-8")
     (gen / "skills.tex").write_text(_industrial_skills(db), encoding="utf-8")
     (gen / "experience.tex").write_text(_industrial_experience(db), encoding="utf-8")
+    (gen / "experience-compact.tex").write_text(_industrial_experience(db, compact=True), encoding="utf-8")
     (gen / "projects.tex").write_text(_industrial_projects(db), encoding="utf-8")
     (cache / "segments" / "common" / "education.tex").write_text(_industrial_education(db), encoding="utf-8")
+    body_compact = body.replace("experience.tex", "experience-compact.tex")
+    (cache / "body-compact.tex").write_text(body_compact, encoding="utf-8")
 
     for slug, _name in INDUSTRIAL_PREAMBLES:
         preamble = (gallery / f"preamble-{_industrial_num(slug)}-{slug}.tex").read_text(encoding="utf-8")
+        body_file = body_compact if (compact and slug == "ieee") else body
         assembled = (
             f"% assembled from theme-gallery/preamble-{slug} + generated career_db body\n"
             "\\newcommand{\\cvvariant}{live}\n"
-            + preamble + "\n" + body
+            + preamble + "\n" + body_file
         )
         (cache / f"main-{slug}.tex").write_text(assembled, encoding="utf-8")
 
@@ -684,7 +688,7 @@ def compile_template(db: CareerDatabase, template_id: str, force: bool = False) 
             slug = template_id.split("-", 1)[1]
             cache = _cache_dir("industrial", h)
             if not (cache / f"main-{slug}.tex").exists():
-                generate_industrial(db, cache)
+                generate_industrial(db, cache, compact=(slug == "ieee"))
             ok, log = _run([
                 "pdflatex", "-interaction=nonstopmode", "-halt-on-error",
                 f"main-{slug}.tex",

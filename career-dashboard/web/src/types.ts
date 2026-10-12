@@ -212,3 +212,49 @@ export interface PublishingAudit {
   modules: PublishingModule[]
   dry_run: string[]
 }
+
+export type InterviewCategory = 'deep_dive' | 'project' | 'behavioral' | 'fundamentals'
+export type InterviewStatus = 'unprepared' | 'drafted' | 'confident'
+
+export interface InterviewQuestion {
+  id: string
+  category: InterviewCategory
+  difficulty: string
+  position_id?: string
+  project_id?: string
+  skill?: string
+  question: string
+  hints: string[]
+  why: string
+  status: InterviewStatus
+  answer: string
+}
+
+export interface InterviewQuestionsResponse {
+  questions: InterviewQuestion[]
+}
+
+export interface OriginalityDuplication {
+  score: number
+  findings: any[]
+}
+
+export interface OriginalityCliches {
+  count: number
+  phrases: string[]
+}
+
+export interface OriginalityAi {
+  band: 'low' | 'medium' | 'high'
+  score: number
+  signals?: Record<string, any>
+  disclaimer?: string
+}
+
+export interface OriginalityReport {
+  template_id: string
+  generated_at: string
+  duplication: OriginalityDuplication
+  cliches: OriginalityCliches
+  ai: OriginalityAi
+}

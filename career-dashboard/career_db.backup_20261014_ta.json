@@ -1,0 +1,2034 @@
+{
+  "schema_version": 1,
+  "profile": {
+    "id": "6de8f42d1573",
+    "name": "Ali Nikkhah",
+    "headline": "Machine Learning Engineer / Researcher",
+    "email": "alinkkh9@gmail.com",
+    "phone": "+98 991 296 3951",
+    "location": "Tehran, Iran \u00b7 Remote-friendly \u00b7 Open to Relocation",
+    "website": "https://alinikkhah2001.github.io",
+    "linkedin": "https://linkedin.com/in/alinikkhah2001",
+    "github": "https://github.com/AliNikkhah2001",
+    "summary": "ML engineer and researcher with 5+ years across industry and academia (14 roles since 2021). Builds agentic RAG, Graph RAG, self-hosted LLM serving (vLLM/TGI), and vision-language systems \u2014 shipped LLM/CV pipelines serving 5M+ queries/day, a Graph RAG assistant for a national credit bureau, and a BNPL risk ensemble (AUC 0.87). Sharif B.Sc. (GPA 3.65); M.Sc. AI.",
+    "summary_brief": "ML engineer/researcher \u2014 Graph RAG at a national credit bureau, 5M+ queries/day marketplace LLM pipelines, self-hosted LLM GPU serving, vision-language research.",
+    "summary_detailed": "ML engineer and researcher with 5+ years across industry and academia (14 roles since 2021). Shipped agentic RAG platforms at marketplace scale (5M+ queries/day), a self-hosted Graph RAG assistant for a national credit bureau, and a BNPL credit-risk ensemble (AUC 0.87). Research spans vision-language ultrasound report generation (arXiv preprint in preparation), emotion-aware speech translation, texture-free motion classification, and LLM reasoning and hallucination mitigation. Sharif B.Sc. Electrical Engineering (GPA 3.65); M.Sc. Artificial Intelligence since Sep 2025. Self-hosts open-weight LLMs on GPU with AWQ/GPTQ quantization."
+  },
+  "organizations": [
+    {
+      "id": "org_001",
+      "name": "Iran Credit Scoring Bureau",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_002",
+      "name": "Turquoise Digital",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_003",
+      "name": "Advanced Analytics Australia",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_004",
+      "name": "Trinity College Dublin \u2014 EmoDub Project",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_005",
+      "name": "Sharif University \u2014 Robust & Interpretable ML Lab",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_006",
+      "name": "Digikala",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_007",
+      "name": "University of British Columbia",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_008",
+      "name": "L3S Research Center \u2014 Leibniz University Hannover",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_009",
+      "name": "Sharif University of Technology",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_010",
+      "name": "HomaCloud",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_011",
+      "name": "Mapna-MD2",
+      "aliases": [],
+      "type": "employer"
+    },
+    {
+      "id": "org_012",
+      "name": "Trinity College Dublin \u00b7 EmoDub",
+      "aliases": [],
+      "type": "research_lab"
+    },
+    {
+      "id": "org_013",
+      "name": "L3S Research Center",
+      "aliases": [],
+      "type": "research_lab"
+    }
+  ],
+  "positions": [
+    {
+      "id": "pos_iran_credit_scoring",
+      "organization_id": "org_001",
+      "title": "ML Engineer \u2014 Self-Hosted Graph RAG Assistant",
+      "start": {
+        "year": 2026,
+        "month": 4
+      },
+      "end": {
+        "year": 9999
+      },
+      "ongoing": true,
+      "employment_type": "full_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Full-time \u00b7 On-site",
+      "summary": "Built the company's self-hosted Graph RAG assistant for credit-scoring analysts \u2014 Neo4j knowledge graph, GPU-resident open-weight LLM runtime and a tool-calling agent with grounded citations.",
+      "tech_stack": [
+        "Python",
+        "Neo4j",
+        "Cypher",
+        "Graph RAG",
+        "LangGraph",
+        "LangChain",
+        "FAISS",
+        "vLLM",
+        "TGI",
+        "GPU Optimization",
+        "AWQ",
+        "GPTQ",
+        "FastAPI",
+        "Kubernetes"
+      ],
+      "achievements": [
+        "ach_iran_credit_scoring_0",
+        "ach_iran_credit_scoring_1",
+        "ach_iran_credit_scoring_2",
+        "ach_iran_credit_scoring_3"
+      ],
+      "concurrent_with": [
+        "sharif_masters"
+      ],
+      "concurrent_note": "Current full-time role held alongside the Sharif M.Sc. in AI (since Sep 2025), after the Turquoise and Advanced Analytics commitments ended in early 2026.",
+      "verified": false
+    },
+    {
+      "id": "pos_turquoise_senior",
+      "organization_id": "org_002",
+      "title": "Senior Data Scientist & Data Engineer",
+      "start": {
+        "year": 2025,
+        "month": 5
+      },
+      "end": {
+        "year": 2026,
+        "month": 4
+      },
+      "ongoing": false,
+      "employment_type": "full_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Full-time \u00b7 On-site",
+      "summary": "Directed AI for regional retailers \u2014 multilingual reco, BNPL credit-risk ensemble (AUC 0.87), agentic support chatbot, centralized data lake + observability.",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "XGBoost",
+        "Spark",
+        "Trino",
+        "PeerDB",
+        "Airflow",
+        "Great Expectations",
+        "Prometheus",
+        "Grafana",
+        "Whisper",
+        "wav2vec2.0",
+        "LangGraph",
+        "LlamaIndex",
+        "ClickHouse",
+        "Metabase"
+      ],
+      "achievements": [
+        "ach_turquoise_senior_0",
+        "ach_turquoise_senior_1",
+        "ach_turquoise_senior_2",
+        "ach_turquoise_senior_3"
+      ],
+      "concurrent_with": [
+        "pos_advanced_analytics",
+        "pos_ubc",
+        "pos_sharif_xai",
+        "pos_iran_credit_scoring",
+        "pos_digikala_rd"
+      ],
+      "concurrent_note": "Full-time on-site role following the Advanced Analytics contract with no gap; UBC and Sharif XAI research ran alongside part-time.",
+      "verified": false
+    },
+    {
+      "id": "pos_advanced_analytics",
+      "organization_id": "org_003",
+      "title": "Computer Vision / ML Platform Engineer (Edge)",
+      "start": {
+        "year": 2024,
+        "month": 4
+      },
+      "end": {
+        "year": 2025,
+        "month": 5
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Remote \u00b7 Australia (Tehran-based)",
+      "remote": true,
+      "work_model": "Remote Contract",
+      "summary": "Delivered an edge computer-vision platform across 12 retail sites \u2014 100+ cameras at 30 FPS, Kafka streaming, and quantized TensorRT/TF Lite models served on Triton.",
+      "tech_stack": [
+        "Python",
+        "OpenCV",
+        "YOLO",
+        "ViT",
+        "TensorRT",
+        "TFLite",
+        "Triton",
+        "Kafka",
+        "Docker",
+        "Kubernetes",
+        "Prometheus",
+        "Grafana",
+        "ONNX"
+      ],
+      "achievements": [
+        "ach_advanced_analytics_0",
+        "ach_advanced_analytics_1",
+        "ach_advanced_analytics_2"
+      ],
+      "concurrent_with": [
+        "pos_trinity_emodub",
+        "pos_digikala_rd",
+        "pos_ubc",
+        "pos_turquoise_senior"
+      ],
+      "concurrent_note": "Part-time remote contract held serially after Trinity and before Turquoise, overlapping full-time Digikala R&D and UBC research.",
+      "verified": false
+    },
+    {
+      "id": "pos_trinity_emodub",
+      "organization_id": "org_004",
+      "title": "Machine Learning Engineer \u2014 Emotion-Aware Speech Translation",
+      "start": {
+        "year": 2023,
+        "month": 5
+      },
+      "end": {
+        "year": 2024,
+        "month": 4
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Dublin, Ireland",
+      "remote": true,
+      "work_model": "Part-time \u00b7 Remote Work",
+      "summary": "Researched emotion-aware speech-to-speech translation for the EmoDub project, fusing speech-emotion-recognition transformers with wav2vec2.0 and Whisper to preserve prosody in translated output.",
+      "tech_stack": [
+        "PyTorch",
+        "Hugging Face",
+        "librosa",
+        "wav2vec2.0",
+        "Whisper",
+        "EmotionNet",
+        "EmoDB"
+      ],
+      "achievements": [
+        "ach_trinity_emodub_0",
+        "ach_trinity_emodub_1",
+        "ach_trinity_emodub_2"
+      ],
+      "concurrent_with": [
+        "pos_digikala_ai",
+        "pos_l3s",
+        "pos_digikala_rd",
+        "pos_ubc",
+        "pos_advanced_analytics"
+      ],
+      "concurrent_note": "Part-time remote research alongside full-time Digikala AI then Senior AI Engineer, plus L3S/UBC research; the Advanced Analytics contract follows it serially.",
+      "verified": false
+    },
+    {
+      "id": "pos_sharif_xai",
+      "organization_id": "org_005",
+      "title": "Research Collaborator \u2014 Explainable & Robust AI",
+      "start": {
+        "year": 2025,
+        "month": 6
+      },
+      "end": {
+        "year": 2025,
+        "month": 8
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Part-time \u00b7 On-site",
+      "summary": "Built robustness and interpretability harnesses for multimodal perception models under distribution shift, benchmarking adversarial and natural shifts with Captum and SHAP attribution analysis.",
+      "tech_stack": [
+        "PyTorch",
+        "MLflow",
+        "Captum",
+        "SHAP"
+      ],
+      "achievements": [
+        "ach_sharif_xai_0",
+        "ach_sharif_xai_1"
+      ],
+      "concurrent_with": [
+        "digikala_rd",
+        "trinity_emodub",
+        "ubc",
+        "turquoise_senior",
+        "advanced_analytics"
+      ],
+      "concurrent_note": "Part-time summer lab sprint finished while full-time at Digikala R&D, with Trinity, Turquoise, Advanced Analytics and UBC still overlapping.",
+      "verified": false
+    },
+    {
+      "id": "pos_digikala_rd",
+      "organization_id": "org_006",
+      "title": "Senior AI Engineer",
+      "start": {
+        "year": 2023,
+        "month": 12
+      },
+      "end": {
+        "year": 2025,
+        "month": 5
+      },
+      "ongoing": false,
+      "employment_type": "full_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Full-time \u00b7 On-site",
+      "summary": "Owned agentic RAG platform for marketplace listing intelligence \u2014 modular control pipelines (MCP), hybrid retrieval, LLM serving at 5M+ queries/day.",
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "LangChain",
+        "LlamaIndex",
+        "FAISS",
+        "Elasticsearch",
+        "ChromaDB",
+        "HyDE",
+        "KAG",
+        "FastAPI",
+        "vLLM",
+        "Triton",
+        "Redis",
+        "Prometheus",
+        "Kubernetes",
+        "ArgoCD"
+      ],
+      "achievements": [
+        "ach_digikala_rd_0",
+        "ach_digikala_rd_1",
+        "ach_digikala_rd_2",
+        "ach_digikala_rd_3"
+      ],
+      "concurrent_with": [
+        "pos_digikala_ai",
+        "pos_l3s",
+        "pos_ubc",
+        "pos_trinity_emodub",
+        "pos_advanced_analytics",
+        "pos_turquoise_senior"
+      ],
+      "concurrent_note": "Full-time on-site lead role; L3S and UBC ran alongside it as part-time remote research.",
+      "verified": false
+    },
+    {
+      "id": "pos_digikala_ai",
+      "organization_id": "org_006",
+      "title": "AI Engineer",
+      "start": {
+        "year": 2022,
+        "month": 12
+      },
+      "end": {
+        "year": 2023,
+        "month": 12
+      },
+      "ongoing": false,
+      "employment_type": "full_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Full-time \u00b7 Hybrid",
+      "summary": "Prototyped the RAG and MCP scaffolding for Digikala's marketplace listing assistant \u2014 hybrid retrieval, orchestration and eval telemetry that grew into an org-wide platform mandate.",
+      "tech_stack": [
+        "Python",
+        "LangChain",
+        "LlamaIndex",
+        "FAISS",
+        "Elasticsearch",
+        "LangGraph",
+        "FastAPI"
+      ],
+      "achievements": [
+        "ach_digikala_ai_0",
+        "ach_digikala_ai_1"
+      ],
+      "concurrent_with": [
+        "pos_homacloud",
+        "pos_digikala_rd",
+        "pos_l3s",
+        "pos_trinity_emodub"
+      ],
+      "concurrent_note": "Full-time role following HomaCloud with no gap; converted straight into the full-time Senior AI Engineer post in Dec 2023 rather than held in parallel with it.",
+      "verified": false
+    },
+    {
+      "id": "pos_ubc",
+      "organization_id": "org_007",
+      "title": "Research Assistant \u2014 Vision-Language Medical Imaging (Ultrasound Report Generation)",
+      "start": {
+        "year": 2024,
+        "month": 2
+      },
+      "end": {
+        "year": 2025,
+        "month": 11
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Remote \u00b7 Vancouver, Canada (Tehran-based)",
+      "remote": true,
+      "work_model": "Part-time \u00b7 Remote Internship (10h/wk)",
+      "summary": "Part-time research assistant developing ViT/BLIP and T5 models for DICOM-compliant ultrasound report generation with contrastive pretraining and clinician-in-the-loop saliency.",
+      "tech_stack": [
+        "PyTorch",
+        "ViT",
+        "BLIP",
+        "T5",
+        "CLIP",
+        "OpenCV",
+        "MIMIC-CXR",
+        "DICOM"
+      ],
+      "achievements": [
+        "ach_ubc_0",
+        "ach_ubc_1",
+        "ach_ubc_2"
+      ],
+      "concurrent_with": [
+        "digikala_ai",
+        "digikala_rd",
+        "l3s_tail",
+        "trinity_emodub",
+        "sharif_xai",
+        "turquoise_senior",
+        "advanced_analytics"
+      ],
+      "concurrent_note": "Part-time remote research capped at 10h/wk that overlapped several industry roles, with Digikala and Turquoise remaining the primary commitments.",
+      "verified": false
+    },
+    {
+      "id": "pos_l3s",
+      "organization_id": "org_008",
+      "title": "Research Assistant \u2014 Video Motion Classification",
+      "start": {
+        "year": 2023,
+        "month": 5
+      },
+      "end": {
+        "year": 2024,
+        "month": 2
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Hannover, Germany",
+      "remote": true,
+      "work_model": "Part-time \u00b7 Remote/On-site",
+      "summary": "Research assistant developing texture-free motion models from optical flow with 3D CNNs and transformers, with state-of-the-art results on UCF-101 and HMDB-51.",
+      "tech_stack": [
+        "PyTorch Lightning",
+        "OpenCV",
+        "PyAV",
+        "TensorBoard",
+        "scikit-learn"
+      ],
+      "achievements": [
+        "ach_l3s_0",
+        "ach_l3s_1"
+      ],
+      "concurrent_with": [
+        "sharif_ta"
+      ],
+      "concurrent_note": "Part-time RA during B.Sc. final year \u2014 no conflict",
+      "verified": false
+    },
+    {
+      "id": "pos_sharif_ta",
+      "organization_id": "org_009",
+      "title": "Teaching Assistant \u2014 NLP, Generative Models, Deep Learning",
+      "start": {
+        "year": 2023,
+        "month": 8
+      },
+      "end": {
+        "year": 2024,
+        "month": 2
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Part-time \u00b7 On-site",
+      "summary": "Led labs and seminars for graduate NLP, Generative Models, and Deep Learning courses, designed problem sets and exams, and mentored undergraduate capstones.",
+      "tech_stack": [
+        "PyTorch",
+        "TensorFlow",
+        "NumPy",
+        "scikit-learn"
+      ],
+      "achievements": [
+        "ach_sharif_ta_0",
+        "ach_sharif_ta_1"
+      ],
+      "concurrent_with": [
+        "l3s"
+      ],
+      "concurrent_note": "TA for graduate NLP, Generative Models, and Deep Learning ran alongside the L3S research assistantship at a 6-8h/wk teaching load.",
+      "verified": false
+    },
+    {
+      "id": "pos_sharif_ta_history",
+      "organization_id": "org_009",
+      "title": "Teaching Assistant \u2014 History (8 courses, 2021-2023)",
+      "start": {
+        "year": 2021,
+        "month": 3
+      },
+      "end": {
+        "year": 2023,
+        "month": 8
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Part-time",
+      "summary": "Part-time teaching assistant across eight Sharif University courses from 2021 to 2023, spanning circuit theory, electronics, machine learning, and deep learning.",
+      "tech_stack": [
+        "PyTorch",
+        "TensorFlow",
+        "NumPy"
+      ],
+      "achievements": [
+        "ach_sharif_ta_history_0"
+      ],
+      "concurrent_with": [],
+      "verified": false
+    },
+    {
+      "id": "pos_homacloud",
+      "organization_id": "org_010",
+      "title": "MLOps Engineer",
+      "start": {
+        "year": 2021,
+        "month": 11
+      },
+      "end": {
+        "year": 2022,
+        "month": 12
+      },
+      "ongoing": false,
+      "employment_type": "full_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Full-time \u00b7 On-site",
+      "summary": "Built and operated HomaCloud's Kubernetes-native training, CI/CD, and model-serving infrastructure using Docker, Ray, MLflow, Terraform, ArgoCD, and FastAPI.",
+      "tech_stack": [
+        "Kubernetes",
+        "Docker",
+        "Ray",
+        "MLflow",
+        "Terraform",
+        "ArgoCD",
+        "FastAPI",
+        "Prometheus",
+        "Grafana",
+        "GitHub Actions"
+      ],
+      "achievements": [
+        "ach_homacloud_0",
+        "ach_homacloud_1"
+      ],
+      "concurrent_with": [
+        "pos_digikala_ai"
+      ],
+      "concurrent_note": "Full-time role during B.Sc., starting right after the HomaCloud internship that followed the Mapna internship.",
+      "verified": false
+    },
+    {
+      "id": "pos_homacloud_intern",
+      "organization_id": "org_010",
+      "title": "MLOps Intern",
+      "start": {
+        "year": 2021,
+        "month": 8
+      },
+      "end": {
+        "year": 2021,
+        "month": 11
+      },
+      "ongoing": false,
+      "employment_type": "part_time",
+      "location": "Tehran, Iran",
+      "remote": false,
+      "work_model": "Internship",
+      "summary": "Evaluated PyTorch and TensorFlow multi-node training and built serving and API automation for dataset preparation and deployment during a 2021 MLOps internship.",
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "Docker",
+        "FastAPI"
+      ],
+      "achievements": [
+        "ach_homacloud_intern_0",
+        "ach_homacloud_intern_1"
+      ],
+      "concurrent_with": [],
+      "verified": false
+    }
+  ],
+  "projects": [
+    {
+      "id": "emodub",
+      "title": "Emotion-aware voice translation",
+      "organization_id": "org_012",
+      "start": {
+        "year": 2025,
+        "month": 5
+      },
+      "end": {
+        "year": 2025,
+        "month": 11
+      },
+      "ongoing": false,
+      "summary": "Emotion-aware speech-to-speech translation system fusing SER transformer affect logits with wav2vec2.0/Whisper representations for prosody-consistent translation.",
+      "description": "Trained a transformer + wav2vec2.0/Whisper SER front-end to produce affect logits, then a cross-modal fusion transformer for emotion-consistent decoding. Curated emotion-annotated corpora (EmotionNet, EmoDB) with balanced cultural representation and evaluated BLEU, Emotion F1, and MOS. Collaboration with Prof. Siobh\u00e1n Clarke; reproducible codebase on GitHub.",
+      "skills": [
+        "PyTorch",
+        "TensorFlow",
+        "Hugging Face",
+        "Librosa",
+        "wav2vec2.0",
+        "Whisper",
+        "EmotionNet",
+        "EmoDB"
+      ],
+      "achievements": [],
+      "position_ids": [
+        "pos_trinity_emodub"
+      ]
+    },
+    {
+      "id": "ultrasound",
+      "title": "Ultrasound report generation",
+      "organization_id": "org_007",
+      "start": {
+        "year": 2024,
+        "month": 2
+      },
+      "end": {
+        "year": 2025,
+        "month": 11
+      },
+      "ongoing": false,
+      "summary": "Vision-language system generating DICOM-compliant ultrasound reports via contrastive vision-language learning with clinician-facing interpretability.",
+      "description": "Designed ViT/BLIP encoders with T5 generation and contrastive/self-supervised alignment over curated DICOM and de-identified QA corpora. Deployed attention and saliency overlays and benchmarked BLEU/ROUGE-L plus clinical efficacy with radiologists, reaching state-of-the-art on the in-house split. Preprint in preparation for arXiv.",
+      "skills": [
+        "PyTorch",
+        "ViT",
+        "BLIP",
+        "T5",
+        "LLaVA",
+        "CLIP",
+        "OpenCV",
+        "MIMIC-CXR",
+        "PubMed",
+        "DICOM"
+      ],
+      "achievements": [],
+      "position_ids": [
+        "pos_ubc"
+      ]
+    },
+    {
+      "id": "texture_free",
+      "title": "Texture-free motion intelligence",
+      "organization_id": "org_013",
+      "start": {
+        "year": 2023,
+        "month": 4
+      },
+      "end": {
+        "year": 2024,
+        "month": 2
+      },
+      "ongoing": false,
+      "summary": "Texture-free human motion classification via optical flow and 3D CNN\u2013transformer hybrids, benchmarked on UCF-101 and HMDB-51.",
+      "description": "Engineered optical-flow-centric datasets with temporal sampling and augmentation to improve domain generalization under lighting, texture, and camera shift. Benchmarked 3D CNN and transformer hybrids against baselines, analyzed attention maps, and achieved state-of-the-art accuracy on UCF-101/HMDB-51.",
+      "skills": [
+        "PyTorch Lightning",
+        "OpenCV",
+        "PyAV",
+        "TensorBoard",
+        "scikit-learn"
+      ],
+      "achievements": [],
+      "position_ids": [
+        "pos_l3s"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "sharif_masters",
+      "organization_id": "org_009",
+      "degree": "M.Sc. Artificial Intelligence",
+      "start": {
+        "year": 2025,
+        "month": 9
+      },
+      "ongoing": true,
+      "coursework": [
+        "Advanced Machine Learning",
+        "Deep Learning",
+        "Advanced Computer Vision",
+        "Advanced Natural Language Processing",
+        "Optimization",
+        "Probabilistic Graphical Models",
+        "Reinforcement Learning"
+      ]
+    },
+    {
+      "id": "sharif_bsc",
+      "organization_id": "org_009",
+      "degree": "B.Sc. Electrical Engineering",
+      "field": "Machine Learning",
+      "start": {
+        "year": 2020,
+        "month": 9
+      },
+      "end": {
+        "year": 2025,
+        "month": 9
+      },
+      "ongoing": false,
+      "gpa": "3.65",
+      "thesis": "Team thesis: efficient design and implementation of a spread-time CDMA ASIC; responsibilities: FPGA implementation and pre-chip FPGA testing; supervisor: Dr. Fatemeh (Noyan) Akbar; grade: 20/20.",
+      "coursework": [
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Data Science",
+        "Embedded Systems",
+        "Signals and Systems",
+        "Microprocessor Systems"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "id": "ultrasound_preprint",
+      "title": "Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning",
+      "authors": [
+        "Ali Nikkhah",
+        "[Co-authors TBD]",
+        "A. Supervisor"
+      ],
+      "venue": "arXiv preprint \u2014 in preparation",
+      "year": 2025,
+      "url": "",
+      "status": "preprint"
+    }
+  ],
+  "teaching": [
+    {
+      "id": "teach_0",
+      "course": "Natural Language Processing (Graduate)",
+      "role": "TA \u00b7 Sharif",
+      "organization_id": "org_009",
+      "period": "Aug 2023 \u2013 Jan 2024"
+    },
+    {
+      "id": "teach_1",
+      "course": "Generative Models (Graduate)",
+      "role": "TA \u00b7 Sharif",
+      "organization_id": "org_009",
+      "period": "Aug 2023 \u2013 Jan 2024"
+    },
+    {
+      "id": "teach_2",
+      "course": "Deep Learning (Graduate)",
+      "role": "TA \u00b7 Sharif",
+      "organization_id": "org_009",
+      "period": "Jan 2023 \u2013 Aug 2023"
+    },
+    {
+      "id": "teach_3",
+      "course": "Analog Electronics",
+      "role": "TA \u00b7 Sharif",
+      "organization_id": "org_009",
+      "period": "Aug 2022 \u2013 Jan 2023"
+    },
+    {
+      "id": "teach_4",
+      "course": "Machine Learning & Data Science",
+      "role": "TA \u00b7 Sharif",
+      "organization_id": "org_009",
+      "period": "Jan 2022 \u2013 Aug 2022"
+    },
+    {
+      "id": "teach_5",
+      "course": "Circuit Theory & Engineering Probability",
+      "role": "TA \u00b7 Sharif",
+      "organization_id": "org_009",
+      "period": "Jan 2021 \u2013 Aug 2021"
+    }
+  ],
+  "skills": [
+    {
+      "id": "8b01a96fcef1",
+      "name": "Python",
+      "category": "language",
+      "aliases": []
+    },
+    {
+      "id": "66b7d3f45a5f",
+      "name": "C++",
+      "category": "language",
+      "aliases": []
+    },
+    {
+      "id": "5e133a324986",
+      "name": "Go",
+      "category": "language",
+      "aliases": []
+    },
+    {
+      "id": "a6f8e1313eaf",
+      "name": "SQL",
+      "category": "language",
+      "aliases": []
+    },
+    {
+      "id": "45ae9c5ce720",
+      "name": "R",
+      "category": "language",
+      "aliases": []
+    },
+    {
+      "id": "dc163cd56ffe",
+      "name": "Bash",
+      "category": "language",
+      "aliases": []
+    },
+    {
+      "id": "31f54dce7851",
+      "name": "TypeScript",
+      "category": "language",
+      "aliases": []
+    },
+    {
+      "id": "4f1e0c674bcb",
+      "name": "PyTorch",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "133783c51a2f",
+      "name": "TensorFlow",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "7adeaef2462e",
+      "name": "JAX",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "e2d1890548e9",
+      "name": "Hugging Face",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "2bf509d462ec",
+      "name": "ViT",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "fa2299c4c672",
+      "name": "BLIP",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "a5a84167bd12",
+      "name": "T5",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "014156b3b4c3",
+      "name": "Whisper",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "c6cddfd7dcb6",
+      "name": "wav2vec2.0",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "ec92b233df0b",
+      "name": "Librosa",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "102a74105c24",
+      "name": "OpenCV",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "92b4598afd20",
+      "name": "YOLO",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "c58a5ad605eb",
+      "name": "ONNX",
+      "category": "ml_vision",
+      "aliases": []
+    },
+    {
+      "id": "c7a4aa3d0128",
+      "name": "LangGraph",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "e6692b413255",
+      "name": "LangChain",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "c6c5182c83b5",
+      "name": "LlamaIndex",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "d842a5296971",
+      "name": "FAISS",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "d5ced85598a4",
+      "name": "ChromaDB",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "e851c763baa6",
+      "name": "HyDE",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "d6ba47b5825d",
+      "name": "KAG",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "fe088df7fffa",
+      "name": "Graph RAG",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "adaf2175726d",
+      "name": "vLLM",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "cef932da234d",
+      "name": "Triton",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "c86fca08e613",
+      "name": "Neo4j",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "bb90eed5b4cc",
+      "name": "Cypher",
+      "category": "agentic",
+      "aliases": []
+    },
+    {
+      "id": "1e1fd98c756d",
+      "name": "vLLM",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "352d13093be4",
+      "name": "TGI",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "8a2e0ae01dcc",
+      "name": "AWQ",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "6ffe4ffb169e",
+      "name": "GPTQ",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "745ab1e25421",
+      "name": "KV-cache",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "3fab0ed3170e",
+      "name": "GPU Optimization",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "64a7132e6ccf",
+      "name": "PagedAttention",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "f83aed098a95",
+      "name": "TensorRT-LLM",
+      "category": "llm_serving",
+      "aliases": []
+    },
+    {
+      "id": "6e331e073df1",
+      "name": "Spark",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "dba96d21536b",
+      "name": "Airflow",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "950a7edab81b",
+      "name": "Kafka",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "aa2dc5a5208a",
+      "name": "Docker",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "b2f8e48842c2",
+      "name": "Kubernetes",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "c600d9495ecc",
+      "name": "Ray",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "331cbcbce089",
+      "name": "MLflow",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "ccd3fb1be4cc",
+      "name": "W&B",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "dca548709948",
+      "name": "ArgoCD",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "01465ea97fa5",
+      "name": "Terraform",
+      "category": "data_mlop",
+      "aliases": []
+    },
+    {
+      "id": "b257704eb9c3",
+      "name": "Persian (Native)",
+      "category": "human",
+      "aliases": []
+    },
+    {
+      "id": "f56df8245452",
+      "name": "English (C2 IELTS 8.0)",
+      "category": "human",
+      "aliases": []
+    },
+    {
+      "id": "5cec5e63c1cd",
+      "name": "Arabic (Professional)",
+      "category": "human",
+      "aliases": []
+    },
+    {
+      "id": "9a98ee722949",
+      "name": "French (Limited)",
+      "category": "human",
+      "aliases": []
+    },
+    {
+      "id": "1956a5db8721",
+      "name": "German (Limited)",
+      "category": "human",
+      "aliases": []
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ach_iran_credit_scoring_0",
+      "position_id": "pos_iran_credit_scoring",
+      "text": "Architected a self-hosted Graph RAG assistant that fuses a Neo4j knowledge graph with FAISS vector retrieval into a LangGraph tool-calling agent, answering credit-scoring analysts' queries with grounded citations.",
+      "brief_text": "Architected a self-hosted Graph RAG assistant that fuses a Neo4j knowledge graph with FAISS vector retrieval into a LangGraph tool-calling agent, answering cred\u2026",
+      "detailed_text": "Architected a self-hosted Graph RAG assistant that fuses a Neo4j knowledge graph with FAISS vector retrieval into a LangGraph tool-calling agent, answering credit-scoring analysts' queries with grounded citations.",
+      "metrics": {
+        "needs_metric": "analyst answer accuracy / citation-grounding rate vs the prior FAQ or SQL workflow (no number in source)"
+      },
+      "skills": [
+        "Graph RAG",
+        "Neo4j",
+        "FAISS",
+        "LangGraph"
+      ],
+      "source_refs": [
+        "iran_credit_scoring"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_iran_credit_scoring_1",
+      "position_id": "pos_iran_credit_scoring",
+      "text": "Ran open-weight LLMs on GPU via vLLM and TGI, profiling KV-cache, batching and AWQ/GPTQ quantization to cut per-token latency and GPU memory footprint.",
+      "brief_text": "Ran open-weight LLMs on GPU via vLLM and TGI, profiling KV-cache, batching and AWQ/GPTQ quantization to cut per-token latency and GPU memory footprint.",
+      "detailed_text": "Ran open-weight LLMs on GPU via vLLM and TGI, profiling KV-cache, batching and AWQ/GPTQ quantization to cut per-token latency and GPU memory footprint.",
+      "metrics": {
+        "needs_metric": "before/after p99 token latency and GPU memory footprint (no number in source)"
+      },
+      "skills": [
+        "vLLM",
+        "TGI",
+        "KV-cache",
+        "AWQ",
+        "GPTQ",
+        "GPU Optimization"
+      ],
+      "source_refs": [
+        "iran_credit_scoring"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_iran_credit_scoring_2",
+      "position_id": "pos_iran_credit_scoring",
+      "text": "Implemented Neo4j tool-calls inside the LangGraph agent \u2014 schema-aware Cypher generation and retrieval \u2014 so it executes real graph traversals instead of hallucinating structured credit facts.",
+      "brief_text": "Implemented Neo4j tool-calls inside the LangGraph agent \u2014 schema-aware Cypher generation and retrieval \u2014 so it executes real graph traversals instead of halluci\u2026",
+      "detailed_text": "Implemented Neo4j tool-calls inside the LangGraph agent \u2014 schema-aware Cypher generation and retrieval \u2014 so it executes real graph traversals instead of hallucinating structured credit facts.",
+      "metrics": {
+        "needs_metric": "Cypher execution success rate or drop in unanswerable structured queries (no number in source)"
+      },
+      "skills": [
+        "Neo4j",
+        "Cypher",
+        "LangGraph"
+      ],
+      "source_refs": [
+        "iran_credit_scoring"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_iran_credit_scoring_3",
+      "position_id": "pos_iran_credit_scoring",
+      "text": "Hardened the Graph RAG assistant for a regulated financial environment with retrieval grounding, citation enforcement and deterministic fallback, blocking unsupported answers before they reach analysts.",
+      "brief_text": "Hardened the Graph RAG assistant for a regulated financial environment with retrieval grounding, citation enforcement and deterministic fallback, blocking unsup\u2026",
+      "detailed_text": "Hardened the Graph RAG assistant for a regulated financial environment with retrieval grounding, citation enforcement and deterministic fallback, blocking unsupported answers before they reach analysts.",
+      "metrics": {
+        "needs_metric": "hallucination / unsupported-claim rate on an internal red-team set (no number in source)"
+      },
+      "skills": [
+        "Graph RAG"
+      ],
+      "source_refs": [
+        "iran_credit_scoring"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_turquoise_senior_0",
+      "position_id": "pos_turquoise_senior",
+      "text": "Consolidated raw CDC streams into a centralized lake (PeerDB into Trino/Parquet) at 5TB/day with <60s freshness; Airflow and PySpark DAGs cut pipeline memory 60%, governed by Great Expectations and Prometheus/Grafana.",
+      "brief_text": "Consolidated raw CDC streams into a centralized lake (PeerDB into Trino/Parquet) at 5TB/day with <60s freshness; Airflow and PySpark DAGs cut pipeline memory 60\u2026",
+      "detailed_text": "Consolidated raw CDC streams into a centralized lake (PeerDB into Trino/Parquet) at 5TB/day with <60s freshness; Airflow and PySpark DAGs cut pipeline memory 60%, governed by Great Expectations and Prometheus/Grafana.",
+      "metrics": {
+        "throughput_per_day": "5TB/day",
+        "freshness": "<60s",
+        "pipeline_memory_reduction": "60%"
+      },
+      "skills": [
+        "Spark",
+        "Airflow",
+        "Trino",
+        "PeerDB",
+        "Great Expectations",
+        "Prometheus",
+        "Grafana"
+      ],
+      "source_refs": [
+        "turquoise_senior"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_turquoise_senior_1",
+      "position_id": "pos_turquoise_senior",
+      "text": "Shipped a BNPL default-risk ensemble (XGBoost and PyTorch time-series Transformers) reaching AUC 0.87 and -22% defaults, then ran 50+ concurrent mSPRT A/B tests with staged rollout and auto-rollback for the C-suite.",
+      "brief_text": "Shipped a BNPL default-risk ensemble (XGBoost and PyTorch time-series Transformers) reaching AUC 0.87 and -22% defaults, then ran 50+ concurrent mSPRT A/B tests\u2026",
+      "detailed_text": "Shipped a BNPL default-risk ensemble (XGBoost and PyTorch time-series Transformers) reaching AUC 0.87 and -22% defaults, then ran 50+ concurrent mSPRT A/B tests with staged rollout and auto-rollback for the C-suite.",
+      "metrics": {
+        "auc": "0.87",
+        "defaults_delta": "-22%",
+        "concurrent_ab_tests": "50+"
+      },
+      "skills": [
+        "XGBoost",
+        "PyTorch"
+      ],
+      "source_refs": [
+        "turquoise_senior"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_turquoise_senior_2",
+      "position_id": "pos_turquoise_senior",
+      "text": "Launched an agentic support chatbot built on Whisper, wav2vec2.0 and LangGraph, cutting ticket volume -78% at 94% intent accuracy, with deterministic fallback and policy guardrails keeping every response traceable.",
+      "brief_text": "Launched an agentic support chatbot built on Whisper, wav2vec2.0 and LangGraph, cutting ticket volume -78% at 94% intent accuracy, with deterministic fallback a\u2026",
+      "detailed_text": "Launched an agentic support chatbot built on Whisper, wav2vec2.0 and LangGraph, cutting ticket volume -78% at 94% intent accuracy, with deterministic fallback and policy guardrails keeping every response traceable.",
+      "metrics": {
+        "ticket_volume_delta": "-78%",
+        "intent_accuracy": "94%"
+      },
+      "skills": [
+        "Whisper",
+        "wav2vec2.0",
+        "LangGraph"
+      ],
+      "source_refs": [
+        "turquoise_senior"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_turquoise_senior_3",
+      "position_id": "pos_turquoise_senior",
+      "text": "Directed a portfolio allocation and risk engine delivering Sharpe +0.42, fed by streaming ClickHouse signals and a LlamaIndex retrieval graph producing ranking features.",
+      "brief_text": "Directed a portfolio allocation and risk engine delivering Sharpe +0.42, fed by streaming ClickHouse signals and a LlamaIndex retrieval graph producing ranking \u2026",
+      "detailed_text": "Directed a portfolio allocation and risk engine delivering Sharpe +0.42, fed by streaming ClickHouse signals and a LlamaIndex retrieval graph producing ranking features.",
+      "metrics": {
+        "sharpe_delta": "+0.42"
+      },
+      "skills": [
+        "ClickHouse",
+        "LlamaIndex"
+      ],
+      "source_refs": [
+        "turquoise_senior"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_advanced_analytics_0",
+      "position_id": "pos_advanced_analytics",
+      "text": "Deployed quantized YOLO and ViT models (TensorRT/TF Lite) on Triton across 100+ camera streams at 30 FPS \u2014 99.2% uptime, <50ms p99 latency and 3.5x speedup, with exactly-once Kafka ingestion.",
+      "brief_text": "Deployed quantized YOLO and ViT models (TensorRT/TF Lite) on Triton across 100+ camera streams at 30 FPS \u2014 99.2% uptime, <50ms p99 latency and 3.5x speedup, wit\u2026",
+      "detailed_text": "Deployed quantized YOLO and ViT models (TensorRT/TF Lite) on Triton across 100+ camera streams at 30 FPS \u2014 99.2% uptime, <50ms p99 latency and 3.5x speedup, with exactly-once Kafka ingestion.",
+      "metrics": {
+        "uptime": "99.2%",
+        "p99_latency": "<50ms",
+        "speedup": "3.5x",
+        "camera_fps": "30 FPS",
+        "streams": "100+"
+      },
+      "skills": [
+        "YOLO",
+        "ViT",
+        "Triton",
+        "Kafka",
+        "TensorRT",
+        "TFLite"
+      ],
+      "source_refs": [
+        "advanced_analytics"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_advanced_analytics_1",
+      "position_id": "pos_advanced_analytics",
+      "text": "Operationalized edge MLOps around a Triton model repository \u2014 rolling updates with no service interruption, automated rollback and Prometheus/Grafana per-site health across 12 sites.",
+      "brief_text": "Operationalized edge MLOps around a Triton model repository \u2014 rolling updates with no service interruption, automated rollback and Prometheus/Grafana per-site h\u2026",
+      "detailed_text": "Operationalized edge MLOps around a Triton model repository \u2014 rolling updates with no service interruption, automated rollback and Prometheus/Grafana per-site health across 12 sites.",
+      "metrics": {
+        "needs_metric": "deployment success rate or rollback MTTR across the 12 sites"
+      },
+      "skills": [
+        "Triton",
+        "Prometheus",
+        "Grafana"
+      ],
+      "source_refs": [
+        "advanced_analytics"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_advanced_analytics_2",
+      "position_id": "pos_advanced_analytics",
+      "text": "Reduced YOLO detector false positives -35% by combining attention-guided NMS with SNR monitoring, over the Kafka broker architecture spanning 12 distributed retail sites.",
+      "brief_text": "Reduced YOLO detector false positives -35% by combining attention-guided NMS with SNR monitoring, over the Kafka broker architecture spanning 12 distributed ret\u2026",
+      "detailed_text": "Reduced YOLO detector false positives -35% by combining attention-guided NMS with SNR monitoring, over the Kafka broker architecture spanning 12 distributed retail sites.",
+      "metrics": {
+        "false_positive_delta": "-35%",
+        "sites": 12
+      },
+      "skills": [
+        "YOLO",
+        "Kafka"
+      ],
+      "source_refs": [
+        "advanced_analytics"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_trinity_emodub_0",
+      "position_id": "pos_trinity_emodub",
+      "text": "Trained a PyTorch SER front-end over wav2vec2.0 and Whisper to emit affect logits, then fused it with a cross-modal transformer for emotion-consistent translation decoding.",
+      "brief_text": "Trained a PyTorch SER front-end over wav2vec2.0 and Whisper to emit affect logits, then fused it with a cross-modal transformer for emotion-consistent translati\u2026",
+      "detailed_text": "Trained a PyTorch SER front-end over wav2vec2.0 and Whisper to emit affect logits, then fused it with a cross-modal transformer for emotion-consistent translation decoding.",
+      "metrics": {
+        "needs_metric": "SER F1 or emotion-consistency gain of the fusion model vs the SER-only baseline"
+      },
+      "skills": [
+        "PyTorch",
+        "wav2vec2.0",
+        "Whisper"
+      ],
+      "source_refs": [
+        "trinity_emodub"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_trinity_emodub_1",
+      "position_id": "pos_trinity_emodub",
+      "text": "Curated the EmotionNet and EmoDB emotion-annotated corpora with balanced cultural representation, then defined the BLEU, Emotion F1 and MOS evaluation protocol.",
+      "brief_text": "Curated the EmotionNet and EmoDB emotion-annotated corpora with balanced cultural representation, then defined the BLEU, Emotion F1 and MOS evaluation protocol.",
+      "detailed_text": "Curated the EmotionNet and EmoDB emotion-annotated corpora with balanced cultural representation, then defined the BLEU, Emotion F1 and MOS evaluation protocol.",
+      "metrics": {
+        "needs_metric": "corpus size (hours/utterances) and per-emotion class balance achieved"
+      },
+      "skills": [
+        "EmotionNet",
+        "EmoDB"
+      ],
+      "source_refs": [
+        "trinity_emodub"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_trinity_emodub_2",
+      "position_id": "pos_trinity_emodub",
+      "text": "Collaborated with Prof. Siobh\u00e1n Clarke at Trinity College Dublin, delivering a reproducible PyTorch research codebase: https://github.com/AliNikkhah2001/emodub-emotion-translation.",
+      "brief_text": "Collaborated with Prof. Siobh\u00e1n Clarke at Trinity College Dublin, delivering a reproducible PyTorch research codebase: https://github.com/AliNikkhah2001/emodub-\u2026",
+      "detailed_text": "Collaborated with Prof. Siobh\u00e1n Clarke at Trinity College Dublin, delivering a reproducible PyTorch research codebase: https://github.com/AliNikkhah2001/emodub-emotion-translation.",
+      "metrics": {
+        "needs_metric": "reproduction signal (config runs, citations or forks) \u2014 none in source"
+      },
+      "skills": [
+        "PyTorch"
+      ],
+      "source_refs": [
+        "trinity_emodub"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_sharif_xai_0",
+      "position_id": "pos_sharif_xai",
+      "text": "Constructed adversarial and natural distribution-shift suites over PyTorch multimodal perception models, with Captum and SHAP notebooks surfacing attributions, saliency and counterfactuals.",
+      "brief_text": "Constructed adversarial and natural distribution-shift suites over PyTorch multimodal perception models, with Captum and SHAP notebooks surfacing attributions, \u2026",
+      "detailed_text": "Constructed adversarial and natural distribution-shift suites over PyTorch multimodal perception models, with Captum and SHAP notebooks surfacing attributions, saliency and counterfactuals.",
+      "metrics": {
+        "needs_metric": "shift-suite size (attack/perturbation types) and robustness-accuracy drop measured"
+      },
+      "skills": [
+        "PyTorch",
+        "Captum",
+        "SHAP"
+      ],
+      "source_refs": [
+        "sharif_xai"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_sharif_xai_1",
+      "position_id": "pos_sharif_xai",
+      "text": "Authored a regulated-industry deployment guide with lab faculty, codifying MLflow experiment tracking, interpretability evidence and rollout safeguards from the robustness harness.",
+      "brief_text": "Authored a regulated-industry deployment guide with lab faculty, codifying MLflow experiment tracking, interpretability evidence and rollout safeguards from the\u2026",
+      "detailed_text": "Authored a regulated-industry deployment guide with lab faculty, codifying MLflow experiment tracking, interpretability evidence and rollout safeguards from the robustness harness.",
+      "metrics": {
+        "needs_metric": "adoption signal for the guide (faculty sign-off, teams onboarded) \u2014 none in source"
+      },
+      "skills": [
+        "MLflow"
+      ],
+      "source_refs": [
+        "sharif_xai"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_digikala_rd_0",
+      "position_id": "pos_digikala_rd",
+      "text": "Led a 5-person R&D team defining roadmap and SLOs, shipping an MCP control plane with LangGraph cyclic graphs, zero-downtime hot-swapping and health-checked agent composition.",
+      "brief_text": "Led a 5-person R&D team defining roadmap and SLOs, shipping an MCP control plane with LangGraph cyclic graphs, zero-downtime hot-swapping and health-checked age\u2026",
+      "detailed_text": "Led a 5-person R&D team defining roadmap and SLOs, shipping an MCP control plane with LangGraph cyclic graphs, zero-downtime hot-swapping and health-checked agent composition.",
+      "metrics": {
+        "team_size": 5
+      },
+      "skills": [
+        "LangGraph"
+      ],
+      "source_refs": [
+        "digikala_rd"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_digikala_rd_1",
+      "position_id": "pos_digikala_rd",
+      "text": "Tuned the production hybrid retriever \u2014 FAISS vectors fused with Elasticsearch keyword hits via RRF, plus HyDE and KAG \u2014 to +23% recall@10 and -41% hallucination, backed by multi-tier Redis caching holding p99 <200ms.",
+      "brief_text": "Tuned the production hybrid retriever \u2014 FAISS vectors fused with Elasticsearch keyword hits via RRF, plus HyDE and KAG \u2014 to +23% recall@10 and -41% hallucinatio\u2026",
+      "detailed_text": "Tuned the production hybrid retriever \u2014 FAISS vectors fused with Elasticsearch keyword hits via RRF, plus HyDE and KAG \u2014 to +23% recall@10 and -41% hallucination, backed by multi-tier Redis caching holding p99 <200ms.",
+      "metrics": {
+        "recall_at_10_delta": "+23%",
+        "hallucination_delta": "-41%",
+        "p99_latency": "<200ms"
+      },
+      "skills": [
+        "FAISS",
+        "Elasticsearch",
+        "HyDE",
+        "KAG",
+        "Redis"
+      ],
+      "source_refs": [
+        "digikala_rd"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_digikala_rd_2",
+      "position_id": "pos_digikala_rd",
+      "text": "Scaled LLM inference on vLLM (PagedAttention) and Triton to 3.2x throughput and 60% cost reduction across 200 Kubernetes pods, with Prometheus KV-cache dashboards.",
+      "brief_text": "Scaled LLM inference on vLLM (PagedAttention) and Triton to 3.2x throughput and 60% cost reduction across 200 Kubernetes pods, with Prometheus KV-cache dashboar\u2026",
+      "detailed_text": "Scaled LLM inference on vLLM (PagedAttention) and Triton to 3.2x throughput and 60% cost reduction across 200 Kubernetes pods, with Prometheus KV-cache dashboards.",
+      "metrics": {
+        "throughput_multiplier": "3.2x",
+        "cost_reduction": "60%",
+        "pods": 200
+      },
+      "skills": [
+        "vLLM",
+        "Triton",
+        "KV-cache",
+        "Kubernetes",
+        "Prometheus"
+      ],
+      "source_refs": [
+        "digikala_rd"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_digikala_rd_3",
+      "position_id": "pos_digikala_rd",
+      "text": "Partnered with infrastructure and product teams to establish shared eval pipelines, A/B guardrails and ArgoCD canary rollouts for the agent platform.",
+      "brief_text": "Partnered with infrastructure and product teams to establish shared eval pipelines, A/B guardrails and ArgoCD canary rollouts for the agent platform.",
+      "detailed_text": "Partnered with infrastructure and product teams to establish shared eval pipelines, A/B guardrails and ArgoCD canary rollouts for the agent platform.",
+      "metrics": {
+        "needs_metric": "share of releases gated by the eval/canary pipeline (no number in source)"
+      },
+      "skills": [
+        "ArgoCD"
+      ],
+      "source_refs": [
+        "digikala_rd"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_digikala_ai_0",
+      "position_id": "pos_digikala_ai",
+      "text": "Prototyped LangGraph orchestration with health-checked steps, blending FAISS and Elasticsearch via RRF and backed by rule-based fallbacks that kept prototype answers auditable.",
+      "brief_text": "Prototyped LangGraph orchestration with health-checked steps, blending FAISS and Elasticsearch via RRF and backed by rule-based fallbacks that kept prototype an\u2026",
+      "detailed_text": "Prototyped LangGraph orchestration with health-checked steps, blending FAISS and Elasticsearch via RRF and backed by rule-based fallbacks that kept prototype answers auditable.",
+      "metrics": {
+        "needs_metric": "eval-pass or retrieval-quality delta vs the pre-prototype baseline (no number in source)"
+      },
+      "skills": [
+        "LangGraph",
+        "FAISS",
+        "Elasticsearch"
+      ],
+      "source_refs": [
+        "digikala_ai"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_digikala_ai_1",
+      "position_id": "pos_digikala_ai",
+      "text": "Instrumented the FastAPI prototype with eval telemetry, memory-efficient FAISS indexing and response caching, then load-tested it to 5M queries before the work became the R&D platform.",
+      "brief_text": "Instrumented the FastAPI prototype with eval telemetry, memory-efficient FAISS indexing and response caching, then load-tested it to 5M queries before the work \u2026",
+      "detailed_text": "Instrumented the FastAPI prototype with eval telemetry, memory-efficient FAISS indexing and response caching, then load-tested it to 5M queries before the work became the R&D platform.",
+      "metrics": {
+        "load_test_queries": "5M"
+      },
+      "skills": [
+        "FAISS",
+        "FastAPI"
+      ],
+      "source_refs": [
+        "digikala_ai"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_ubc_0",
+      "position_id": "pos_ubc",
+      "text": "Designed ViT/BLIP encoders paired with a T5 report generator, trained with contrastive and self-supervised alignment over curated DICOM and de-identified QA corpora in PyTorch.",
+      "brief_text": "Designed ViT/BLIP encoders paired with a T5 report generator, trained with contrastive and self-supervised alignment over curated DICOM and de-identified QA cor\u2026",
+      "detailed_text": "Designed ViT/BLIP encoders paired with a T5 report generator, trained with contrastive and self-supervised alignment over curated DICOM and de-identified QA corpora in PyTorch.",
+      "metrics": {
+        "needs_metric": "add training-set size or report-quality score if known"
+      },
+      "skills": [
+        "PyTorch",
+        "ViT",
+        "BLIP",
+        "T5",
+        "DICOM"
+      ],
+      "source_refs": [
+        "ubc"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_ubc_1",
+      "position_id": "pos_ubc",
+      "text": "Deployed attention and saliency overlays for interpretability, benchmarked BLEU/ROUGE-L and clinical efficacy with radiologists, and reached state-of-the-art accuracy on the in-house ultrasound split.",
+      "brief_text": "Deployed attention and saliency overlays for interpretability, benchmarked BLEU/ROUGE-L and clinical efficacy with radiologists, and reached state-of-the-art ac\u2026",
+      "detailed_text": "Deployed attention and saliency overlays for interpretability, benchmarked BLEU/ROUGE-L and clinical efficacy with radiologists, and reached state-of-the-art accuracy on the in-house ultrasound split.",
+      "metrics": {
+        "needs_metric": "add BLEU/ROUGE-L scores vs prior art if known"
+      },
+      "skills": [],
+      "source_refs": [
+        "ubc"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_ubc_2",
+      "position_id": "pos_ubc",
+      "text": "Drafted manuscript \"Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning\" for arXiv (preprint in preparation, 2025).",
+      "brief_text": "Drafted manuscript \"Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning\" for arXiv (preprint in preparation, 2025).",
+      "detailed_text": "Drafted manuscript \"Automated DICOM-Compliant Ultrasound Report Generation via Contrastive Vision-Language Learning\" for arXiv (preprint in preparation, 2025).",
+      "metrics": {
+        "needs_metric": "add arXiv ID or accepted venue once available"
+      },
+      "skills": [
+        "DICOM"
+      ],
+      "source_refs": [
+        "ubc"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_l3s_0",
+      "position_id": "pos_l3s",
+      "text": "Engineered optical-flow-centric video datasets with temporal sampling and augmentation, improving domain generalization across lighting, texture, and camera shifts using OpenCV and PyAV.",
+      "brief_text": "Engineered optical-flow-centric video datasets with temporal sampling and augmentation, improving domain generalization across lighting, texture, and camera shi\u2026",
+      "detailed_text": "Engineered optical-flow-centric video datasets with temporal sampling and augmentation, improving domain generalization across lighting, texture, and camera shifts using OpenCV and PyAV.",
+      "metrics": {
+        "needs_metric": "add dataset size or domain-shift accuracy gain if known"
+      },
+      "skills": [
+        "OpenCV",
+        "PyAV"
+      ],
+      "source_refs": [
+        "l3s"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_l3s_1",
+      "position_id": "pos_l3s",
+      "text": "Benchmarked 3D CNN and transformer hybrids against baselines on UCF-101/HMDB-51, analyzing attention maps to curb overfitting and reach SOTA accuracy with PyTorch Lightning.",
+      "brief_text": "Benchmarked 3D CNN and transformer hybrids against baselines on UCF-101/HMDB-51, analyzing attention maps to curb overfitting and reach SOTA accuracy with PyTor\u2026",
+      "detailed_text": "Benchmarked 3D CNN and transformer hybrids against baselines on UCF-101/HMDB-51, analyzing attention maps to curb overfitting and reach SOTA accuracy with PyTorch Lightning.",
+      "metrics": {
+        "needs_metric": "add UCF-101/HMDB-51 accuracy percentages vs baselines if known"
+      },
+      "skills": [
+        "PyTorch Lightning"
+      ],
+      "source_refs": [
+        "l3s"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_sharif_ta_0",
+      "position_id": "pos_sharif_ta",
+      "text": "Facilitated seminars and office hours for graduate Deep Learning and NLP courses, designing problem sets and exams for cohorts of 30-80 students.",
+      "brief_text": "Facilitated seminars and office hours for graduate Deep Learning and NLP courses, designing problem sets and exams for cohorts of 30-80 students.",
+      "detailed_text": "Facilitated seminars and office hours for graduate Deep Learning and NLP courses, designing problem sets and exams for cohorts of 30-80 students.",
+      "metrics": {},
+      "skills": [],
+      "source_refs": [
+        "sharif_ta"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_sharif_ta_1",
+      "position_id": "pos_sharif_ta",
+      "text": "Developed lab material for Deep Learning, Analog Electronics, and foundational machine learning courses while mentoring undergraduate capstones.",
+      "brief_text": "Developed lab material for Deep Learning, Analog Electronics, and foundational machine learning courses while mentoring undergraduate capstones.",
+      "detailed_text": "Developed lab material for Deep Learning, Analog Electronics, and foundational machine learning courses while mentoring undergraduate capstones.",
+      "metrics": {
+        "needs_metric": "add number of capstones mentored or lab sessions delivered if known"
+      },
+      "skills": [],
+      "source_refs": [
+        "sharif_ta"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_sharif_ta_history_0",
+      "position_id": "pos_sharif_ta_history",
+      "text": "Graded problem sets, ran tutorials, and answered student questions across a 2021-2023 Sharif teaching assistantship serving 30-80 students per term.",
+      "brief_text": "Graded problem sets, ran tutorials, and answered student questions across a 2021-2023 Sharif teaching assistantship serving 30-80 students per term.",
+      "detailed_text": "Graded problem sets, ran tutorials, and answered student questions across a 2021-2023 Sharif teaching assistantship serving 30-80 students per term.",
+      "metrics": {},
+      "skills": [],
+      "source_refs": [
+        "sharif_ta_history"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_homacloud_0",
+      "position_id": "pos_homacloud",
+      "text": "Provisioned multi-node Kubernetes with Terraform and built Ray + MLflow training pipelines plus TF Serving/FastAPI serving \u2014 <10 min releases, 99.9% deploy success, 15+ models.",
+      "brief_text": "Provisioned multi-node Kubernetes with Terraform and built Ray + MLflow training pipelines plus TF Serving/FastAPI serving \u2014 <10 min releases, 99.9% deploy succ\u2026",
+      "detailed_text": "Provisioned multi-node Kubernetes with Terraform and built Ray + MLflow training pipelines plus TF Serving/FastAPI serving \u2014 <10 min releases, 99.9% deploy success, 15+ models.",
+      "metrics": {},
+      "skills": [
+        "Kubernetes",
+        "Terraform",
+        "Ray",
+        "MLflow",
+        "FastAPI"
+      ],
+      "source_refs": [
+        "homacloud"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_homacloud_1",
+      "position_id": "pos_homacloud",
+      "text": "Operationalized GitOps delivery with GitHub Actions and canary rollouts, optimized spot-instance compute, and added Prometheus/Grafana + ELK observability with model registry and lineage tracking.",
+      "brief_text": "Operationalized GitOps delivery with GitHub Actions and canary rollouts, optimized spot-instance compute, and added Prometheus/Grafana + ELK observability with \u2026",
+      "detailed_text": "Operationalized GitOps delivery with GitHub Actions and canary rollouts, optimized spot-instance compute, and added Prometheus/Grafana + ELK observability with model registry and lineage tracking.",
+      "metrics": {
+        "needs_metric": "add spot-instance cost savings or release-frequency figure if known"
+      },
+      "skills": [
+        "GitHub Actions",
+        "Prometheus",
+        "Grafana",
+        "ArgoCD"
+      ],
+      "source_refs": [
+        "homacloud"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ach_mapna_0",
+      "position_id": "pos_mapna",
+      "text": "Built dashboards and partner integration services with React, Node.js, and PostgreSQL as a part-time full stack engineer at Mapna-MD2.",
+      "brief_text": "Built dashboards and partner integration services with React, Node.js, and PostgreSQL as a part-time full stack engineer at Mapna-MD2.",
+      "detailed_text": "Built dashboards and partner integration services with React, Node.js, and PostgreSQL as a part-time full stack engineer at Mapna-MD2.",
+      "metrics": {
+        "candidate": true
+      },
+      "skills": [
+        "React",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "source_refs": [
+        "mapna"
+      ],
+      "verified": false
+    },
+    {
+      "id": "ach_mapna_1",
+      "position_id": "pos_mapna",
+      "text": "Containerized delivery with Docker and wrote QA and deployment scripts supporting the dashboards and partner integrations.",
+      "brief_text": "Containerized delivery with Docker and wrote QA and deployment scripts supporting the dashboards and partner integrations.",
+      "detailed_text": "Containerized delivery with Docker and wrote QA and deployment scripts supporting the dashboards and partner integrations.",
+      "metrics": {
+        "candidate": true
+      },
+      "skills": [
+        "Docker"
+      ],
+      "source_refs": [
+        "mapna"
+      ],
+      "verified": false
+    },
+    {
+      "id": "ach_homacloud_intern_0",
+      "position_id": "pos_homacloud_intern",
+      "text": "Evaluated PyTorch and TensorFlow multi-node training setups for HomaCloud's model-training platform during the 2021 internship.",
+      "brief_text": "Evaluated PyTorch and TensorFlow multi-node training setups for HomaCloud's model-training platform during the 2021 internship.",
+      "detailed_text": "Evaluated PyTorch and TensorFlow multi-node training setups for HomaCloud's model-training platform during the 2021 internship.",
+      "metrics": {
+        "candidate": true
+      },
+      "skills": [
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "source_refs": [
+        "homacloud_intern"
+      ],
+      "verified": false
+    },
+    {
+      "id": "ach_homacloud_intern_1",
+      "position_id": "pos_homacloud_intern",
+      "text": "Built FastAPI-based serving and API automation covering dataset preparation and model deployment for HomaCloud's ML platform.",
+      "brief_text": "Built FastAPI-based serving and API automation covering dataset preparation and model deployment for HomaCloud's ML platform.",
+      "detailed_text": "Built FastAPI-based serving and API automation covering dataset preparation and model deployment for HomaCloud's ML platform.",
+      "metrics": {
+        "candidate": true
+      },
+      "skills": [
+        "FastAPI"
+      ],
+      "source_refs": [
+        "homacloud_intern"
+      ],
+      "verified": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "long",
+      "label": "Union 10-page",
+      "audience": "industry",
+      "length_target": "10page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_iran_credit_scoring",
+        "pos_turquoise_senior",
+        "pos_advanced_analytics",
+        "pos_trinity_emodub",
+        "pos_sharif_xai",
+        "pos_digikala_rd",
+        "pos_digikala_ai",
+        "pos_ubc",
+        "pos_l3s",
+        "pos_sharif_ta",
+        "pos_sharif_ta_history",
+        "pos_homacloud",
+        "pos_homacloud_intern",
+        "pos_mapna"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 10
+    },
+    {
+      "id": "agentic",
+      "label": "Agentic AI",
+      "audience": "industry",
+      "length_target": "2page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_iran_credit_scoring",
+        "pos_turquoise_senior",
+        "pos_digikala_rd",
+        "pos_digikala_ai",
+        "pos_homacloud"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 2
+    },
+    {
+      "id": "vision",
+      "label": "Computer Vision",
+      "audience": "industry",
+      "length_target": "2page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_turquoise_senior",
+        "pos_advanced_analytics",
+        "pos_sharif_xai",
+        "pos_digikala_rd",
+        "pos_ubc",
+        "pos_l3s",
+        "pos_homacloud"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 2
+    },
+    {
+      "id": "data",
+      "label": "Data Science/Eng",
+      "audience": "industry",
+      "length_target": "2page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_turquoise_senior",
+        "pos_digikala_rd",
+        "pos_homacloud"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 2
+    },
+    {
+      "id": "swe",
+      "label": "Software Engineering",
+      "audience": "industry",
+      "length_target": "2page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_turquoise_senior",
+        "pos_advanced_analytics",
+        "pos_digikala_rd",
+        "pos_homacloud"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 2
+    },
+    {
+      "id": "hybrid",
+      "label": "Hybrid AI",
+      "audience": "industry",
+      "length_target": "2page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_iran_credit_scoring",
+        "pos_turquoise_senior",
+        "pos_advanced_analytics",
+        "pos_trinity_emodub",
+        "pos_sharif_xai",
+        "pos_digikala_rd",
+        "pos_digikala_ai",
+        "pos_ubc",
+        "pos_l3s",
+        "pos_homacloud"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 2
+    },
+    {
+      "id": "senior",
+      "label": "Senior AI / Lead",
+      "audience": "industry",
+      "length_target": "2page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_iran_credit_scoring",
+        "pos_turquoise_senior",
+        "pos_advanced_analytics",
+        "pos_trinity_emodub",
+        "pos_sharif_xai",
+        "pos_digikala_rd",
+        "pos_digikala_ai",
+        "pos_ubc",
+        "pos_l3s",
+        "pos_homacloud"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 2
+    },
+    {
+      "id": "platform",
+      "label": "ML Platform",
+      "audience": "industry",
+      "length_target": "2page",
+      "template": "industrial",
+      "sections": [],
+      "position_ids": [
+        "pos_iran_credit_scoring",
+        "pos_turquoise_senior",
+        "pos_advanced_analytics",
+        "pos_digikala_rd",
+        "pos_digikala_ai",
+        "pos_homacloud"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 2
+    },
+    {
+      "id": "research",
+      "label": "Academic / Research",
+      "audience": "academic",
+      "length_target": "4page",
+      "template": "academic",
+      "sections": [],
+      "position_ids": [
+        "pos_iran_credit_scoring",
+        "pos_trinity_emodub",
+        "pos_sharif_xai",
+        "pos_ubc",
+        "pos_l3s",
+        "pos_sharif_ta",
+        "pos_sharif_ta_history"
+      ],
+      "achievement_overrides": {},
+      "wording_level": "standard",
+      "page_limit": 4
+    }
+  ],
+  "interview_prep": {
+    "answers": {
+      "q_deep_dive_1": {
+        "status": "drafted",
+        "answer": "Graph RAG: Neo4j graph + vector fusion, agent layer, grounded citations.",
+        "updated_at": "2026-10-13T09:38:25.342248+00:00"
+      }
+    }
+  },
+  "acknowledged": [
+    "work_study_overlap:pos_iran_credit_scoring",
+    "work_study_overlap:pos_turquoise_senior",
+    "work_study_overlap:pos_digikala_rd",
+    "work_study_overlap:pos_homacloud"
+  ],
+  "resume_configs": []
+}

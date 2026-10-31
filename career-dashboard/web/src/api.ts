@@ -1,5 +1,21 @@
 const API_BASE = '/api'
 
+function fmtDetail(detail: unknown): string | null {
+  if (detail == null) return null
+  if (typeof detail === 'string') return detail
+  if (Array.isArray(detail)) {
+    return detail
+      .map((d) =>
+        typeof d === 'string'
+          ? d
+          : `${Array.isArray(d?.loc) ? d.loc.join('.') : 'error'} — ${d?.msg ?? JSON.stringify(d)}`,
+      )
+      .join('; ')
+  }
+  if (typeof detail === 'object') return JSON.stringify(detail)
+  return String(detail)
+}
+
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
     headers: {
@@ -11,7 +27,9 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
 
   if (!response.ok) {
     const body = await response.json().catch(() => null)
-    const err = new Error(body?.detail || body?.error || `HTTP ${response.status}`) as Error & { payload?: unknown }
+    const err = new Error(
+      fmtDetail(body?.detail) || fmtDetail(body?.error) || `HTTP ${response.status}`,
+    ) as Error & { payload?: unknown }
     err.payload = body
     throw err
   }
@@ -140,6 +158,23 @@ export const api = {
     request<import('./types').OriginalityReport>(`/originality/${encodeURIComponent(templateId)}`),
 
   getPublishingAudit: () => request<import('./types').PublishingAudit>('/publishing/audit'),
+
+  listResumeConfigs: () => request<import('./types').ResumeConfig[]>('/resume-configs'),
+  createResumeConfig: (config: import('./types').ResumeConfig) => request<import('./types').ResumeConfig>('/resume-configs', {
+    method: 'POST',
+    body: JSON.stringify(config),
+  }),
+  updateResumeConfig: (id: string, config: import('./types').ResumeConfig) => request<import('./types').ResumeConfig>(`/resume-configs/${encodeURIComponent(id)}`, {
+    method: 'PUT',
+    body: JSON.stringify(config),
+  }),
+  deleteResumeConfig: (id: string) => request(`/resume-configs/${encodeURIComponent(id)}`, { method: 'DELETE' }),
+  compileResumeConfig: (id: string) => request<import('./types').ResumeCompileResult>(`/resume-configs/${encodeURIComponent(id)}/compile`, {
+    method: 'POST',
+  }),
+  resumeConfigPdfUrl: (id: string, bust?: number) =>
+    `/api/resume-configs/${encodeURIComponent(id)}/pdf${bust ? `?t=${bust}` : ''}`,
+  resumeConfigSource: (id: string) => requestText(`/resume-configs/${encodeURIComponent(id)}/source`),
 
   search: (q: string) => request<any>(`/search?q=${encodeURIComponent(q)}`),
 }

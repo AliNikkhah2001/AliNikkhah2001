@@ -2,7 +2,7 @@
 
 # Ali Nikkhah 🧠⚙️
 
-**Machine Learning Engineer / Researcher** — Tehran, Iran · Remote-friendly · Open to Relocation
+**Machine Learning Engineer & Researcher — Agentic & Graph RAG, LLM GPU Serving, Vision-Language** — Tehran, Iran · Remote-friendly · Open to Relocation
 
 [![Website](https://img.shields.io/badge/website-alinikkhah2001.github.io-0e6eb0?style=flat-square&logo=github)](https://alinikkhah2001.github.io)
 [![LinkedIn](https://img.shields.io/badge/linkedin-alinikkhah2001-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/alinikkhah2001)
@@ -11,8 +11,7 @@
 
 </div>
 
-> Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025, GPA 3.65; M.Sc. AI from Sep 2025) specialising in agentic RAG, multimodal vision-language, self-hosted LLM serving, and GPU runtime optimisation. Shipped LLM + CV pipelines at marketplace scale, self-hosted Graph RAG assistant for a national credit bureau, and BNPL risk platforms. Research focus: LLM reasoning and hallucination mitigation.
-
+> ML engineer and researcher with 5+ years across industry and academia. Shipped Graph RAG for a national credit bureau, LLM pipelines serving 5M+ queries/day at marketplace scale, self-hosted vLLM/TGI GPU serving, a BNPL credit-risk ensemble (AUC 0.87), and vision-language research with an arXiv preprint in preparation. Sharif B.Sc. Electrical Engineering (GPA 3.65); M.Sc. Artificial Intelligence since Sep 2025.
 
 ---
 
@@ -21,25 +20,23 @@
 - **M.Sc. Artificial Intelligence** — Sharif University of Technology *(2025-09 – Present)*
 - **B.Sc. Electrical Engineering** — Sharif University of Technology *(2020-09 – 2025-09)*<br>
   GPA 3.65<br>
-  Research: Team thesis on efficient design and implementation of spread-time CDMA ASIC (my slice: FPGA implementation and pre-chip FPGA tests), supervisor Dr. Fatemeh (Noyan) Akbar, grade 20/20
+  Research: Team thesis: efficient design and implementation of a spread-time CDMA ASIC; responsibilities: FPGA implementation and pre-chip FPGA testing; supervisor: Dr. Fatemeh (Noyan) Akbar; grade: 20/20.
 
 ## 💼 Experience
 
 | Period | Role | Organisation |
 |--------|------|--------------|
 | 2026-04 – Present | ML Engineer — Self-Hosted Graph RAG Assistant | Iran Credit Scoring Bureau |
-| 2025-09 – 2026-03 | Senior Data Scientist & Data Engineer | Turquoise Digital |
-| 2025-09 – 2026-04 | Computer Vision / ML Platform Engineer (Edge) | Advanced Analytics Australia |
-| 2025-07 – 2025-09 | Research Collaborator — Explainable & Robust AI | Sharif University — Robust & Interpretable ML Lab |
-| 2025-05 – 2025-11 | Machine Learning Researcher — Emotion-Aware Speech Translation | Trinity College Dublin — EmoDub Project |
-| 2025-01 – 2025-08 | AI Engineering R&D Lead | Digikala |
-| 2024-11 – 2025-01 | AI Engineer | Digikala |
+| 2025-06 – 2025-08 | Research Collaborator — Explainable & Robust AI | Sharif University — Robust & Interpretable ML Lab |
+| 2025-05 – 2026-04 | Senior Data Scientist & Data Engineer | Turquoise Digital |
+| 2024-04 – 2025-05 | Computer Vision / ML Platform Engineer (Edge) | Advanced Analytics Australia |
 | 2024-02 – 2025-11 | Research Assistant — Vision-Language Medical Imaging (Ultrasound Report Generation) | University of British Columbia |
-| 2023-08 – 2024-01 | Teaching Assistant — NLP, Generative Models, Deep Learning | Sharif University of Technology |
-| 2023-04 – 2024-02 | Research Assistant — Video Motion Classification | L3S Research Center — Leibniz University Hannover |
-| 2021-08 – 2022-02 | MLOps Engineer (Founding) | HomaCloud |
-| 2021-05 – 2021-08 | MLOps Intern | HomaCloud |
-| 2021-01 – 2023-08 | Teaching Assistant — History (8 courses, 2021-2023) | Sharif University of Technology |
+| 2023-12 – 2025-05 | Senior AI Engineer | Digikala |
+| 2023-05 – 2024-04 | Machine Learning Engineer — Emotion-Aware Speech Translation | Trinity College Dublin — EmoDub Project |
+| 2023-05 – 2024-02 | Research Assistant — Video Motion Classification | L3S Research Center — Leibniz University Hannover |
+| 2022-12 – 2023-12 | AI Engineer | Digikala |
+| 2021-11 – 2022-12 | MLOps Engineer | HomaCloud |
+| 2021-08 – 2021-11 | MLOps Intern | HomaCloud |
 | 2021-01 – 2021-05 | Full Stack Engineer | Mapna-MD2 |
 
 ## 🛠️ Stack
@@ -53,9 +50,9 @@
 
 ## 🧪 Research & Projects
 
-- **Emotion-aware voice translation** — Trinity College Dublin · EmoDub (2025-05 – 2025-11)
+- **Emotion-aware voice translation** — Trinity College Dublin · EmoDub (2023-05 – 2024-04)
 - **Ultrasound report generation** — University of British Columbia (2024-02 – 2025-11)
-- **Texture-free motion intelligence** — L3S Research Center (2023-04 – 2024-02)
+- **Texture-free motion intelligence** — L3S Research Center (2023-05 – 2024-02)
 
 ## 📚 Publications
 

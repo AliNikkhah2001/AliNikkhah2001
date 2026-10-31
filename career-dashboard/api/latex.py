@@ -110,18 +110,41 @@ def date_range(start: DatePrecision, end: DatePrecision | None, ongoing: bool) -
 def categorize(pos: Position) -> str:
     t = pos.title.lower()
     if "teaching assistant" in t or "instructor" in t:
-        return "education"
+        return "teaching"
+    # Full-time industry roles (incl. R&D Lead) belong to Industry, not Research.
+    if pos.employment_type == "full_time":
+        return "full-time"
     if re.search(r"research|\br&d\b|scholar|fellow|collaborator", t):
         return "research"
-    return "full-time" if pos.employment_type == "full_time" else "part-time"
+    return "part-time"
 
 
 def _by_start_desc(items, key=lambda x: x.start.year * 100 + (x.start.month or 1)):
     return sorted(items, key=key, reverse=True)
 
 
-def db_hash(db: CareerDatabase) -> str:
-    return hashlib.md5(db.model_dump_json(exclude_none=True).encode()).hexdigest()[:12]
+def db_hash(db: CareerDatabase, opts: dict | None = None) -> str:
+    base = db.model_dump_json(exclude_none=True)
+    if opts:
+        base += "|" + json.dumps(opts, sort_keys=True, default=str)
+    return hashlib.md5(base.encode()).hexdigest()[:12]
+
+
+def _wording_text(ach, wording: str | None, compact: bool = False) -> str:
+    if wording == "brief":
+        return ach.brief_text or ach.text
+    if wording == "detailed":
+        return ach.detailed_text or ach.text
+    if compact:  # legacy behavior: compact layout used brief wording
+        return ach.brief_text or ach.text
+    return ach.text
+
+
+def _enabled(opts: dict | None, section: str) -> bool:
+    """Section gate: no opts → everything on; otherwise membership in opts['sections']."""
+    if not opts:
+        return True
+    return section in (opts.get("sections") or [])
 
 
 def _org_map(db: CareerDatabase) -> dict:
@@ -257,13 +280,12 @@ def _skills_section(db: CareerDatabase) -> str:
     return "\n".join(out)
 
 
-def _position_block(pos: Position, db: CareerDatabase, orgs: dict, achs: dict, compact: bool = False) -> str:
+def _position_block(pos: Position, db: CareerDatabase, orgs: dict, achs: dict,
+                    compact: bool = False, wording: str | None = None) -> str:
     org = orgs.get(pos.organization_id)
     org_name = tex_esc(org.name if org else "Unknown")
     loc = tex_esc(pos.location or "")
     title = tex_esc(pos.title)
-    if pos.concurrent_note:
-        title += r" \textit{\scriptsize (Concurrent)}"
     lines = [
         "\\resumeSubheading",
         f"  {{{org_name}}}{{{loc}}}",
@@ -274,27 +296,33 @@ def _position_block(pos: Position, db: CareerDatabase, orgs: dict, achs: dict, c
     for aid in pos.achievements:
         a = achs.get(aid)
         if a:
-            texts.append((a.brief_text or a.text) if compact else a.text)
+            texts.append(_wording_text(a, wording, compact))
     if not texts and pos.summary:
         texts.append(pos.summary)
     for t in texts:
         lines.append(f"  \\resumeItem{{{tex_esc(t)}}}")
     if pos.tech_stack and not compact:
         lines.append(f"  \\resumeItem{{\\textit{{Stack:}} {tex_esc(', '.join(pos.tech_stack))}}}")
-    if pos.concurrent_note and not compact:
-        lines.append(f"  \\resumeItem{{\\textit{{{tex_esc(pos.concurrent_note)}}}}}")
     if len(lines) == 4:  # header only + begin + end
         lines.insert(4, "  \\resumeItem{}")
     lines.append("\\end{resumeItemList}")
     return "\n".join(lines)
 
 
-def _teaching_segment(db: CareerDatabase) -> str:
+def _has_items(segment: str) -> bool:
+    """True if a generated segment contains real LaTeX content (not just comments)."""
+    return any(
+        ln.strip() and not ln.strip().startswith("%")
+        for ln in segment.splitlines()
+    )
+
+
+def _teaching_segment(db: CareerDatabase, wording: str | None = None) -> str:
     orgs = _org_map(db)
     achs = _ach_map(db)
     out: list[str] = []
-    for pos in _by_start_desc([p for p in db.positions if categorize(p) == "education"]):
-        out.append(_position_block(pos, db, orgs, achs))
+    for pos in _by_start_desc([p for p in db.positions if categorize(p) in ("education", "teaching")]):
+        out.append(_position_block(pos, db, orgs, achs, wording=wording))
         out.append("")
     # group explicit teaching records by role+org
     groups: dict[tuple, list] = {}
@@ -317,10 +345,41 @@ def _teaching_segment(db: CareerDatabase) -> str:
     return "\n".join(out) if out else "% no teaching entries\n"
 
 
-def generate_academic(db: CareerDatabase, cache: Path) -> None:
+def _apply_style(tex: str, style: dict | None) -> str:
+    """Override page margins / font size / line spacing on assembled LaTeX."""
+    if not style:
+        return tex
+    margin = style.get("margin")
+    if margin:
+        m = f"{float(margin):g}"
+        tex = tex.replace(
+            r"\usepackage[empty]{fullpage}",
+            rf"\usepackage[left={m}in,right={m}in,top={m}in,bottom={m}in]{{geometry}}",
+        )
+        tex = re.sub(
+            r"^\\addtolength\{\\(?:oddsidemargin|evensidemargin|textwidth|topmargin|textheight)\}"
+            r"\{[-+]?[.0-9]+in\}[ \t]*\n",
+            "", tex, flags=re.M,
+        )
+    font_size = style.get("font_size")
+    if font_size:
+        tex = re.sub(r"(\\documentclass\[[^\]]*?)\d+pt", rf"\g<1>{int(font_size)}pt", tex, count=1)
+    spacing = style.get("line_spacing")
+    if spacing:
+        tex = tex.replace(
+            r"\begin{document}",
+            "\\begin{document}\n" + rf"\linespread{{{float(spacing):g}}}\selectfont",
+            1,
+        )
+    return tex
+
+
+def generate_academic(db: CareerDatabase, cache: Path, opts: dict | None = None) -> None:
     """Write main.tex + segments/ + themes/*.tex into the cache tree."""
     orgs = _org_map(db)
     achs = _ach_map(db)
+    wording = (opts or {}).get("wording_level")
+    compact = bool(opts and opts.get("format") == "1page")
     (cache / "segments" / "publications").mkdir(parents=True, exist_ok=True)
     (cache / "segments" / "research_experience").mkdir(parents=True, exist_ok=True)
     (cache / "segments" / "teaching_mentoring").mkdir(parents=True, exist_ok=True)
@@ -328,28 +387,12 @@ def generate_academic(db: CareerDatabase, cache: Path) -> None:
 
     main = ACADEMIC_PREAMBLE + "\n% ==============================================================================\n\\begin{document}\n\n"
     main += "% --- HEADER ---\n" + _academic_header(db)
-    main += "\n" + _research_interests(db)
-    main += _education_section(db)
-    main += (
-        "\\section{Publications \\& Preprints}\n"
-        "\\begin{itemize}[leftmargin=0.15in, label={}]\n"
-        "  \\input{segments/publications/list.tex}\n"
-        "\\end{itemize}\n\n"
-        "\\section{Research Experience}\n\\begin{resumeSubHeadingList}\n"
-        "  \\input{segments/research_experience/entries.tex}\n"
-        "\\end{resumeSubHeadingList}\n\n"
-        "\\section{Teaching \\& Mentoring}\n\\begin{resumeSubHeadingList}\n"
-        "  \\input{segments/teaching_mentoring/ta_history.tex}\n"
-        "\\end{resumeSubHeadingList}\n\n"
-        "\\section{Industry Experience}\n\\begin{resumeSubHeadingList}\n"
-        "  \\input{segments/research_experience/industry.tex}\n"
-        "\\end{resumeSubHeadingList}\n\n"
-    )
-    main += _skills_section(db)
-    main += "\\end{document}\n"
-    (cache / "main.tex").write_text(main, encoding="utf-8")
+    if _enabled(opts, "summary"):
+        main += "\n" + _research_interests(db)
+    if _enabled(opts, "education"):
+        main += _education_section(db)
 
-    # publications segment
+    # publications segment (built before main so empty sections can be skipped)
     pubs = ["% generated from career_db", ""]
     status_map = {"published": "", "preprint": "arXiv preprint", "in_preparation": "in preparation",
                   "under_review": "under review"}
@@ -364,18 +407,52 @@ def generate_academic(db: CareerDatabase, cache: Path) -> None:
         )
     if len(pubs) == 2:
         pubs.append("% no publications yet")
-    (cache / "segments" / "publications" / "list.tex").write_text("\n".join(pubs) + "\n", encoding="utf-8")
+    pubs_tex = "\n".join(pubs) + "\n"
+    (cache / "segments" / "publications" / "list.tex").write_text(pubs_tex, encoding="utf-8")
 
     research = _by_start_desc([p for p in db.positions if categorize(p) == "research"])
-    entries = "\n\n".join(_position_block(p, db, orgs, achs) for p in research) or "% no research positions"
+    entries = "\n\n".join(_position_block(p, db, orgs, achs, compact=compact, wording=wording) for p in research) or "% no research positions"
     (cache / "segments" / "research_experience" / "entries.tex").write_text(entries + "\n", encoding="utf-8")
 
     industry = _by_start_desc([p for p in db.positions if categorize(p) in ("full-time", "part-time")])
-    ind = "\n\n".join(_position_block(p, db, orgs, achs) for p in industry) or "% no industry positions"
+    ind = "\n\n".join(_position_block(p, db, orgs, achs, compact=compact, wording=wording) for p in industry) or "% no industry positions"
     (cache / "segments" / "research_experience" / "industry.tex").write_text(ind + "\n", encoding="utf-8")
 
-    teaching = _teaching_segment(db)
+    teaching = _teaching_segment(db, wording=wording)
     (cache / "segments" / "teaching_mentoring" / "ta_history.tex").write_text(teaching + "\n", encoding="utf-8")
+
+    # Sections gated by the resume config, then skipped when empty — an empty
+    # itemize is a LaTeX fatal error. Research + industry are both "experience".
+    if _enabled(opts, "publications") and _has_items(pubs_tex):
+        main += (
+            "\\section{Publications \\& Preprints}\n"
+            "\\begin{itemize}[leftmargin=0.15in, label={}]\n"
+            "  \\input{segments/publications/list.tex}\n"
+            "\\end{itemize}\n\n"
+        )
+    if _enabled(opts, "experience") and _has_items(entries):
+        main += (
+            "\\section{Research Experience}\n\\begin{resumeSubHeadingList}\n"
+            "  \\input{segments/research_experience/entries.tex}\n"
+            "\\end{resumeSubHeadingList}\n\n"
+        )
+    if _enabled(opts, "teaching") and _has_items(teaching):
+        main += (
+            "\\section{Teaching \\& Mentoring}\n\\begin{resumeSubHeadingList}\n"
+            "  \\input{segments/teaching_mentoring/ta_history.tex}\n"
+            "\\end{resumeSubHeadingList}\n\n"
+        )
+    if _enabled(opts, "experience") and _has_items(ind):
+        main += (
+            "\\section{Industry Experience}\n\\begin{resumeSubHeadingList}\n"
+            "  \\input{segments/research_experience/industry.tex}\n"
+            "\\end{resumeSubHeadingList}\n\n"
+        )
+    if _enabled(opts, "skills"):
+        main += _skills_section(db)
+    main += "\\end{document}\n"
+    main = _apply_style(main, (opts or {}).get("style"))
+    (cache / "main.tex").write_text(main, encoding="utf-8")
 
     # themes: base = main.tex with segment inputs rewritten for themes/ cwd
     base = main.replace(r"\input{segments/", r"\input{../segments/")
@@ -411,11 +488,11 @@ def _industrial_skills(db: CareerDatabase) -> str:
     return "\n".join(out) + "\n"
 
 
-def _industrial_experience(db: CareerDatabase, compact: bool = False) -> str:
+def _industrial_experience(db: CareerDatabase, compact: bool = False, wording: str | None = None) -> str:
     orgs = _org_map(db)
     achs = _ach_map(db)
     positions = _by_start_desc(db.positions)
-    return "\n\n".join(_position_block(p, db, orgs, achs, compact=compact) for p in positions) + "\n"
+    return "\n\n".join(_position_block(p, db, orgs, achs, compact=compact, wording=wording) for p in positions) + "\n"
 
 
 def _industrial_projects(db: CareerDatabase) -> str:
@@ -438,7 +515,7 @@ def _industrial_projects(db: CareerDatabase) -> str:
             lines.insert(4, "  \\resumeItem{}")
         lines.append("\\end{resumeItemList}")
         out.append("\n".join(lines))
-    return "\n\n".join(out) + "\n" if out else "% no projects\n"
+    return "\n\n".join(out) + "\n" if out else "\\item[] % no projects\n"
 
 
 def _industrial_education(db: CareerDatabase) -> str:
@@ -457,17 +534,47 @@ def _industrial_education(db: CareerDatabase) -> str:
     return "\n".join(out) + "\n"
 
 
-def generate_industrial(db: CareerDatabase, cache: Path, compact: bool = False) -> None:
+INDUSTRIAL_SECTION_MAP = {
+    "Summary": "summary",
+    "Technical Skills": "skills",
+    "Professional Experience": "experience",
+    r"Selected Projects \& Research": "projects",
+    "Education": "education",
+}
+
+
+def _filter_industrial_body(body: str, opts: dict | None) -> str:
+    """Drop \section blocks whose wizard section is unchecked, keeping \end{document}."""
+    if not opts:
+        return body
+    enabled = set(opts.get("sections") or [])
+    out: list[str] = []
+    keep = True
+    for ln in body.splitlines(keepends=True):
+        if ln.startswith("\\section{"):
+            title = ln.split("{", 1)[1].rstrip("}\n")
+            key = INDUSTRIAL_SECTION_MAP.get(title)
+            keep = key is None or key in enabled
+        elif ln.startswith("\\end{document}"):
+            keep = True
+        if keep:
+            out.append(ln)
+    return "".join(out)
+
+
+def generate_industrial(db: CareerDatabase, cache: Path, compact: bool = False, opts: dict | None = None) -> None:
     gallery = RESUME / "industrial" / "theme-gallery"
-    body = (gallery / "body.tex").read_text(encoding="utf-8")
+    body = _filter_industrial_body((gallery / "body.tex").read_text(encoding="utf-8"), opts)
+    wording = (opts or {}).get("wording_level")
+    one_page = bool(opts and opts.get("format") == "1page")
     (cache / "segments" / "generated" / "live").mkdir(parents=True, exist_ok=True)
     (cache / "segments" / "common").mkdir(parents=True, exist_ok=True)
 
     gen = cache / "segments" / "generated" / "live"
     (gen / "summary.tex").write_text(_industrial_summary(db), encoding="utf-8")
     (gen / "skills.tex").write_text(_industrial_skills(db), encoding="utf-8")
-    (gen / "experience.tex").write_text(_industrial_experience(db), encoding="utf-8")
-    (gen / "experience-compact.tex").write_text(_industrial_experience(db, compact=True), encoding="utf-8")
+    (gen / "experience.tex").write_text(_industrial_experience(db, wording=wording), encoding="utf-8")
+    (gen / "experience-compact.tex").write_text(_industrial_experience(db, compact=True, wording=wording), encoding="utf-8")
     (gen / "projects.tex").write_text(_industrial_projects(db), encoding="utf-8")
     (cache / "segments" / "common" / "education.tex").write_text(_industrial_education(db), encoding="utf-8")
     body_compact = body.replace("experience.tex", "experience-compact.tex")
@@ -475,12 +582,13 @@ def generate_industrial(db: CareerDatabase, cache: Path, compact: bool = False) 
 
     for slug, _name in INDUSTRIAL_PREAMBLES:
         preamble = (gallery / f"preamble-{_industrial_num(slug)}-{slug}.tex").read_text(encoding="utf-8")
-        body_file = body_compact if (compact and slug == "ieee") else body
+        body_file = body_compact if (one_page or (compact and slug == "ieee")) else body
         assembled = (
             f"% assembled from theme-gallery/preamble-{slug} + generated career_db body\n"
             "\\newcommand{\\cvvariant}{live}\n"
             + preamble + "\n" + body_file
         )
+        assembled = _apply_style(assembled, (opts or {}).get("style"))
         (cache / f"main-{slug}.tex").write_text(assembled, encoding="utf-8")
 
 
@@ -492,12 +600,32 @@ def _industrial_num(slug: str) -> str:
 # --------------------------------------------------------------------------- #
 # rendercv generator
 # --------------------------------------------------------------------------- #
-def generate_rendercv(db: CareerDatabase, out_dir: Path, theme: str, variant_id: str = "long") -> Path:
+def generate_rendercv(db: CareerDatabase, out_dir: Path, theme: str, variant_id: str = "long",
+                      opts: dict | None = None) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
-    payload = db.to_rendercv(variant_id)
-    # payload is a dict of cv: ... sections; strip any existing design block and set theme
+    payload = db.to_rendercv(
+        variant_id,
+        position_ids=(opts or {}).get("position_ids"),
+        wording_level=(opts or {}).get("wording_level"),
+        sections=(opts or {}).get("sections"),
+    )
+    # payload is a dict of cv: ... sections; build design block from theme + style
     payload.pop("design", None)
-    payload["design"] = {"theme": theme}
+    design: dict = {"theme": theme}
+    style = (opts or {}).get("style") or {}
+    if style.get("margin"):
+        m = f"{float(style['margin']):g}in"
+        design["page"] = {
+            "left_margin": m, "right_margin": m, "top_margin": m, "bottom_margin": m,
+        }
+    typography: dict = {}
+    if style.get("font_size"):
+        typography["font_size"] = {"body": f"{int(style['font_size'])}pt"}
+    if style.get("line_spacing"):
+        typography["line_spacing"] = f"{0.6 * float(style['line_spacing']):g}em"
+    if typography:
+        design["typography"] = typography
+    payload["design"] = design
     import yaml as _yaml  # PyYAML installed alongside fastapi extras
 
     yaml_path = out_dir / "cv.yaml"
@@ -651,20 +779,50 @@ def registry(db: CareerDatabase) -> list[dict[str, Any]]:
 # --------------------------------------------------------------------------- #
 # compile entry point
 # --------------------------------------------------------------------------- #
-def compile_template(db: CareerDatabase, template_id: str, force: bool = False) -> dict[str, Any]:
+def _flatten_tex(path: Path, depth: int = 0) -> str:
+    """Inline \\input{...} references relative to the file's own directory."""
+    text = path.read_text(encoding="utf-8")
+    if depth > 3:
+        return text
+
+    def repl(m: "re.Match[str]") -> str:
+        # body.tex references segments via the \cvvariant macro (always "live" here)
+        rel = m.group(1).replace("\\cvvariant", "live")
+        target = path.parent / rel
+        if not target.suffix:
+            target = target.with_suffix(".tex")
+        if target.exists() and target.is_file():
+            return _flatten_tex(target, depth + 1)
+        return m.group(0)
+
+    return re.sub(r"\\input\{([^}]+)\}", repl, text)
+
+
+def _write_source_copy(entry: Path, target: Path) -> None:
+    """Copy the generated entry file next to the output, inlining its segments."""
+    try:
+        content = _flatten_tex(entry)
+    except OSError:
+        content = entry.read_text(encoding="utf-8")
+    target.with_suffix(entry.suffix or ".tex").write_text(content, encoding="utf-8")
+
+
+def compile_template(db: CareerDatabase, template_id: str, force: bool = False,
+                     opts: dict | None = None, out_pdf: Path | None = None) -> dict[str, Any]:
     start = time.time()
     known = {i["id"] for i in registry(db)}
     if template_id not in known:
         raise KeyError(f"unknown template: {template_id}")
 
-    out_pdf = pdf_path(template_id)
-    if out_pdf.exists() and not force:
+    default_pdf = pdf_path(template_id)
+    target = out_pdf or default_pdf
+    if target == default_pdf and target.exists() and not force:
         item = next(i for i in registry(db) if i["id"] == template_id)
         if not item["stale"]:
             return {"ok": True, "cached": True, "pages": item["pages"], "duration": round(time.time() - start, 2)}
 
-    out_pdf.parent.mkdir(parents=True, exist_ok=True)
-    h = db_hash(db)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    h = db_hash(db, opts)
 
     ok, log = False, ""
     family = template_id.split("-", 1)[0]
@@ -674,33 +832,37 @@ def compile_template(db: CareerDatabase, template_id: str, force: bool = False) 
             slug = template_id.split("-", 1)[1]
             cache = _cache_dir("academic", h)
             if not (cache / "themes" / f"theme_{slug}.tex").exists():
-                generate_academic(db, cache)
+                generate_academic(db, cache, opts)
             cwd = cache / "themes"
+            # keep the generated entry source (segments inlined) next to the output
+            _write_source_copy(cwd / f"theme_{slug}.tex", target)
             ok, log = _run([
                 "pdflatex", "-interaction=nonstopmode", "-halt-on-error",
                 f"theme_{slug}.tex",
             ], cwd=cwd)
             produced = cwd / f"theme_{slug}.pdf"
             if ok and produced.exists():
-                shutil.copy(produced, out_pdf)
+                shutil.copy(produced, target)
 
         elif family == "industrial":
             slug = template_id.split("-", 1)[1]
             cache = _cache_dir("industrial", h)
             if not (cache / f"main-{slug}.tex").exists():
-                generate_industrial(db, cache, compact=(slug == "ieee"))
+                generate_industrial(db, cache, compact=(slug == "ieee"), opts=opts)
+            _write_source_copy(cache / f"main-{slug}.tex", target)
             ok, log = _run([
                 "pdflatex", "-interaction=nonstopmode", "-halt-on-error",
                 f"main-{slug}.tex",
             ], cwd=cache)
             produced = cache / f"main-{slug}.pdf"
             if ok and produced.exists():
-                shutil.copy(produced, out_pdf)
+                shutil.copy(produced, target)
 
         elif family == "rendercv":
             theme = template_id.split("-", 1)[1]
             work = BUILD / template_id / "src"
-            yaml_path = generate_rendercv(db, work, theme)
+            yaml_path = generate_rendercv(db, work, theme, opts=opts)
+            shutil.copy(yaml_path, target.with_suffix(".yaml"))
             bin_path = _rendercv_bin()
             ok, log = _run([
                 str(bin_path), "render", "cv.yaml", "-o", "out", "-nomd", "-nopng",
@@ -708,13 +870,13 @@ def compile_template(db: CareerDatabase, template_id: str, force: bool = False) 
             ], cwd=work)
             produced = work / "out" / "cv.pdf"
             if ok and produced.exists():
-                shutil.copy(produced, out_pdf)
+                shutil.copy(produced, target)
 
         elif family == "upstream":
             entry_id = template_id.split("-", 1)[1]
-            src = out_pdf.parent / "src"
+            src = default_pdf.parent / "src"
             info = prepare_upstream(entry_id, src)
-            out_dir = out_pdf.parent / "build"
+            out_dir = default_pdf.parent / "build"
             if out_dir.exists():
                 shutil.rmtree(out_dir)
             out_dir.mkdir(parents=True, exist_ok=True)
@@ -733,7 +895,7 @@ def compile_template(db: CareerDatabase, template_id: str, force: bool = False) 
             ok, log = _run(cmd, cwd=src, timeout=420)
             pdfs = sorted(out_dir.glob("*.pdf"), key=lambda p: p.stat().st_mtime, reverse=True)
             if ok and pdfs:
-                shutil.copy(pdfs[0], out_pdf)
+                shutil.copy(pdfs[0], target)
 
     except KeyError as e:
         return {"ok": False, "error": str(e), "log": "", "duration": round(time.time() - start, 2)}
@@ -742,8 +904,8 @@ def compile_template(db: CareerDatabase, template_id: str, force: bool = False) 
                 "duration": round(time.time() - start, 2)}
 
     duration = round(time.time() - start, 2)
-    if ok and out_pdf.exists():
-        return {"ok": True, "cached": False, "pages": _pdf_pages(out_pdf), "duration": duration}
+    if ok and target.exists():
+        return {"ok": True, "cached": False, "pages": _pdf_pages(target), "duration": duration}
     return {
         "ok": False,
         "error": "engine reported failure" if not ok else "engine succeeded but PDF missing",

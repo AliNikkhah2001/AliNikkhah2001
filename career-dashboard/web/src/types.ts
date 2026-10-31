@@ -155,6 +155,37 @@ export interface ValidationReport {
   total: number
 }
 
+export interface ResumeStyle {
+  margin?: number
+  font_size?: number
+  line_spacing?: number
+}
+
+export interface ResumeConfig {
+  id: string
+  name: string
+  position_ids: string[]
+  project_ids: string[]
+  sections: string[]
+  template: string
+  format: '1page' | '2page' | 'long'
+  wording_level: 'brief' | 'standard' | 'detailed'
+  exclude_incomplete: boolean
+  style?: ResumeStyle | null
+  created_at?: string
+  updated_at?: string
+}
+
+export interface ResumeCompileResult {
+  ok: boolean
+  pages?: number | null
+  error?: string
+  log?: string
+  excluded_records?: string[]
+  pdf_url?: string
+  source_url?: string
+}
+
 export interface TemplateInfo {
   id: string
   name: string

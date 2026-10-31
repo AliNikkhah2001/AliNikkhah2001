@@ -178,6 +178,21 @@ class Variant(BaseModel):
     page_limit: int = 2
 
 
+class ResumeConfig(BaseModel):
+    id: str = Field(default_factory=lambda: uuid4().hex[:12])
+    name: str
+    position_ids: list[str] = Field(default_factory=list)
+    project_ids: list[str] = Field(default_factory=list)
+    sections: list[str] = Field(default_factory=lambda: ["summary", "skills", "experience", "projects", "education"])
+    template: str = "industrial-classic"
+    format: Literal["1page", "2page", "long"] = "2page"
+    wording_level: Literal["brief", "standard", "detailed"] = "standard"
+    exclude_incomplete: bool = True
+    style: Optional[dict[str, float]] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+
+
 class CareerDatabase(BaseModel):
     schema_version: int = 1
     profile: Profile
@@ -192,6 +207,7 @@ class CareerDatabase(BaseModel):
     variants: list[Variant] = Field(default_factory=list)
     interview_prep: dict[str, Any] = Field(default_factory=dict)
     acknowledged: list[str] = Field(default_factory=list)
+    resume_configs: list[ResumeConfig] = Field(default_factory=list)
 
     def get_organization(self, org_id: str) -> Optional[Organization]:
         return next((o for o in self.organizations if o.id == org_id), None)
@@ -331,8 +347,13 @@ class CareerDatabase(BaseModel):
             },
         }
 
-    def to_rendercv(self, variant_id: str) -> dict:
-        """Export to RenderCV YAML for a specific variant."""
+    def to_rendercv(self, variant_id: str, position_ids: list[str] | None = None,
+                    wording_level: str | None = None, sections: list[str] | None = None) -> dict:
+        """Export to RenderCV YAML for a specific variant.
+
+        Optional overrides let a resume config drive selection without persisting
+        a variant: position_ids / wording_level / sections (wizard section ids).
+        """
         variant = next((v for v in self.variants if v.id == variant_id), None)
         if not variant:
             raise ValueError(f"Variant {variant_id} not found")
@@ -342,7 +363,9 @@ class CareerDatabase(BaseModel):
         edu_map = {e.id: e for e in self.education}
         ach_map = {a.id: a for a in self.achievements}
 
-        selected_positions = [pos_map[pid] for pid in variant.position_ids if pid in pos_map]
+        ids = position_ids if position_ids is not None else variant.position_ids
+        wording = wording_level or variant.wording_level
+        selected_positions = [pos_map[pid] for pid in ids if pid in pos_map]
 
         experience = []
         for p in selected_positions:
@@ -351,8 +374,8 @@ class CareerDatabase(BaseModel):
             for aid in p.achievements:
                 ach = ach_map.get(aid)
                 if ach:
-                    text = variant.wording_level == "brief" and ach.brief_text or ach.detailed_text
-                    highlights.append(text or ach.text)
+                    text = (wording == "brief" and ach.brief_text) or ach.detailed_text or ach.text
+                    highlights.append(text)
             experience.append({
                 "company": org.name if org else "Unknown",
                 "position": p.title,
@@ -392,7 +415,7 @@ class CareerDatabase(BaseModel):
             }.get(s.category, s.category)
             skills_dict.setdefault(cat, []).append(s.name)
 
-        return {
+        payload = {
             "cv": {
                 "name": self.profile.name,
                 "headline": self.profile.headline,
@@ -424,6 +447,11 @@ class CareerDatabase(BaseModel):
             },
             "design": {"theme": "classic"},
         }
+        if sections is not None:
+            enabled = set(sections)
+            cv_sections = payload["cv"]["sections"]
+            payload["cv"]["sections"] = {k: v for k, v in cv_sections.items() if k in enabled and v}
+        return payload
 
     def to_linkedin_sections(self) -> dict:
         """Generate LinkedIn-style sections for copy-paste."""

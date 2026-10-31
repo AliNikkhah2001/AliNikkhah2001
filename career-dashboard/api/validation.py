@@ -36,13 +36,159 @@ def _position_window(p: Position) -> tuple[int, int]:
 
 
 def _overlaps(a: tuple[int, int], b: tuple[int, int]) -> bool:
-    return a[0] <= b[1] and b[0] <= a[1]
+    # Strict overlap: sharing only a single boundary month (exact handoff,
+    # e.g. intern ends Nov 2021 and engineer starts Nov 2021) is standard
+    # CV month-precision dating, not parallel employment.
+    return a[0] < b[1] and b[0] < a[1]
 
 
 def _fmt_month(ym: int | None) -> str:
     if ym is None:
         return "?"
     return f"{ym // 100:04d}-{ym % 100:02d}"
+
+
+PLACEHOLDER_PATTERNS = [
+    r"\[TBD\]", r"\[Co-authors TBD\]", r"\[.*TBD.*\]",
+    r"^\s*TODO\s*$", r"^\s*todo\s*$",
+    r"^\s*A\. Supervisor\s*$",
+    r"^\s*$",
+]
+
+def _is_placeholder(text: str | None) -> bool:
+    """Check if a text field contains placeholder content."""
+    if not text:
+        return True
+    for pat in PLACEHOLDER_PATTERNS:
+        import re
+        if re.search(pat, text, re.IGNORECASE):
+            return True
+    return False
+
+def scan_placeholders(db: CareerDatabase) -> list[dict[str, Any]]:
+    """Find all records with placeholder/incomplete content."""
+    findings = []
+    # Publications
+    for pub in db.publications:
+        for author in pub.authors:
+            if _is_placeholder(author) or "TBD" in author:
+                findings.append({
+                    "record_type": "publication",
+                    "record_id": pub.id,
+                    "field": "authors",
+                    "issue": f"Placeholder author: {author}",
+                    "action": "Exclude from CV until real names are added",
+                })
+        if not pub.url:
+            findings.append({
+                "record_type": "publication",
+                "record_id": pub.id,
+                "field": "url",
+                "issue": "Missing URL/link",
+                "action": "Add arXiv URL or remove from CV",
+            })
+        if pub.status in ("preprint", "in_preparation") and not pub.url:
+            findings.append({
+                "record_type": "publication",
+                "record_id": pub.id,
+                "field": "status",
+                "issue": "Status is preprint/in_preparation but no URL",
+                "action": "Set to in_preparation or add URL",
+            })
+    # Education
+    for edu in db.education:
+        if not edu.gpa and not edu.ongoing:
+            findings.append({
+                "record_type": "education",
+                "record_id": edu.id,
+                "field": "gpa",
+                "issue": "Missing GPA",
+                "action": "Add GPA or leave empty if not applicable",
+            })
+        if not edu.thesis and not edu.ongoing:
+            findings.append({
+                "record_type": "education",
+                "record_id": edu.id,
+                "field": "thesis",
+                "issue": "Missing thesis title",
+                "action": "Add thesis title or mark as ongoing",
+            })
+    # Achievements
+    for ach in db.achievements:
+        if _is_placeholder(ach.text):
+            findings.append({
+                "record_type": "achievement",
+                "record_id": ach.id,
+                "field": "text",
+                "issue": f"Placeholder text: {ach.text[:60]}",
+                "action": "Rewrite with real content before including in CV",
+            })
+    # Positions
+    for pos in db.positions:
+        if _is_placeholder(pos.summary):
+            findings.append({
+                "record_type": "position",
+                "record_id": pos.id,
+                "field": "summary",
+                "issue": "Placeholder summary",
+                "action": "Write a real summary",
+            })
+    # Projects
+    for proj in db.projects:
+        if _is_placeholder(proj.summary) or _is_placeholder(proj.description):
+            findings.append({
+                "record_type": "project",
+                "record_id": proj.id,
+                "field": "summary/description",
+                "issue": "Placeholder summary or description",
+                "action": "Rewrite with real content",
+            })
+    return findings
+
+
+def filter_incomplete(db: CareerDatabase) -> tuple[CareerDatabase, list[str]]:
+    """Return a copy of db with placeholder/incomplete records removed.
+    Returns (filtered_db, list_of_excluded_ids)."""
+    findings = scan_placeholders(db)
+    excluded_ids = {f["record_id"] for f in findings}
+
+    # Filter publications
+    publications = [p for p in db.publications if p.id not in excluded_ids]
+
+    # Filter education
+    education = [e for e in db.education if e.id not in excluded_ids]
+
+    # Filter achievements
+    achievements = [a for a in db.achievements if a.id not in excluded_ids]
+
+    # Filter positions (and their achievement links)
+    positions = []
+    for p in db.positions:
+        if p.id in excluded_ids:
+            continue
+        p_copy = p.model_copy(deep=True)
+        p_copy.achievements = [aid for aid in p.achievements if aid not in excluded_ids]
+        positions.append(p_copy)
+
+    # Filter projects
+    projects = [p for p in db.projects if p.id not in excluded_ids]
+
+    filtered = CareerDatabase(
+        schema_version=db.schema_version,
+        profile=db.profile,
+        organizations=db.organizations,
+        positions=positions,
+        projects=projects,
+        education=education,
+        publications=publications,
+        teaching=db.teaching,
+        skills=db.skills,
+        achievements=achievements,
+        variants=db.variants,
+        interview_prep=db.interview_prep,
+        acknowledged=db.acknowledged,
+    )
+    return filtered, sorted(excluded_ids)
 
 
 def validate_db(db: CareerDatabase) -> dict[str, Any]:
@@ -103,7 +249,7 @@ def validate_db(db: CareerDatabase) -> dict[str, Any]:
                 add(
                     "info",
                     "work_study_overlap",
-                    f"“{p.title}” runs alongside “{e.degree}” — declared in the CV, keep the phrasing explicit.",
+                    f"“{p.title}” runs alongside “{e.degree}” — expected work-study overlap on the timeline.",
                     [p.id],
                 )
             else:

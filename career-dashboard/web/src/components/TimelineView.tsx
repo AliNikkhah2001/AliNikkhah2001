@@ -25,7 +25,8 @@ const LANE_DEFS = [
   { id: 'full-time', label: 'Full-time Work' },
   { id: 'part-time', label: 'Part-time / Contract' },
   { id: 'research', label: 'R&D / Research' },
-  { id: 'education', label: 'Education & Teaching' },
+  { id: 'education', label: 'Education' },
+  { id: 'teaching', label: 'Teaching' },
   { id: 'project', label: 'Projects' },
 ]
 
@@ -183,19 +184,28 @@ export function TimelineView({ db, onUpdate }: TimelineViewProps) {
           })
         })
 
-        // Add projects
+        // Add projects (linked to their parent position — org + role shown on the bar)
         db.projects.forEach((prj) => {
           const start = fmtDate(prj.start) ?? `${prj.start.year}-01-01`
           const end = resolveEnd(start, fmtDate(prj.end), prj.ongoing)
+          const org = orgMap.get(prj.organization_id ?? '') || 'Unknown'
+          const linkedRoles = db.positions
+            .filter((p) => prj.position_ids?.includes(p.id))
+            .map((p) => p.title)
+          const linkLine = linkedRoles.length
+            ? `<br><small>part of: ${linkedRoles.join(' · ')}</small>`
+            : ''
 
           items.push({
             id: `prj_${prj.id}`,
-            content: `<div style="white-space:normal"><strong>${prj.title}</strong><br><span class="tl-tag" style="background:${PROJECT_CATEGORY.bg};color:${PROJECT_CATEGORY.color}">${PROJECT_CATEGORY.label}</span></div>`,
+            content: `<div style="white-space:normal"><strong>${prj.title}</strong><br><small>${org}</small>${linkLine}<br><span class="tl-tag" style="background:${PROJECT_CATEGORY.bg};color:${PROJECT_CATEGORY.color}">${PROJECT_CATEGORY.label}</span></div>`,
             start,
             end,
             type: 'range',
             className: 'tl-cat-project',
-            title: prj.title,
+            title: linkedRoles.length
+              ? `${prj.title} — part of ${linkedRoles.join(', ')} (${org})`
+              : `${prj.title} (${org})`,
             group: 'project',
           })
         })
@@ -354,7 +364,14 @@ export function TimelineView({ db, onUpdate }: TimelineViewProps) {
           label: 'Education',
           color: CATEGORY_META.education.color,
           bg: CATEGORY_META.education.bg,
-          count: db.education.length + db.positions.filter((p) => categorizePosition(p) === 'education').length,
+          count: db.education.length,
+        },
+        {
+          key: 'teaching',
+          label: CATEGORY_META.teaching.label,
+          color: CATEGORY_META.teaching.color,
+          bg: CATEGORY_META.teaching.bg,
+          count: db.positions.filter((p) => categorizePosition(p) === 'teaching').length,
         },
         {
           key: 'project',

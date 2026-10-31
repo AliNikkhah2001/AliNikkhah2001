@@ -426,12 +426,14 @@ input, textarea, select {
 .vis-item.tl-cat-part-time { background: #d1e7dd; border-color: #198754; }
 .vis-item.tl-cat-research { background: #fff3e0; border-color: #fd7e14; }
 .vis-item.tl-cat-education { background: #f3e8ff; border-color: #6f42c1; }
+.vis-item.tl-cat-teaching { background: #fce7f3; border-color: #db2777; }
 .vis-item.tl-cat-project { background: #e6f4f1; border-color: #0d9488; }
 
 .vis-item.tl-cat-full-time.vis-selected { background: #bfdbfe; border-color: #1d4ed8; box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.35); }
 .vis-item.tl-cat-part-time.vis-selected { background: #a7f3d0; border-color: #0f766e; box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.35); }
 .vis-item.tl-cat-research.vis-selected { background: #fed7aa; border-color: #c2410c; box-shadow: 0 0 0 2px rgba(194, 65, 12, 0.35); }
 .vis-item.tl-cat-education.vis-selected { background: #e9d5ff; border-color: #6d28d9; box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.35); }
+.vis-item.tl-cat-teaching.vis-selected { background: #fbcfe8; border-color: #be185d; box-shadow: 0 0 0 2px rgba(190, 24, 93, 0.35); }
 .vis-item.tl-cat-project.vis-selected { background: #99f6e4; border-color: #0f766e; box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.35); }
 
 .vis-item:hover {
@@ -853,4 +855,94 @@ input, textarea, select {
   color: #198754;
   font-size: 0.78rem;
   font-weight: 600;
+}
+
+/* ===== Resume Builder ===== */
+.rb-steps {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.rb-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6c757d;
+}
+.rb-step.active {
+  background: #e7f1ff;
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+.rb-step.done {
+  background: #d1e7dd;
+  border-color: #198754;
+  color: #0f5132;
+}
+.rb-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  font-size: 0.7rem;
+}
+.rb-step.active .rb-step-num { background: #0d6efd; color: #fff; }
+.rb-step.done .rb-step-num { background: #198754; color: #fff; }
+
+.rb-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+@media (max-width: 992px) {
+  .rb-split { grid-template-columns: 1fr; }
+}
+.rb-pane h4 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #343a40;
+}
+.rb-scrollbox {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 0.4rem 0.5rem;
+  background: #fff;
+}
+.rb-selected {
+  border: 2px solid #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+.rb-pdf {
+  width: 100%;
+  height: 640px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background: #525659;
+}
+.rb-pdf-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  background: #f8f9fa;
+}
+.rb-tex {
+  min-height: 480px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  resize: vertical;
 }

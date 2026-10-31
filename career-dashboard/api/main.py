@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -12,7 +13,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse, Response
 from pydantic import BaseModel
 
-from models import CareerDatabase, Organization, Position, Project, Education, Achievement, Variant
+from models import (
+    CareerDatabase, Organization, Position, Project, Education, Achievement, Variant,
+    Publication, Teaching, Skill, ResumeConfig,
+)
 import ats as ats_mod
 import interview as interview_mod
 import latex as latex_mod
@@ -245,10 +249,68 @@ async def list_education():
     return load_db().education
 
 
+@app.post("/api/education")
+async def create_education(edu: Education):
+    db = load_db()
+    if any(e.id == edu.id for e in db.education):
+        raise HTTPException(409, "Education ID exists")
+    db.education.append(edu)
+    save_db(db)
+    return edu
+
+
+@app.put("/api/education/{edu_id}")
+async def update_education(edu_id: str, edu: Education):
+    db = load_db()
+    for i, e in enumerate(db.education):
+        if e.id == edu_id:
+            db.education[i] = edu
+            save_db(db)
+            return edu
+    raise HTTPException(404, "Education not found")
+
+
+@app.delete("/api/education/{edu_id}")
+async def delete_education(edu_id: str):
+    db = load_db()
+    db.education = [e for e in db.education if e.id != edu_id]
+    save_db(db)
+    return {"deleted": edu_id}
+
+
 # Publications
 @app.get("/api/publications")
 async def list_publications():
     return load_db().publications
+
+
+@app.post("/api/publications")
+async def create_publication(pub: Publication):
+    db = load_db()
+    if any(p.id == pub.id for p in db.publications):
+        raise HTTPException(409, "Publication ID exists")
+    db.publications.append(pub)
+    save_db(db)
+    return pub
+
+
+@app.put("/api/publications/{pub_id}")
+async def update_publication(pub_id: str, pub: Publication):
+    db = load_db()
+    for i, p in enumerate(db.publications):
+        if p.id == pub_id:
+            db.publications[i] = pub
+            save_db(db)
+            return pub
+    raise HTTPException(404, "Publication not found")
+
+
+@app.delete("/api/publications/{pub_id}")
+async def delete_publication(pub_id: str):
+    db = load_db()
+    db.publications = [p for p in db.publications if p.id != pub_id]
+    save_db(db)
+    return {"deleted": pub_id}
 
 
 # Teaching
@@ -257,10 +319,68 @@ async def list_teaching():
     return load_db().teaching
 
 
+@app.post("/api/teaching")
+async def create_teaching(t: Teaching):
+    db = load_db()
+    if any(x.id == t.id for x in db.teaching):
+        raise HTTPException(409, "Teaching ID exists")
+    db.teaching.append(t)
+    save_db(db)
+    return t
+
+
+@app.put("/api/teaching/{t_id}")
+async def update_teaching(t_id: str, t: Teaching):
+    db = load_db()
+    for i, x in enumerate(db.teaching):
+        if x.id == t_id:
+            db.teaching[i] = t
+            save_db(db)
+            return t
+    raise HTTPException(404, "Teaching not found")
+
+
+@app.delete("/api/teaching/{t_id}")
+async def delete_teaching(t_id: str):
+    db = load_db()
+    db.teaching = [x for x in db.teaching if x.id != t_id]
+    save_db(db)
+    return {"deleted": t_id}
+
+
 # Skills
 @app.get("/api/skills")
 async def list_skills():
     return load_db().skills
+
+
+@app.post("/api/skills")
+async def create_skill(skill: Skill):
+    db = load_db()
+    if any(s.id == skill.id for s in db.skills):
+        raise HTTPException(409, "Skill ID exists")
+    db.skills.append(skill)
+    save_db(db)
+    return skill
+
+
+@app.put("/api/skills/{skill_id}")
+async def update_skill(skill_id: str, skill: Skill):
+    db = load_db()
+    for i, s in enumerate(db.skills):
+        if s.id == skill_id:
+            db.skills[i] = skill
+            save_db(db)
+            return skill
+    raise HTTPException(404, "Skill not found")
+
+
+@app.delete("/api/skills/{skill_id}")
+async def delete_skill(skill_id: str):
+    db = load_db()
+    db.skills = [s for s in db.skills if s.id != skill_id]
+    save_db(db)
+    return {"deleted": skill_id}
 
 
 # Variants
@@ -277,6 +397,138 @@ async def create_variant(variant: Variant):
     db.variants.append(variant)
     save_db(db)
     return variant
+
+
+# Resume Configs — step-by-step builder saved configurations
+@app.get("/api/resume-configs")
+async def list_resume_configs():
+    return load_db().resume_configs
+
+
+@app.post("/api/resume-configs")
+async def create_resume_config(config: ResumeConfig):
+    db = load_db()
+    if any(c.id == config.id for c in db.resume_configs):
+        raise HTTPException(409, "Config ID exists")
+    from datetime import datetime, timezone
+    config.created_at = datetime.now(timezone.utc).isoformat()
+    config.updated_at = config.created_at
+    db.resume_configs.append(config)
+    save_db(db)
+    return config
+
+
+@app.put("/api/resume-configs/{config_id}")
+async def update_resume_config(config_id: str, config: ResumeConfig):
+    db = load_db()
+    for i, c in enumerate(db.resume_configs):
+        if c.id == config_id:
+            from datetime import datetime, timezone
+            config.updated_at = datetime.now(timezone.utc).isoformat()
+            db.resume_configs[i] = config
+            save_db(db)
+            return config
+    raise HTTPException(404, "Resume config not found")
+
+
+@app.delete("/api/resume-configs/{config_id}")
+async def delete_resume_config(config_id: str):
+    db = load_db()
+    db.resume_configs = [c for c in db.resume_configs if c.id != config_id]
+    save_db(db)
+    return {"deleted": config_id}
+
+
+# Compile from a resume config
+def _config_pdf_path(config_id: str) -> Path:
+    return latex_mod.BUILD / "resume-configs" / f"{config_id}.pdf"
+
+
+def _load_config(config_id: str):
+    db = load_db()
+    config = next((c for c in db.resume_configs if c.id == config_id), None)
+    if not config:
+        raise HTTPException(404, "Resume config not found")
+    return db, config
+
+
+@app.get("/api/resume-configs/{config_id}/pdf")
+async def get_resume_config_pdf(config_id: str):
+    _, config = _load_config(config_id)
+    pdf = _config_pdf_path(config.id)
+    if not pdf.exists():
+        raise HTTPException(404, "Not compiled yet — run compile first")
+    return FileResponse(pdf, media_type="application/pdf", filename=f"{config.name}.pdf")
+
+
+def _flatten_tex(path: Path, depth: int = 0) -> str:
+    """Inline \\input{...} references so the source pane shows the full document."""
+    text = path.read_text(encoding="utf-8")
+    if depth > 3:
+        return text
+
+    def repl(m: "re.Match[str]") -> str:
+        target = (path.parent / m.group(1))
+        for candidate in (target, target.with_suffix(".tex") if target.suffix != ".tex" else target):
+            if candidate.exists() and candidate.is_file():
+                return _flatten_tex(candidate, depth + 1)
+        return m.group(0)
+
+    return re.sub(r"\\input\{([^}]+)\}", repl, text)
+
+
+@app.get("/api/resume-configs/{config_id}/source")
+async def get_resume_config_source(config_id: str):
+    _, config = _load_config(config_id)
+    base = _config_pdf_path(config.id)
+    tex = base.with_suffix(".tex")
+    if tex.exists():
+        try:
+            return Response(content=_flatten_tex(tex), media_type="text/plain; charset=utf-8")
+        except OSError:
+            return Response(content=tex.read_text(encoding="utf-8"), media_type="text/plain; charset=utf-8")
+    yaml_src = base.with_suffix(".yaml")
+    if yaml_src.exists():
+        return Response(content=yaml_src.read_text(encoding="utf-8"), media_type="text/plain; charset=utf-8")
+    raise HTTPException(404, "No source yet — compile first")
+
+
+@app.post("/api/resume-configs/{config_id}/compile")
+async def compile_from_config(config_id: str):
+    db, config = _load_config(config_id)
+    # Filter to selected positions/projects
+    positions = [p for p in db.positions if p.id in config.position_ids]
+    projects = [p for p in db.projects if p.id in config.project_ids]
+    # Filter out incomplete records
+    excluded = []
+    if config.exclude_incomplete:
+        filtered, excluded = validation_mod.filter_incomplete(db)
+        positions = [p for p in filtered.positions if p.id in config.position_ids]
+        projects = [p for p in filtered.projects if p.id in config.project_ids]
+    # Build a filtered DB
+    filtered_db = db.model_copy(deep=True)
+    filtered_db.positions = positions
+    filtered_db.projects = projects
+    opts = {
+        "sections": config.sections,
+        "format": config.format,
+        "wording_level": config.wording_level,
+        "position_ids": config.position_ids,
+        "style": config.style,
+    }
+    try:
+        result = latex_mod.compile_template(
+            filtered_db, config.template, force=True,
+            opts=opts, out_pdf=_config_pdf_path(config.id),
+        )
+        if excluded:
+            result["excluded_records"] = excluded
+        if result.get("ok"):
+            result["pdf_url"] = f"/api/resume-configs/{config.id}/pdf"
+            result["source_url"] = f"/api/resume-configs/{config.id}/source"
+    except KeyError as e:
+        raise HTTPException(404, str(e))
+    return JSONResponse(content=result, status_code=200 if result.get("ok") else 500)
 
 
 # Exports
@@ -335,9 +587,17 @@ async def get_validation():
     return validation_mod.validate_db(load_db())
 
 
+# Validation — placeholder / incomplete records scan
+@app.get("/api/validation/placeholders")
+async def get_placeholders():
+    findings = validation_mod.scan_placeholders(load_db())
+    return {"findings": findings, "total": len(findings)}
+
+
 # Templates — registry, compile, PDF
 class CompileRequest(BaseModel):
     force: bool = False
+    exclude_incomplete: bool = True
 
 
 @app.get("/api/templates")
@@ -348,9 +608,13 @@ async def list_templates():
 @app.post("/api/templates/{template_id}/compile")
 async def compile_template(template_id: str, body: CompileRequest | None = None):
     try:
-        result = latex_mod.compile_template(
-            load_db(), template_id, force=bool(body and body.force)
-        )
+        db = load_db()
+        excluded = []
+        if body and body.exclude_incomplete:
+            db, excluded = validation_mod.filter_incomplete(db)
+        result = latex_mod.compile_template(db, template_id, force=bool(body and body.force))
+        if excluded:
+            result["excluded_records"] = excluded
     except KeyError as e:
         raise HTTPException(404, str(e))
     return JSONResponse(content=result, status_code=200 if result.get("ok") else 500)

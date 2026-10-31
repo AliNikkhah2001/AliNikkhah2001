@@ -1,7 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Ali Nikkhah
-  headline: Machine Learning Engineer / Researcher
+  headline: Machine Learning Engineer & Researcher — Agentic & Graph RAG, LLM GPU
+    Serving, Vision-Language
   location: Tehran, Iran · Remote-friendly · Open to Relocation
   email: alinkkh9@gmail.com
   phone: +98 991 296 3951
@@ -13,9 +14,8 @@ cv:
     username: AliNikkhah2001
   sections:
     summary:
-    - Applied ML researcher & engineer (Sharif B.Sc. Electrical Engineering 2020-2025,
-      GPA 3.65; M.Sc. AI from Sep 2025) specialising in agentic RAG, multimodal vision-language,
-      self-hosted LLM serving, and…
+    - ML engineer/researcher — Graph RAG at a national credit bureau, 5M+ queries/day
+      marketplace LLM pipelines, self-hosted LLM GPU serving, vision-language research.
     education:
     - institution: Sharif University of Technology
       area: M.Sc. Artificial Intelligence
@@ -23,7 +23,10 @@ cv:
       start_date: 2025-09
       end_date: present
       location: Sharif University of Technology
-      highlights: []
+      highlights:
+      - 'Coursework: Advanced Machine Learning, Deep Learning, Advanced Computer Vision,
+        Advanced Natural Language Processing, Optimization, Probabilistic Graphical
+        Models, Reinforcement Learning'
     - institution: Sharif University of Technology
       area: B.Sc. Electrical Engineering
       degree: B.Sc. Electrical Engineering
@@ -32,9 +35,9 @@ cv:
       location: Sharif University of Technology
       highlights:
       - 'GPA: 3.65'
-      - 'Thesis: Team thesis on efficient design and implementation of spread-time
-        CDMA ASIC (my slice: FPGA implementation and pre-chip FPGA tests), supervisor
-        Dr. Fatemeh (Noyan) Akbar, grade 20/20'
+      - 'Thesis: Team thesis: efficient design and implementation of a spread-time
+        CDMA ASIC; responsibilities: FPGA implementation and pre-chip FPGA testing;
+        supervisor: Dr. Fatemeh (Noyan) Akbar; grade: 20/20.'
       - 'Coursework: Machine Learning, Deep Learning, Natural Language Processing,
         Data Science, Embedded Systems, Signals and Systems, Microprocessor Systems'
     experience:
@@ -43,44 +46,58 @@ cv:
       start_date: 2026-04
       end_date: present
       location: Tehran, Iran — Full-time · On-site
-      summary: Self-hosted Graph RAG company assistant for national credit scoring
-        — Neo4j knowledge graph, self-hosted LLM runtime on GPU, tool-calling agent.
+      summary: Built the company's self-hosted Graph RAG assistant for credit-scoring
+        analysts — Neo4j knowledge graph, GPU-resident open-weight LLM runtime and
+        a tool-calling agent with grounded citations.
       highlights:
-      - 'Architected self-hosted Graph RAG assistant: Neo4j knowledge graph + vector
-        retrieval fused into an agent that answers analyst queries over credit-scoring
-        domain data with grounded citations.'
-      - Ran self-hosted open-weight LLMs (vLLM/TGI) on GPU; profiled and optimised
-        GPU runtime — KV-cache, batching, quantization (AWQ/GPTQ) — cutting per-token
-        latency and GPU memory footprint.
-      - Implemented Neo4j tool-calls (Cypher generation + schema-aware retrieval)
-        so the assistant executes graph traversals instead of hallucinating structured
-        facts.
-      - Added hallucination guardrails — retrieval grounding, citation enforcement,
-        deterministic fallback — for a regulated financial environment.
+      - Architected a self-hosted Graph RAG assistant that fuses a Neo4j knowledge
+        graph with FAISS vector retrieval into a LangGraph tool-calling agent, answering
+        credit-scoring analysts' queries with grounded citations.
+      - Ran open-weight LLMs on GPU via vLLM and TGI, profiling KV-cache, batching
+        and AWQ/GPTQ quantization to cut per-token latency and GPU memory footprint.
+      - Implemented Neo4j tool-calls inside the LangGraph agent — schema-aware Cypher
+        generation and retrieval — so it executes real graph traversals instead of
+        hallucinating structured credit facts.
+      - Hardened the Graph RAG assistant for a regulated financial environment with
+        retrieval grounding, citation enforcement and deterministic fallback, blocking
+        unsupported answers before they reach analysts.
+      - Shipped the assistant as a FastAPI service on Kubernetes with usage guides
+        for credit-scoring analysts' daily workflow.
     - company: Trinity College Dublin — EmoDub Project
-      position: Machine Learning Researcher — Emotion-Aware Speech Translation
-      start_date: 2025-05
-      end_date: 2025-11
-      location: Dublin, Ireland — Part-time · Remote Collaboration
-      summary: Fusion of SER transformers + wav2vec2.0 for prosody-preserving S2S
-        translation; cross-modal acoustic+semantic transformer.
+      position: Machine Learning Engineer — Emotion-Aware Speech Translation
+      start_date: 2023-05
+      end_date: 2024-04
+      location: Dublin, Ireland — Part-time · Remote Work
+      summary: Researched emotion-aware speech-to-speech translation for the EmoDub
+        project, fusing speech-emotion-recognition transformers with wav2vec2.0 and
+        Whisper to preserve prosody in translated output.
       highlights:
-      - Trained SER front-end (transformer + wav2vec2.0 + Whisper) for affect logits;
-        cross-modal fusion transformer for emotion-consistent decoding.
-      - Curated emotion-annotated corpora (EmotionNet/EmoDB) with balanced cultural
-        representation; evaluated BLEU, Emotion F1, MOS.
-      - Collab. with Prof. Siobhán Clarke; reproducible codebase https://github.com/AliNikkhah2001/emodub-emotion-translation.
+      - Trained a PyTorch SER front-end over wav2vec2.0 and Whisper to emit affect
+        logits, then fused it with a cross-modal transformer for emotion-consistent
+        translation decoding.
+      - Curated the EmotionNet and EmoDB emotion-annotated corpora with balanced cultural
+        representation, then defined the BLEU, Emotion F1 and MOS evaluation protocol.
+      - 'Collaborated with Prof. Siobhán Clarke at Trinity College Dublin, delivering
+        a reproducible PyTorch research codebase: https://github.com/AliNikkhah2001/emodub-emotion-translation.'
+      - Diagnosed where emotion leaks out of translated speech by contrasting wav2vec2.0
+        and Whisper embeddings against librosa prosody contours.
     - company: Sharif University — Robust & Interpretable ML Lab
       position: Research Collaborator — Explainable & Robust AI
-      start_date: 2025-07
-      end_date: 2025-09
+      start_date: 2025-06
+      end_date: 2025-08
       location: Tehran, Iran — Part-time · On-site
-      summary: Robustness & interpretability harnesses for multimodal perception under
-        distribution shift.
+      summary: Built robustness and interpretability harnesses for multimodal perception
+        models under distribution shift, benchmarking adversarial and natural shifts
+        with Captum and SHAP attribution analysis.
       highlights:
-      - Benchmarked adversarial + natural shift suites; notebooks surfacing Captum/SHAP
-        attributions, saliency, counterfactuals.
-      - Documented deploy best-practices for regulated industries with faculty.
+      - Constructed adversarial and natural distribution-shift suites over PyTorch
+        multimodal perception models, with Captum and SHAP notebooks surfacing attributions,
+        saliency and counterfactuals.
+      - Authored a regulated-industry deployment guide with lab faculty, codifying
+        MLflow experiment tracking, interpretability evidence and rollout safeguards
+        from the robustness harness.
+      - Ranked model variants in a robustness leaderboard across shift types with
+        documented failure cases for lab review.
     - company: University of British Columbia
       position: Research Assistant — Vision-Language Medical Imaging (Ultrasound Report
         Generation)
@@ -88,48 +105,38 @@ cv:
       end_date: 2025-11
       location: Remote · Vancouver, Canada (Tehran-based) — Part-time · Remote Internship
         (10h/wk)
-      summary: ViT/BLIP + T5 for DICOM-compliant ultrasound reporting with contrastive
-        pretraining and clinician-in-the-loop saliency.
+      summary: Part-time research assistant developing ViT/BLIP and T5 models for
+        DICOM-compliant ultrasound report generation with contrastive pretraining
+        and clinician-in-the-loop saliency.
       highlights:
-      - Designed ViT/BLIP encoders + T5 generator with contrastive/self-supervised
-        alignment; curated DICOM, de-identified QA corpora.
-      - Deployed attention/saliency overlays for interpretability; benchmarked BLEU/ROUGE-L
-        + clinical efficacy with radiologists; SOTA on in-house split.
-      - 'Preprint in prep: Automated DICOM-Compliant Ultrasound Report Generation
-        via Contrastive Vision-Language Learning (2025).'
+      - Designed ViT/BLIP encoders paired with a T5 report generator, trained with
+        contrastive and self-supervised alignment over curated DICOM and de-identified
+        QA corpora in PyTorch.
+      - Deployed attention and saliency overlays for interpretability, benchmarked
+        BLEU/ROUGE-L and clinical efficacy with radiologists, and reached state-of-the-art
+        accuracy on the in-house ultrasound split.
+      - Drafted manuscript "Automated DICOM-Compliant Ultrasound Report Generation
+        via Contrastive Vision-Language Learning" for arXiv (preprint in preparation,
+        2025).
+      - Ran CLIP-similarity pretraining ablations to pick the recipe before report-generation
+        fine-tuning.
     - company: L3S Research Center — Leibniz University Hannover
       position: Research Assistant — Video Motion Classification
-      start_date: 2023-04
+      start_date: 2023-05
       end_date: 2024-02
       location: Hannover, Germany — Part-time · Remote/On-site
-      summary: Texture-free motion models via optical flow + 3D CNNs + transformers;
-        SOTA on UCF-101/HMDB-51.
+      summary: Research assistant developing texture-free motion models from optical
+        flow with 3D CNNs and transformers, with state-of-the-art results on UCF-101
+        and HMDB-51.
       highlights:
-      - Engineered optical-flow-centric datasets with temporal sampling/augmentation;
-        improved domain generalization across lighting/texture/camera shift.
-      - Benchmarked 3D CNN + transformer hybrids vs baselines; analyzed attention
-        maps; reduced overfitting, SOTA accuracy.
-    - company: Sharif University of Technology
-      position: Teaching Assistant — NLP, Generative Models, Deep Learning
-      start_date: 2023-08
-      end_date: '2024'
-      location: Tehran, Iran — Part-time · On-site
-      summary: Led labs/seminars for graduate NLP/GenAI/DL; mentored capstones.
-      highlights:
-      - Facilitated seminars, office hours (30-80 students), problem-set design/grading,
-        exam design for DL/NLP.
-      - Developed lab material for Deep Learning, Analog Electronics, foundational
-        ML; mentored undergrad capstones.
-    - company: Sharif University of Technology
-      position: Teaching Assistant — History (8 courses, 2021-2023)
-      start_date: '2021'
-      end_date: 2023-08
-      location: Tehran, Iran — Part-time
-      summary: Three-year TA service across 8 courses — Deep Learning, ML & Data Science,
-        Generative Models, Engineering Prob & Stats, Analog Electronics, Circuit Theory.
-      highlights:
-      - Graded problem sets, ran tutorials, held office hours; supported 30-80 students
-        per term.
+      - Engineered optical-flow-centric video datasets with temporal sampling and
+        augmentation, improving domain generalization across lighting, texture, and
+        camera shifts using OpenCV and PyAV.
+      - Benchmarked 3D CNN and transformer hybrids against baselines on UCF-101/HMDB-51,
+        analyzing attention maps to curb overfitting and reach SOTA accuracy with
+        PyTorch Lightning.
+      - Built the ablation and cross-validation harness (splits, metric aggregation)
+        used across all reported UCF-101/HMDB-51 experiments.
     publications:
     - title: Automated DICOM-Compliant Ultrasound Report Generation via Contrastive
         Vision-Language Learning

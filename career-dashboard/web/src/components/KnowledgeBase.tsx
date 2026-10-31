@@ -34,6 +34,10 @@ export function KnowledgeBase({ db, onUpdate }: KnowledgeBaseProps) {
         case 'achievements': endpoint = `/achievements/${id}`; break
         case 'organizations': endpoint = `/organizations/${id}`; break
         case 'skills': endpoint = `/skills/${id}`; break
+        case 'education': endpoint = `/education/${id}`; break
+        case 'projects': endpoint = `/projects/${id}`; break
+        case 'publications': endpoint = `/publications/${id}`; break
+        case 'teaching': endpoint = `/teaching/${id}`; break
         default: throw new Error('Not implemented')
       }
       await fetch(`/api${endpoint}`, {
@@ -59,6 +63,11 @@ export function KnowledgeBase({ db, onUpdate }: KnowledgeBaseProps) {
         case 'positions': endpoint = `/positions/${id}`; break
         case 'achievements': endpoint = `/achievements/${id}`; break
         case 'organizations': endpoint = `/organizations/${id}`; break
+        case 'skills': endpoint = `/skills/${id}`; break
+        case 'education': endpoint = `/education/${id}`; break
+        case 'projects': endpoint = `/projects/${id}`; break
+        case 'publications': endpoint = `/publications/${id}`; break
+        case 'teaching': endpoint = `/teaching/${id}`; break
         default: throw new Error('Not implemented')
       }
       await fetch(`/api${endpoint}`, { method: 'DELETE' })

@@ -3,8 +3,8 @@ import { CareerDatabase } from '../types'
 interface SidebarProps {
   open: boolean
   onToggle: () => void
-  activeTab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'interview' | 'publishing' | 'linkedin'
-  onTabChange: (tab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'interview' | 'publishing' | 'linkedin') => void
+  activeTab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'interview' | 'publishing' | 'linkedin' | 'resume'
+  onTabChange: (tab: 'timeline' | 'knowledge' | 'stack' | 'variants' | 'templates' | 'interview' | 'publishing' | 'linkedin' | 'resume') => void
   db: CareerDatabase | null
 }
 
@@ -17,6 +17,7 @@ const tabs = [
   { id: 'interview', label: 'Interview Prep', icon: '🎯' },
   { id: 'publishing', label: 'Publishing', icon: '🚀' },
   { id: 'linkedin', label: 'LinkedIn Export', icon: '💼' },
+  { id: 'resume', label: 'Resume Builder', icon: '📝' },
 ] as const
 
 export function Sidebar({ open, onToggle, activeTab, onTabChange, db }: SidebarProps) {

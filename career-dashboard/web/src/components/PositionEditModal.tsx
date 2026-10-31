@@ -113,6 +113,22 @@ export function PositionEditModal({ position, db, onClose, onUpdate }: PositionE
   const toggleProject = (p: Project) =>
     setProjectLinks((l) => ({ ...l, [p.id]: !isProjectLinked(p) }))
 
+  const handleDelete = async () => {
+    if (!confirm('Delete this position permanently?')) return
+    setSaving(true)
+    try {
+      await api.deletePosition(position.id)
+      const newDb = await api.getDatabase()
+      onUpdate(newDb)
+      onClose()
+    } catch (e) {
+      console.error('Delete failed:', e)
+      alert('Failed to delete position')
+    } finally {
+      setSaving(false)
+    }
+  }
+
   const handleSave = async () => {
     setError(null)
     if (!form.title.trim()) return setError('Title is required')
@@ -514,6 +530,11 @@ export function PositionEditModal({ position, db, onClose, onUpdate }: PositionE
             {newProjects.length > 0 && `${newProjects.length} new project(s) · `}
             saves everything at once
           </span>
+          <div className="d-flex gap-2">
+            <button className="btn btn-danger btn-sm" onClick={handleDelete} disabled={saving}>
+              Delete position
+            </button>
+          </div>
           <button className="btn btn-secondary" onClick={onClose}>Cancel</button>
           <button className="btn btn-primary" onClick={handleSave} disabled={saving}>
             {saving ? 'Saving…' : 'Save changes'}
